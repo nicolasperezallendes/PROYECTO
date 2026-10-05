@@ -9,6 +9,7 @@ Fuente de datos: las dos planillas de SECPLAN (iniciativas georreferenciadas 202
 | MAPA INVERSION POR SECTOR | 3840×2160 (16:9) | Presentación al Concejo, pantalla, impresión A3 apaisada |
 | INFOGRAFIA INVERSION POR AÑO | 2160×2700 (4:5) | Instagram y Facebook |
 | LAMINA ESTADIO | 2160×2700 (4:5) | Redes, o lámina impresa |
+| INFOGRAFIA MONTOS POR SECTOR | 3840×2160 (16:9) | Complemento del mapa: desglose de montos e iniciativas por sector (sección 4.7 del informe) |
 
 Cada pieza viene en tres versiones:
 - **SVG** para editar en Affinity. Los grupos tienen nombre (Fondo, Título, Burbujas, Etiquetas, Leyenda, Fuente) y se abren como capas.

@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3840" height="2160" viewBox="0 0 3840 2160">
+<g id="Fondo"><rect width="3840" height="2160" fill="#F6F4EF"/></g>
+<g id="Titulo"><text x="80" y="104" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="4" fill="#007C99">MUNICIPALIDAD DE COQUIMBO · INVERSIÓN 2021-2026</text><text x="80" y="186" font-family="Montserrat, Arial, sans-serif" font-size="76" font-weight="800" fill="#0B2545">Montos e iniciativas por sector</text></g>
+<g id="Leyenda"><rect x="2520" y="140" width="30" height="30" rx="6" fill="#007C99"/><text x="2564" y="165" font-family="Montserrat, Arial, sans-serif" font-size="26" font-weight="600" fill="#4A5568">Recuperación de espacios públicos</text><rect x="3080" y="140" width="30" height="30" rx="6" fill="#D98E00"/><text x="3124" y="165" font-family="Montserrat, Arial, sans-serif" font-size="26" font-weight="600" fill="#4A5568">Infraestructura deportiva</text></g>
+<g id="Encabezados"><text x="80" y="290" font-family="Montserrat, Arial, sans-serif" font-size="24" font-weight="700" fill="#718096" letter-spacing="2">SECTOR</text><text x="640" y="290" font-family="Montserrat, Arial, sans-serif" font-size="24" font-weight="700" fill="#718096" letter-spacing="2">MONTO TOTAL, EN MILLONES DE PESOS</text><text x="3330" y="290" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="24" font-weight="700" fill="#718096" letter-spacing="2">INICIATIVAS</text><text x="3640" y="290" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="24" font-weight="700" fill="#718096" letter-spacing="2">DEPORTIVAS</text><line x1="80" y1="308" x2="3760" y2="308" stroke="#C9C3B6" stroke-width="2"/></g>
+<g id="Sectores urbanos">
+<text x="80" y="364" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#007C99">Área urbana</text><text x="3760" y="364" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="24" font-weight="600" fill="#4A5568">$39.513 millones · 119 iniciativas · 72,3% del total</text>
+<rect x="64" y="384" width="3712" height="60" fill="#FFFFFF" fill-opacity="0.65"/>
+<text x="80" y="424" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">La Cantera</text>
+<path d="M644.0,399.0 L2505.8,399.0 L2505.8,429.0 L644.0,429.0 Q640.0,429.0 640.0,425.0 L640.0,403.0 Q640.0,399.0 644.0,399.0 Z" fill="#007C99"/>
+<path d="M2507.8,399.0 L2536.0,399.0 Q2540.0,399.0 2540.0,403.0 L2540.0,425.0 Q2540.0,429.0 2536.0,429.0 L2507.8,429.0 L2507.8,399.0 Z" fill="#D98E00"/>
+<text x="2556" y="424" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$9.374</text>
+<text x="2684" y="423" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#718096">deporte $159</text>
+<text x="3330" y="424" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">8</text><text x="3640" y="424" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#4A5568">2</text>
+<text x="80" y="484" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">Peñuelas</text>
+<path d="M644.0,459.0 L1991.2,459.0 L1991.2,489.0 L644.0,489.0 Q640.0,489.0 640.0,485.0 L640.0,463.0 Q640.0,459.0 644.0,459.0 Z" fill="#007C99"/>
+<path d="M1993.2,459.0 L2005.4,459.0 Q2009.4,459.0 2009.4,463.0 L2009.4,485.0 Q2009.4,489.0 2005.4,489.0 L1993.2,489.0 L1993.2,459.0 Z" fill="#D98E00"/>
+<text x="2025" y="484" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$6.756</text>
+<text x="2153" y="483" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#718096">deporte $80</text>
+<text x="3330" y="484" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">8</text><text x="3640" y="484" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#4A5568">1</text>
+<rect x="64" y="504" width="3712" height="60" fill="#FFFFFF" fill-opacity="0.65"/>
+<text x="80" y="544" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">La Pampilla</text>
+<path d="M644.0,519.0 L1218.1,519.0 L1218.1,549.0 L644.0,549.0 Q640.0,549.0 640.0,545.0 L640.0,523.0 Q640.0,519.0 644.0,519.0 Z" fill="#007C99"/>
+<path d="M1220.1,519.0 L1521.3,519.0 Q1525.3,519.0 1525.3,523.0 L1525.3,545.0 Q1525.3,549.0 1521.3,549.0 L1220.1,549.0 L1220.1,519.0 Z" fill="#D98E00"/>
+<text x="1541" y="544" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$4.368</text>
+<text x="1669" y="543" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#718096">deporte $1.506</text>
+<text x="3330" y="544" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">8</text><text x="3640" y="544" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#4A5568">2</text>
+<text x="80" y="604" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">Centro</text>
+<path d="M644.0,579.0 L1296.3,579.0 Q1300.3,579.0 1300.3,583.0 L1300.3,605.0 Q1300.3,609.0 1296.3,609.0 L644.0,609.0 Q640.0,609.0 640.0,605.0 L640.0,583.0 Q640.0,579.0 644.0,579.0 Z" fill="#007C99"/>
+<text x="1316" y="604" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$3.257</text>
+<text x="3330" y="604" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">32</text><text x="3640" y="604" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#718096">0</text>
+<rect x="64" y="624" width="3712" height="60" fill="#FFFFFF" fill-opacity="0.65"/>
+<text x="80" y="664" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">Sindempart</text>
+<path d="M644.0,639.0 L1094.6,639.0 L1094.6,669.0 L644.0,669.0 Q640.0,669.0 640.0,665.0 L640.0,643.0 Q640.0,639.0 644.0,639.0 Z" fill="#007C99"/>
+<path d="M1096.6,639.0 L1178.6,639.0 Q1182.6,639.0 1182.6,643.0 L1182.6,665.0 Q1182.6,669.0 1178.6,669.0 L1096.6,669.0 L1096.6,639.0 Z" fill="#D98E00"/>
+<text x="1199" y="664" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$2.677</text>
+<text x="1327" y="663" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#718096">deporte $424</text>
+<text x="3330" y="664" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">5</text><text x="3640" y="664" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#4A5568">2</text>
+<text x="80" y="724" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">Costanera y Culebrón</text>
+<path d="M644.0,699.0 L1067.1,699.0 Q1071.1,699.0 1071.1,703.0 L1071.1,725.0 Q1071.1,729.0 1067.1,729.0 L644.0,729.0 Q640.0,729.0 640.0,725.0 L640.0,703.0 Q640.0,699.0 644.0,699.0 Z" fill="#007C99"/>
+<text x="1087" y="724" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$2.127</text>
+<text x="3330" y="724" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">2</text><text x="3640" y="724" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#718096">0</text>
+<rect x="64" y="744" width="3712" height="60" fill="#FFFFFF" fill-opacity="0.65"/>
+<text x="80" y="784" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">Tierras Blancas</text>
+<path d="M644.0,759.0 L854.7,759.0 L854.7,789.0 L644.0,789.0 Q640.0,789.0 640.0,785.0 L640.0,763.0 Q640.0,759.0 644.0,759.0 Z" fill="#007C99"/>
+<path d="M856.7,759.0 L1032.7,759.0 Q1036.7,759.0 1036.7,763.0 L1036.7,785.0 Q1036.7,789.0 1032.7,789.0 L856.7,789.0 L856.7,759.0 Z" fill="#D98E00"/>
+<text x="1053" y="784" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$1.957</text>
+<text x="1181" y="783" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#718096">deporte $888</text>
+<text x="3330" y="784" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">13</text><text x="3640" y="784" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#4A5568">6</text>
+<text x="80" y="844" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">La Herradura</text>
+<path d="M644.0,819.0 L850.1,819.0 L850.1,849.0 L644.0,849.0 Q640.0,849.0 640.0,845.0 L640.0,823.0 Q640.0,819.0 644.0,819.0 Z" fill="#007C99"/>
+<path d="M852.1,819.0 L1016.8,819.0 Q1020.8,819.0 1020.8,823.0 L1020.8,845.0 Q1020.8,849.0 1016.8,849.0 L852.1,849.0 L852.1,819.0 Z" fill="#D98E00"/>
+<text x="1037" y="844" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$1.879</text>
+<text x="1165" y="843" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#718096">deporte $832</text>
+<text x="3330" y="844" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">5</text><text x="3640" y="844" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#4A5568">1</text>
+<rect x="64" y="864" width="3712" height="60" fill="#FFFFFF" fill-opacity="0.65"/>
+<text x="80" y="904" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">Parte Alta</text>
+<path d="M644.0,879.0 L959.5,879.0 Q963.5,879.0 963.5,883.0 L963.5,905.0 Q963.5,909.0 959.5,909.0 L644.0,909.0 Q640.0,909.0 640.0,905.0 L640.0,883.0 Q640.0,879.0 644.0,879.0 Z" fill="#007C99"/>
+<text x="980" y="904" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$1.596</text>
+<text x="3330" y="904" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">6</text><text x="3640" y="904" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#718096">0</text>
+<text x="80" y="964" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">Estadio</text>
+<path d="M644.0,939.0 L654.9,939.0 L654.9,969.0 L644.0,969.0 Q640.0,969.0 640.0,965.0 L640.0,943.0 Q640.0,939.0 644.0,939.0 Z" fill="#007C99"/>
+<path d="M656.9,939.0 L896.0,939.0 Q900.0,939.0 900.0,943.0 L900.0,965.0 Q900.0,969.0 896.0,969.0 L656.9,969.0 L656.9,939.0 Z" fill="#D98E00"/>
+<text x="916" y="964" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$1.283</text>
+<text x="1044" y="963" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#718096">deporte $1.200</text>
+<text x="3330" y="964" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">5</text><text x="3640" y="964" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#4A5568">3</text>
+<rect x="64" y="984" width="3712" height="60" fill="#FFFFFF" fill-opacity="0.65"/>
+<text x="80" y="1024" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">San Juan</text>
+<path d="M644.0,999.0 L747.3,999.0 L747.3,1029.0 L644.0,1029.0 Q640.0,1029.0 640.0,1025.0 L640.0,1003.0 Q640.0,999.0 644.0,999.0 Z" fill="#007C99"/>
+<path d="M749.3,999.0 L895.2,999.0 Q899.2,999.0 899.2,1003.0 L899.2,1025.0 Q899.2,1029.0 895.2,1029.0 L749.3,1029.0 L749.3,999.0 Z" fill="#D98E00"/>
+<text x="915" y="1024" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$1.279</text>
+<text x="1043" y="1023" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#718096">deporte $739</text>
+<text x="3330" y="1024" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">10</text><text x="3640" y="1024" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#4A5568">7</text>
+<text x="80" y="1084" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">Baquedano</text>
+<path d="M644.0,1059.0 L668.2,1059.0 L668.2,1089.0 L644.0,1089.0 Q640.0,1089.0 640.0,1085.0 L640.0,1063.0 Q640.0,1059.0 644.0,1059.0 Z" fill="#007C99"/>
+<path d="M670.2,1059.0 L889.1,1059.0 Q893.1,1059.0 893.1,1063.0 L893.1,1085.0 Q893.1,1089.0 889.1,1089.0 L670.2,1089.0 L670.2,1059.0 Z" fill="#D98E00"/>
+<text x="909" y="1084" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$1.249</text>
+<text x="1037" y="1083" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#718096">deporte $1.100</text>
+<text x="3330" y="1084" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">2</text><text x="3640" y="1084" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#4A5568">1</text>
+<rect x="64" y="1104" width="3712" height="60" fill="#FFFFFF" fill-opacity="0.65"/>
+<text x="80" y="1144" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">Guayacán</text>
+<path d="M644.0,1119.0 L882.1,1119.0 Q886.1,1119.0 886.1,1123.0 L886.1,1145.0 Q886.1,1149.0 882.1,1149.0 L644.0,1149.0 Q640.0,1149.0 640.0,1145.0 L640.0,1123.0 Q640.0,1119.0 644.0,1119.0 Z" fill="#007C99"/>
+<text x="902" y="1144" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$1.214</text>
+<text x="3330" y="1144" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">10</text><text x="3640" y="1144" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#718096">0</text>
+<text x="80" y="1204" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">Punta Mira</text>
+<path d="M644.0,1179.0 L650.1,1179.0 L650.1,1209.0 L644.0,1209.0 Q640.0,1209.0 640.0,1205.0 L640.0,1183.0 Q640.0,1179.0 644.0,1179.0 Z" fill="#007C99"/>
+<path d="M652.1,1179.0 L700.0,1179.0 Q704.0,1179.0 704.0,1183.0 L704.0,1205.0 Q704.0,1209.0 700.0,1209.0 L652.1,1209.0 L652.1,1179.0 Z" fill="#D98E00"/>
+<text x="720" y="1204" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$316</text>
+<text x="810" y="1203" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#718096">deporte $256</text>
+<text x="3330" y="1204" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">3</text><text x="3640" y="1204" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#4A5568">2</text>
+<rect x="64" y="1224" width="3712" height="60" fill="#FFFFFF" fill-opacity="0.65"/>
+<text x="80" y="1264" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">Las Torres</text>
+<path d="M644.0,1239.0 L651.2,1239.0 L651.2,1269.0 L644.0,1269.0 Q640.0,1269.0 640.0,1265.0 L640.0,1243.0 Q640.0,1239.0 644.0,1239.0 Z" fill="#007C99"/>
+<path d="M653.2,1239.0 L673.1,1239.0 Q677.1,1239.0 677.1,1243.0 L677.1,1265.0 Q677.1,1269.0 673.1,1269.0 L653.2,1269.0 L653.2,1239.0 Z" fill="#D98E00"/>
+<text x="693" y="1264" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$183</text>
+<text x="783" y="1263" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#718096">deporte $118</text>
+<text x="3330" y="1264" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">2</text><text x="3640" y="1264" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#4A5568">1</text>
+</g>
+<g id="Sectores rurales">
+<text x="80" y="1342" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#007C99">Localidades rurales y costeras</text><text x="3760" y="1342" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="24" font-weight="600" fill="#4A5568">$9.036 millones · 24 iniciativas · 16,5% del total</text>
+<rect x="64" y="1362" width="3712" height="60" fill="#FFFFFF" fill-opacity="0.65"/>
+<text x="80" y="1402" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">Tongoy</text>
+<path d="M644.0,1377.0 L2055.1,1377.0 Q2059.1,1377.0 2059.1,1381.0 L2059.1,1403.0 Q2059.1,1407.0 2055.1,1407.0 L644.0,1407.0 Q640.0,1407.0 640.0,1403.0 L640.0,1381.0 Q640.0,1377.0 644.0,1377.0 Z" fill="#007C99"/>
+<text x="2075" y="1402" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$7.001</text>
+<text x="3330" y="1402" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">8</text><text x="3640" y="1402" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#718096">0</text>
+<text x="80" y="1462" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">Pan de Azúcar</text>
+<path d="M644.0,1437.0 L781.0,1437.0 Q785.0,1437.0 785.0,1441.0 L785.0,1463.0 Q785.0,1467.0 781.0,1467.0 L644.0,1467.0 Q640.0,1467.0 640.0,1463.0 L640.0,1441.0 Q640.0,1437.0 644.0,1437.0 Z" fill="#007C99"/>
+<text x="801" y="1462" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$715</text>
+<text x="3330" y="1462" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">7</text><text x="3640" y="1462" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#718096">0</text>
+<rect x="64" y="1482" width="3712" height="60" fill="#FFFFFF" fill-opacity="0.65"/>
+<text x="80" y="1522" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">El Peñón</text>
+<path d="M644.0,1497.0 L755.7,1497.0 Q759.7,1497.0 759.7,1501.0 L759.7,1523.0 Q759.7,1527.0 755.7,1527.0 L644.0,1527.0 Q640.0,1527.0 640.0,1523.0 L640.0,1501.0 Q640.0,1497.0 644.0,1497.0 Z" fill="#007C99"/>
+<text x="776" y="1522" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$591</text>
+<text x="3330" y="1522" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">4</text><text x="3640" y="1522" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#718096">0</text>
+<text x="80" y="1582" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">El Sauce</text>
+<path d="M644.0,1557.0 L687.7,1557.0 L687.7,1587.0 L644.0,1587.0 Q640.0,1587.0 640.0,1583.0 L640.0,1561.0 Q640.0,1557.0 644.0,1557.0 Z" fill="#007C99"/>
+<path d="M689.7,1557.0 L706.0,1557.0 Q710.0,1557.0 710.0,1561.0 L710.0,1583.0 Q710.0,1587.0 706.0,1587.0 L689.7,1587.0 L689.7,1557.0 Z" fill="#D98E00"/>
+<text x="726" y="1582" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$345</text>
+<text x="816" y="1581" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#718096">deporte $100</text>
+<text x="3330" y="1582" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">2</text><text x="3640" y="1582" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#4A5568">1</text>
+<rect x="64" y="1602" width="3712" height="60" fill="#FFFFFF" fill-opacity="0.65"/>
+<text x="80" y="1642" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">Guanaqueros</text>
+<path d="M644.0,1617.0 L666.4,1617.0 Q670.4,1617.0 670.4,1621.0 L670.4,1643.0 Q670.4,1647.0 666.4,1647.0 L644.0,1647.0 Q640.0,1647.0 640.0,1643.0 L640.0,1621.0 Q640.0,1617.0 644.0,1617.0 Z" fill="#D98E00"/>
+<text x="686" y="1642" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$150</text>
+<text x="3330" y="1642" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">1</text><text x="3640" y="1642" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#4A5568">1</text>
+<text x="80" y="1702" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">Las Cardas</text>
+<path d="M644.0,1677.0 L659.9,1677.0 Q663.9,1677.0 663.9,1681.0 L663.9,1703.0 Q663.9,1707.0 659.9,1707.0 L644.0,1707.0 Q640.0,1707.0 640.0,1703.0 L640.0,1681.0 Q640.0,1677.0 644.0,1677.0 Z" fill="#007C99"/>
+<text x="680" y="1702" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$118</text>
+<text x="3330" y="1702" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">1</text><text x="3640" y="1702" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#718096">0</text>
+<rect x="64" y="1722" width="3712" height="60" fill="#FFFFFF" fill-opacity="0.65"/>
+<text x="80" y="1762" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">Tambillos</text>
+<path d="M644.0,1737.0 L659.5,1737.0 Q663.5,1737.0 663.5,1741.0 L663.5,1763.0 Q663.5,1767.0 659.5,1767.0 L644.0,1767.0 Q640.0,1767.0 640.0,1763.0 L640.0,1741.0 Q640.0,1737.0 644.0,1737.0 Z" fill="#007C99"/>
+<text x="679" y="1762" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#0B2545">$116</text>
+<text x="3330" y="1762" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B2545">1</text><text x="3640" y="1762" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#718096">0</text>
+</g>
+<g id="Sin sector y total"><line x1="80" y1="1802" x2="3760" y2="1802" stroke="#C9C3B6" stroke-width="2"/><text x="80" y="1852" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#4A5568">Sin sector identificable</text><text x="640" y="1852" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="800" fill="#4A5568">$6.088<tspan font-size="22" font-weight="600" fill="#718096">   obras comunales o sin lugar claro en la planilla</tspan></text><text x="3330" y="1852" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#4A5568">40</text><text x="3640" y="1852" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="600" fill="#4A5568">9</text><line x1="80" y1="1878" x2="3760" y2="1878" stroke="#0B2545" stroke-width="3"/><text x="80" y="1930" font-family="Montserrat, Arial, sans-serif" font-size="34" font-weight="800" fill="#0B2545">Total comuna</text><text x="640" y="1930" font-family="Montserrat, Arial, sans-serif" font-size="34" font-weight="800" fill="#0B2545">$54.637</text><text x="3330" y="1930" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="34" font-weight="800" fill="#0B2545">183</text><text x="3640" y="1930" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="34" font-weight="800" fill="#0B2545">39</text></g>
+<g id="Fuente"><text x="80" y="2076" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="500" fill="#718096">Fuente: SECPLAN, Municipalidad de Coquimbo, planillas de iniciativas 2021-2026. Cada iniciativa se asigna a un solo sector según el lugar que nombra.</text><text x="80" y="2112" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="500" fill="#718096">El monto suma obras terminadas, en curso y sin estado informado. Pesos nominales, sin ajuste por inflación. Acompaña al mapa de inversión por sector.</text></g>
+</svg>
