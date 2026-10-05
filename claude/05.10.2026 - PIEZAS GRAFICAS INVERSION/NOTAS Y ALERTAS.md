@@ -9,6 +9,7 @@ Fuente de datos: las dos planillas de SECPLAN (iniciativas georreferenciadas 202
 | MAPA INVERSION POR SECTOR | 3840×2160 (16:9) | Presentación al Concejo, pantalla, impresión A3 apaisada |
 | INFOGRAFIA INVERSION POR AÑO | 2160×2700 (4:5) | Instagram y Facebook |
 | LAMINA ESTADIO | 2160×2700 (4:5) | Redes, o lámina impresa |
+| INICIATIVAS POR SECTOR, LÁMINAS 1 A 4 | 3840×2160 (16:9) | Detalle de las 183 iniciativas por sector: financiamiento, monto y estado. El PDF reúne las 4 láminas |
 | INFOGRAFIA MONTOS POR SECTOR | 3840×2160 (16:9) | Complemento del mapa: desglose de montos e iniciativas por sector (sección 4.7 del informe) |
 
 Cada pieza viene en tres versiones:
@@ -33,6 +34,12 @@ La tipografía es Montserrat (Google Fonts, gratuita). Si no está instalada, Af
 - **El informe Word quedó corregido.** Ahora asigna cada iniciativa a un solo sector, con el mismo criterio del mapa, y las filas suman el total.
 - **El mapa ya estaba correcto.** Muestra Guanaqueros con 1 iniciativa por $150 millones. La nota aclaratoria se quitó a pedido de Nicolás; si alguien pregunta, las obras de Av. Guanaqueros ($1.519 millones) se cuentan en Tongoy.
 - **La infografía por año y la lámina del estadio no cambian.** No tienen datos por localidad, y sus cifras coinciden con el informe.
+
+## Láminas de iniciativas por sector
+
+- **Nombres de las iniciativas.** Se pasaron de mayúsculas a tipo oración. Se agregaron tildes y se corrigieron erratas de la planilla (gimnasio, multicancha, consistorial). Se quitó la coletilla "Coquimbo" cuando no aportaba.
+- **Columna estado.** "Terminada" agrupa los estados terminada, recepcionada o adquirida que informa la planilla, con su año.
+- **Repeticiones en la planilla.** "Implementación de máquinas de ejercicios para diversos espacios públicos" aparece dos veces, con montos distintos ($81 MM y $66 MM). Se mantienen las dos.
 
 ## Alertas
 

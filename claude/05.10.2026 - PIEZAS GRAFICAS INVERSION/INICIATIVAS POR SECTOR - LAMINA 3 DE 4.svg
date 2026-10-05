@@ -1,0 +1,257 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3840" height="2160" viewBox="0 0 3840 2160">
+<g id="Fondo"><rect width="3840" height="2160" fill="#F6F4EF"/></g>
+<g id="Titulo"><text x="80" y="104" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="4" fill="#007C99">INVERSIÓN 2021-2026 · INICIATIVAS POR SECTOR · LÁMINA 3 DE 4</text><text x="80" y="186" font-family="Montserrat, Arial, sans-serif" font-size="40" font-weight="800" fill="#0B2545">Guayacán, Punta Mira, Las Torres, Tongoy, Pan de Azúcar, El Peñón, El Sauce, Guanaqueros, Las Cardas y Tambillos</text></g>
+<g id="Leyenda"><circle cx="2900" cy="166" r="12" fill="#007C99"/><text x="2922" y="175" font-family="Montserrat, Arial, sans-serif" font-size="24" font-weight="600" fill="#4A5568">Espacios públicos</text><circle cx="3190" cy="166" r="12" fill="#D98E00"/><text x="3212" y="175" font-family="Montserrat, Arial, sans-serif" font-size="24" font-weight="600" fill="#4A5568">Infraestructura deportiva</text></g>
+<g id="Columna 1">
+<text x="110" y="308" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#718096">INICIATIVA</text><text x="1190" y="308" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#718096">FINANCIAMIENTO</text><text x="1640" y="308" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#718096">$ MM</text><text x="1670" y="308" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#718096">ESTADO</text>
+<g id="Sector Guayacán">
+<rect x="80" y="344" width="1800" height="62" rx="10" fill="#0B2545"/><text x="102" y="386" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">Guayacán</text><text x="1858" y="385" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$1.214 millones · 10 iniciativas · 0 deportivas</text>
+<circle cx="94" cy="449.0" r="7" fill="#007C99"/>
+<text x="110" y="455.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento pasaje Tenis Guayacán</text>
+<text x="1190" y="454.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SUBDERE y municipal</text>
+<text x="1640" y="455.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">294</text>
+<text x="1670" y="454.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<rect x="80" y="470" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="493.0" r="7" fill="#007C99"/>
+<text x="110" y="499.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento accesibilidad peatonal calle Rieles esquina Lira, Guayacán</text>
+<text x="1190" y="498.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SUBDERE</text>
+<text x="1640" y="499.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">218</text>
+<text x="1670" y="498.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2023</text>
+<circle cx="94" cy="537.0" r="7" fill="#007C99"/>
+<text x="110" y="543.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación media calzada calle Pedro Aguirre Cerda Guayacán</text>
+<text x="1190" y="542.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SUBDERE y municipal</text>
+<text x="1640" y="543.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">179</text>
+<text x="1670" y="542.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<rect x="80" y="558" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="581.0" r="7" fill="#007C99"/>
+<text x="110" y="587.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Reposición centro de madres Santa Emita Guayacán</text>
+<text x="1190" y="586.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SUBDERE</text>
+<text x="1640" y="587.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">139</text>
+<text x="1670" y="586.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2023</text>
+<circle cx="94" cy="625.0" r="7" fill="#007C99"/>
+<text x="110" y="631.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento 10 viviendas en Guayacán (PPF)</text>
+<text x="1190" y="630.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">MINVU</text>
+<text x="1640" y="631.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">130</text>
+<text x="1670" y="630.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<rect x="80" y="646" width="1800" height="72" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="669.0" r="7" fill="#007C99"/>
+<text x="110" y="675.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Implementación de punto de venta para la comercialización de moluscos vivos en caleta</text>
+<text x="110" y="703.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">de Guayacán</text>
+<text x="1190" y="674.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SUBDERE</text>
+<text x="1640" y="675.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">89</text>
+<text x="1670" y="674.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<circle cx="94" cy="741.0" r="7" fill="#007C99"/>
+<text x="110" y="747.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Programa de fondo de incentivo al fomento productivo y al emprendimiento Guayacán</text>
+<text x="1190" y="746.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SUBDERE</text>
+<text x="1640" y="747.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">70</text>
+<text x="1670" y="746.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<rect x="80" y="762" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="785.0" r="7" fill="#007C99"/>
+<text x="110" y="791.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Guayacán más iluminado</text>
+<text x="1190" y="790.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SPD</text>
+<text x="1640" y="791.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">48</text>
+<text x="1670" y="790.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2026</text>
+<circle cx="94" cy="829.0" r="7" fill="#007C99"/>
+<text x="110" y="835.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento área de juego plaza Pescadores de Guayacán</text>
+<text x="1190" y="834.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SPD</text>
+<text x="1640" y="835.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">31</text>
+<text x="1670" y="834.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
+<rect x="80" y="850" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="873.0" r="7" fill="#007C99"/>
+<text x="110" y="879.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Instalación de cámara de teleprotección en sector Los Rieles, Guayacán (SPD)</text>
+<text x="1190" y="878.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="879.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">15</text>
+<text x="1670" y="878.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#718096">Sin estado</text>
+</g>
+<g id="Sector Punta Mira">
+<rect x="80" y="932" width="1800" height="62" rx="10" fill="#0B2545"/><text x="102" y="974" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">Punta Mira</text><text x="1858" y="973" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$316 millones · 3 iniciativas · 2 deportivas</text>
+<circle cx="94" cy="1037.0" r="7" fill="#D98E00"/>
+<text x="110" y="1043.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento multicancha Raúl Silva Henríquez, Punta Mira Sur</text>
+<text x="1190" y="1042.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="1043.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">146</text>
+<text x="1670" y="1042.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#007C99">En evaluación</text>
+<rect x="80" y="1058" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="1081.0" r="7" fill="#D98E00"/>
+<text x="110" y="1087.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción multicancha Los Naranjos, Punta Mira Norte</text>
+<text x="1190" y="1086.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="1087.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">110</text>
+<text x="1670" y="1086.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#007C99">En contrato</text>
+<circle cx="94" cy="1125.0" r="7" fill="#007C99"/>
+<text x="110" y="1131.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento espacio público calle Glorias Navales, Punta Mira</text>
+<text x="1190" y="1130.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SUBDERE</text>
+<text x="1640" y="1131.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">60</text>
+<text x="1670" y="1130.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2022</text>
+</g>
+<g id="Sector Las Torres">
+<rect x="80" y="1184" width="1800" height="62" rx="10" fill="#0B2545"/><text x="102" y="1226" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">Las Torres</text><text x="1858" y="1225" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$183 millones · 2 iniciativas · 1 deportiva</text>
+<circle cx="94" cy="1289.0" r="7" fill="#D98E00"/>
+<text x="110" y="1295.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento integral cancha San Luis, avenida Las Torres</text>
+<text x="1190" y="1294.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="1295.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">118</text>
+<text x="1670" y="1294.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<rect x="80" y="1310" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="1333.0" r="7" fill="#007C99"/>
+<text x="110" y="1339.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Recambio masivo de luminarias y mejoramiento iluminación pública, Las Torres</text>
+<text x="1190" y="1338.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
+<text x="1640" y="1339.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">65</text>
+<text x="1670" y="1338.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#718096">Sin estado</text>
+</g>
+<g id="Sector Tongoy">
+<rect x="80" y="1392" width="1800" height="62" rx="10" fill="#0B2545"/><text x="102" y="1434" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">Tongoy</text><text x="1858" y="1433" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$7.001 millones · 8 iniciativas · 0 deportivas</text>
+<circle cx="94" cy="1497.0" r="7" fill="#007C99"/>
+<text x="110" y="1503.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción borde costero Socos, Tongoy</text>
+<text x="1190" y="1502.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">MOP</text>
+<text x="1640" y="1503.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">2.725</text>
+<text x="1670" y="1502.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2023</text>
+<rect x="80" y="1518" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="1541.0" r="7" fill="#007C99"/>
+<text x="110" y="1547.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento vías de evacuación Tongoy (primera etapa)</text>
+<text x="1190" y="1546.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">MINVU</text>
+<text x="1640" y="1547.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">1.970</text>
+<text x="1670" y="1546.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2023</text>
+<circle cx="94" cy="1585.0" r="7" fill="#007C99"/>
+<text x="110" y="1591.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación avenida Guanaqueros, segunda etapa, Tongoy</text>
+<text x="1190" y="1590.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="1591.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">830</text>
+<text x="1670" y="1590.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#718096">Sin estado</text>
+<rect x="80" y="1606" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="1629.0" r="7" fill="#007C99"/>
+<text x="110" y="1635.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación avenida Guanaqueros, localidad de Tongoy, etapa 1, Fundición-Pichasca</text>
+<text x="1190" y="1634.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="1635.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">689</text>
+<text x="1670" y="1634.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<circle cx="94" cy="1673.0" r="7" fill="#007C99"/>
+<text x="110" y="1679.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento plaza Fundición de Tongoy</text>
+<text x="1190" y="1678.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="1679.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">269</text>
+<text x="1670" y="1678.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<rect x="80" y="1694" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="1717.0" r="7" fill="#007C99"/>
+<text x="110" y="1723.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Especialidades del proyecto reposición y reubicación centro de salud familiar de Tongoy</text>
+<text x="1190" y="1722.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="1723.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">249</text>
+<text x="1670" y="1722.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#007C99">En ejecución</text>
+<circle cx="94" cy="1761.0" r="7" fill="#007C99"/>
+<text x="110" y="1767.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación Avda. Fundición Sur Tongoy, entre Avda. La Serena y Avda. Playa Grande</text>
+<text x="1190" y="1766.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="1767.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">224</text>
+<text x="1670" y="1766.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
+<rect x="80" y="1782" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="1805.0" r="7" fill="#007C99"/>
+<text x="110" y="1811.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Obra de confianza plaza para la primera infancia Tongoy</text>
+<text x="1190" y="1810.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">MINVU</text>
+<text x="1640" y="1811.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">47</text>
+<text x="1670" y="1810.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2023</text>
+</g>
+</g>
+<g id="Columna 2">
+<text x="1990" y="308" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#718096">INICIATIVA</text><text x="3070" y="308" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#718096">FINANCIAMIENTO</text><text x="3520" y="308" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#718096">$ MM</text><text x="3550" y="308" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#718096">ESTADO</text>
+<g id="Sector Pan de Azúcar">
+<rect x="1960" y="344" width="1800" height="62" rx="10" fill="#0B2545"/><text x="1982" y="386" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">Pan de Azúcar</text><text x="3738" y="385" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$715 millones · 7 iniciativas · 0 deportivas</text>
+<circle cx="1974" cy="449.0" r="7" fill="#007C99"/>
+<text x="1990" y="455.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación Hernán Gallardo, Pan de Azúcar (PP N°33)</text>
+<text x="3070" y="454.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
+<text x="3520" y="455.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">283</text>
+<text x="3550" y="454.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<rect x="1960" y="470" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="1974" cy="493.0" r="7" fill="#007C99"/>
+<text x="1990" y="499.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación veredas callejón Esfuerzo Campesino</text>
+<text x="3070" y="498.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="3520" y="499.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">104</text>
+<text x="3550" y="498.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#718096">Sin estado</text>
+<circle cx="1974" cy="537.0" r="7" fill="#007C99"/>
+<text x="1990" y="543.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación callejón Esfuerzo Campesino</text>
+<text x="3070" y="542.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">MOP (Vialidad)</text>
+<text x="3520" y="543.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">102</text>
+<text x="3550" y="542.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#718096">Sin estado</text>
+<rect x="1960" y="558" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="1974" cy="581.0" r="7" fill="#007C99"/>
+<text x="1990" y="587.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación pasaje Norma Andueza, Pan de Azúcar (PP N°33)</text>
+<text x="3070" y="586.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
+<text x="3520" y="587.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">81</text>
+<text x="3550" y="586.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<circle cx="1974" cy="625.0" r="7" fill="#007C99"/>
+<text x="1990" y="631.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento planta de tratamiento Sueño por un Mañana Pan de Azúcar</text>
+<text x="3070" y="630.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SUBDERE</text>
+<text x="3520" y="631.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">52</text>
+<text x="3550" y="630.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2023</text>
+<rect x="1960" y="646" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="1974" cy="669.0" r="7" fill="#007C99"/>
+<text x="1990" y="675.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación pasaje María Jacinta Durán Pan de Azúcar (PP N° 32)</text>
+<text x="3070" y="674.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
+<text x="3520" y="675.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">47</text>
+<text x="3550" y="674.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
+<circle cx="1974" cy="713.0" r="7" fill="#007C99"/>
+<text x="1990" y="719.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación pasaje Alberto La Barra Pan de Azúcar (PP N° 32)</text>
+<text x="3070" y="718.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
+<text x="3520" y="719.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">47</text>
+<text x="3550" y="718.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
+</g>
+<g id="Sector El Peñón">
+<rect x="1960" y="772" width="1800" height="62" rx="10" fill="#0B2545"/><text x="1982" y="814" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">El Peñón</text><text x="3738" y="813" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$591 millones · 4 iniciativas · 0 deportivas</text>
+<circle cx="1974" cy="877.0" r="7" fill="#007C99"/>
+<text x="1990" y="883.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción extensión redes sanitarias y conexiones domiciliarias de viviendas</text>
+<text x="1990" y="911.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">localidad El Peñón (SUBDERE)</text>
+<text x="3070" y="882.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SUBDERE y municipal</text>
+<text x="3520" y="883.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">321</text>
+<text x="3550" y="882.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#007C99">En ejecución</text>
+<rect x="1960" y="926" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="1974" cy="949.0" r="7" fill="#007C99"/>
+<text x="1990" y="955.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento plaza El Peñón</text>
+<text x="3070" y="954.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SUBDERE</text>
+<text x="3520" y="955.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">156</text>
+<text x="3550" y="954.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<circle cx="1974" cy="993.0" r="7" fill="#007C99"/>
+<text x="1990" y="999.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación pasaje Galvarino, El Peñón (PP N°33)</text>
+<text x="3070" y="998.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
+<text x="3520" y="999.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">69</text>
+<text x="3550" y="998.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<rect x="1960" y="1014" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="1974" cy="1037.0" r="7" fill="#007C99"/>
+<text x="1990" y="1043.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación pasaje Caupolicán El Peñón (PP N° 32)</text>
+<text x="3070" y="1042.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
+<text x="3520" y="1043.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">46</text>
+<text x="3550" y="1042.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
+</g>
+<g id="Sector El Sauce">
+<rect x="1960" y="1096" width="1800" height="62" rx="10" fill="#0B2545"/><text x="1982" y="1138" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">El Sauce</text><text x="3738" y="1137" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$345 millones · 2 iniciativas · 1 deportiva</text>
+<circle cx="1974" cy="1201.0" r="7" fill="#007C99"/>
+<text x="1990" y="1207.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción extensión redes sanitarias y conexiones domiciliarias de viviendas sector</text>
+<text x="1990" y="1235.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">parcela 30 El Sauce</text>
+<text x="3070" y="1206.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SUBDERE</text>
+<text x="3520" y="1207.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">245</text>
+<text x="3550" y="1206.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2021</text>
+<rect x="1960" y="1250" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="1974" cy="1273.0" r="7" fill="#D98E00"/>
+<text x="1990" y="1279.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento multicancha El Observatorio El Sauce</text>
+<text x="3070" y="1278.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="3520" y="1279.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">100</text>
+<text x="3550" y="1278.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#007C99">En licitación</text>
+</g>
+<g id="Sector Guanaqueros">
+<rect x="1960" y="1332" width="1800" height="62" rx="10" fill="#0B2545"/><text x="1982" y="1374" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">Guanaqueros</text><text x="3738" y="1373" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$150 millones · 1 iniciativa · 1 deportiva</text>
+<circle cx="1974" cy="1437.0" r="7" fill="#D98E00"/>
+<text x="1990" y="1443.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento cancha Villa Los Pescadores, Guanaqueros</text>
+<text x="3070" y="1442.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="3520" y="1443.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">150</text>
+<text x="3550" y="1442.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#007C99">En evaluación</text>
+</g>
+<g id="Sector Las Cardas">
+<rect x="1960" y="1496" width="1800" height="62" rx="10" fill="#0B2545"/><text x="1982" y="1538" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">Las Cardas</text><text x="3738" y="1537" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$118 millones · 1 iniciativa · 0 deportivas</text>
+<circle cx="1974" cy="1601.0" r="7" fill="#007C99"/>
+<text x="1990" y="1607.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción estación médico rural de Las Cardas</text>
+<text x="3070" y="1606.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">GORE (FRIL) y municipal</text>
+<text x="3520" y="1607.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">118</text>
+<text x="3550" y="1606.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2021</text>
+</g>
+<g id="Sector Tambillos">
+<rect x="1960" y="1660" width="1800" height="62" rx="10" fill="#0B2545"/><text x="1982" y="1702" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">Tambillos</text><text x="3738" y="1701" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$116 millones · 1 iniciativa · 0 deportivas</text>
+<circle cx="1974" cy="1765.0" r="7" fill="#007C99"/>
+<text x="1990" y="1771.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción nichos y veredas cementerio Tambillo</text>
+<text x="3070" y="1770.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="3520" y="1771.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">116</text>
+<text x="3550" y="1770.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+</g>
+</g>
+<g id="Fuente"><text x="80" y="2090" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="500" fill="#718096">Fuente: SECPLAN, Municipalidad de Coquimbo, planillas de iniciativas 2021-2026. Montos totales en millones de pesos nominales. Cada iniciativa se asigna a un solo sector según el lugar que nombra.</text></g>
+</svg>
