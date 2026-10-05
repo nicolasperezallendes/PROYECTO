@@ -1,302 +1,330 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="3840" height="2160" viewBox="0 0 3840 2160">
 <g id="Fondo"><rect width="3840" height="2160" fill="#F6F4EF"/></g>
-<g id="Titulo"><text x="80" y="104" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="4" fill="#007C99">INVERSIÓN 2021-2026 · INICIATIVAS POR SECTOR · LÁMINA 2 DE 4</text><text x="80" y="186" font-family="Montserrat, Arial, sans-serif" font-size="40" font-weight="800" fill="#0B2545">Sindempart, Costanera y Culebrón, Tierras Blancas, La Herradura, Parte Alta, Estadio, San Juan y Baquedano</text></g>
+<g id="Titulo"><text x="80" y="104" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="4" fill="#007C99">INVERSIÓN 2021-2026 · INICIATIVAS POR SECTOR · LÁMINA 2 DE 4</text><text x="80" y="186" font-family="Montserrat, Arial, sans-serif" font-size="48" font-weight="800" fill="#0B2545">Sindempart, Costanera y Culebrón, Tierras Blancas, La Herradura, Baquedano, Parte Alta y San Juan</text></g>
 <g id="Leyenda"><circle cx="2900" cy="166" r="12" fill="#007C99"/><text x="2922" y="175" font-family="Montserrat, Arial, sans-serif" font-size="24" font-weight="600" fill="#4A5568">Espacios públicos</text><circle cx="3190" cy="166" r="12" fill="#D98E00"/><text x="3212" y="175" font-family="Montserrat, Arial, sans-serif" font-size="24" font-weight="600" fill="#4A5568">Infraestructura deportiva</text></g>
 <g id="Columna 1">
 <text x="110" y="308" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#718096">INICIATIVA</text><text x="1190" y="308" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#718096">FINANCIAMIENTO</text><text x="1640" y="308" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#718096">$ MM</text><text x="1670" y="308" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#718096">ESTADO</text>
 <g id="Sector Sindempart">
-<rect x="80" y="344" width="1800" height="62" rx="10" fill="#0B2545"/><text x="102" y="386" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">Sindempart</text><text x="1858" y="385" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$2.677 millones · 5 iniciativas · 2 deportivas</text>
-<circle cx="94" cy="449.0" r="7" fill="#007C99"/>
-<text x="110" y="455.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Reposición cuartel 1° compañía de bomberos Sindempart</text>
-<text x="1190" y="454.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">GORE (FRIL)</text>
-<text x="1640" y="455.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">1.722</text>
-<text x="1670" y="454.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
-<rect x="80" y="470" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="94" cy="493.0" r="7" fill="#007C99"/>
-<text x="110" y="499.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento plaza Sindempart</text>
-<text x="1190" y="498.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="1640" y="499.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">471</text>
-<text x="1670" y="498.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#718096">Sin estado</text>
-<circle cx="94" cy="537.0" r="7" fill="#D98E00"/>
-<text x="110" y="543.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción pumptruck Sindempart</text>
-<text x="1190" y="542.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="1640" y="543.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">325</text>
-<text x="1670" y="542.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
-<rect x="80" y="558" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="94" cy="581.0" r="7" fill="#D98E00"/>
-<text x="110" y="587.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Conservación skatepark de Sindempart</text>
-<text x="1190" y="586.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">IND</text>
-<text x="1640" y="587.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">99</text>
-<text x="1670" y="586.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
-<circle cx="94" cy="625.0" r="7" fill="#007C99"/>
-<text x="110" y="631.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación calle Almirante Simpson Sindempart (PP N° 32)</text>
-<text x="1190" y="630.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
-<text x="1640" y="631.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">60</text>
-<text x="1670" y="630.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
+<rect x="80" y="344" width="1800" height="62" rx="10" fill="#0B2545"/><text x="102" y="386" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">Sindempart</text><text x="1858" y="385" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$2.711 millones · 6 iniciativas · 3 deportivas</text>
+<circle cx="94" cy="442.5" r="7" fill="#007C99"/>
+<text x="110" y="448.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Reposición cuartel 1° compañía de bomberos Sindempart</text>
+<text x="1190" y="447.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">GORE (FRIL)</text>
+<text x="1640" y="448.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">1.722</text>
+<text x="1670" y="447.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
+<rect x="80" y="461" width="1800" height="39" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="481.5" r="7" fill="#007C99"/>
+<text x="110" y="487.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento plaza Sindempart</text>
+<text x="1190" y="486.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="487.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">471</text>
+<text x="1670" y="486.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#718096">Sin estado</text>
+<circle cx="94" cy="520.5" r="7" fill="#D98E00"/>
+<text x="110" y="526.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción pumptruck Sindempart</text>
+<text x="1190" y="525.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="526.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">325</text>
+<text x="1670" y="525.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<rect x="80" y="539" width="1800" height="39" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="559.5" r="7" fill="#D98E00"/>
+<text x="110" y="565.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Conservación skatepark de Sindempart</text>
+<text x="1190" y="564.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">IND</text>
+<text x="1640" y="565.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">99</text>
+<text x="1670" y="564.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<circle cx="94" cy="598.5" r="7" fill="#007C99"/>
+<text x="110" y="604.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación calle Almirante Simpson Sindempart (PP N° 32)</text>
+<text x="1190" y="603.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
+<text x="1640" y="604.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">60</text>
+<text x="1670" y="603.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
+<rect x="80" y="617" width="1800" height="66" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="637.5" r="7" fill="#D98E00"/>
+<text x="110" y="643.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Tractor y equipamiento complejo deportivo Las Rosas</text>
+<text x="110" y="669.0" font-family="Montserrat, Arial, sans-serif" font-size="18" font-weight="500" font-style="italic" fill="#007C99">Ubicación: Complejo Deportivo Las Rosas, Villa Los Olivos, Sindempart</text>
+<text x="1190" y="642.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">GORE (FNDR)</text>
+<text x="1640" y="643.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">35</text>
+<text x="1670" y="642.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
 </g>
 <g id="Sector Costanera y Culebrón">
-<rect x="80" y="684" width="1800" height="62" rx="10" fill="#0B2545"/><text x="102" y="726" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">Costanera y Culebrón</text><text x="1858" y="725" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$2.127 millones · 2 iniciativas · 0 deportivas</text>
-<circle cx="94" cy="789.0" r="7" fill="#007C99"/>
-<text x="110" y="795.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Reposición Av. Costanera tramo entre Pte. Culebrón y línea férrea</text>
-<text x="1190" y="794.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">MOP (DOP)</text>
-<text x="1640" y="795.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">1.566</text>
-<text x="1670" y="794.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
-<rect x="80" y="810" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="94" cy="833.0" r="7" fill="#007C99"/>
-<text x="110" y="839.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción cierre perimetral parque humedal Culebrón</text>
-<text x="1190" y="838.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">MINVU</text>
-<text x="1640" y="839.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">561</text>
-<text x="1670" y="838.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<rect x="80" y="721" width="1800" height="62" rx="10" fill="#0B2545"/><text x="102" y="763" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">Costanera y Culebrón</text><text x="1858" y="762" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$2.127 millones · 2 iniciativas · 0 deportivas</text>
+<circle cx="94" cy="819.5" r="7" fill="#007C99"/>
+<text x="110" y="825.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Reposición Av. Costanera tramo entre Pte. Culebrón y línea férrea</text>
+<text x="1190" y="824.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">MOP (DOP)</text>
+<text x="1640" y="825.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">1.566</text>
+<text x="1670" y="824.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
+<rect x="80" y="838" width="1800" height="39" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="858.5" r="7" fill="#007C99"/>
+<text x="110" y="864.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción cierre perimetral parque humedal Culebrón</text>
+<text x="1190" y="863.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">MINVU</text>
+<text x="1640" y="864.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">561</text>
+<text x="1670" y="863.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
 </g>
 <g id="Sector Tierras Blancas">
-<rect x="80" y="892" width="1800" height="62" rx="10" fill="#0B2545"/><text x="102" y="934" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">Tierras Blancas</text><text x="1858" y="933" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$1.957 millones · 13 iniciativas · 6 deportivas</text>
-<circle cx="94" cy="997.0" r="7" fill="#007C99"/>
-<text x="110" y="1003.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación avenida Alessandri, sector Bosque San Carlos</text>
-<text x="1190" y="1002.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="1640" y="1003.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">343</text>
-<text x="1670" y="1002.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
-<rect x="80" y="1018" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="94" cy="1041.0" r="7" fill="#007C99"/>
-<text x="110" y="1047.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Ampliación delegación modular Tierras Blancas</text>
-<text x="1190" y="1046.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="1640" y="1047.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">342</text>
-<text x="1670" y="1046.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
-<circle cx="94" cy="1085.0" r="7" fill="#D98E00"/>
-<text x="110" y="1091.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento gimnasio techado de Tierras Blancas</text>
-<text x="1190" y="1090.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">IND</text>
-<text x="1640" y="1091.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">306</text>
-<text x="1670" y="1090.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
-<rect x="80" y="1106" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="94" cy="1129.0" r="7" fill="#D98E00"/>
-<text x="110" y="1135.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción skatepark de Tierras Blancas</text>
-<text x="1190" y="1134.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">GORE (FNDR) y municipal</text>
-<text x="1640" y="1135.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">221</text>
-<text x="1670" y="1134.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#007C99">En evaluación</text>
-<circle cx="94" cy="1173.0" r="7" fill="#007C99"/>
-<text x="110" y="1179.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento plaza de Tierras Blancas (Oscar Bonilla)</text>
-<text x="1190" y="1178.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="1640" y="1179.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">195</text>
-<text x="1670" y="1178.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#718096">Sin estado</text>
-<rect x="80" y="1194" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="94" cy="1217.0" r="7" fill="#D98E00"/>
-<text x="110" y="1223.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento multicancha El Huracán de Tierras Blancas</text>
-<text x="1190" y="1222.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="1640" y="1223.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">145</text>
-<text x="1670" y="1222.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2026</text>
-<circle cx="94" cy="1261.0" r="7" fill="#D98E00"/>
-<text x="110" y="1267.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento multicancha Magallanes, sector Tierras Blancas</text>
-<text x="1190" y="1266.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="1640" y="1267.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">100</text>
-<text x="1670" y="1266.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#007C99">En licitación</text>
-<rect x="80" y="1282" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="94" cy="1305.0" r="7" fill="#D98E00"/>
-<text x="110" y="1311.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento multicancha sector Tierras Blancas Las Lomas</text>
-<text x="1190" y="1310.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="1640" y="1311.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">100</text>
-<text x="1670" y="1310.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2026</text>
-<circle cx="94" cy="1349.0" r="7" fill="#007C99"/>
-<text x="110" y="1355.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción de pórtico de lectura de patentes en el sector Tierras Blancas</text>
-<text x="1190" y="1354.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SUBDERE</text>
-<text x="1640" y="1355.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">58</text>
-<text x="1670" y="1354.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2023</text>
-<rect x="80" y="1370" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="94" cy="1393.0" r="7" fill="#007C99"/>
-<text x="110" y="1399.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación pasaje Mauricio Rugenda Tierras Blancas (PP N° 32)</text>
-<text x="1190" y="1398.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
-<text x="1640" y="1399.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">57</text>
-<text x="1670" y="1398.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
-<circle cx="94" cy="1437.0" r="7" fill="#007C99"/>
-<text x="110" y="1443.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento de sistema de teleprotección municipal mediante instalación de cámaras</text>
-<text x="110" y="1471.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">de televigilancia, sector Tierras Blancas</text>
-<text x="1190" y="1442.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SUBDERE</text>
-<text x="1640" y="1443.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">54</text>
-<text x="1670" y="1442.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2023</text>
-<rect x="80" y="1486" width="1800" height="72" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="94" cy="1509.0" r="7" fill="#007C99"/>
-<text x="110" y="1515.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Instalación de riego de áreas verdes, plaza Gabriela Mistral y plaza Atacama sector Tierras</text>
-<text x="110" y="1543.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Blancas</text>
-<text x="1190" y="1514.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="1640" y="1515.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">19</text>
-<text x="1670" y="1514.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
-<circle cx="94" cy="1581.0" r="7" fill="#D98E00"/>
-<text x="110" y="1587.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Adquisición de equipamiento gimnasio municipal de Tierras Blanca (gimnasio)</text>
-<text x="1190" y="1586.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="1640" y="1587.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">17</text>
-<text x="1670" y="1586.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<rect x="80" y="915" width="1800" height="62" rx="10" fill="#0B2545"/><text x="102" y="957" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">Tierras Blancas</text><text x="1858" y="956" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$2.030 millones · 14 iniciativas · 6 deportivas</text>
+<circle cx="94" cy="1013.5" r="7" fill="#007C99"/>
+<text x="110" y="1019.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación avenida Alessandri, sector Bosque San Carlos</text>
+<text x="1190" y="1018.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="1019.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">343</text>
+<text x="1670" y="1018.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
+<rect x="80" y="1032" width="1800" height="39" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="1052.5" r="7" fill="#007C99"/>
+<text x="110" y="1058.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Ampliación delegación modular Tierras Blancas</text>
+<text x="1190" y="1057.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="1058.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">342</text>
+<text x="1670" y="1057.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<circle cx="94" cy="1091.5" r="7" fill="#D98E00"/>
+<text x="110" y="1097.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento gimnasio techado de Tierras Blancas</text>
+<text x="1190" y="1096.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">IND</text>
+<text x="1640" y="1097.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">306</text>
+<text x="1670" y="1096.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<rect x="80" y="1110" width="1800" height="39" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="1130.5" r="7" fill="#D98E00"/>
+<text x="110" y="1136.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción skatepark de Tierras Blancas</text>
+<text x="1190" y="1135.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">GORE (FNDR) y municipal</text>
+<text x="1640" y="1136.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">221</text>
+<text x="1670" y="1135.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#007C99">En evaluación</text>
+<circle cx="94" cy="1169.5" r="7" fill="#007C99"/>
+<text x="110" y="1175.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento plaza de Tierras Blancas (Oscar Bonilla)</text>
+<text x="1190" y="1174.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="1175.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">195</text>
+<text x="1670" y="1174.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#718096">Sin estado</text>
+<rect x="80" y="1188" width="1800" height="39" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="1208.5" r="7" fill="#D98E00"/>
+<text x="110" y="1214.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento multicancha El Huracán de Tierras Blancas</text>
+<text x="1190" y="1213.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="1214.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">145</text>
+<text x="1670" y="1213.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2026</text>
+<circle cx="94" cy="1247.5" r="7" fill="#D98E00"/>
+<text x="110" y="1253.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento multicancha Magallanes, sector Tierras Blancas</text>
+<text x="1190" y="1252.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="1253.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">100</text>
+<text x="1670" y="1252.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#007C99">En licitación</text>
+<rect x="80" y="1266" width="1800" height="39" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="1286.5" r="7" fill="#D98E00"/>
+<text x="110" y="1292.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento multicancha sector Tierras Blancas Las Lomas</text>
+<text x="1190" y="1291.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="1292.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">100</text>
+<text x="1670" y="1291.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2026</text>
+<circle cx="94" cy="1325.5" r="7" fill="#007C99"/>
+<text x="110" y="1331.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción área verde junta de vecinos Los Aromos</text>
+<text x="110" y="1357.0" font-family="Montserrat, Arial, sans-serif" font-size="18" font-weight="500" font-style="italic" fill="#007C99">Ubicación: Villa Los Aromos, Tierras Blancas</text>
+<text x="1190" y="1330.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SUBDERE y municipal</text>
+<text x="1640" y="1331.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">73</text>
+<text x="1670" y="1330.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2022</text>
+<rect x="80" y="1371" width="1800" height="39" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="1391.5" r="7" fill="#007C99"/>
+<text x="110" y="1397.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción de pórtico de lectura de patentes en el sector Tierras Blancas</text>
+<text x="1190" y="1396.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SUBDERE</text>
+<text x="1640" y="1397.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">58</text>
+<text x="1670" y="1396.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2023</text>
+<circle cx="94" cy="1430.5" r="7" fill="#007C99"/>
+<text x="110" y="1436.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación pasaje Mauricio Rugenda Tierras Blancas (PP N° 32)</text>
+<text x="1190" y="1435.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
+<text x="1640" y="1436.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">57</text>
+<text x="1670" y="1435.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
+<rect x="80" y="1449" width="1800" height="66" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="1469.5" r="7" fill="#007C99"/>
+<text x="110" y="1475.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento de sistema de teleprotección municipal mediante instalación de cámaras</text>
+<text x="110" y="1502.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">de televigilancia, sector Tierras Blancas</text>
+<text x="1190" y="1474.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SUBDERE</text>
+<text x="1640" y="1475.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">54</text>
+<text x="1670" y="1474.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2023</text>
+<circle cx="94" cy="1535.5" r="7" fill="#007C99"/>
+<text x="110" y="1541.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Instalación de riego de áreas verdes, plaza Gabriela Mistral y plaza Atacama sector Tierras</text>
+<text x="110" y="1568.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Blancas</text>
+<text x="1190" y="1540.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="1541.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">19</text>
+<text x="1670" y="1540.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
+<rect x="80" y="1581" width="1800" height="39" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="1601.5" r="7" fill="#D98E00"/>
+<text x="110" y="1607.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Adquisición de equipamiento gimnasio municipal de Tierras Blanca (gimnasio)</text>
+<text x="1190" y="1606.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="1607.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">17</text>
+<text x="1670" y="1606.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
 </g>
 <g id="Sector La Herradura">
-<rect x="80" y="1640" width="1800" height="62" rx="10" fill="#0B2545"/><text x="102" y="1682" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">La Herradura</text><text x="1858" y="1681" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$1.879 millones · 5 iniciativas · 1 deportiva</text>
-<circle cx="94" cy="1745.0" r="7" fill="#D98E00"/>
-<text x="110" y="1751.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción e instalación de un centro deportivo cultural en el sector de la playa de La</text>
-<text x="110" y="1779.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Herradura</text>
-<text x="1190" y="1750.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="1640" y="1751.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">832</text>
-<text x="1670" y="1750.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
-<rect x="80" y="1794" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="94" cy="1817.0" r="7" fill="#007C99"/>
-<text x="110" y="1823.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción paseo peatonal de La Herradura (casino 2025)</text>
-<text x="1190" y="1822.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="1640" y="1823.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">791</text>
-<text x="1670" y="1822.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#718096">Sin estado</text>
-<circle cx="94" cy="1861.0" r="7" fill="#007C99"/>
+<rect x="80" y="1658" width="1800" height="62" rx="10" fill="#0B2545"/><text x="102" y="1700" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">La Herradura</text><text x="1858" y="1699" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$1.879 millones · 5 iniciativas · 1 deportiva</text>
+<circle cx="94" cy="1756.5" r="7" fill="#D98E00"/>
+<text x="110" y="1762.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción e instalación de un centro deportivo cultural en el sector de la playa de La</text>
+<text x="110" y="1789.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Herradura</text>
+<text x="1190" y="1761.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="1762.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">832</text>
+<text x="1670" y="1761.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<rect x="80" y="1802" width="1800" height="39" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="1822.5" r="7" fill="#007C99"/>
+<text x="110" y="1828.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción paseo peatonal de La Herradura (casino 2025)</text>
+<text x="1190" y="1827.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="1828.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">791</text>
+<text x="1670" y="1827.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#718096">Sin estado</text>
+<circle cx="94" cy="1861.5" r="7" fill="#007C99"/>
 <text x="110" y="1867.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento paseo mirador de La Herradura</text>
 <text x="1190" y="1866.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
 <text x="1640" y="1867.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">134</text>
 <text x="1670" y="1866.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
-<rect x="80" y="1882" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="94" cy="1905.0" r="7" fill="#007C99"/>
-<text x="110" y="1911.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación calle Fundición, sector La Herradura (pav. participativa N° 30)</text>
-<text x="1190" y="1910.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
-<text x="1640" y="1911.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">91</text>
-<text x="1670" y="1910.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2022</text>
-<circle cx="94" cy="1949.0" r="7" fill="#007C99"/>
-<text x="110" y="1955.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Instalación publicitaria cierre perimetral Herradura</text>
-<text x="1190" y="1954.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="1640" y="1955.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">30</text>
-<text x="1670" y="1954.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#718096">Sin estado</text>
+<rect x="80" y="1880" width="1800" height="39" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="94" cy="1900.5" r="7" fill="#007C99"/>
+<text x="110" y="1906.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación calle Fundición, sector La Herradura (pav. participativa N° 30)</text>
+<text x="1190" y="1905.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
+<text x="1640" y="1906.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">91</text>
+<text x="1670" y="1905.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2022</text>
+<circle cx="94" cy="1939.5" r="7" fill="#007C99"/>
+<text x="110" y="1945.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Instalación publicitaria cierre perimetral Herradura</text>
+<text x="1190" y="1944.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="1640" y="1945.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">30</text>
+<text x="1670" y="1944.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#718096">Sin estado</text>
 </g>
 </g>
 <g id="Columna 2">
 <text x="1990" y="308" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#718096">INICIATIVA</text><text x="3070" y="308" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#718096">FINANCIAMIENTO</text><text x="3520" y="308" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#718096">$ MM</text><text x="3550" y="308" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#718096">ESTADO</text>
-<g id="Sector Parte Alta">
-<rect x="1960" y="344" width="1800" height="62" rx="10" fill="#0B2545"/><text x="1982" y="386" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">Parte Alta</text><text x="3738" y="385" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$1.596 millones · 6 iniciativas · 0 deportivas</text>
-<circle cx="1974" cy="449.0" r="7" fill="#007C99"/>
-<text x="1990" y="455.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción parque comunitario El Bosque sector Parte Alta</text>
-<text x="3070" y="454.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="3520" y="455.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">697</text>
-<text x="3550" y="454.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#718096">Sin estado</text>
-<rect x="1960" y="470" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="1974" cy="493.0" r="7" fill="#007C99"/>
-<text x="1990" y="499.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación calle 8 de Marzo y pasaje Andrés Sabella Parte Alta (PP N° 32)</text>
-<text x="3070" y="498.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
-<text x="3520" y="499.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">386</text>
-<text x="3550" y="498.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
-<circle cx="1974" cy="537.0" r="7" fill="#007C99"/>
-<text x="1990" y="543.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción centro comunitario El Bosque (DS27)</text>
-<text x="3070" y="542.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">MINVU</text>
-<text x="3520" y="543.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">295</text>
-<text x="3550" y="542.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
-<rect x="1960" y="558" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="1974" cy="581.0" r="7" fill="#007C99"/>
-<text x="1990" y="587.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación calle Pablo Neruda Parte Alta (PP N° 32)</text>
-<text x="3070" y="586.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
-<text x="3520" y="587.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">133</text>
-<text x="3550" y="586.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
-<circle cx="1974" cy="625.0" r="7" fill="#007C99"/>
-<text x="1990" y="631.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación pasaje Gabriela Mistral, sector Parte Alta (pav. participativa N° 30)</text>
-<text x="3070" y="630.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
-<text x="3520" y="631.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">53</text>
-<text x="3550" y="630.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2022</text>
-<rect x="1960" y="646" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="1974" cy="669.0" r="7" fill="#007C99"/>
-<text x="1990" y="675.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación pasaje Garriga, sector Parte Alta (pav. participativa N° 30)</text>
-<text x="3070" y="674.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
-<text x="3520" y="675.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">33</text>
-<text x="3550" y="674.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2022</text>
+<g id="Sector Baquedano">
+<rect x="1960" y="344" width="1800" height="62" rx="10" fill="#0B2545"/><text x="1982" y="386" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">Baquedano</text><text x="3738" y="385" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$1.846 millones · 5 iniciativas · 1 deportiva</text>
+<circle cx="1974" cy="442.5" r="7" fill="#D98E00"/>
+<text x="1990" y="448.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento plaza La Victoria Baquedano (tiene una multicancha)</text>
+<text x="3070" y="447.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">MINVU</text>
+<text x="3520" y="448.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">1.100</text>
+<text x="3550" y="447.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<rect x="1960" y="461" width="1800" height="66" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="1974" cy="481.5" r="7" fill="#007C99"/>
+<text x="1990" y="487.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Habilitación centro integral del adulto mayor</text>
+<text x="1990" y="513.0" font-family="Montserrat, Arial, sans-serif" font-size="18" font-weight="500" font-style="italic" fill="#007C99">Ubicación: Probable: Centro Armonía, ex edificio Teletón, Barrio Baquedano</text>
+<text x="3070" y="486.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="3520" y="487.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">392</text>
+<text x="3550" y="486.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
+<circle cx="1974" cy="547.5" r="7" fill="#007C99"/>
+<text x="1990" y="553.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Obras complementarias centro integral adulto mayor</text>
+<text x="1990" y="579.0" font-family="Montserrat, Arial, sans-serif" font-size="18" font-weight="500" font-style="italic" fill="#007C99">Ubicación: Probable: Centro Armonía, ex edificio Teletón, Barrio Baquedano</text>
+<text x="3070" y="552.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="3520" y="553.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">200</text>
+<text x="3550" y="552.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<rect x="1960" y="593" width="1800" height="39" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="1974" cy="613.5" r="7" fill="#007C99"/>
+<text x="1990" y="619.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción plaza Domeyko Baquedano</text>
+<text x="3070" y="618.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">MINVU</text>
+<text x="3520" y="619.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">149</text>
+<text x="3550" y="618.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2021</text>
+<circle cx="1974" cy="652.5" r="7" fill="#007C99"/>
+<text x="1990" y="658.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Habilitación suministro eléctrico centro integral del adulto mayor</text>
+<text x="1990" y="684.0" font-family="Montserrat, Arial, sans-serif" font-size="18" font-weight="500" font-style="italic" fill="#007C99">Ubicación: Probable: Centro Armonía, ex edificio Teletón, Barrio Baquedano</text>
+<text x="3070" y="657.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="3520" y="658.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">5</text>
+<text x="3550" y="657.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2023</text>
 </g>
-<g id="Sector Estadio">
-<rect x="1960" y="728" width="1800" height="62" rx="10" fill="#0B2545"/><text x="1982" y="770" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">Estadio</text><text x="3738" y="769" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$1.283 millones · 5 iniciativas · 3 deportivas</text>
-<circle cx="1974" cy="833.0" r="7" fill="#D98E00"/>
-<text x="1990" y="839.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Conservación y modernización sistema eléctrico Estadio Francisco Sánchez Rumoroso</text>
-<text x="3070" y="838.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="3520" y="839.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">1.152</text>
-<text x="3550" y="838.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#007C99">En ejecución</text>
-<rect x="1960" y="854" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="1974" cy="877.0" r="7" fill="#007C99"/>
-<text x="1990" y="883.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Adquisición de mobiliarios y materiales salón VIP y baños Francisco Sánchez Rumoroso</text>
-<text x="3070" y="882.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="3520" y="883.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">50</text>
-<text x="3550" y="882.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#718096">Sin estado</text>
-<circle cx="1974" cy="921.0" r="7" fill="#007C99"/>
-<text x="1990" y="927.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción y habilitación piso 3 y 4, sector VIP Estadio Francisco Sánchez Rumoroso</text>
-<text x="3070" y="926.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="3520" y="927.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">33</text>
-<text x="3550" y="926.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#718096">Sin estado</text>
-<rect x="1960" y="942" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="1974" cy="965.0" r="7" fill="#D98E00"/>
-<text x="1990" y="971.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Adquisición de mobiliarios para el Estadio Francisco Sánchez Rumoroso</text>
-<text x="3070" y="970.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="3520" y="971.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">24</text>
-<text x="3550" y="970.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2026</text>
-<circle cx="1974" cy="1009.0" r="7" fill="#D98E00"/>
-<text x="1990" y="1015.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Adquisición de materiales de construcción para el Estadio Francisco Sánchez Rumoroso</text>
-<text x="3070" y="1014.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="3520" y="1015.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">23</text>
-<text x="3550" y="1014.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2026</text>
+<g id="Sector Parte Alta">
+<rect x="1960" y="736" width="1800" height="62" rx="10" fill="#0B2545"/><text x="1982" y="778" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">Parte Alta</text><text x="3738" y="777" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$1.716 millones · 7 iniciativas · 1 deportiva</text>
+<circle cx="1974" cy="834.5" r="7" fill="#007C99"/>
+<text x="1990" y="840.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción parque comunitario El Bosque sector Parte Alta</text>
+<text x="3070" y="839.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="3520" y="840.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">697</text>
+<text x="3550" y="839.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#718096">Sin estado</text>
+<rect x="1960" y="853" width="1800" height="39" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="1974" cy="873.5" r="7" fill="#007C99"/>
+<text x="1990" y="879.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación calle 8 de Marzo y pasaje Andrés Sabella Parte Alta (PP N° 32)</text>
+<text x="3070" y="878.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
+<text x="3520" y="879.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">386</text>
+<text x="3550" y="878.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
+<circle cx="1974" cy="912.5" r="7" fill="#007C99"/>
+<text x="1990" y="918.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción centro comunitario El Bosque (DS27)</text>
+<text x="3070" y="917.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">MINVU</text>
+<text x="3520" y="918.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">295</text>
+<text x="3550" y="917.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<rect x="1960" y="931" width="1800" height="39" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="1974" cy="951.5" r="7" fill="#007C99"/>
+<text x="1990" y="957.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación calle Pablo Neruda Parte Alta (PP N° 32)</text>
+<text x="3070" y="956.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
+<text x="3520" y="957.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">133</text>
+<text x="3550" y="956.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
+<circle cx="1974" cy="990.5" r="7" fill="#D98E00"/>
+<text x="1990" y="996.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción multicancha El Escuadrón</text>
+<text x="1990" y="1022.0" font-family="Montserrat, Arial, sans-serif" font-size="18" font-weight="500" font-style="italic" fill="#007C99">Ubicación: Calle Regimiento Coquimbo 140, Parte Alta</text>
+<text x="3070" y="995.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="3520" y="996.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">120</text>
+<text x="3550" y="995.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="600" fill="#007C99">En contrato</text>
+<rect x="1960" y="1036" width="1800" height="39" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="1974" cy="1056.5" r="7" fill="#007C99"/>
+<text x="1990" y="1062.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación pasaje Gabriela Mistral, sector Parte Alta (pav. participativa N° 30)</text>
+<text x="3070" y="1061.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
+<text x="3520" y="1062.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">53</text>
+<text x="3550" y="1061.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2022</text>
+<circle cx="1974" cy="1095.5" r="7" fill="#007C99"/>
+<text x="1990" y="1101.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Pavimentación pasaje Garriga, sector Parte Alta (pav. participativa N° 30)</text>
+<text x="3070" y="1100.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SERVIU</text>
+<text x="3520" y="1101.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">33</text>
+<text x="3550" y="1100.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2022</text>
 </g>
 <g id="Sector San Juan">
-<rect x="1960" y="1068" width="1800" height="62" rx="10" fill="#0B2545"/><text x="1982" y="1110" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">San Juan</text><text x="3738" y="1109" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$1.279 millones · 10 iniciativas · 7 deportivas</text>
-<circle cx="1974" cy="1173.0" r="7" fill="#007C99"/>
-<text x="1990" y="1179.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento pasaje Los Pinos y gruta La Virgen Villa Dominante</text>
-<text x="3070" y="1178.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">MINVU</text>
-<text x="3520" y="1179.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">258</text>
-<text x="3550" y="1178.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
-<rect x="1960" y="1194" width="1800" height="72" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="1974" cy="1217.0" r="7" fill="#D98E00"/>
-<text x="1990" y="1223.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento multicancha deportiva gimnasio techado municipal Perfecto López (piso</text>
-<text x="1990" y="1251.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">de madera)</text>
-<text x="3070" y="1222.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">IND y municipal</text>
-<text x="3520" y="1223.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">230</text>
-<text x="3550" y="1222.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
-<circle cx="1974" cy="1289.0" r="7" fill="#007C99"/>
-<text x="1990" y="1295.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción plaza Orígenes Las Encinas</text>
-<text x="3070" y="1294.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="3520" y="1295.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">199</text>
+<rect x="1960" y="1152" width="1800" height="62" rx="10" fill="#0B2545"/><text x="1982" y="1194" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">San Juan</text><text x="3738" y="1193" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$1.524 millones · 13 iniciativas · 7 deportivas</text>
+<circle cx="1974" cy="1250.5" r="7" fill="#007C99"/>
+<text x="1990" y="1256.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento pasaje Los Pinos y gruta La Virgen Villa Dominante</text>
+<text x="3070" y="1255.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">MINVU</text>
+<text x="3520" y="1256.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">258</text>
+<text x="3550" y="1255.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<rect x="1960" y="1269" width="1800" height="66" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="1974" cy="1289.5" r="7" fill="#D98E00"/>
+<text x="1990" y="1295.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento multicancha deportiva gimnasio techado municipal Perfecto López (piso</text>
+<text x="1990" y="1322.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">de madera)</text>
+<text x="3070" y="1294.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">IND y municipal</text>
+<text x="3520" y="1295.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">230</text>
 <text x="3550" y="1294.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
-<rect x="1960" y="1310" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="1974" cy="1333.0" r="7" fill="#D98E00"/>
-<text x="1990" y="1339.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Adquisición de equipamiento deportivo para gimnasio techado Perfecto Arturo López</text>
-<text x="3070" y="1338.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="3520" y="1339.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">121</text>
-<text x="3550" y="1338.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
-<circle cx="1974" cy="1377.0" r="7" fill="#D98E00"/>
-<text x="1990" y="1383.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento baños, camarines y cubierta gimnasio techado municipal</text>
-<text x="3070" y="1382.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="3520" y="1383.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">111</text>
-<text x="3550" y="1382.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
-<rect x="1960" y="1398" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="1974" cy="1421.0" r="7" fill="#D98E00"/>
-<text x="1990" y="1427.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Conservación gimnasio techado (radier multicancha)</text>
-<text x="3070" y="1426.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
-<text x="3520" y="1427.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">95</text>
-<text x="3550" y="1426.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
-<circle cx="1974" cy="1465.0" r="7" fill="#007C99"/>
-<text x="1990" y="1471.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Reparación techumbre consultorio general urbano de San Juan</text>
-<text x="3070" y="1470.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">GORE (FNDR)</text>
-<text x="3520" y="1471.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">82</text>
-<text x="3550" y="1470.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2023</text>
-<rect x="1960" y="1486" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="1974" cy="1509.0" r="7" fill="#D98E00"/>
-<text x="1990" y="1515.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento multicancha Villa Maestranza San Juan (IND)</text>
-<text x="3070" y="1514.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">IND</text>
-<text x="3520" y="1515.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">80</text>
-<text x="3550" y="1514.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2026</text>
-<circle cx="1974" cy="1553.0" r="7" fill="#D98E00"/>
-<text x="1990" y="1559.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Conservación gimnasio techado (evacuación de aguas lluvias)</text>
-<text x="3070" y="1558.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">IND y municipal</text>
-<text x="3520" y="1559.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">59</text>
-<text x="3550" y="1558.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
-<rect x="1960" y="1574" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="1974" cy="1597.0" r="7" fill="#D98E00"/>
-<text x="1990" y="1603.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Conservación gimnasio techado (instalación eléctrica)</text>
-<text x="3070" y="1602.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">IND y municipal</text>
-<text x="3520" y="1603.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">42</text>
-<text x="3550" y="1602.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2023</text>
+<circle cx="1974" cy="1355.5" r="7" fill="#007C99"/>
+<text x="1990" y="1361.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción plaza Orígenes Las Encinas</text>
+<text x="3070" y="1360.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="3520" y="1361.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">199</text>
+<text x="3550" y="1360.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<rect x="1960" y="1374" width="1800" height="66" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="1974" cy="1394.5" r="7" fill="#007C99"/>
+<text x="1990" y="1400.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción plaza memorial ferroviario La Covico</text>
+<text x="1990" y="1426.0" font-family="Montserrat, Arial, sans-serif" font-size="18" font-weight="500" font-style="italic" fill="#007C99">Ubicación: Sector Covico, Av. Alessandri con Manuel Jesús Rivera, Villa Dominante</text>
+<text x="3070" y="1399.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">GORE (FRIL)</text>
+<text x="3520" y="1400.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">161</text>
+<text x="3550" y="1399.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<circle cx="1974" cy="1460.5" r="7" fill="#D98E00"/>
+<text x="1990" y="1466.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Adquisición de equipamiento deportivo para gimnasio techado Perfecto Arturo López</text>
+<text x="3070" y="1465.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="3520" y="1466.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">121</text>
+<text x="3550" y="1465.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<rect x="1960" y="1479" width="1800" height="39" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="1974" cy="1499.5" r="7" fill="#D98E00"/>
+<text x="1990" y="1505.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento baños, camarines y cubierta gimnasio techado municipal</text>
+<text x="3070" y="1504.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="3520" y="1505.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">111</text>
+<text x="3550" y="1504.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
+<circle cx="1974" cy="1538.5" r="7" fill="#D98E00"/>
+<text x="1990" y="1544.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Conservación gimnasio techado (radier multicancha)</text>
+<text x="3070" y="1543.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="3520" y="1544.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">95</text>
+<text x="3550" y="1543.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
+<rect x="1960" y="1557" width="1800" height="39" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="1974" cy="1577.5" r="7" fill="#007C99"/>
+<text x="1990" y="1583.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Reparación techumbre consultorio general urbano de San Juan</text>
+<text x="3070" y="1582.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">GORE (FNDR)</text>
+<text x="3520" y="1583.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">82</text>
+<text x="3550" y="1582.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2023</text>
+<circle cx="1974" cy="1616.5" r="7" fill="#D98E00"/>
+<text x="1990" y="1622.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento multicancha Villa Maestranza San Juan (IND)</text>
+<text x="3070" y="1621.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">IND</text>
+<text x="3520" y="1622.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">80</text>
+<text x="3550" y="1621.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2026</text>
+<rect x="1960" y="1635" width="1800" height="66" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="1974" cy="1655.5" r="7" fill="#007C99"/>
+<text x="1990" y="1661.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción sede comunitaria JJVV Villa Fedeco, sector La Covico</text>
+<text x="1990" y="1687.0" font-family="Montserrat, Arial, sans-serif" font-size="18" font-weight="500" font-style="italic" fill="#007C99">Ubicación: Sector Covico, Av. Alessandri con Manuel Jesús Rivera, Villa Dominante</text>
+<text x="3070" y="1660.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">SUBDERE</text>
+<text x="3520" y="1661.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">60</text>
+<text x="3550" y="1660.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2023</text>
+<circle cx="1974" cy="1721.5" r="7" fill="#D98E00"/>
+<text x="1990" y="1727.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Conservación gimnasio techado (evacuación de aguas lluvias)</text>
+<text x="3070" y="1726.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">IND y municipal</text>
+<text x="3520" y="1727.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">59</text>
+<text x="3550" y="1726.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2024</text>
+<rect x="1960" y="1740" width="1800" height="39" fill="#FFFFFF" fill-opacity="0.7"/>
+<circle cx="1974" cy="1760.5" r="7" fill="#D98E00"/>
+<text x="1990" y="1766.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Conservación gimnasio techado (instalación eléctrica)</text>
+<text x="3070" y="1765.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">IND y municipal</text>
+<text x="3520" y="1766.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">42</text>
+<text x="3550" y="1765.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2023</text>
+<circle cx="1974" cy="1799.5" r="7" fill="#007C99"/>
+<text x="1990" y="1805.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento locomotora a vapor "Vaporina 3858 de cuatro ejes"</text>
+<text x="1990" y="1831.0" font-family="Montserrat, Arial, sans-serif" font-size="18" font-weight="500" font-style="italic" fill="#007C99">Ubicación: Sector Covico, Av. Alessandri con Manuel Jesús Rivera, Villa Dominante</text>
+<text x="3070" y="1804.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Municipal</text>
+<text x="3520" y="1805.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">25</text>
+<text x="3550" y="1804.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
 </g>
-<g id="Sector Baquedano">
-<rect x="1960" y="1656" width="1800" height="62" rx="10" fill="#0B2545"/><text x="1982" y="1698" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">Baquedano</text><text x="3738" y="1697" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="600" fill="#D7E3EE">$1.249 millones · 2 iniciativas · 1 deportiva</text>
-<circle cx="1974" cy="1761.0" r="7" fill="#D98E00"/>
-<text x="1990" y="1767.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Mejoramiento plaza La Victoria Baquedano (tiene una multicancha)</text>
-<text x="3070" y="1766.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">MINVU</text>
-<text x="3520" y="1767.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">1.100</text>
-<text x="3550" y="1766.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2025</text>
-<rect x="1960" y="1782" width="1800" height="44" fill="#FFFFFF" fill-opacity="0.7"/>
-<circle cx="1974" cy="1805.0" r="7" fill="#007C99"/>
-<text x="1990" y="1811.0" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B2545">Construcción plaza Domeyko Baquedano</text>
-<text x="3070" y="1810.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">MINVU</text>
-<text x="3520" y="1811.0" text-anchor="end" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B2545">149</text>
-<text x="3550" y="1810.0" font-family="Montserrat, Arial, sans-serif" font-size="19" font-weight="500" fill="#4A5568">Terminada 2021</text>
 </g>
-</g>
-<g id="Fuente"><text x="80" y="2090" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="500" fill="#718096">Fuente: SECPLAN, Municipalidad de Coquimbo, planillas de iniciativas 2021-2026. Montos totales en millones de pesos nominales. Cada iniciativa se asigna a un solo sector según el lugar que nombra.</text></g>
+<g id="Fuente"><text x="80" y="2090" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="500" fill="#718096">Fuente: SECPLAN, Municipalidad de Coquimbo, planillas de iniciativas 2021-2026. Montos totales en millones de pesos nominales. Cada iniciativa se asigna a un solo sector, según el lugar que nombra o, si no lo indica, según prensa y OpenStreetMap.</text></g>
 </svg>
