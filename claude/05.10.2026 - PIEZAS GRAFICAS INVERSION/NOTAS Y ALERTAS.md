@@ -30,7 +30,7 @@ La tipografía es Montserrat (Google Fonts, gratuita). Si no está instalada, Af
 - **Dónde estaba el error.** La tabla territorial del informe Word (sección 4.7) contaba las iniciativas que *nombran* cada sector. Así, a Guanaqueros le asignaba 3 iniciativas por $1.668.672.830. Dos de ellas son la pavimentación de la Avenida Guanaqueros, que está en Tongoy: etapa 1 Fundición-Pichasca ($688.826.613, terminada en 2025) y segunda etapa ($829.846.217, sin estado informado).
 - **La cifra correcta.** En la localidad de Guanaqueros hay una sola iniciativa: el mejoramiento de la cancha Villa Los Pescadores, $150.000.000, municipal, en evaluación de ofertas.
 - **El informe Word quedó corregido.** Ahora asigna cada iniciativa a un solo sector, con el mismo criterio del mapa, y las filas suman el total.
-- **El mapa quedó corregido.** Lleva una nota que explica que las obras de Av. Guanaqueros ($1.519 millones) se cuentan en Tongoy.
+- **El mapa ya estaba correcto.** Muestra Guanaqueros con 1 iniciativa por $150 millones. La nota aclaratoria se quitó a pedido de Nicolás; si alguien pregunta, las obras de Av. Guanaqueros ($1.519 millones) se cuentan en Tongoy.
 - **La infografía por año y la lámina del estadio no cambian.** No tienen datos por localidad, y sus cifras coinciden con el informe.
 
 ## Alertas
