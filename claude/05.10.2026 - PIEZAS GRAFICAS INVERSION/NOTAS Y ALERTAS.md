@@ -25,6 +25,14 @@ La tipografía es Montserrat (Google Fonts, gratuita). Si no está instalada, Af
 - Aporte municipal sobre lo terminado cada año: 8% en 2021, 56% en 2025, 92% en lo que va de 2026.
 - Estadio: $1.341 millones en proyectos 2023-2026. Iluminación $955 MM, butacas $139 MM, maquinaria para el césped $103 MM, pantalla LED $59 MM, insumos y materiales $48 MM, pantalla marcador $37 MM.
 
+## Rectificación de Guanaqueros (05.10.2026)
+
+- **Dónde estaba el error.** La tabla territorial del informe Word (sección 4.7) contaba las iniciativas que *nombran* cada sector. Así, a Guanaqueros le asignaba 3 iniciativas por $1.668.672.830. Dos de ellas son la pavimentación de la Avenida Guanaqueros, que está en Tongoy: etapa 1 Fundición-Pichasca ($688.826.613, terminada en 2025) y segunda etapa ($829.846.217, sin estado informado).
+- **La cifra correcta.** En la localidad de Guanaqueros hay una sola iniciativa: el mejoramiento de la cancha Villa Los Pescadores, $150.000.000, municipal, en evaluación de ofertas.
+- **El informe Word quedó corregido.** Ahora asigna cada iniciativa a un solo sector, con el mismo criterio del mapa, y las filas suman el total.
+- **El mapa quedó corregido.** Lleva una nota que explica que las obras de Av. Guanaqueros ($1.519 millones) se cuentan en Tongoy.
+- **La infografía por año y la lámina del estadio no cambian.** No tienen datos por localidad, y sus cifras coinciden con el informe.
+
 ## Alertas
 
 1. **El mapa no es georreferenciación oficial.** Las planillas no traen coordenadas. Cada iniciativa se asignó a un sector según su nombre: se ubicaron 143 de 183 iniciativas ($48.549 millones). Las otras 40 ($6.088 millones) son obras comunales o sin sector claro, y el mapa lo dice.
