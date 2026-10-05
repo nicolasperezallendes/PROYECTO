@@ -19,11 +19,11 @@
 | Dirección | 163 de 163 | Ídem |
 | Aniversario (fecha o mes) | 69 de 163 | PEI de cada establecimiento y noticias del SLEP |
 | Año de fundación | 93 de 163 | Ídem |
-| Presidente de CEAL | 0 de 92 que corresponden | Sin registro público |
+| Presidente de CEAL | 38 de 94 que corresponden | Nómina 2026 del SLEP Puerto Cordillera (versión reservada) |
 
 **ALERTAS**
 
-1. **Presidentes de centros de estudiantes.** No existe un registro público. Se eligen cada año y casi siempre los preside un menor de edad. La columna quedó en amarillo para completar en los 92 establecimientos con 2.° ciclo básico, enseñanza media o adultos. Lo más rápido es pedir el dato por oficio al SLEP Puerto Cordillera para los públicos y directamente a cada colegio particular. Ese dato se debería usar solo para vinculación institucional (Ley 19.628).
+1. **Presidentes de centros de estudiantes.** Se integró la nómina 2026 de gobiernos estudiantiles del SLEP Puerto Cordillera: 38 presidentas y presidentes, todos cruzados por RBD con su establecimiento. Cubre a todos los establecimientos públicos de Coquimbo con matrícula, incluidas las escuelas especiales Jean Piaget y Juan Sandoval. En los particulares no hay registro público, y quedan 56 para completar por oficio. **En este repositorio, que es público, los nombres y correos de los estudiantes aparecen como "reservado".** La versión completa se entregó aparte y no debe publicarse, porque son datos de menores de edad (Ley 19.628 y Ley 21.719).
 2. **La tabla del SLEP no está al día.** El 4 de mayo de 2026 asumieron por Alta Dirección Pública Carlos Videla Bonilla (IAC Estado de Israel), Neusy Chelmes Julio (Liceo Diego Portales), Jenny Salinas Rosales (Escuela República de Italia) y Carola Gutiérrez Piqueres (Colegio Santa Cecilia). En la base ya están corregidos.
 3. **Seis directores por confirmar.** En Claudio Arrau, Cardenal Caro, Pablo Neruda, La Herradura, Mario Muñoz y República de Grecia, el SLEP y MINEDUC informan a personas distintas. La columna Observaciones indica en cada caso cuál nombre se usó y cuál es el otro.
 4. **Teléfonos de colegios particulares.** Muchos venían en formato antiguo (6 u 8 dígitos) y se pasaron al formato actual. Los que fueron convertidos o tienen prefijo de Santiago quedaron marcados como "verificar".
