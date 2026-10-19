@@ -26,7 +26,7 @@ Estados posibles: **Detectada**, **Cotizada**, **Seleccionada**, **OC aceptada**
 
 | Código | Nombre | Organismo | Monto disponible | Cierre | Cotizaciones a la fecha | Estado | Próximo paso |
 |---|---|---|---|---|---|---|---|
-| 1317954-9-COT26 | Estudio de clima laboral 2026 (19 trabajadores, comparación con 2025, presentación al Directorio y plan de mejora) | Empresa Portuaria Coquimbo (Región de Coquimbo) | $1.000.000 con impuestos | **Enviar el mar 20-10-2026** (el PDF fija la recepción ese día; la plataforma dice lun 26-10, 23:59) | 7 (19-10) | **Propuesta en borrador** | Completar la experiencia del consultor (40%), el precio por etapa y el IVA; confirmar EMT; pasar a PDF y enviar. Propuesta: `claude/19.10.2026 - PROPUESTA COMPRA AGIL 1317954-9-COT26 CLIMA LABORAL EPCO.md` |
+| 1317954-9-COT26 | Estudio de clima laboral 2026 (19 trabajadores, comparación con 2025, presentación al Directorio y plan de mejora) | Empresa Portuaria Coquimbo (Región de Coquimbo) | $1.000.000 con impuestos | **Enviar el mar 20-10-2026** (el PDF fija la recepción ese día; la plataforma dice lun 26-10, 23:59) | 7 (19-10) | **Lista para enviar**: $750.000 con IVA ($630.252 + $119.748), 36 horas | Nicolás envía por la plataforma: descripción, PDF `claude/licitaciones/1317954-9-COT26/PROPUESTA JUNCOS - CLIMA LABORAL EPCO 2026.pdf` y su CV. Evaluación: precio 40%, experiencia del consultor 40%, metodología 20% |
 | 3760-612-COT26 | Estudio cualitativo: 2 grupos focales en el barrio Monte Centro, El Monte (SECPLAN, Quiero Mi Barrio) | Región Metropolitana | $2.000.000 | Mié 21-10-2026, 10:00 | 0 (19-10) | Alternativa | Producto 80101703, fuera de los rubros inscritos. Requiere trabajo presencial en El Monte |
 | 1109692-245-COT26 | Estudio de factibilidad, pertinencia territorial y plan de negocios del CFT Estatal de Magallanes | Magallanes | $7.200.000 | Mié 21-10-2026, 16:00 | 0 (19-10) | Descartada por plazo | Producto 80101601 (no inscrito). 60 días de ejecución y varios anexos |
 
@@ -72,13 +72,13 @@ Estados posibles: **Detectada**, **Cotizada**, **Seleccionada**, **OC aceptada**
 | Renovar la inscripción en el Registro de Proveedores | Antes del 29-12-2026 | Pendiente |
 | Agregar en el SII un giro de consultoría (702000, 732000 o 722000) y actualizarlo en Mercado Público | Lo antes posible | Pendiente |
 | Quitar 5 rubros sin relación y agregar los 8 sugeridos. Los rubros también definen qué Compras Ágiles avisa la plataforma | Lo antes posible | Pendiente |
-| Verificar en Mercado Público que JUNCOS figure como Empresa de Menor Tamaño (micro). Sin eso no puede cotizar en el primer llamado de Compra Ágil. Si no aparece, consultar a la mesa de ayuda (600 0061 211) | Antes de la primera Compra Ágil | Pendiente |
+| ~~Verificar en Mercado Público que JUNCOS figure como Empresa de Menor Tamaño (micro).~~ Sin eso no puede cotizar en el primer llamado de Compra Ágil. Si no aparece, consultar a la mesa de ayuda (600 0061 211) | Antes de la primera Compra Ágil | Hecho el 19-10-2026: es EMT |
 | Primera corrida real de `compras_agiles.py` | 19-10-2026 | Hecho: el ticket sirve, Coquimbo es la región 4 y `codigo_producto` es UNSPSC de 8 dígitos. Se ajustó a páginas de 10 y al filtro por rubros inscritos |
 | Confirmar el enlace público a la ficha de cada Compra Ágil y probar el filtro de texto `q` | Esta semana | Pendiente |
 | Pedir los certificados de vigencia, boletín comercial y quiebras | Esta semana (para 564953-79-LE26) | Pendiente |
 | Redactar el código de ética o programa de integridad | Antes del 22-10-2026 | Hecho en otra sesión, sin subir a GitHub. Recuperar o regenerar |
 | Reunir certificados de experiencia del titular (trabajos previos) | Antes del 22-10-2026 | Pendiente |
-| Completar el teléfono y el correo de contacto en la ficha | Cuando Nicolás los entregue | Pendiente |
+| Completar el teléfono y el correo de contacto en la ficha | 19-10-2026 | Hecho |
 | Ingresar la declaración jurada de socios y beneficiarios finales en Mercado Público | Lo antes posible | Pendiente |
 
 ## Historial de resultados

@@ -53,10 +53,12 @@ Si el usuario pega una versión distinta de esta skill (por ejemplo, de otra ses
 | Acreditación en Mercado Público | Sin acreditación vigente (ficha pública) |
 | Declaración jurada de socios y beneficiarios | No ingresada (ficha pública) |
 | Sellos (Empresa Mujer u otros) | No tiene |
-| Tamaño de empresa (EMT) en Mercado Público | PENDIENTE de verificar. Define si puede cotizar en el primer llamado de Compra Ágil |
+| Tamaño de empresa (EMT) en Mercado Público | Empresa de Menor Tamaño (confirmado por Nicolás el 19-10-2026). Puede cotizar en el primer llamado de Compra Ágil |
 | Historial de ventas al Estado | Sin registros a octubre de 2026 |
 | Unidades adicionales | No tiene |
-| Teléfono y correo de contacto | PENDIENTE (pedírselos al usuario) |
+| Teléfono y correo de contacto | +56 9 9423 4563 · juncoseirl@gmail.com (entregados el 19-10-2026) |
+| Régimen de IVA | Factura afecta a IVA (confirmado por Nicolás el 19-10-2026). El precio total con impuestos es el neto × 1,19 |
+| Currículum del titular | Sociólogo (U. Central, 2013) y magíster en Ciencia Política (U. de Chile, 2016). CV 2026 entregado el 19-10-2026; se adjunta en las ofertas cuando se evalúa la experiencia del consultor |
 | Logo, paleta y generador de documentos | En el proyecto JUNCOS de claude.ai (skills `/cotizacion`, `/orden`, `/presentacion-juncos`) |
 
 **Si falta un dato, pídeselo al usuario. No lo inventes.** Cuando cambie algún dato, actualiza esta tabla con la fecha de verificación.
@@ -67,7 +69,7 @@ Si el usuario pega una versión distinta de esta skill (por ejemplo, de otra ses
 2. **Giro en el SII:** el giro principal registrado (inmobiliario) no calza con una consultora. Si las bases exigen giro acorde, recomienda agregar la actividad 702000 (consultoría de gestión), 732000 (estudios de mercado y encuestas de opinión pública) o 722000 (investigación en ciencias sociales), y luego usar "Actualizar con la versión más reciente" en Mercado Público.
 3. **Experiencia:** la empresa no registra ventas al Estado. En criterios de experiencia hay que revisar si las bases aceptan la del titular o la del equipo, con certificados de clientes, contratos u órdenes de compra. Las Compras Ágiles son la vía más rápida para empezar a acumularla.
 4. **Puntos que hoy se pierden:** Sello Empresa Mujer y, si no se prepara, el programa de integridad.
-5. **Compra Ágil y EMT:** el primer llamado es solo para Empresas de Menor Tamaño. Mientras no se confirme que JUNCOS figura como EMT, avisa este riesgo cada vez que recomiendes cotizar una.
+5. **Compra Ágil y EMT:** el primer llamado es solo para Empresas de Menor Tamaño. JUNCOS figura como EMT (19-10-2026). Revísalo una vez al año, porque el tamaño se recalcula con las ventas.
 
 ## Rubros inscritos en Mercado Público (14, verificados el 19-10-2026)
 
