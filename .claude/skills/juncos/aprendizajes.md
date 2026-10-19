@@ -66,3 +66,4 @@ Agregado el 19-10-2026, a partir de chilecompra.cl/api y de la documentación en
 - Los informes abren con la conclusión y las recomendaciones, y el detalle va después.
 - No inventes datos de la empresa: pídeselos al usuario. El correo del usuario no se escribe en documentos sin que él lo entregue para ese fin.
 - Cuando una vía falla o se bloquea, dilo claro, explica la alternativa y sigue con lo que sí se puede hacer. No rellenes con datos supuestos.
+- **Compra Ágil con pauta propia (19-10-2026):** el adjunto de una Compra Ágil puede traer criterios de evaluación propios (en EPCO: precio 40%, experiencia del consultor 40% y metodología 20%) y **fechas distintas a las de la plataforma**. Cuando no coinciden, envía en la fecha más temprana. En estos casos la experiencia suele ser **del consultor o del equipo**, así que la trayectoria de Nicolás sí cuenta.

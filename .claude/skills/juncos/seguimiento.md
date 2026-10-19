@@ -26,7 +26,7 @@ Estados posibles: **Detectada**, **Cotizada**, **Seleccionada**, **OC aceptada**
 
 | Código | Nombre | Organismo | Monto disponible | Cierre | Cotizaciones a la fecha | Estado | Próximo paso |
 |---|---|---|---|---|---|---|---|
-| 1317954-9-COT26 | Estudio de clima laboral 2026 | Empresa Portuaria Coquimbo (Región de Coquimbo) | $1.000.000 con impuestos (neto máximo $840.336) | Lun 26-10-2026, 23:59 | 7 (19-10) | **Elegida para cotizar** | Nicolás baja el adjunto "Cotización Clima Laboral 2026 .pdf". Confirmar EMT y código de producto (el detalle de la API falla) |
+| 1317954-9-COT26 | Estudio de clima laboral 2026 (19 trabajadores, comparación con 2025, presentación al Directorio y plan de mejora) | Empresa Portuaria Coquimbo (Región de Coquimbo) | $1.000.000 con impuestos | **Enviar el mar 20-10-2026** (el PDF fija la recepción ese día; la plataforma dice lun 26-10, 23:59) | 7 (19-10) | **Propuesta en borrador** | Completar la experiencia del consultor (40%), el precio por etapa y el IVA; confirmar EMT; pasar a PDF y enviar. Propuesta: `claude/19.10.2026 - PROPUESTA COMPRA AGIL 1317954-9-COT26 CLIMA LABORAL EPCO.md` |
 | 3760-612-COT26 | Estudio cualitativo: 2 grupos focales en el barrio Monte Centro, El Monte (SECPLAN, Quiero Mi Barrio) | Región Metropolitana | $2.000.000 | Mié 21-10-2026, 10:00 | 0 (19-10) | Alternativa | Producto 80101703, fuera de los rubros inscritos. Requiere trabajo presencial en El Monte |
 | 1109692-245-COT26 | Estudio de factibilidad, pertinencia territorial y plan de negocios del CFT Estatal de Magallanes | Magallanes | $7.200.000 | Mié 21-10-2026, 16:00 | 0 (19-10) | Descartada por plazo | Producto 80101601 (no inscrito). 60 días de ejecución y varios anexos |
 
