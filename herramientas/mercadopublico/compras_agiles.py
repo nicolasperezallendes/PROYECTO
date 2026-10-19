@@ -104,7 +104,7 @@ def pedir(sufijo="", **params):
                     espera *= 2
                     continue
                 raise ErrorCA(f"{e.code}: {cuerpo}")
-            except (urllib.error.URLError, TimeoutError) as e:
+            except (urllib.error.URLError, TimeoutError, ConnectionError, OSError) as e:  # incluye cortes de conexión a mitad de lectura
                 if intento < 4:
                     time.sleep(espera)
                     espera *= 2
@@ -138,6 +138,31 @@ def listar_publicadas(dias, region=None, tamano=10, max_paginas=200):
             print(file=sys.stderr)
             return items
         params["numero_pagina"] += 1
+
+
+def buscar_texto(terminos, region=None, max_paginas=4):
+    """Busca Compras Ágiles publicadas con el filtro de texto q de la API (rápido)."""
+    items, vistos = [], set()
+    for t in terminos:
+        params = {"estado": "publicada", "tamano_pagina": 10, "numero_pagina": 1, "q": t}
+        if region:
+            params["region"] = region
+        while True:
+            try:
+                payload = (pedir(**params) or {}).get("payload") or {}
+            except ErrorCA as e:
+                print(f"  '{t}' página {params['numero_pagina']}: {e}", file=sys.stderr)
+                break
+            for it in payload.get("items") or []:
+                if it.get("codigo") not in vistos:
+                    vistos.add(it.get("codigo"))
+                    items.append(it)
+            total = int((payload.get("paginacion") or {}).get("total_paginas") or 1)
+            print(f"  '{t}': página {params['numero_pagina']}/{total}, acumuladas {len(items)}", file=sys.stderr)
+            if params["numero_pagina"] >= min(total, max_paginas):
+                break
+            params["numero_pagina"] += 1
+    return items
 
 
 def detalle(codigo):
@@ -289,6 +314,8 @@ def main():
     p.add_argument("--sin-prefiltro", action="store_true",
                    help="revisa el detalle de todas las no excluidas, no solo las que tienen "
                         "palabras clave en el nombre (lento: unos 17 s por Compra Ágil)")
+    p.add_argument("--q", help="buscar con el filtro de texto de la API, términos separados por coma "
+                               "(ej. 'clima,estudio,encuesta'). Mucho más rápido que recorrer todo")
     p.add_argument("--md", help="guardar el ranking en este archivo Markdown")
     p.add_argument("--json", help="guardar el ranking en JSON")
     args = p.parse_args()
@@ -312,7 +339,10 @@ def main():
     consulta = datetime.now(CHILE) if CHILE else datetime.now()
     print("Bajando Compras Ágiles publicadas...", file=sys.stderr)
     try:
-        todas = listar_publicadas(dias, region)
+        if args.q:
+            todas = buscar_texto([t.strip() for t in args.q.split(",") if t.strip()], region)
+        else:
+            todas = listar_publicadas(dias, region)
     except ErrorCA as e:
         sys.exit(f"No se pudo listar: {e}")
 

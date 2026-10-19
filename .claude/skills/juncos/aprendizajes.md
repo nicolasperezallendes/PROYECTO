@@ -36,7 +36,10 @@ Agregado el 19-10-2026, a partir de chilecompra.cl/api y de la documentación en
 - **Sin confirmar todavía:**
   - el enlace público a la ficha de cada Compra Ágil;
   - si la API muestra el plazo para aceptar la orden de compra;
-  - si el filtro de texto `q` funciona y si sirve para reemplazar el prefiltro por nombre.
+  - si el detalle de algunas Compras Ágiles falla siempre. La de clima laboral 1317954-9-COT26 dio 504 en todos los intentos del 19-10-2026, mientras otras respondían.
+- **Filtro de texto `q` (probado el 19-10-2026): funciona y es rápido**, unos 10 segundos por página. Es la mejor forma de buscar: `compras_agiles.py --q "clima,estudio,encuesta,diagnostico,capacitacion,taller,charla"`. Recorrer una región entera sin `q` toma casi una hora.
+- **Adjuntos de Compra Ágil:** la API solo da `id` y `nombre`, no el archivo. El buscador público (`buscador.mercadopublico.cl`) responde 403 desde la nube (firewall de CloudFront). No se intenta saltar. Los adjuntos los baja Nicolás desde su escritorio de proveedor, menú Compra Ágil, y los sube a la conversación.
+- **Cortes de conexión:** la API a veces corta la conexión a mitad de la respuesta (ConnectionResetError). `compras_agiles.py` ya los reintenta, pero un recorrido largo puede perderse si se cae. Prefiere `--q`.
 - **Pruebas:** `compras_agiles.py` se probó el 19-10-2026 contra una API simulada, no contra la real. La sesión del chat de claude.ai no tenía red hacia mercadopublico.cl ni ticket.
 - **Las órdenes de compra de Compra Ágil** aparecen en la API v1 de órdenes con el tipo AG. Sirven para ver quién ganó y a qué precio.
 
