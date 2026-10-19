@@ -11,7 +11,8 @@ Léelas antes de usar las herramientas. Cada lección nueva se agrega con su fec
 - **El listado trae los nombres cortados** (unos 50 caracteres). El nombre completo y la descripción están en el detalle.
 - **Monedas:** `Moneda` puede ser CLP, CLF (que es UF) o USD. Por ejemplo, 3.400 en CLF son 3.400 UF, no $3.400.
 - **Montos ocultos:** con `VisibilidadMonto` igual a 0, el monto no se publica. Hay que decir "no publica", no "$0".
-- **Códigos de rubro:** los productos usan UNSPSC de 8 dígitos. ChileCompra tiene además categorías propias de 9 dígitos (por ejemplo, 102000000 Consultoría), que no calzan con los productos licitados y no sirven para puntuar.
+- **Códigos de rubro:** los productos usan UNSPSC de 8 dígitos, pero también hay categorías propias de ChileCompra de 9 dígitos que **sí aparecen en las licitaciones**. Se había supuesto lo contrario y se corrigió el 19-10-2026. Por ejemplo, la categoría 102000000 "Consultoría", con el producto 102101001 "Planificación y Factibilidad", aparece en unas 20 de cada 166 licitaciones de consultoría, casi todas del MOP y de ingeniería. `postulables.py` compara cada código solo con códigos de su mismo largo.
+- **Cómo revisar qué rubros se usan:** baja el detalle de las licitaciones activas cuyo nombre tenga consultoría, asesoría, estudio, diagnóstico, encuesta, evaluación, investigación o capacitación (sin obras ni suministros), y cuenta los `CodigoCategoria` de sus ítems. Lo hace `rubros_en_uso.py` en unos 7 minutos. El resultado del 19-10-2026 está en `rubros-consultoria.md`.
 - **Unidades de la Municipalidad de Coquimbo:** 2446 es la municipal central y 2448 el Departamento de Salud (organismo 87901).
 - **Ruido conocido del filtro por nombre:** "diseño" trae ingeniería y arquitectura, como puentes, ciclovías, paraderos, plazas y edificios. "Capacitación" trae franquicias y seguros. Ya están en `excluir`.
 
@@ -26,6 +27,8 @@ Léelas antes de usar las herramientas. Cada lección nueva se agrega con su fec
 
 ## Entorno de trabajo
 
+- **El acceso a mercadopublico.cl depende de la sesión.** En una sesión en la nube del 19-10-2026 la red no llegaba a mercadopublico.cl. En otra del mismo día (rama `claude/stoic-darwin-gi9n29`) la API y la ficha pública funcionaron sin problema. Prueba primero con `python3 mercadopublico.py organismos coquimbo`. Si falla por red, lee la ficha y el foro con Claude en Chrome o corre los scripts en el computador del usuario.
+- **Para hacer push**, el repositorio `nicolasperezallendes/PROYECTO` tiene que estar agregado como fuente de la sesión, con permiso de escritura. Si no lo está, entrega los archivos por el chat y avisa que el commit quedó solo en el entorno. Así se perdieron el programa de integridad y el borrador de propuesta de 564953-79-LE26 del 19-10-2026: se hicieron en otra sesión y no llegaron a GitHub.
 - Las sesiones en la nube **no pueden usar el Chrome del usuario**. Para eso hay que trabajar en la app de escritorio o con `claude remote-control` en su computador, con la extensión Claude en Chrome conectada.
 - El trabajo se guarda con commits y push en la rama del proyecto. Lo que queda solo en el contenedor se pierde.
 

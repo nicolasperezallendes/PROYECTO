@@ -10,6 +10,8 @@ Actualiza este archivo al final de cada sesión de trabajo. Estados posibles: **
 | [632-11-LE26](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=632-11-LE26) | Informe 5: diagnóstico y plan maestro del barrio Pudepar, Cartagena | Subsecretaría de Vivienda y Urbanismo | No publica | Mié 28-10-2026, 15:10 | Detectada | Decidir con la matriz de la etapa 2 |
 | [752-32-LP26](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=752-32-LP26) | Estudio de indicadores y metas para el seguimiento del PARCC | Gobierno Regional de Los Lagos | $100.000.000 | Mar 03-11-2026, 15:30 | Detectada | Decidir con la matriz. Probable alianza |
 | [691-8-LP26](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=691-8-LP26) | Diagnóstico y tramitación del Plan Regulador Comunal de Empedrado | Subsecretaría de Vivienda y Urbanismo | $200.000.000 | Mié 04-11-2026, 17:00 | Detectada | Solo en UTP con urbanistas |
+| [3712-75-LE26](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3712-75-LE26) | Talleres de oficio para el programa Quiero Mi Barrio | I. Municipalidad de Los Vilos (**Región de Coquimbo**) | No publica | Lun 26-10-2026, 15:05 | Detectada | Revisar bases. Es la única afín en la región |
+| [1750-6-LE26](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1750-6-LE26) | Diseño y ejecución de talleres de liderazgo efectivo | Dirección Nacional del Servicio Civil | $68.000.000 | Lun 26-10-2026, 15:00 | Detectada | Decidir con la matriz |
 | [519302-9-LE26](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=519302-9-LE26) | Diseño, implementación y medición de marketing digital | INAPI | No publica | Lun 02-11-2026, 16:00 | Detectada | Revisar bases |
 
 ## Análisis entregados
@@ -45,6 +47,7 @@ Actualiza este archivo al final de cada sesión de trabajo. Estados posibles: **
 - **Pago:** 30 días desde la factura, por transferencia. Responsable: Francisco Díaz (fdiaz@corplascondes.cl). El organismo tiene 22 reclamos por pagar fuera de plazo en los últimos 12 meses.
 - **Ofertas técnicas:** quedan públicas tras la apertura.
 - **Pendiente:** bases en PDF y anexos (los tiene que bajar Nicolás).
+- **Documentos de oferta:** en otra sesión del 19-10-2026 se redactaron el programa de integridad y ética y el borrador de propuesta técnica, pero **no están en GitHub**. Si Nicolás los tiene, que los suba o los pegue. Si no, hay que regenerarlos con `plantillas.md` y el método de la etapa 5.
 
 ## Tareas pendientes de la empresa
 
@@ -54,7 +57,7 @@ Actualiza este archivo al final de cada sesión de trabajo. Estados posibles: **
 | Agregar en el SII un giro de consultoría (702000, 732000 o 722000) y actualizarlo en Mercado Público | Lo antes posible | Pendiente |
 | Quitar 5 rubros sin relación y agregar los 8 sugeridos | Lo antes posible | Pendiente |
 | Pedir los certificados de vigencia, boletín comercial y quiebras | Esta semana (para 564953-79-LE26) | Pendiente |
-| Redactar el código de ética o programa de integridad | Antes del 22-10-2026 | Pendiente |
+| Redactar el código de ética o programa de integridad | Antes del 22-10-2026 | Hecho en otra sesión, sin subir a GitHub. Recuperar o regenerar |
 | Reunir certificados de experiencia del titular (trabajos previos) | Antes del 22-10-2026 | Pendiente |
 | Completar el teléfono y el correo de contacto en la ficha | Cuando Nicolás los entregue | Pendiente |
 | Ingresar la declaración jurada de socios y beneficiarios finales en Mercado Público | Lo antes posible | Pendiente |

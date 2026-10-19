@@ -74,6 +74,21 @@ Para la competencia, revisa órdenes de compra anteriores del organismo con `mer
 | Programa de integridad o código de ética | Claude redacta, Nicolás firma | `plantillas.md`, sección 3 |
 | Declaración Jurada de Requisitos para Ofertar | Nicolás, firma electrónica en la plataforma | Se hace en Mercado Público |
 
+**Archivos que se generan después del análisis** (en `claude/`, en Markdown; método del 19-10-2026):
+1. `dd.mm.aaaa - PROGRAMA DE INTEGRIDAD Y ETICA JUNCOS.md`. Es reutilizable: si ya existe, actualiza solo la fecha y revisa si el artículo de evaluación pide un formato propio. La base está en `plantillas.md`, sección 3.
+2. `dd.mm.aaaa - BORRADOR PROPUESTA TECNICA CODIGO.md`. Lleva comprensión del encargo, enfoque, diseño muestral, instrumentos, campo, análisis, productos, equipo y Gantt. **Marca con [BASES] todo lo que dependa de las bases en PDF** y aún no se haya podido verificar.
+
+**Diseño muestral de referencia para encuestas:** 95% de confianza, error de ±5% y p = 0,5, con corrección por población finita: n = 384,16 / (1 + 383,16 / N).
+
+| Universo por establecimiento (N) | Muestra |
+|---|---|
+| 500 | 218 |
+| 1.000 | 278 |
+| 5.000 | 357 |
+| Muy grande | 384 |
+
+Con presupuestos ajustados, ofrece ±5% para el total de cada área (por ejemplo, educación y salud) y entre ±7% y ±8% por establecimiento. Explica en la propuesta qué precisión tiene cada nivel de análisis.
+
 **Estrategia según el peso de los criterios:**
 - **Precio de 40% o más:** el precio decide. Ofrece bajo el referencial, pero cubre los costos reales. La fórmula típica premia al precio más bajo (precio mínimo dividido por precio ofertado), así que conviene simular escenarios.
 - **Técnica de 30% o más:** apuesta a la metodología, porque ahí está la ventaja de un sociólogo. Muestra diseño muestral con su error, instrumentos validados, control de calidad del campo, plan de análisis y productos de muestra.

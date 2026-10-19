@@ -13,6 +13,9 @@ Esta skill es la memoria de trabajo de la consultora en Mercado Público. Antes 
 | `seguimiento.md` | Al empezar cada sesión: licitaciones en curso, tareas pendientes de la empresa y su estado. **Actualízalo al terminar** |
 | `aprendizajes.md` | Antes de usar las herramientas: límites técnicos, errores ya cometidos y lo que no se debe intentar |
 | `plantillas.md` | Al redactar una propuesta técnica, un presupuesto, un código de integridad o una carta de experiencia |
+| `rubros-consultoria.md` | Al revisar o ampliar los rubros inscritos, o al ajustar `perfil_juncos.json` |
+
+Si el usuario pega una versión distinta de esta skill (por ejemplo, de otra sesión), integra lo nuevo en el archivo que corresponda sin perder lo que ya existe, y avisa qué contenido no coincide con lo verificado.
 
 Las herramientas están en `herramientas/mercadopublico/` (instrucciones en su `README.md`). El perfil de búsqueda es `perfil_juncos.json`.
 
@@ -59,15 +62,16 @@ Las herramientas están en `herramientas/mercadopublico/` (instrucciones en su `
 | 86141500 | Servicios de orientación educacional | Núcleo |
 | 43232300 | Software de consultas y gestión de datos | Secundario |
 | 52161600 | Accesorios de equipos audiovisuales | Secundario |
-| 102000000 | Consultoría (categoría ChileCompra) | Genérico |
-| 102106000 | Arquitectura y Urbanismo (categoría ChileCompra) | Genérico |
+| 102000000 | Consultoría (categoría ChileCompra; producto 102101001 "Planificación y Factibilidad") | Secundario: aparece en muchas licitaciones, pero casi todas son de ingeniería del MOP |
+| 102106000 | Arquitectura y Urbanismo (categoría ChileCompra) | Secundario |
 | 30222300 | Construcciones para educación e investigación | Sin relación, se sugirió quitarlo |
 | 43223100 | Componentes y equipos de infraestructura de redes móviles y digitales | Sin relación, se sugirió quitarlo |
 | 47121900 | Accesorios de equipos de limpieza | Sin relación, se sugirió quitarlo |
 | 72131700 | Construcción de obras civiles y infraestructuras | Sin relación, se sugirió quitarlo |
 | 86121500 | Escuelas de educación primaria y secundaria | Sin relación, se sugirió quitarlo |
 
-**Se sugirió inscribir** (verificar el nombre exacto en el buscador de rubros):
+**Se sugirió inscribir** (verificar el nombre exacto en el buscador de rubros; el detalle está en `rubros-consultoria.md`):
+- **80111500 Consultorías para el desarrollo de recursos humanos.** Es la categoría más usada en capacitación y en los servicios de consultoría del Estado.
 - 80141500 Investigación de mercados
 - 81131500 Metodología y análisis (incluye 81131504, encuestas por muestreo)
 - 93141500 Desarrollo social

@@ -45,10 +45,12 @@ def rubros_coincidentes(ficha, rubros):
     hallados = []
     for r in rubros:
         codigo = str(r["codigo"])
-        if len(codigo) != 8 or not r.get("peso", 5):
-            continue  # solo códigos UNSPSC de 8 dígitos y con peso
+        if not r.get("peso", 5):
+            continue
         pref = codigo.rstrip("0")
-        if any(c.startswith(pref) for c in codigos if c):
+        # Los códigos UNSPSC tienen 8 dígitos y los propios de ChileCompra
+        # (ej. 102000000 Consultoría) 9: solo se comparan con su mismo largo.
+        if any(c.startswith(pref) and len(c) == len(codigo) for c in codigos if c):
             hallados.append(r)
     return hallados
 
