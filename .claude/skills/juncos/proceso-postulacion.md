@@ -78,14 +78,14 @@ Para la competencia, revisa órdenes de compra anteriores del organismo con `mer
 1. `dd.mm.aaaa - PROGRAMA DE INTEGRIDAD Y ETICA JUNCOS.md`. Es reutilizable: si ya existe, actualiza solo la fecha y revisa si el artículo de evaluación pide un formato propio. La base está en `plantillas.md`, sección 3.
 2. `dd.mm.aaaa - BORRADOR PROPUESTA TECNICA CODIGO.md`. Lleva comprensión del encargo, enfoque, diseño muestral, instrumentos, campo, análisis, productos, equipo y Gantt. **Marca con [BASES] todo lo que dependa de las bases en PDF** y aún no se haya podido verificar.
 
-**Diseño muestral de referencia para encuestas:** 95% de confianza, error de ±5% y p = 0,5, con corrección por población finita: n = 384,16 / (1 + 383,16 / N).
+**Diseño muestral de referencia para encuestas:** 95% de confianza, error de ±5% y p = 0,5, con corrección por población finita: n = 384,16 / (1 + 383,16 / N), redondeado hacia arriba.
 
 | Universo por establecimiento (N) | Muestra |
 |---|---|
 | 500 | 218 |
 | 1.000 | 278 |
 | 5.000 | 357 |
-| Muy grande | 384 |
+| Muy grande | 385 |
 
 Con presupuestos ajustados, ofrece ±5% para el total de cada área (por ejemplo, educación y salud) y entre ±7% y ±8% por establecimiento. Explica en la propuesta qué precisión tiene cada nivel de análisis.
 
