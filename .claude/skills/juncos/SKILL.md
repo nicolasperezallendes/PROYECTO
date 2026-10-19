@@ -64,6 +64,26 @@ python3 postulables.py --min-monto 5000000
 
 Para revisar la ficha completa de una licitación (requisitos, garantías, plazos): `python3 mercadopublico.py licitacion CODIGO`.
 
+## Analizar una licitación (método probado el 19-10-2026)
+
+Fuentes públicas, en este orden:
+1. **Ficha web pública y foro:** `python3 mercadopublico.py ficha-web CODIGO --md ficha.md`. Trae el resumen de las bases que publica el portal: características, organismo, plazos, antecedentes, requisitos para contratar, criterios de evaluación con su peso, monto, garantías, cláusulas y demandas. También trae las preguntas y respuestas del foro.
+2. **API:** `python3 mercadopublico.py licitacion CODIGO`. Entrega productos con su código UNSPSC, fechas, responsables y la justificación del monto.
+3. **Bases en PDF y anexos:** NO se pueden bajar de forma automática. La página `ViewAttachment.aspx` está protegida con reCAPTCHA Enterprise, y no se intenta saltar ese control (ni llamando directo a `ViewAttachmentLC.aspx` ni con navegadores automatizados). Pídele al usuario que los descargue desde el botón "Ver adjuntos" de la ficha y los suba a la conversación.
+4. **OCDS** (`https://apis.mercadopublico.cl/OCDS/data/record/CODIGO`): las licitaciones recientes suelen no aparecer aún (devuelve 404).
+
+El análisis se entrega en `claude/dd.mm.aaaa - ANALISIS LICITACION CODIGO NOMBRE CORTO.md` y lleva:
+- Veredicto: postular o no, y bajo qué condiciones.
+- Datos clave.
+- Calendario, con el día de la semana verificado (`date -d AAAA-MM-DD +%A`).
+- Tabla de criterios con su peso y qué significa cada uno para JUNCOS.
+- Documentos para ofertar y para contratar.
+- Riesgos: giro SII, vencimiento del registro, distancia y comportamiento de pago del organismo.
+- Lo que falta leer en las bases.
+- Plan día a día hasta el cierre.
+
+El ejemplo de referencia es el análisis de 564953-79-LE26 del 19-10-2026.
+
 ## Cómo entregar el resultado
 
 - Guarda el informe en `claude/` con el formato de nombre `dd.mm.aaaa - LICITACIONES AFINES JUNCOS.md`. Usa siempre Markdown, nunca .docx.

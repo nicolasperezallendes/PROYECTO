@@ -35,6 +35,12 @@ python3 mercadopublico.py orden 2448-1195-SE26
 python3 mercadopublico.py organismos "gobierno regional"
 python3 mercadopublico.py licitaciones --estado activas --organismo 6940
 
+# Texto de la ficha pública (bases resumidas, criterios, plazos) y del foro
+python3 mercadopublico.py ficha-web 564953-79-LE26 --md ficha.md
+
+# Licitaciones activas de todo el país afines al perfil de JUNCOS
+python3 postulables.py --max-detalle 100 --md ranking.md
+
 # Buscar un proveedor por RUT
 python3 mercadopublico.py proveedor 76.123.456-7
 ```
@@ -48,5 +54,7 @@ Todas las listas aceptan `--md`, `--csv` y `--json` para guardar el resultado.
 - `--detalle` baja una ficha por registro. Con muchos registros se demora
   (unos 2 a 3 segundos por ficha).
 - Los montos se muestran en la moneda de cada proceso (`CLF` = UF).
+- Las bases en PDF y los anexos de cada licitación están protegidos con
+  reCAPTCHA y se descargan a mano desde "Ver adjuntos" en la ficha.
 - Unidades del municipio: código 2446 (municipal central) y 2448
   (Departamento de Salud).

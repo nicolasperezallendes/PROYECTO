@@ -162,6 +162,47 @@ def proveedor(rut):
     return pedir("Empresas/BuscarProveedor", rutempresaproveedor=rut)
 
 
+# ---------------------------------------------------------------- ficha web
+
+FICHA_WEB = "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion={}"
+
+
+def _html_a_texto(crudo):
+    import html as _html
+    import re
+    t = re.sub(r"(?s)<script.*?</script>|<style.*?</style>", "", crudo)
+    t = re.sub(r"<br\s*/?>|</(tr|p|div|h\d|li)>", "\n", t)
+    t = _html.unescape(re.sub(r"<[^>]+>", " ", t))
+    t = re.sub(r"[ \t\xa0]+", " ", t)
+    return re.sub(r"\n\s*\n+", "\n", t).strip()
+
+
+def _get_web(url):
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=90) as r:
+        return r.read().decode("utf-8", "replace")
+
+
+def ficha_publica(codigo):
+    """Texto de la ficha pública (bases resumidas, plazos, criterios, requisitos) y del foro.
+
+    Los adjuntos (bases en PDF y anexos) no se bajan: el portal los protege
+    con reCAPTCHA y hay que descargarlos a mano desde el navegador.
+    """
+    import re
+    crudo = _get_web(FICHA_WEB.format(urllib.parse.quote(codigo)))
+    texto = _html_a_texto(crudo)
+    inicio = texto.find("Licitación ID:")
+    texto = texto[inicio:] if inicio >= 0 else texto
+    foro = ""
+    m = re.search(r'href="(/Foros/Modules/FNormal/PopUps/PublicView\.aspx\?qs=[^"]+)"', crudo)
+    if m:
+        foro = _html_a_texto(_get_web("https://www.mercadopublico.cl" + m.group(1)))
+        i = foro.find("Preguntas Licitación")
+        foro = foro[i:] if i >= 0 else foro
+    return texto, foro
+
+
 # ---------------------------------------------------------------- filas
 
 def fila_licitacion(l):
@@ -322,6 +363,20 @@ def cmd_ficha(args, funcion):
     print(json.dumps(dato, ensure_ascii=False, indent=2))
 
 
+def cmd_ficha_web(args):
+    texto, foro = ficha_publica(args.codigo)
+    salida = (f"# Ficha pública {args.codigo}\n\nFuente: {FICHA_WEB.format(args.codigo)} "
+              f"(leída el {datetime.now():%d-%m-%Y %H:%M})\n\n```\n{texto}\n```\n\n"
+              f"## Foro de preguntas\n\n```\n{foro or 'Sin foro disponible.'}\n```\n\n"
+              "Las bases en PDF y los anexos no se descargan de forma automática "
+              "(el portal los protege con reCAPTCHA). Bájalos desde el botón 'Ver adjuntos' de la ficha.\n")
+    if args.md:
+        Path(args.md).write_text(salida, encoding="utf-8")
+        print(f"Guardado en {args.md}", file=sys.stderr)
+    else:
+        print(salida)
+
+
 def main():
     p = argparse.ArgumentParser(description="Consulta la API de Mercado Público.")
     sub = p.add_subparsers(dest="comando", required=True)
@@ -351,6 +406,11 @@ def main():
     sp = sub.add_parser("licitacion", help="ficha completa de una licitación")
     sp.add_argument("codigo")
     sp.set_defaults(func=lambda a: cmd_ficha(a, licitacion))
+
+    sp = sub.add_parser("ficha-web", help="texto de la ficha pública y del foro de una licitación")
+    sp.add_argument("codigo")
+    sp.add_argument("--md", help="guardar en este archivo")
+    sp.set_defaults(func=cmd_ficha_web)
 
     sp = sub.add_parser("orden", help="ficha completa de una orden de compra")
     sp.add_argument("codigo")
