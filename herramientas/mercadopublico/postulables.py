@@ -12,7 +12,8 @@ Cómo puntúa cada licitación:
   1. Filtro inicial por nombre: debe tener al menos una palabra clave y
      ninguna palabra excluida (esto evita bajar miles de fichas).
   2. Se baja la ficha de las mejores candidatas y se suma:
-     +5 por cada rubro del perfil que coincide con los productos pedidos,
+     el peso de cada rubro del perfil que coincide con los productos pedidos
+     (5 núcleo, 3 sugerido, 2 secundario),
      +1 por palabra clave en nombre o descripción (tope 6),
      +2 si la región está entre las preferentes.
 """
@@ -43,9 +44,12 @@ def rubros_coincidentes(ficha, rubros):
               {str(i.get("CodigoCategoria") or "") for i in items}
     hallados = []
     for r in rubros:
-        pref = str(r["codigo"]).rstrip("0") or str(r["codigo"])
+        codigo = str(r["codigo"])
+        if len(codigo) != 8 or not r.get("peso", 5):
+            continue  # solo códigos UNSPSC de 8 dígitos y con peso
+        pref = codigo.rstrip("0")
         if any(c.startswith(pref) for c in codigos if c):
-            hallados.append(r["nombre"])
+            hallados.append(r)
     return hallados
 
 
@@ -58,13 +62,14 @@ def evaluar(ficha, perfil):
     rubros = rubros_coincidentes(ficha, perfil.get("rubros", []))
     claves = contar(texto, perfil.get("palabras_clave", []))
     pref = any(normalizar(r) in normalizar(region) for r in perfil.get("regiones_preferentes", []))
-    puntaje = 5 * len(rubros) + min(len(claves), 6) + (2 if pref else 0)
+    puntaje = sum(r.get("peso", 5) for r in rubros) + min(len(claves), 6) + (2 if pref else 0)
     fila = mp.fila_licitacion(ficha)
     fila.update({
         "puntaje": puntaje,
         "organismo": comprador.get("NombreOrganismo", ""),
         "region": region.replace("Región de ", "").replace("Región del ", "").replace("Región ", ""),
-        "rubros": ", ".join(rubros),
+        "rubros": ", ".join(r["nombre"] + ("" if r.get("inscrito", True) else " (no inscrito)")
+                            for r in rubros),
         "claves": ", ".join(claves[:4]),
     })
     return fila

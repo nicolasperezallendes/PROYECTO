@@ -1,43 +1,55 @@
 ---
 name: juncos
-description: "Ficha de JUNCOS EIRL (Consultores Nicolás Pérez Allendes E.I.R.L.) para Mercado Público: razón social, RUT, código de proveedor, rubros y perfil de postulación. Úsala con /juncos o cuando se pida buscar licitaciones afines a la consultora, revisar sus rubros o completar datos de la empresa en una postulación."
+description: "Ficha de JUNCOS E.I.R.L. (Consultores Nicolás Pérez Allendes E.I.R.L.) para Mercado Público: razón social, RUT, domicilio legal, habilidad, rubros inscritos y perfil de postulación. Úsala con /juncos o cuando se pida buscar licitaciones afines a la consultora, revisar sus rubros o completar datos de la empresa en una postulación."
 ---
 
-# /juncos — Perfil de postulación de JUNCOS EIRL
+# /juncos — Perfil de postulación de JUNCOS E.I.R.L.
 
-## Ficha de la empresa
+## Ficha de la empresa (verificada el 19-10-2026 en Mercado Público, Mi empresa)
 
 | Campo | Valor |
 |---|---|
 | Razón social | CONSULTORES NICOLÁS PÉREZ ALLENDES E.I.R.L. |
-| Nombre de fantasía | JUNCOS EIRL |
+| Nombre de fantasía | JUNCOS E.I.R.L. |
 | RUT | 78.390.884-0 |
-| Tipo societario | Empresa Individual de Responsabilidad Limitada |
+| Tipo societario | Empresa Individual de Responsabilidad Limitada (persona jurídica) |
 | Titular / representante legal | Nicolás Pérez Allendes |
-| Correo de contacto | perez.allendes.sociologo@gmail.com |
-| Código de proveedor en Mercado Público | 2103594 |
-| Domicilio legal | PENDIENTE |
-| Comuna / región | PENDIENTE (se trabaja desde la Región de Coquimbo) |
-| Teléfono | PENDIENTE |
-| Giro / actividades SII | PENDIENTE |
+| Domicilio legal (según SII) | Colón 352, oficina 318, edificio StudiOffice Colón, La Serena, Región de Coquimbo |
+| Giro principal registrado (SII) | Compra, venta y alquiler (excepto amoblados) de inmuebles |
+| Código de empresa en Mercado Público | 2103594 |
+| Código de organización / sucursal principal | 1524491 |
+| Estado de habilidad | HÁBIL |
+| Inscripción en Registro de Proveedores | Contrato vigente hasta el 29-12-2026 |
+| Unidades adicionales | No tiene |
+| Teléfono y correo de contacto | PENDIENTE (pedírselos al usuario) |
 
-Estado en Mercado Público al 19-10-2026 (ficha pública):
-- "Proveedor sin acreditación vigente".
-- Sin declaración jurada de socios ni datos de administración ingresados.
+Alertas que debes repetir cuando sean pertinentes:
+- **Renovación:** la inscripción en el Registro de Proveedores vence el 29-12-2026. Avisa si una licitación se adjudica o firma después de esa fecha.
+- **Giro:** el giro principal registrado (inmobiliario) no calza con una consultora. Si las bases exigen giro acorde, recomienda agregar en el SII la actividad 702000, 732000 o 722000, y luego actualizar los datos en Mercado Público.
+- **Datos pendientes:** si falta un dato, pídeselo al usuario. No lo inventes.
 
-**Alerta.** Para que el Estado le adjudique contratos, la empresa debe estar inscrita y hábil en el Registro de Proveedores (Ley 21.634). Antes de postular, revisa ese estado y súbele a la ficha los datos que falten.
+## Rubros inscritos en Mercado Público (14, verificados el 19-10-2026)
 
-Si un dato aparece como PENDIENTE, pídeselo al usuario y actualiza esta tabla. No lo inventes.
+| Código | Rubro | Coherencia |
+|---|---|---|
+| 80101500 | Servicios de consultoría en gestión de empresas | Núcleo |
+| 80141600 | Ventas y marketing | Núcleo |
+| 82141500 | Diseño | Núcleo |
+| 86111600 | Educación de adultos | Núcleo |
+| 86141500 | Servicios de orientación educacional | Núcleo |
+| 43232300 | Software de consultas y gestión de datos | Secundario |
+| 52161600 | Accesorios de equipos audiovisuales | Secundario |
+| 102000000 | Consultoría (categoría ChileCompra) | Genérico |
+| 102106000 | Arquitectura y Urbanismo (categoría ChileCompra) | Genérico |
+| 30222300 | Construcciones para educación e investigación | Sin relación, se sugirió quitarlo |
+| 43223100 | Componentes y equipos de infraestructura de redes móviles y digitales | Sin relación, se sugirió quitarlo |
+| 47121900 | Accesorios de equipos de limpieza | Sin relación, se sugirió quitarlo |
+| 72131700 | Construcción de obras civiles y infraestructuras | Sin relación, se sugirió quitarlo |
+| 86121500 | Escuelas de educación primaria y secundaria | Sin relación, se sugirió quitarlo |
 
-## Rubros
+Rubros que se sugirió inscribir: 80141500 Investigación de mercados, 81131500 Metodología y análisis, 93141500 Desarrollo social, 93142000 Desarrollo urbano, 86101700 Capacitación, 86132000 Educación en gestión, 80161500 Apoyo gerencial y 82101500 Publicidad.
 
-La lista oficial está en Mercado Público, en Mi empresa > Rubros, y solo se ve con sesión iniciada. Mientras no se confirme, el perfil usa un **borrador** de rubros UNSPSC propuesto para una consultora en ciencias sociales y comunicaciones. Está en `herramientas/mercadopublico/perfil_juncos.json` (campo `estado_rubros`).
-
-Cuando el usuario entregue sus rubros:
-1. Reemplaza la lista `rubros` del JSON por los códigos y nombres reales (8 dígitos UNSPSC).
-2. Ajusta `palabras_clave` y `excluir` para que coincidan con esos rubros.
-3. Cambia `estado_rubros` a "CONFIRMADO dd-mm-aaaa".
-4. Copia aquí la lista confirmada.
+Si el usuario cambia sus rubros, actualiza esta tabla y `herramientas/mercadopublico/perfil_juncos.json`. En el JSON, los campos `inscrito` y `peso` siguen esta regla: 5 = núcleo, 3 = sugerido o no inscrito, 2 = secundario, y los rubros sin relación no puntúan. Pon la nueva fecha en `estado_rubros`.
 
 ## Buscar licitaciones afines
 
@@ -45,16 +57,18 @@ Requiere el ticket de la API en `MERCADOPUBLICO_TICKET` o en `herramientas/merca
 
 ```bash
 cd herramientas/mercadopublico
-python3 postulables.py --md "../../claude/dd.mm.aaaa - LICITACIONES AFINES JUNCOS.md"
-python3 postulables.py --region coquimbo          # solo la región
-python3 postulables.py --max-detalle 100 --min-monto 5000000
+python3 postulables.py --max-detalle 100 --md "../../claude/dd.mm.aaaa - LICITACIONES AFINES JUNCOS.md"
+python3 postulables.py --region coquimbo
+python3 postulables.py --min-monto 5000000
 ```
 
-Puntaje: +5 por cada rubro del perfil que coincide con los productos licitados, +1 por cada palabra clave (máximo 6) y +2 si la región es preferente.
+Para revisar la ficha completa de una licitación (requisitos, garantías, plazos): `python3 mercadopublico.py licitacion CODIGO`.
 
-Al entregar el resultado:
-- Guárdalo en `claude/` con el formato de nombre `dd.mm.aaaa - LICITACIONES AFINES JUNCOS.md`.
-- Abre con 3 a 5 recomendaciones en lenguaje simple: cuál conviene, por qué y cuándo cierra.
-- Marca las que cierran en menos de 3 días hábiles.
-- Indica cuando el monto viene en UF o USD.
-- Si una licitación pide experiencia o boletas de garantía, menciónalo después de revisar la ficha con `python3 mercadopublico.py licitacion CODIGO`.
+## Cómo entregar el resultado
+
+- Guarda el informe en `claude/` con el formato de nombre `dd.mm.aaaa - LICITACIONES AFINES JUNCOS.md`. Usa siempre Markdown, nunca .docx.
+- Abre con 3 a 5 recomendaciones en lenguaje simple: qué es, quién la licita, cuánto vale, cuándo cierra y por qué calza con JUNCOS. El ejemplo de referencia es el informe del 19-10-2026.
+- Prioriza en este orden: encuestas, estudios, diagnósticos sociales y territoriales, participación ciudadana, indicadores y evaluación de programas, capacitación y comunicaciones.
+- Cuando el proceso exige un equipo grande (planes reguladores, campañas de medios millonarias), sugiere entrar en alianza mediante una unión temporal de proveedores.
+- Marca lo que cierra en menos de 3 días hábiles. Señala los montos en UF o USD. Indica si no hay oportunidades en la Región de Coquimbo.
+- Repite las alertas de la ficha que apliquen (renovación, giro).

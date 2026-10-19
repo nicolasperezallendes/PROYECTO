@@ -1,37 +1,208 @@
 {
-  "empresa": "CONSULTORES NICOLÁS PÉREZ ALLENDES E.I.R.L. (JUNCOS EIRL)",
+  "empresa": "CONSULTORES NICOLÁS PÉREZ ALLENDES E.I.R.L. (JUNCOS E.I.R.L.)",
   "rut": "78.390.884-0",
   "codigo_proveedor_mp": "2103594",
-  "estado_rubros": "BORRADOR: rubros propuestos, falta confirmarlos contra los inscritos en Mercado Público",
+  "estado_rubros": "CONFIRMADO 19-10-2026 contra Mi empresa > Rubros en Mercado Público",
+  "nota_pesos": "peso 5 = núcleo de la consultora; 3 = sugerido, aún no inscrito; 2 = inscrito pero secundario. Los rubros inscritos que no calzan con una consultora no puntúan y se listan en rubros_inscritos_sin_puntaje.",
   "rubros": [
-    {"codigo": "80101500", "nombre": "Consultoría de negocios y administración"},
-    {"codigo": "80101600", "nombre": "Gerencia de proyectos"},
-    {"codigo": "80141500", "nombre": "Investigación de mercados"},
-    {"codigo": "81131500", "nombre": "Metodología y análisis"},
-    {"codigo": "93141500", "nombre": "Desarrollo social"},
-    {"codigo": "93142000", "nombre": "Desarrollo urbano"},
-    {"codigo": "93142100", "nombre": "Desarrollo regional"},
-    {"codigo": "93151500", "nombre": "Administración pública"},
-    {"codigo": "86101700", "nombre": "Capacitación no científica"},
-    {"codigo": "86132000", "nombre": "Educación en gestión"},
-    {"codigo": "80161500", "nombre": "Servicios de apoyo gerencial"},
-    {"codigo": "82101500", "nombre": "Publicidad"},
-    {"codigo": "82141500", "nombre": "Diseño gráfico"},
-    {"codigo": "83121700", "nombre": "Servicios de comunicación masiva"}
+    {
+      "codigo": "80101500",
+      "nombre": "Consultoría en gestión de empresas",
+      "inscrito": true,
+      "peso": 5
+    },
+    {
+      "codigo": "80141600",
+      "nombre": "Ventas y marketing",
+      "inscrito": true,
+      "peso": 5
+    },
+    {
+      "codigo": "82141500",
+      "nombre": "Diseño",
+      "inscrito": true,
+      "peso": 5
+    },
+    {
+      "codigo": "86111600",
+      "nombre": "Educación de adultos",
+      "inscrito": true,
+      "peso": 5
+    },
+    {
+      "codigo": "86141500",
+      "nombre": "Orientación educacional",
+      "inscrito": true,
+      "peso": 5
+    },
+    {
+      "codigo": "43232300",
+      "nombre": "Software de consultas y gestión de datos",
+      "inscrito": true,
+      "peso": 2
+    },
+    {
+      "codigo": "52161600",
+      "nombre": "Accesorios de equipos audiovisuales",
+      "inscrito": true,
+      "peso": 2
+    },
+    {
+      "codigo": "80141500",
+      "nombre": "Investigación de mercados",
+      "inscrito": false,
+      "peso": 3
+    },
+    {
+      "codigo": "81131500",
+      "nombre": "Metodología y análisis",
+      "inscrito": false,
+      "peso": 3
+    },
+    {
+      "codigo": "93141500",
+      "nombre": "Desarrollo social",
+      "inscrito": false,
+      "peso": 3
+    },
+    {
+      "codigo": "93142000",
+      "nombre": "Desarrollo urbano",
+      "inscrito": false,
+      "peso": 3
+    },
+    {
+      "codigo": "86101700",
+      "nombre": "Capacitación no científica",
+      "inscrito": false,
+      "peso": 3
+    },
+    {
+      "codigo": "86132000",
+      "nombre": "Educación en gestión",
+      "inscrito": false,
+      "peso": 3
+    },
+    {
+      "codigo": "80161500",
+      "nombre": "Servicios de apoyo gerencial",
+      "inscrito": false,
+      "peso": 3
+    },
+    {
+      "codigo": "82101500",
+      "nombre": "Publicidad",
+      "inscrito": false,
+      "peso": 3
+    }
+  ],
+  "rubros_inscritos_sin_puntaje": [
+    {
+      "codigo": "30222300",
+      "nombre": "Construcciones para educación e investigación"
+    },
+    {
+      "codigo": "43223100",
+      "nombre": "Componentes y equipos de infraestructura de redes móviles y digitales"
+    },
+    {
+      "codigo": "47121900",
+      "nombre": "Accesorios de equipos de limpieza"
+    },
+    {
+      "codigo": "72131700",
+      "nombre": "Construcción de obras civiles y infraestructuras"
+    },
+    {
+      "codigo": "86121500",
+      "nombre": "Escuelas de educación primaria y secundaria"
+    },
+    {
+      "codigo": "102000000",
+      "nombre": "Consultoría (categoría propia de ChileCompra)"
+    },
+    {
+      "codigo": "102106000",
+      "nombre": "Arquitectura y Urbanismo (categoría propia de ChileCompra)"
+    }
   ],
   "palabras_clave": [
-    "estudio", "diagnostico", "encuesta", "consultoria", "asesoria", "evaluacion",
-    "capacitacion", "taller", "pladeco", "plan de desarrollo", "plan comunal",
-    "participacion ciudadana", "participativo", "caracterizacion", "levantamiento",
-    "linea base", "sistematizacion", "focus", "grupos focales", "satisfaccion usuaria",
-    "social", "comunitari", "territorial", "politica comunal", "politica publica",
-    "comunicacion", "comunicacional", "monitoreo de medios", "prensa", "difusion",
-    "estrategia", "planificacion", "investigacion", "observatorio", "catastro"
+    "estudio",
+    "diagnostico",
+    "encuesta",
+    "consultoria",
+    "asesoria",
+    "evaluacion",
+    "capacitacion",
+    "taller",
+    "pladeco",
+    "plan de desarrollo",
+    "plan comunal",
+    "participacion ciudadana",
+    "participativo",
+    "caracterizacion",
+    "levantamiento",
+    "linea base",
+    "sistematizacion",
+    "grupos focales",
+    "satisfaccion usuaria",
+    "comunitari",
+    "territorial",
+    "politica comunal",
+    "politica publica",
+    "comunicacion",
+    "comunicacional",
+    "monitoreo de prensa",
+    "difusion",
+    "campana",
+    "marketing",
+    "diseno",
+    "grafic",
+    "orientacion",
+    "educacion de adultos",
+    "nivelacion de estudios",
+    "planificacion estrategica",
+    "investigacion",
+    "observatorio",
+    "plan maestro",
+    "plan regulador",
+    "urbanismo"
   ],
   "excluir": [
-    "obra", "construccion", "reposicion", "pavimento", "suministro de", "adquisicion de",
-    "arriendo", "vehiculo", "combustible", "alimento", "medicamento", "insumo",
-    "mantencion", "reparacion", "mobiliario", "equipamiento", "computacional", "aseo"
+    "obra",
+    "construccion",
+    "reposicion",
+    "pavimento",
+    "suministro de",
+    "adquisicion de",
+    "arriendo",
+    "vehiculo",
+    "combustible",
+    "alimento",
+    "medicamento",
+    "insumo",
+    "mantencion",
+    "reparacion",
+    "mobiliario",
+    "equipamiento",
+    "computacional",
+    "aseo",
+    "seguro",
+    "reembolso",
+    "franquicia tributaria",
+    "puente",
+    "estructuras",
+    "pruebas de carga",
+    "ciclovia",
+    "parador",
+    "pavimentacion",
+    "conservacion",
+    "edificio",
+    "restauracion",
+    " rest. ",
+    "plaza"
   ],
-  "regiones_preferentes": ["Coquimbo"]
+  "regiones_preferentes": [
+    "Coquimbo"
+  ]
 }
