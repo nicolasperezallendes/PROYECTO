@@ -1,6 +1,6 @@
 # Proceso de postulación de JUNCOS E.I.R.L.
 
-Ciclo completo, de la búsqueda al contrato. Cada etapa dice qué hace Claude, qué hace Nicolás y qué se entrega.
+Ciclo completo, de la búsqueda al contrato. Cada etapa dice qué hace Claude, qué hace Nicolás y qué se entrega. Las licitaciones siguen las etapas 1 a 7. Las Compras Ágiles (hasta 100 UTM) tienen su propia ruta corta, al final de este archivo.
 
 ## Etapa 1. Búsqueda de oportunidades
 
@@ -15,7 +15,7 @@ python3 postulables.py --region coquimbo --max-detalle 150     # foco regional
 - El puntaje suma el peso de cada rubro que coincide, 1 punto por palabra clave (hasta 6) y 2 puntos si es de la Región de Coquimbo.
 - Revisa las 10 primeras a mano. El filtro por nombre deja pasar ruido. Ejemplos: "diseño" trae diseños de ingeniería, y "capacitación" trae seguros o franquicias. Si aparece ruido nuevo, agrégalo a `excluir` en `perfil_juncos.json`.
 - Descarta lo que cierra en menos de 3 días hábiles, salvo que sea muy simple (L1).
-- Revisa también la **Compra Ágil** (compras de hasta 100 UTM con cotización simple). Es la vía más fácil para que una consultora nueva acumule historial con el Estado.
+- Corre también la búsqueda de **Compra Ágil**, pero a diario y no solo los lunes y jueves, porque muchas cierran en uno a tres días. Sigue la «Ruta corta: Compra Ágil» al final de este archivo. Es la vía más fácil para que una consultora nueva acumule historial con el Estado.
 - Anota en `seguimiento.md` las licitaciones que pasan a la etapa 2.
 
 **Entregable:** `dd.mm.aaaa - LICITACIONES AFINES JUNCOS.md`, que abre con 3 a 5 recomendaciones en lenguaje simple.
@@ -113,6 +113,94 @@ Lista de chequeo antes de enviar:
 - **Evaluación:** sigue el acta. Si hay un error en tu puntaje, se puede reclamar en Mercado Público dentro de plazo.
 - **Si no ganas:** anota en `seguimiento.md` el puntaje, el ganador, su precio y la lección aprendida.
 - **Si ganas:** reúne los documentos para contratar, entrega la garantía de fiel cumplimiento si la piden, revisa el contrato y arma un calendario de entregas, pagos y vencimientos.
+
+## Ruta corta: Compra Ágil (hasta 100 UTM)
+
+La Compra Ágil es la forma más rápida de que JUNCOS acumule ventas al Estado. No pide bases, garantías ni contrato, y cada orden de compra aceptada sirve después como respaldo de experiencia en las licitaciones. Mientras la empresa no tenga historial, tiene prioridad.
+
+### Reglas vigentes (verificadas el 19-10-2026)
+
+Fuentes: Directiva N° 35 de ChileCompra (Res. 563-B del 22-12-2025), página Compra Ágil de chilecompra.cl y tabla de UTM 2026 del SII.
+
+| Regla | Qué significa para JUNCOS |
+|---|---|
+| Tope de 100 UTM, con impuestos, despacho y todo gasto incluido. Se usa la UTM del mes de publicación | Octubre de 2026: UTM $72.151, tope $7.215.100. Noviembre de 2026: UTM $72.440, tope $7.244.000 |
+| El primer llamado es solo para Empresas de Menor Tamaño (EMT, Ley 20.416). Si queda desierto, se abre un segundo llamado a empresas de todo tamaño | JUNCOS tiene que figurar como EMT en Mercado Público. Está pendiente de verificar (ver `seguimiento.md`) |
+| Hay que estar inscrito y hábil en el Registro de Proveedores al cotizar y al contratar | La inscripción vence el 29-12-2026. Si la entrega o el pago pasan de esa fecha, hay que renovar antes |
+| La solicitud queda abierta al menos 24 horas | Muchas cierran en uno a tres días. Por eso la búsqueda es diaria |
+| El comprador pide al menos tres cotizaciones por el sistema, pero puede comprar con menos | Vale la pena cotizar aunque ya haya ofertas |
+| Gana la más barata que cumpla lo técnico, salvo que la solicitud fije otros criterios. Si no elige la más barata, debe fundamentarlo | El precio decide. Cotiza ajustado y cumple todo lo pedido |
+| Se cotiza la totalidad del requerimiento, sin ofertas parciales ni condicionadas | Lo que JUNCOS no hace (impresión, traslados) se subcontrata y va incluido en el precio |
+| Al enviar la cotización se firma electrónicamente una declaración jurada de no tener inhabilidades | La firma Nicolás en la plataforma |
+| No hay contrato ni garantías: la compra se formaliza cuando el proveedor acepta la orden de compra en la plataforma | Acepta la OC apenas llegue y revisa sus plazos |
+| El pago vence a los 30 días corridos desde la factura, después de la recepción conforme | Factura solo cuando tengas la recepción conforme |
+| Todo se tramita por Mercado Público, nunca por correo | Las consultas al comprador van por la plataforma |
+
+**El monto disponible incluye impuestos.** JUNCOS cotiza el neto más IVA, igual que en `/cotizacion`. Por eso el neto máximo es el monto disponible dividido por 1,19: con $2.500.000 disponibles, el neto no puede pasar de $2.100.840. El buscador calcula ese neto en cada fila.
+
+### CA1. Búsqueda diaria (lunes a viernes, en la mañana)
+
+```bash
+cd herramientas/mercadopublico
+python3 compras_agiles.py --md "../../claude/dd.mm.aaaa - COMPRAS AGILES AFINES JUNCOS.md"
+python3 compras_agiles.py --region coquimbo --dias 7      # foco regional, con una ventana más amplia
+```
+
+- Usa el mismo `perfil_juncos.json` que las licitaciones (rubros, palabras clave y exclusiones), más su bloque `compra_agil`. Ese bloque agrega:
+  - palabras propias de las compras chicas, como charla, relator, jornada, clima laboral, redes sociales o infografía;
+  - exclusiones de bienes y servicios ajenos al rubro, como alimentación, traslados, premiación, primeros auxilios o asesoría legal y contable;
+  - señales de que el trabajo se puede hacer a distancia.
+- **Puntaje:**
+  - El peso de cada rubro que coincide con los productos pedidos.
+  - 1 punto por palabra clave, hasta 6.
+  - 2 puntos si es de la Región de Coquimbo.
+  - 1 punto si se puede hacer a distancia.
+- **Alertas que marca:** cierre en menos de 24 horas, servicio presencial fuera de la región, exigencia de OTEC, código SENCE o boleta de garantía, y segundo llamado.
+- Descarta lo que cierra en menos de 3 horas (`--min-horas`). Por defecto mira las publicadas en los últimos 3 días (`--dias 0` trae todas las abiertas).
+- Revisa a mano las 10 primeras. Si aparece ruido nuevo, agrégalo a `compra_agil.excluir_extra`.
+- Anota en `seguimiento.md` las que vas a cotizar.
+
+**Entregable:** `dd.mm.aaaa - COMPRAS AGILES AFINES JUNCOS.md`. Abre con las 3 a 5 que conviene cotizar ese día.
+
+### CA2. Filtro de coherencia con el perfil
+
+Cotiza solo lo que JUNCOS hace bien con su equipo, o con un apoyo menor subcontratado.
+
+| Coherente | Solo si se resuelve la parte ajena | No corresponde |
+|---|---|---|
+| Encuestas breves y mediciones de satisfacción | Diseño con impresión de piezas, subcontratando la imprenta | Bienes, insumos y equipos |
+| Talleres, charlas, capacitaciones y jornadas: liderazgo, participación, comunicación, habilidades transversales | Talleres presenciales fuera de la Región de Coquimbo, con el viático en el precio | Capacitaciones técnicas o normadas: primeros auxilios, extintores, conducción, trabajo en altura, manipulación de alimentos |
+| Facilitación de cabildos, diálogos y jornadas participativas; sistematizaciones | Eventos en que JUNCOS solo pone el contenido y otro la producción | Cursos que exigen ser OTEC o tener código SENCE (no consta que JUNCOS sea OTEC) |
+| Diagnósticos breves, informes, indicadores y evaluaciones acotadas | | Logística: alimentación, traslados, sonido, carpas y premiación |
+| Diseño gráfico, piezas, infografías, identidad visual, contenidos y redes sociales | | Asesoría legal, contable, psicológica o médica |
+| Monitoreo de prensa, minutas y presentaciones | | |
+
+### CA3. Decisión rápida
+
+Puntúa cinco criterios de 0 a 2. Cotiza con 7 puntos o más. Con 5 o 6, cotiza solo si suma experiencia en un área que interesa: mientras la empresa no tenga ventas al Estado, cada orden de compra aceptada vale como antecedente.
+
+| Criterio | 0 | 1 | 2 |
+|---|---|---|---|
+| Afinidad (CA2) | No corresponde | Columna del medio | Coherente |
+| Plazo de entrega que piden | No se alcanza | Ajustado | Holgado |
+| Tiempo para cotizar | Menos de 3 horas | Entre 3 y 24 horas | Más de 24 horas |
+| Precio posible frente al neto máximo | No cubre costos | Margen bajo | Margen razonable |
+| Logística | Presencial lejos y sin apoyo | Presencial fuera de la región, con viático | Región de Coquimbo o a distancia |
+
+### CA4. Cotización
+
+1. Lee la solicitud completa en Mercado Público, en el escritorio de proveedor, menú Compra Ágil: descripción, productos, cantidades, plazo y lugar de entrega, adjuntos y criterios.
+2. Calcula el precio neto con la estructura de `plantillas.md`, sección 2, en versión corta. Tiene que cubrir los costos y quedar bajo el neto máximo.
+3. Genera la cotización formal con `/cotizacion` (logo, correlativo y validez de 10 días hábiles) y pásala a PDF para adjuntarla.
+4. Redacta la descripción de la oferta con `plantillas.md`, sección 6.
+5. Nicolás ingresa el precio, adjunta los archivos, firma la declaración jurada y envía. Revisa si la plataforma pide el precio neto o con impuestos, y que coincida con el PDF. Envía con margen y no a última hora.
+
+### CA5. Después de cotizar
+
+- **Si te seleccionan:** llega la orden de compra. Acéptala en la plataforma, porque eso formaliza la compra. Después entrega, pide la recepción conforme, factura y cobra a 30 días corridos.
+- **Al terminar el trabajo:** pide la carta de certificación (`plantillas.md`, sección 4) y guarda la orden de compra. Las dos son experiencia acreditable para las licitaciones.
+- **Si no te seleccionan:** anota en `seguimiento.md` quién ganó y a qué precio. Las órdenes de Compra Ágil aparecen en la API de órdenes de compra con el tipo AG.
+- **Necesidad repetida:** si un organismo compra varias veces lo mismo y la suma del año pasa de 100 UTM, la directiva lo obliga a licitar. Anótalo como licitación probable.
 
 ## Documentos de la empresa que conviene tener siempre al día
 

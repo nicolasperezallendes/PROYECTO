@@ -16,6 +16,26 @@ Léelas antes de usar las herramientas. Cada lección nueva se agrega con su fec
 - **Unidades de la Municipalidad de Coquimbo:** 2446 es la municipal central y 2448 el Departamento de Salud (organismo 87901).
 - **Ruido conocido del filtro por nombre:** "diseño" trae ingeniería y arquitectura, como puentes, ciclovías, paraderos, plazas y edificios. "Capacitación" trae franquicias y seguros. Ya están en `excluir`.
 
+## API de Compra Ágil (v2, beta)
+
+Agregado el 19-10-2026, a partir de chilecompra.cl/api y de la documentación en PDF de mayo de 2026.
+
+- **Existe desde el 22-05-2026.** Antes, la API v1 no traía las solicitudes de cotización de Compra Ágil (ChileCompra lo confirmó en febrero de 2025). Ahora tiene su propia API, en versión beta.
+- **Rutas:** la base es `https://api2.mercadopublico.cl`. El listado está en `/v2/compra-agil` y el detalle en `/v2/compra-agil/{codigo}` (los códigos son del tipo `1195-39-COT26`). La guía también usa `/v2/compraagil`, sin guion, y `compras_agiles.py` prueba las dos.
+- **Ticket:** va en el header `ticket`, no en la URL. Se pide en chilecompra.cl/api con Clave Única. Falta confirmar que el ticket actual de JUNCOS sirve también para esta API.
+- **Estados:** `publicada` (abierta y recibiendo cotizaciones), `cerrada`, `desierta`, `cancelada` y `proveedor_seleccionado`.
+- **Filtros:** estado, región (de 1 a 16; Coquimbo debería ser 4, hay que verificarlo), texto (`q`) y fechas en ISO-8601. No hay filtro por organismo ni por rubro, así que se filtra en el script.
+- **Paginación:** hasta 50 registros por página.
+- **Cuota diaria por ticket:** al agotarse responde 429, y se reinicia al cambiar el día. Por eso el script filtra por nombre antes de bajar detalles, y por defecto solo mira las publicadas en los últimos 3 días.
+- **Monto:** `monto_disponible_clp` está en `montos` en el listado y en `presupuesto` en el detalle. Incluye impuestos.
+- **Sin confirmar:**
+  - si `codigo_producto` es UNSPSC de 8 dígitos o un código propio;
+  - el enlace público a la ficha de cada Compra Ágil;
+  - si la API muestra el plazo para aceptar la orden de compra.
+  Revísalo en la primera corrida y corrige el script.
+- **Pruebas:** `compras_agiles.py` se probó el 19-10-2026 contra una API simulada, no contra la real. La sesión del chat de claude.ai no tenía red hacia mercadopublico.cl ni ticket.
+- **Las órdenes de compra de Compra Ágil** aparecen en la API v1 de órdenes con el tipo AG. Sirven para ver quién ganó y a qué precio.
+
 ## Portal web
 
 - **La ficha pública de la licitación** (`DetailsAcquisition.aspx`) es HTML normal y trae el resumen de las bases. Se lee con `mercadopublico.py ficha-web`. Lo mismo vale para el foro (`/Foros/.../PublicView.aspx`).
@@ -27,7 +47,7 @@ Léelas antes de usar las herramientas. Cada lección nueva se agrega con su fec
 
 ## Entorno de trabajo
 
-- **El acceso a mercadopublico.cl depende de la sesión.** En una sesión en la nube del 19-10-2026 la red no llegaba a mercadopublico.cl. En otra del mismo día (rama `claude/stoic-darwin-gi9n29`) la API y la ficha pública funcionaron sin problema. Prueba primero con `python3 mercadopublico.py organismos coquimbo`. Si falla por red, lee la ficha y el foro con Claude en Chrome o corre los scripts en el computador del usuario.
+- **El acceso a mercadopublico.cl depende de la sesión.** En una sesión en la nube del 19-10-2026 la red no llegaba a mercadopublico.cl. En otra del mismo día (rama `claude/stoic-darwin-gi9n29`) la API y la ficha pública funcionaron sin problema. En el chat del proyecto JUNCOS en claude.ai, también el 19-10-2026, no hubo red hacia `api.mercadopublico.cl` ni hacia `api2.mercadopublico.cl`. Prueba primero con `python3 mercadopublico.py organismos coquimbo`. Si falla por red, lee la ficha y el foro con Claude en Chrome o corre los scripts en el computador del usuario.
 - **Para hacer push**, el repositorio `nicolasperezallendes/PROYECTO` tiene que estar agregado como fuente de la sesión, con permiso de escritura. Si no lo está, entrega los archivos por el chat y avisa que el commit quedó solo en el entorno. Así se perdieron el programa de integridad y el borrador de propuesta de 564953-79-LE26 del 19-10-2026: se hicieron en otra sesión y no llegaron a GitHub.
 - Las sesiones en la nube **no pueden usar el Chrome del usuario**. Para eso hay que trabajar en la app de escritorio o con `claude remote-control` en su computador, con la extensión Claude en Chrome conectada.
 - El trabajo se guarda con commits y push en la rama del proyecto. Lo que queda solo en el contenedor se pierde.

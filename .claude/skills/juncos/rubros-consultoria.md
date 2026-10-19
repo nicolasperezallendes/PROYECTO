@@ -37,6 +37,8 @@
 
 **Quitar:** 30222300, 43223100, 47121900, 72131700 y 86121500.
 
+**Compra Ágil:** la plataforma avisa las Compras Ágiles a las EMT según sus rubros inscritos. Inscribir los sugeridos también amplía esos avisos. `compras_agiles.py` usa los mismos pesos de rubro que `postulables.py`.
+
 ## Lo que todavía no se ha visto
 
 - **El árbol completo de categorías propias de ChileCompra.** Bajo "Consultoría" (102xxxxxx) solo se conocen 102000000 (con el producto 102101001) y 102106000 "Arquitectura y Urbanismo". El resto del árbol solo aparece en el buscador "+ Agregar rubros" de Mi empresa, que requiere sesión iniciada.

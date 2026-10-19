@@ -41,6 +41,10 @@ python3 mercadopublico.py ficha-web 564953-79-LE26 --md ficha.md
 # Licitaciones activas de todo el país afines al perfil de JUNCOS
 python3 postulables.py --max-detalle 100 --md ranking.md
 
+# Compras Ágiles abiertas afines al perfil (API Compra Ágil v2, beta)
+python3 compras_agiles.py --md ranking_ca.md
+python3 compras_agiles.py --region coquimbo --dias 7 --md ranking_ca_coquimbo.md
+
 # Buscar un proveedor por RUT
 python3 mercadopublico.py proveedor 76.123.456-7
 ```
@@ -58,3 +62,11 @@ Todas las listas aceptan `--md`, `--csv` y `--json` para guardar el resultado.
   reCAPTCHA y se descargan a mano desde "Ver adjuntos" en la ficha.
 - Unidades del municipio: código 2446 (municipal central) y 2448
   (Departamento de Salud).
+- `compras_agiles.py` usa otra API (`https://api2.mercadopublico.cl/v2/compra-agil`),
+  con el mismo ticket, pero enviado en el header `ticket`. Tiene cuota diaria: si
+  responde 429, hay que esperar al día siguiente. Lee también el bloque
+  `compra_agil` de `perfil_juncos.json`. Para pruebas sin red se puede apuntar a otra
+  base con `MERCADOPUBLICO_CA_BASE`.
+- `compras_agiles.py` se probó el 19-10-2026 solo contra una API simulada. En la
+  primera corrida real, revisa el código de región, el formato de `codigo_producto`
+  y el enlace a la ficha pública.

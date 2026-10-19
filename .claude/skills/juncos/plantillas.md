@@ -73,3 +73,17 @@ Pide esta carta al cerrar cada trabajo, aunque no haya una licitación a la vist
 - ¿La oferta económica debe expresarse con o sin impuestos?
 - ¿Cómo se acredita el programa de integridad: basta un documento interno o se exige certificación?
 - ¿Quién es el dueño de las bases de datos y en qué formato deben entregarse?
+
+## 6. Descripción de la oferta en Compra Ágil
+
+Va en el campo de descripción de la cotización en Mercado Público. Se adjunta además la cotización formal en PDF generada con `/cotizacion`. Escríbela corta y siguiendo el orden de lo que pide la solicitud.
+
+> CONSULTORES NICOLÁS PÉREZ ALLENDES E.I.R.L. (JUNCOS), consultora de La Serena especializada en [estudios y encuestas / capacitación / comunicaciones y diseño], ofrece [servicio] según lo solicitado: [qué se entrega, cantidad, número de sesiones u horas, modalidad y lugar]. Plazo de entrega: [n] días corridos desde la aceptación de la orden de compra. Incluye [materiales, traslados, informe final u otros]. Responsable: Nicolás Pérez Allendes, sociólogo. Se adjunta la cotización N° [correlativo].
+
+Antes de enviar, revisa que:
+- [ ] La oferta cubra la totalidad de lo pedido, con las mismas cantidades y unidades.
+- [ ] El plazo de entrega sea igual o menor al solicitado.
+- [ ] El neto más IVA no supere el monto disponible.
+- [ ] El precio de la plataforma coincida con el PDF de `/cotizacion`.
+- [ ] No haya condiciones del tipo «sujeto a» o «salvo».
+- [ ] Vayan adjuntos todos los archivos que pide la solicitud.

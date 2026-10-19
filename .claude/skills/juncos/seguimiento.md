@@ -14,6 +14,14 @@ Actualiza este archivo al final de cada sesión de trabajo. Estados posibles: **
 | [1750-6-LE26](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1750-6-LE26) | Diseño y ejecución de talleres de liderazgo efectivo | Dirección Nacional del Servicio Civil | $68.000.000 | Lun 26-10-2026, 15:00 | Detectada | Decidir con la matriz |
 | [519302-9-LE26](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=519302-9-LE26) | Diseño, implementación y medición de marketing digital | INAPI | No publica | Lun 02-11-2026, 16:00 | Detectada | Revisar bases |
 
+## Compras Ágiles en curso
+
+Estados posibles: **Detectada**, **Cotizada**, **Seleccionada**, **OC aceptada**, **Entregada**, **Pagada**, **No seleccionada** o **Descartada**. El método está en `proceso-postulacion.md`, «Ruta corta: Compra Ágil».
+
+| Código | Nombre | Organismo | Monto disponible | Cierre | Estado | Próximo paso |
+|---|---|---|---|---|---|---|
+| — | Todavía no se corre la búsqueda real (ruta agregada el 19-10-2026) | — | — | — | — | Primera corrida de `compras_agiles.py` |
+
 ## Análisis entregados
 
 | Fecha | Código | Veredicto | Archivo |
@@ -55,7 +63,9 @@ Actualiza este archivo al final de cada sesión de trabajo. Estados posibles: **
 |---|---|---|
 | Renovar la inscripción en el Registro de Proveedores | Antes del 29-12-2026 | Pendiente |
 | Agregar en el SII un giro de consultoría (702000, 732000 o 722000) y actualizarlo en Mercado Público | Lo antes posible | Pendiente |
-| Quitar 5 rubros sin relación y agregar los 8 sugeridos | Lo antes posible | Pendiente |
+| Quitar 5 rubros sin relación y agregar los 8 sugeridos. Los rubros también definen qué Compras Ágiles avisa la plataforma | Lo antes posible | Pendiente |
+| Verificar en Mercado Público que JUNCOS figure como Empresa de Menor Tamaño (micro). Sin eso no puede cotizar en el primer llamado de Compra Ágil. Si no aparece, consultar a la mesa de ayuda (600 0061 211) | Antes de la primera Compra Ágil | Pendiente |
+| Primera corrida real de `compras_agiles.py`. Confirmar que el ticket sirve para la API de Compra Ágil, el código de región de Coquimbo, el formato de `codigo_producto` y el enlace público de cada ficha | Esta semana | Pendiente |
 | Pedir los certificados de vigencia, boletín comercial y quiebras | Esta semana (para 564953-79-LE26) | Pendiente |
 | Redactar el código de ética o programa de integridad | Antes del 22-10-2026 | Hecho en otra sesión, sin subir a GitHub. Recuperar o regenerar |
 | Reunir certificados de experiencia del titular (trabajos previos) | Antes del 22-10-2026 | Pendiente |
