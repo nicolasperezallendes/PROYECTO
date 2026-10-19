@@ -1,0 +1,37 @@
+{
+  "empresa": "CONSULTORES NICOLÁS PÉREZ ALLENDES E.I.R.L. (JUNCOS EIRL)",
+  "rut": "78.390.884-0",
+  "codigo_proveedor_mp": "2103594",
+  "estado_rubros": "BORRADOR: rubros propuestos, falta confirmarlos contra los inscritos en Mercado Público",
+  "rubros": [
+    {"codigo": "80101500", "nombre": "Consultoría de negocios y administración"},
+    {"codigo": "80101600", "nombre": "Gerencia de proyectos"},
+    {"codigo": "80141500", "nombre": "Investigación de mercados"},
+    {"codigo": "81131500", "nombre": "Metodología y análisis"},
+    {"codigo": "93141500", "nombre": "Desarrollo social"},
+    {"codigo": "93142000", "nombre": "Desarrollo urbano"},
+    {"codigo": "93142100", "nombre": "Desarrollo regional"},
+    {"codigo": "93151500", "nombre": "Administración pública"},
+    {"codigo": "86101700", "nombre": "Capacitación no científica"},
+    {"codigo": "86132000", "nombre": "Educación en gestión"},
+    {"codigo": "80161500", "nombre": "Servicios de apoyo gerencial"},
+    {"codigo": "82101500", "nombre": "Publicidad"},
+    {"codigo": "82141500", "nombre": "Diseño gráfico"},
+    {"codigo": "83121700", "nombre": "Servicios de comunicación masiva"}
+  ],
+  "palabras_clave": [
+    "estudio", "diagnostico", "encuesta", "consultoria", "asesoria", "evaluacion",
+    "capacitacion", "taller", "pladeco", "plan de desarrollo", "plan comunal",
+    "participacion ciudadana", "participativo", "caracterizacion", "levantamiento",
+    "linea base", "sistematizacion", "focus", "grupos focales", "satisfaccion usuaria",
+    "social", "comunitari", "territorial", "politica comunal", "politica publica",
+    "comunicacion", "comunicacional", "monitoreo de medios", "prensa", "difusion",
+    "estrategia", "planificacion", "investigacion", "observatorio", "catastro"
+  ],
+  "excluir": [
+    "obra", "construccion", "reposicion", "pavimento", "suministro de", "adquisicion de",
+    "arriendo", "vehiculo", "combustible", "alimento", "medicamento", "insumo",
+    "mantencion", "reparacion", "mobiliario", "equipamiento", "computacional", "aseo"
+  ],
+  "regiones_preferentes": ["Coquimbo"]
+}
