@@ -3,7 +3,7 @@
   "rut": "78.390.884-0",
   "codigo_proveedor_mp": "2103594",
   "estado_rubros": "CONFIRMADO 19-10-2026 contra Mi empresa > Rubros en Mercado Público; pesos revisados el 19-10-2026 con 166 licitaciones de consultoría",
-  "nota_pesos": "peso 5 = núcleo de la consultora; 3 = sugerido, aún no inscrito (o inscrito de uso menor); 2 = inscrito pero secundario. Los códigos de 9 dígitos son categorías propias de ChileCompra y solo se comparan con códigos de 9 dígitos.",
+  "nota_pesos": "peso 5 = núcleo de la consultora; 4 = sugerido de alta prioridad (80111500, el rubro más usado en capacitación); 3 = sugerido, aún no inscrito (o inscrito de uso menor); 2 = inscrito pero secundario. Los códigos de 9 dígitos son categorías propias de ChileCompra y solo se comparan con códigos de 9 dígitos.",
   "rubros": [
     {
       "codigo": "80101500",

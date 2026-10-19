@@ -81,7 +81,7 @@ Las herramientas están en `herramientas/mercadopublico/` (instrucciones en su `
 - 80161500 Apoyo gerencial
 - 82101500 Publicidad
 
-Si el usuario cambia sus rubros, actualiza esta tabla y `perfil_juncos.json`. En el JSON, `peso` vale 5 para el núcleo, 3 para los sugeridos o no inscritos y 2 para los secundarios. Los rubros sin relación no puntúan. Pon la nueva fecha en `estado_rubros`.
+Si el usuario cambia sus rubros, actualiza esta tabla y `perfil_juncos.json`. En el JSON, `peso` vale 5 para el núcleo, 4 para el sugerido de alta prioridad (80111500), 3 para los demás sugeridos o no inscritos y 2 para los secundarios. Los rubros sin relación no puntúan. Pon la nueva fecha en `estado_rubros`.
 
 ## Especialidades de la consultora (en orden de prioridad para postular)
 
