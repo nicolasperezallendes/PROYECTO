@@ -29,7 +29,7 @@ Si el repositorio y el informe no coinciden, manda el de fecha más reciente. Av
 
 ### Cómo mantener las dos copias al día
 
-- Cuando cambien la skill, el perfil o el seguimiento en el repositorio, genera el informe de nuevo con la fecha del día. Súbelo al proyecto, en `claude/licitaciones-juncos/`, con `project_write`.
+- Cuando cambien la skill, el perfil o el seguimiento en el repositorio, genera el informe de nuevo con la fecha del día: `python3 herramientas/generar_informe_skill.py --nota "actualizado con ..."`. El comando deja en `claude/` el informe y el paquete `dd.mm.aaaa - SKILL JUNCOS.zip`, sin el ticket. Los pendientes del resumen los toma de la tabla de tareas de `seguimiento.md`. Sube el informe al proyecto, en `claude/licitaciones-juncos/`, con `project_write`. El .zip es para volver a cargar la skill en claude.ai (Configuración > Capacidades > Skills).
 - En un chat sin el repositorio, guarda los cambios en el informe del proyecto. Si son del mismo día, reemplaza la sección que cambió en el mismo archivo. Si son de otro día, crea un informe nuevo con la fecha del día. Avisa que GitHub queda atrasado hasta el próximo push.
 - Para correr los scripts o hacer push desde claude.ai, agrega el repositorio a la sesión, con permiso de escritura si vas a hacer push. Si no se puede, trabaja con lo que trae el informe y dilo.
 
@@ -111,6 +111,8 @@ Si el usuario cambia sus rubros, actualiza esta tabla y `perfil_juncos.json`. En
 6. Comunicaciones: estrategia, monitoreo de prensa, minutas, presentaciones, diseño de piezas y campañas de escala acotada.
 
 Las campañas de medios millonarias y los planes reguladores solo se abordan en alianza, mediante una Unión Temporal de Proveedores (UTP), con JUNCOS a cargo del componente social o comunicacional. En Compra Ágil vale lo mismo, pero a escala chica: se cotiza lo que calza con estas especialidades. El filtro está en `proceso-postulacion.md`, CA2.
+
+**Regla de Nicolás (19-10-2026): en Compra Ágil solo se proponen las que piden productos de los rubros inscritos de la empresa.** Las demás no se muestran, aunque su nombre suene afín. Los rubros sugeridos se suman solo si él lo pide o después de inscribirlos.
 
 ## Formato de entrega (preferencias del usuario)
 

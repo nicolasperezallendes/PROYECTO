@@ -99,7 +99,7 @@ def pedir(sufijo="", **params):
                                        "Se reinicia al cambiar el día.")
                 if e.code == 401:
                     raise ErrorCA("401: falta el ticket o no es válido para la API de Compra Ágil.")
-                if e.code in (500, 502, 503) and intento < 4:
+                if e.code in (500, 502, 503, 504) and intento < 4:
                     time.sleep(espera)
                     espera *= 2
                     continue
@@ -113,7 +113,9 @@ def pedir(sufijo="", **params):
     raise ErrorCA(ultimo or "Sin respuesta de la API de Compra Ágil")
 
 
-def listar_publicadas(dias, region=None, tamano=50, max_paginas=200):
+def listar_publicadas(dias, region=None, tamano=10, max_paginas=200):
+    # Probado el 19-10-2026: la API acepta páginas de 10 a 50, pero con 25 o 50
+    # se cae siempre por tiempo (504 a los 29 s). Con 10 responde en 15 a 28 s.
     params = {"estado": "publicada", "tamano_pagina": tamano, "numero_pagina": 1,
               "ordenar_por": "FechaPublicacion"}
     if dias:
@@ -121,10 +123,14 @@ def listar_publicadas(dias, region=None, tamano=50, max_paginas=200):
         params["publicado_desde"] = desde.strftime("%Y-%m-%dT%H:%M:%SZ")
     if region:
         params["region"] = region
-    items = []
+    items, vistos = [], set()
     while True:
         payload = (pedir(**params) or {}).get("payload") or {}
-        items += payload.get("items") or []
+        for it in payload.get("items") or []:
+            # la paginación puede repetir registros si se publican nuevos mientras se recorre
+            if it.get("codigo") not in vistos:
+                vistos.add(it.get("codigo"))
+                items.append(it)
         pag = payload.get("paginacion") or {}
         total = int(pag.get("total_paginas") or 1)
         print(f"\r  página {params['numero_pagina']}/{total}", end="", file=sys.stderr, flush=True)
@@ -276,12 +282,22 @@ def main():
     p.add_argument("--min-puntaje", type=int, default=None)
     p.add_argument("--min-horas", type=float, default=None,
                    help="descarta las que cierran antes de N horas")
+    p.add_argument("--incluir-sugeridos", action="store_true",
+                   help="acepta también los rubros sugeridos que aún no están inscritos")
+    p.add_argument("--todas", action="store_true",
+                   help="no exige coincidencia de rubro (vuelve al filtro solo por palabras clave)")
+    p.add_argument("--sin-prefiltro", action="store_true",
+                   help="revisa el detalle de todas las no excluidas, no solo las que tienen "
+                        "palabras clave en el nombre (lento: unos 17 s por Compra Ágil)")
     p.add_argument("--md", help="guardar el ranking en este archivo Markdown")
     p.add_argument("--json", help="guardar el ranking en JSON")
     args = p.parse_args()
 
     perfil = json.loads(Path(args.perfil).read_text(encoding="utf-8"))
     ca = perfil.get("compra_agil", {})
+    solo_rubros = ca.get("solo_rubros", True) and not args.todas
+    admitidos = [r for r in perfil.get("rubros", [])
+                 if r.get("peso", 5) and (r.get("inscrito", True) or args.incluir_sugeridos)]
     dias = ca.get("dias_publicacion", 3) if args.dias is None else args.dias
     max_det = args.max_detalle or ca.get("max_detalle", 60)
     min_pts = ca.get("min_puntaje", 3) if args.min_puntaje is None else args.min_puntaje
@@ -309,7 +325,7 @@ def main():
         if contar(nombre, excl):
             continue
         hits = contar(nombre, claves)
-        if hits:
+        if hits or args.sin_prefiltro:
             reg = g(it, "institucion", "nombre_region", defecto="") or ""
             pref = any(normalizar(r) in normalizar(reg) for r in prefs)
             candidatas.append((len(hits) + (2 if pref else 0), it))
@@ -330,6 +346,8 @@ def main():
             print(f"\n  {it.get('codigo')}: {e}", file=sys.stderr)
             det = {}
         item = {**it, **det}  # el detalle trae descripción, productos y entrega
+        if solo_rubros and not rubros_coincidentes(codigos_productos(item), admitidos):
+            continue  # sus productos no están en los rubros de la empresa
         fila = evaluar(item, perfil, consulta)
         if not fila or fila["puntaje"] < min_pts:
             continue
@@ -340,6 +358,9 @@ def main():
     filas.sort(key=lambda r: (-r["puntaje"], r["horas_al_cierre"] if r["horas_al_cierre"] is not None else 9e9))
     alcance = f"región {args.region}" if region else "todo el país"
     ventana = f"publicadas en los últimos {dias} días" if dias else "todas las abiertas"
+    if solo_rubros:
+        ventana += (". Filtro: solo productos de los rubros inscritos"
+                    + (" y sugeridos" if args.incluir_sugeridos else ""))
     md = (f"# Compras Ágiles afines · {perfil.get('empresa', 'perfil')}\n\n"
           f"Fuente: API Compra Ágil de Mercado Público (v2 beta), consultada el "
           f"{consulta:%d-%m-%Y %H:%M} (hora de Chile). Alcance: {alcance}, {ventana}. "

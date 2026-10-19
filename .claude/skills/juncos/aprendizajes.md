@@ -22,17 +22,21 @@ Agregado el 19-10-2026, a partir de chilecompra.cl/api y de la documentación en
 
 - **Existe desde el 22-05-2026.** Antes, la API v1 no traía las solicitudes de cotización de Compra Ágil (ChileCompra lo confirmó en febrero de 2025). Ahora tiene su propia API, en versión beta.
 - **Rutas:** la base es `https://api2.mercadopublico.cl`. El listado está en `/v2/compra-agil` y el detalle en `/v2/compra-agil/{codigo}` (los códigos son del tipo `1195-39-COT26`). La guía también usa `/v2/compraagil`, sin guion, y `compras_agiles.py` prueba las dos.
-- **Ticket:** va en el header `ticket`, no en la URL. Se pide en chilecompra.cl/api con Clave Única. Falta confirmar que el ticket actual de JUNCOS sirve también para esta API.
+- **Ticket:** va en el header `ticket`, no en la URL. Se pide en chilecompra.cl/api con Clave Única. **Confirmado el 19-10-2026: el ticket de JUNCOS sirve también para esta API.**
 - **Estados:** `publicada` (abierta y recibiendo cotizaciones), `cerrada`, `desierta`, `cancelada` y `proveedor_seleccionado`.
-- **Filtros:** estado, región (de 1 a 16; Coquimbo debería ser 4, hay que verificarlo), texto (`q`) y fechas en ISO-8601. No hay filtro por organismo ni por rubro, así que se filtra en el script.
-- **Paginación:** hasta 50 registros por página.
+- **Filtros:** estado, región, texto (`q`, sin probar todavía) y fechas en ISO-8601 (`publicado_desde`). **Región verificada: Coquimbo es 4.** No hay filtro por producto, rubro ni organismo: `codigo_producto` y `rubro` devuelven 400 con "Parámetros no permitidos". La API rechaza cualquier parámetro desconocido con ese error, lo que sirve para probar nombres.
+- **Paginación (probada el 19-10-2026):** acepta de 10 a 50 registros por página, pero **con 25 o 50 se cae siempre por tiempo** (504 "Endpoint request timed out" a los 29 segundos). Con 10 responde en 15 a 28 segundos. El script usa 10 y reintenta los 504. Sin `estado` también falla (500).
+- **Volumen y tiempo:** un día normal hay unas 7.000 Compras Ágiles publicadas en el país y unas 3.400 de los últimos 3 días. En la Región de Coquimbo hay unas 280 abiertas y unas 130 de los últimos 3 días. **Cada detalle tarda unos 17 segundos.** Revisar todas las de Coquimbo de 3 días toma cerca de 40 minutos. Para todo el país hay que usar el prefiltro por nombre.
+- **Duplicados:** la paginación puede repetir una Compra Ágil si se publican nuevas mientras se recorre. El script las elimina por código.
+- **Productos:** `productos_solicitados[].codigo_producto` es un entero **UNSPSC de 8 dígitos** (por ejemplo, 90111604 "Salones"), así que calza con los rubros del perfil.
+- **Filtro por rubros (pedido por Nicolás el 19-10-2026):** solo se proponen Compras Ágiles cuyos productos están en los rubros **inscritos** de JUNCOS (`compra_agil.solo_rubros: true`). Con `--incluir-sugeridos` se suman los rubros sugeridos, y con `--todas` se vuelve al filtro solo por palabras clave. Ojo: capacitación (80111500) aún no está inscrita, así que sin `--incluir-sugeridos` esas Compras Ágiles no aparecen.
 - **Cuota diaria por ticket:** al agotarse responde 429, y se reinicia al cambiar el día. Por eso el script filtra por nombre antes de bajar detalles, y por defecto solo mira las publicadas en los últimos 3 días.
 - **Monto:** `monto_disponible_clp` está en `montos` en el listado y en `presupuesto` en el detalle. Incluye impuestos.
-- **Sin confirmar:**
-  - si `codigo_producto` es UNSPSC de 8 dígitos o un código propio;
+- **Campos del detalle (verificados):** codigo, convocatoria, descripcion, documentos, entrega, estado, fechas, flags, id_orden_compra, institucion, motivos, nombre, presupuesto, productos_solicitados, proveedores_cotizando y resumen.
+- **Sin confirmar todavía:**
   - el enlace público a la ficha de cada Compra Ágil;
-  - si la API muestra el plazo para aceptar la orden de compra.
-  Revísalo en la primera corrida y corrige el script.
+  - si la API muestra el plazo para aceptar la orden de compra;
+  - si el filtro de texto `q` funciona y si sirve para reemplazar el prefiltro por nombre.
 - **Pruebas:** `compras_agiles.py` se probó el 19-10-2026 contra una API simulada, no contra la real. La sesión del chat de claude.ai no tenía red hacia mercadopublico.cl ni ticket.
 - **Las órdenes de compra de Compra Ágil** aparecen en la API v1 de órdenes con el tipo AG. Sirven para ver quién ganó y a qué precio.
 

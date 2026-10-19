@@ -143,9 +143,12 @@ Fuentes: Directiva N° 35 de ChileCompra (Res. 563-B del 22-12-2025), página Co
 ```bash
 cd herramientas/mercadopublico
 python3 compras_agiles.py --md "../../claude/dd.mm.aaaa - COMPRAS AGILES AFINES JUNCOS.md"
-python3 compras_agiles.py --region coquimbo --dias 7      # foco regional, con una ventana más amplia
+python3 compras_agiles.py --region coquimbo --sin-prefiltro --max-detalle 200   # región completa, unos 40 min
+python3 compras_agiles.py --region coquimbo --incluir-sugeridos                 # suma capacitación y otros rubros sugeridos
 ```
 
+- **Solo entran Compras Ágiles cuyos productos están en los rubros inscritos de JUNCOS.** Nicolás lo pidió el 19-10-2026. Las palabras clave ya no dejan pasar nada por sí solas: sirven para ordenar y como prefiltro por nombre, antes de bajar el detalle. `--incluir-sugeridos` suma los rubros que se recomendó inscribir, y `--todas` quita el filtro por rubro.
+- En la región conviene `--sin-prefiltro`: revisa el detalle de todas las Compras Ágiles no excluidas y así no se escapa ninguna cuyo nombre no diga nada. Para todo el país no es viable (unos 17 segundos por detalle), y ahí se usa el prefiltro.
 - Usa el mismo `perfil_juncos.json` que las licitaciones (rubros, palabras clave y exclusiones), más su bloque `compra_agil`. Ese bloque agrega:
   - palabras propias de las compras chicas, como charla, relator, jornada, clima laboral, redes sociales o infografía;
   - exclusiones de bienes y servicios ajenos al rubro, como alimentación, traslados, premiación, primeros auxilios o asesoría legal y contable;

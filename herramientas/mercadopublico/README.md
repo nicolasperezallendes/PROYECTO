@@ -67,6 +67,8 @@ Todas las listas aceptan `--md`, `--csv` y `--json` para guardar el resultado.
   responde 429, hay que esperar al día siguiente. Lee también el bloque
   `compra_agil` de `perfil_juncos.json`. Para pruebas sin red se puede apuntar a otra
   base con `MERCADOPUBLICO_CA_BASE`.
-- `compras_agiles.py` se probó el 19-10-2026 solo contra una API simulada. En la
-  primera corrida real, revisa el código de región, el formato de `codigo_producto`
-  y el enlace a la ficha pública.
+- `compras_agiles.py` se probó contra la API real el 19-10-2026. Usa páginas de 10
+  (con 25 o 50 la API se cae por tiempo), cada detalle tarda unos 17 segundos y
+  Coquimbo es la región 4. Por defecto solo muestra Compras Ágiles cuyos productos
+  están en los rubros inscritos (`--incluir-sugeridos`, `--todas` y `--sin-prefiltro`
+  cambian ese comportamiento).

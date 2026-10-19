@@ -65,7 +65,8 @@ Estados posibles: **Detectada**, **Cotizada**, **Seleccionada**, **OC aceptada**
 | Agregar en el SII un giro de consultoría (702000, 732000 o 722000) y actualizarlo en Mercado Público | Lo antes posible | Pendiente |
 | Quitar 5 rubros sin relación y agregar los 8 sugeridos. Los rubros también definen qué Compras Ágiles avisa la plataforma | Lo antes posible | Pendiente |
 | Verificar en Mercado Público que JUNCOS figure como Empresa de Menor Tamaño (micro). Sin eso no puede cotizar en el primer llamado de Compra Ágil. Si no aparece, consultar a la mesa de ayuda (600 0061 211) | Antes de la primera Compra Ágil | Pendiente |
-| Primera corrida real de `compras_agiles.py`. Confirmar que el ticket sirve para la API de Compra Ágil, el código de región de Coquimbo, el formato de `codigo_producto` y el enlace público de cada ficha | Esta semana | Pendiente |
+| Primera corrida real de `compras_agiles.py` | 19-10-2026 | Hecho: el ticket sirve, Coquimbo es la región 4 y `codigo_producto` es UNSPSC de 8 dígitos. Se ajustó a páginas de 10 y al filtro por rubros inscritos |
+| Confirmar el enlace público a la ficha de cada Compra Ágil y probar el filtro de texto `q` | Esta semana | Pendiente |
 | Pedir los certificados de vigencia, boletín comercial y quiebras | Esta semana (para 564953-79-LE26) | Pendiente |
 | Redactar el código de ética o programa de integridad | Antes del 22-10-2026 | Hecho en otra sesión, sin subir a GitHub. Recuperar o regenerar |
 | Reunir certificados de experiencia del titular (trabajos previos) | Antes del 22-10-2026 | Pendiente |
