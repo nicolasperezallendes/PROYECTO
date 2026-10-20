@@ -6,23 +6,17 @@ Actualiza este archivo al final de cada sesión de trabajo. Estados posibles: **
 
 | Código | Nombre | Organismo | Monto | Cierre | Estado | Próximo paso |
 |---|---|---|---|---|---|---|
-| [564953-79-LE26](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=564953-79-LE26) | Servicio de encuestas de satisfacción usuaria (educación y salud) | Corp. de Educación y Salud de Las Condes | $20.000.000 | Vie 23-10-2026, 17:00 | En análisis | Nicolás baja las bases y los anexos. Leer el foro el 20-10 a las 17:00 |
+| [564953-79-LE26](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=564953-79-LE26) | Servicio de encuestas de satisfacción usuaria (educación y salud) | Corp. de Educación y Salud de Las Condes | $20.000.000 | **Lun 26-10-2026, 17:00** (se postergó desde el vie 23-10; visto el 20-10) | Postulando (solo Línea 1, educación) | Bases y anexos analizados, anexos prellenados. Leer el foro el **jue 22-10 a las 18:00** (antes era el 20-10). Faltan datos del Anexo 1 (cédula, inicio de actividades, banco), el precio y la difusión del programa de integridad. Apertura: mar 27-10, 09:00 |
 | [632-11-LE26](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=632-11-LE26) | Informe 5: diagnóstico y plan maestro del barrio Pudepar, Cartagena | Subsecretaría de Vivienda y Urbanismo | No publica | Mié 28-10-2026, 15:10 | Detectada | Decidir con la matriz de la etapa 2 |
 | [752-32-LP26](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=752-32-LP26) | Estudio de indicadores y metas para el seguimiento del PARCC | Gobierno Regional de Los Lagos | $100.000.000 | Mar 03-11-2026, 15:30 | Detectada | Decidir con la matriz. Probable alianza |
 | [691-8-LP26](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=691-8-LP26) | Diagnóstico y tramitación del Plan Regulador Comunal de Empedrado | Subsecretaría de Vivienda y Urbanismo | $200.000.000 | Mié 04-11-2026, 17:00 | Detectada | Solo en UTP con urbanistas |
 | [3712-75-LE26](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3712-75-LE26) | Talleres de oficio para el programa Quiero Mi Barrio | I. Municipalidad de Los Vilos (**Región de Coquimbo**) | No publica | Lun 26-10-2026, 15:05 | Detectada | Revisar bases. Es la única afín en la región |
-| [1750-6-LE26](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1750-6-LE26) | Diseño y ejecución de talleres de liderazgo efectivo | Dirección Nacional del Servicio Civil | $68.000.000 | Lun 26-10-2026, 15:00 | Detectada | Decidir con la matriz |
+| [1750-6-LE26](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1750-6-LE26) | Diseño y ejecución de talleres de liderazgo efectivo | Dirección Nacional del Servicio Civil | $68.000.000 | Lun 26-10-2026, 15:00 | Detectada | Decidir con la matriz. Las preguntas al foro cierran hoy, mar 20-10, a las 18:00 |
 | [519302-9-LE26](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=519302-9-LE26) | Diseño, implementación y medición de marketing digital | INAPI | No publica | Lun 02-11-2026, 16:00 | Detectada | Revisar bases |
 
 ## Compras Ágiles en curso
 
 Estados posibles: **Detectada**, **Cotizada**, **Seleccionada**, **OC aceptada**, **Entregada**, **Pagada**, **No seleccionada** o **Descartada**. El método está en `proceso-postulacion.md`, «Ruta corta: Compra Ágil».
-
-| Código | Nombre | Organismo | Monto disponible | Cierre | Estado | Próximo paso |
-|---|---|---|---|---|---|---|
-| — | Todavía no se corre la búsqueda real (ruta agregada el 19-10-2026) | — | — | — | — | Primera corrida de `compras_agiles.py` |
-
-## Compras Ágiles en curso
 
 | Código | Nombre | Organismo | Monto disponible | Cierre | Cotizaciones a la fecha | Estado | Próximo paso |
 |---|---|---|---|---|---|---|---|
