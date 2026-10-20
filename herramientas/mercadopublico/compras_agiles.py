@@ -26,6 +26,7 @@ El ticket es el mismo de la API de Mercado Público (MERCADOPUBLICO_TICKET o
 
 import argparse
 import json
+import re
 import os
 import sys
 import time
@@ -227,6 +228,21 @@ def texto_completo(item):
 
 # ---------------------------------------------------------------- línea de diseño
 
+def contar_d(texto, palabras):
+    """Como contar(), pero por palabra completa (con plural), para la línea de diseño.
+    Evita que 'logo' calce con 'kinesiologo' o 'diploma' con 'diplomado'."""
+    t = normalizar(texto)
+    return [p for p in palabras
+            if re.search(r"(?<![a-z0-9])" + re.escape(normalizar(p)) + r"(s|es)?(?![a-z0-9])", t)]
+
+
+def unidades(c):
+    try:
+        return f"{float(c):,.0f}".replace(",", ".")
+    except (TypeError, ValueError):
+        return str(c)
+
+
 def cfg_diseno(perfil):
     d = perfil.get("compra_agil", {}).get("diseno", {})
     return d if d.get("activo") else {}
@@ -238,7 +254,7 @@ def excluido(nombre, perfil, extra=()):
     excl = perfil.get("excluir", []) + ca.get("excluir_extra", []) + list(extra)
     hits = contar(nombre, excl)
     d = cfg_diseno(perfil)
-    if d and contar(nombre, d.get("palabras", [])):
+    if d and contar_d(nombre, d.get("palabras", [])):
         flex = [normalizar(x) for x in d.get("excluir_flexible", [])]
         hits = [h for h in hits if normalizar(h) not in flex]
     return hits
@@ -249,7 +265,7 @@ def es_diseno(item, perfil):
     if not d:
         return False
     return bool(rubros_coincidentes(codigos_productos(item), d.get("rubros", []))
-                or contar(item.get("nombre", ""), d.get("palabras", [])))
+                or contar_d(item.get("nombre", ""), d.get("palabras", [])))
 
 
 def motivo_material(item, perfil):
@@ -263,7 +279,7 @@ def motivo_material(item, perfil):
     for p in item.get("productos_solicitados") or []:
         try:
             if float(p.get("cantidad") or 0) > tope:
-                return f"{p.get('cantidad'):g} unidades de '{(p.get('nombre') or '')[:30]}'"
+                return f"{unidades(p.get('cantidad'))} unidades de '{(p.get('nombre') or '')[:30]}'"
         except (TypeError, ValueError):
             pass
     m = monto(item)
@@ -279,9 +295,9 @@ def evaluar(item, perfil, ahora=None):
     if excluido(item.get("nombre", ""), perfil):
         return None
     d = cfg_diseno(perfil)
-    claves_todas = perfil.get("palabras_clave", []) + ca.get("palabras_clave_extra", []) + d.get("palabras", [])
+    claves_todas = perfil.get("palabras_clave", []) + ca.get("palabras_clave_extra", [])
     texto = texto_completo(item)
-    claves = contar(texto, claves_todas)
+    claves = contar(texto, claves_todas) + contar_d(texto, d.get("palabras", []))
     rubros = rubros_coincidentes(codigos_productos(item), perfil.get("rubros", []))
     vistos = {r["codigo"] for r in rubros}
     rubros += [r for r in rubros_coincidentes(codigos_productos(item), d.get("rubros", []))
@@ -308,6 +324,8 @@ def evaluar(item, perfil, ahora=None):
         str(g(item, "convocatoria", "estado_convocatoria", defecto="") or "")
     if "segund" in normalizar(llamado):
         alertas.append("segundo llamado (abierto a empresas de todo tamaño)")
+    if item.get("_sin_detalle"):
+        alertas.append("la API no dio el detalle: revisar productos y cantidades en la plataforma")
     if linea == "diseño":
         alertas.append("cotizar impresión y despacho con imprenta antes de fijar el precio")
         if contar(texto, ["instalacion", "instalar", "retiro"]):
@@ -409,15 +427,14 @@ def main():
     except ErrorCA as e:
         sys.exit(f"No se pudo listar: {e}")
 
-    claves = perfil.get("palabras_clave", []) + ca.get("palabras_clave_extra", []) \
-        + cfg_diseno(perfil).get("palabras", [])
+    claves = perfil.get("palabras_clave", []) + ca.get("palabras_clave_extra", [])
     prefs = perfil.get("regiones_preferentes", [])
     candidatas = []
     for it in todas:
         nombre = it.get("nombre", "")
-        if excluido(nombre, perfil, cfg_diseno(perfil).get("excluir", []) if contar(nombre, cfg_diseno(perfil).get("palabras", [])) else ()):
+        if excluido(nombre, perfil, cfg_diseno(perfil).get("excluir", []) if contar_d(nombre, cfg_diseno(perfil).get("palabras", [])) else ()):
             continue
-        hits = contar(nombre, claves)
+        hits = contar(nombre, claves) + contar_d(nombre, cfg_diseno(perfil).get("palabras", []))
         if hits or args.sin_prefiltro:
             reg = g(it, "institucion", "nombre_region", defecto="") or ""
             pref = any(normalizar(r) in normalizar(reg) for r in prefs)
@@ -437,11 +454,12 @@ def main():
             break
         except ErrorCA as e:
             print(f"\n  {it.get('codigo')}: {e}", file=sys.stderr)
-            det = {}
+            det = {"_sin_detalle": True}
         item = {**it, **det}  # el detalle trae descripción, productos y entrega
         diseno = es_diseno(item, perfil)
         rubro_ok = rubros_coincidentes(codigos_productos(item), admitidos) or \
-            rubros_coincidentes(codigos_productos(item), cfg_diseno(perfil).get("rubros", []))
+            rubros_coincidentes(codigos_productos(item), cfg_diseno(perfil).get("rubros", [])) or \
+            (diseno and det.get("_sin_detalle"))  # nombre de diseño, pero la API no dio el detalle
         if solo_rubros and not rubro_ok:
             continue  # sus productos no están en los rubros de la empresa ni en la línea de diseño
         if diseno and motivo_material(item, perfil):

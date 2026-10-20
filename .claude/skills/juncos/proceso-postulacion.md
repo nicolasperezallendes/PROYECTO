@@ -10,6 +10,8 @@ Ciclo completo, de la búsqueda al contrato. Cada etapa dice qué hace Claude, q
 cd herramientas/mercadopublico
 python3 postulables.py --max-detalle 100 --md "../../claude/dd.mm.aaaa - LICITACIONES AFINES JUNCOS.md"
 python3 postulables.py --region coquimbo --max-detalle 150     # foco regional
+python3 postulables.py --diseno --max-detalle 100              # consultoría + línea de diseño (piezas con poco material)
+python3 postulables.py --solo-diseno                           # solo licitaciones de diseño
 ```
 
 - El puntaje suma el peso de cada rubro que coincide, 1 punto por palabra clave (hasta 6) y 2 puntos si es de la Región de Coquimbo.
@@ -179,7 +181,7 @@ Cotiza solo lo que JUNCOS hace bien con su equipo, o con un apoyo menor subcontr
 | Diseño gráfico, piezas, infografías, identidad visual, contenidos y redes sociales | | Asesoría legal, contable, psicológica o médica |
 | Monitoreo de prensa, minutas y presentaciones | | |
 
-### CA2-bis. Línea de diseño gráfico (agregada el 20-10-2026 a pedido de Nicolás)
+### CA2-bis. Línea de diseño gráfico, en licitaciones y Compras Ágiles (agregada el 20-10-2026 a pedido de Nicolás)
 
 Nicolás quiere incluir **piezas de diseño con poco material**: pendones y roller, lanyards y credenciales, afiches, lienzos, pasacalles, dípticos y trípticos, invitaciones, diplomas y logos. JUNCOS diseña y encarga la impresión a una imprenta, idealmente de la Región de Coquimbo.
 
@@ -189,6 +191,13 @@ Nicolás quiere incluir **piezas de diseño con poco material**: pendones y roll
   - montos sobre $2.000.000;
   - textos con merchandising (tazas, botellas, poleras, mochilas), cuadernos, agendas o libros, ploteo o brandeo de vehículos, letreros luminosos o insumos.
   - Se ajusta en `compra_agil.diseno` (`max_unidades`, `monto_max`, `excluir`).
+- **Corre en las dos vías.**
+  - Compras Ágiles: `compras_agiles.py --diseno`.
+  - Licitaciones: `postulables.py --diseno` (junto a consultoría) o `--solo-diseno`.
+  - Ambas usan el mismo bloque `compra_agil.diseno` del perfil.
+  - En licitaciones, además, solo se aceptan los tipos **L1 y LE** (`tipos_licitacion`) y un monto estimado de hasta **$5.000.000** (`monto_max_licitacion`). Así se descartan los suministros grandes de impresión, por ejemplo un LR de impresión publicitaria.
+- **Palabras por palabra completa:** las de diseño se comparan como palabra completa, con plural (`contar_d`). La lección del 20-10-2026: "logo" calzaba con "kinesiólogo", "diploma" con "diplomado" y "roller" con "cortinas roller". Se excluyen además "cortina" y "persiana".
+- **Si la API no da el detalle** de una Compra Ágil cuyo nombre es de diseño, igual se muestra, con la alerta "revisar productos y cantidades en la plataforma".
 - **Antes de cotizar:** pide precio a la imprenta (impresión, estructura del roller y despacho a la comuna de entrega). El margen está en el diseño. Una pieza suelta de $100.000 a $300.000 solo conviene si la imprenta y el despacho no se comen el precio.
 - **Alertas:** el buscador marca "cotizar impresión y despacho" en todas, e "incluye instalación" cuando la piden (por ejemplo, lienzos con instalación y retiro).
 

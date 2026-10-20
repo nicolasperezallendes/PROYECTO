@@ -41,6 +41,11 @@ python3 mercadopublico.py ficha-web 564953-79-LE26 --md ficha.md
 # Licitaciones activas de todo el país afines al perfil de JUNCOS
 python3 postulables.py --max-detalle 100 --md ranking.md
 
+# Línea de diseño (pendones, lanyards, afiches y piezas con poco material)
+python3 postulables.py --diseno --md ranking.md         # licitaciones: consultoría + diseño
+python3 postulables.py --solo-diseno --md diseno.md     # licitaciones: solo diseño
+python3 compras_agiles.py --diseno --dias 0 --md ca_diseno.md
+
 # Compras Ágiles abiertas afines al perfil (API Compra Ágil v2, beta)
 python3 compras_agiles.py --md ranking_ca.md
 python3 compras_agiles.py --region coquimbo --dias 7 --md ranking_ca_coquimbo.md

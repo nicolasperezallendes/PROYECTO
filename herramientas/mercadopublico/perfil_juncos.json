@@ -351,7 +351,7 @@
     ],
     "diseno": {
       "activo": true,
-      "nota": "Agregado el 20-10-2026 a pedido de Nicolás: piezas de diseño gráfico con poco material (pendones, lanyards, credenciales, afiches, lienzos, dípticos, invitaciones). Estos códigos se admiten aunque no estén inscritos; se sugirió inscribir 82101500 y 82121500. JUNCOS diseña y encarga la impresión a una imprenta.",
+      "nota": "Agregado el 20-10-2026 a pedido de Nicolás: piezas de diseño gráfico con poco material (pendones, lanyards, credenciales, afiches, lienzos, dípticos, invitaciones). Estos códigos se admiten aunque no estén inscritos; se sugirió inscribir 82101500 y 82121500. JUNCOS diseña y encarga la impresión a una imprenta. En licitaciones (postulables.py --diseno) el tope de monto estimado es monto_max_licitacion.",
       "rubros": [
         {
           "codigo": "82141500",
@@ -445,14 +445,21 @@
         "dron",
         "toner",
         "impresora",
-        "sonoro"
+        "sonoro",
+        "cortina",
+        "persiana"
       ],
       "excluir_flexible": [
         "adquisicion de",
         "suministro de"
       ],
       "max_unidades": 60,
-      "monto_max": 2000000
+      "monto_max": 2000000,
+      "monto_max_licitacion": 5000000,
+      "tipos_licitacion": [
+        "L1",
+        "LE"
+      ]
     }
   }
 }
