@@ -72,6 +72,8 @@ Estados posibles: **Detectada**, **Cotizada**, **Seleccionada**, **OC aceptada**
 | ~~Verificar en Mercado Público que JUNCOS figure como Empresa de Menor Tamaño (micro).~~ Sin eso no puede cotizar en el primer llamado de Compra Ágil. Si no aparece, consultar a la mesa de ayuda (600 0061 211) | Antes de la primera Compra Ágil | Hecho el 19-10-2026: es EMT |
 | Primera corrida real de `compras_agiles.py` | 19-10-2026 | Hecho: el ticket sirve, Coquimbo es la región 4 y `codigo_producto` es UNSPSC de 8 dígitos. Se ajustó a páginas de 10 y al filtro por rubros inscritos |
 | Confirmar el enlace público a la ficha de cada Compra Ágil y probar el filtro de texto `q` | Esta semana | Pendiente |
+| Inscribir los rubros 82101500 (publicidad impresa) y 82121500 (impresión promocional) para la línea de diseño | Lo antes posible | Pendiente |
+| Conseguir una imprenta de confianza en La Serena o Coquimbo (precios de pendón roller, lienzo, lanyard y credencial PVC, con despacho) | Antes de la primera Compra Ágil de diseño | Pendiente |
 | Pedir los certificados de vigencia, boletín comercial y quiebras | Esta semana (para 564953-79-LE26) | Pendiente |
 | Redactar el código de ética o programa de integridad | Antes del 22-10-2026 | Hecho en otra sesión, sin subir a GitHub. Recuperar o regenerar |
 | Reunir certificados de experiencia del titular (trabajos previos) | Antes del 22-10-2026 | Pendiente |

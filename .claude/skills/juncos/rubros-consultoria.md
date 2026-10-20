@@ -29,7 +29,7 @@
 
 ## Recomendación de rubros (19-10-2026)
 
-**Inscribir (prioridad alta):** 80111500, 81131500, 80141500, 93141500 y 93142000.
+**Inscribir (prioridad alta):** 80111500, 81131500, 80141500, 93141500 y 93142000. **Para la línea de diseño (20-10-2026):** 82101500 (publicidad impresa: letreros, carteles y pendones) y 82121500 (impresión promocional), que son los códigos que de verdad usan las Compras Ágiles de pendones y lanyards.
 
 **Inscribir si se quiere ampliar:** 80101600, 80161500, 86101700, 86111500 y 93141700.
 

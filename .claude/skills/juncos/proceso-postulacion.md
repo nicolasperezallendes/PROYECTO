@@ -145,6 +145,7 @@ cd herramientas/mercadopublico
 python3 compras_agiles.py --md "../../claude/dd.mm.aaaa - COMPRAS AGILES AFINES JUNCOS.md"
 python3 compras_agiles.py --region coquimbo --sin-prefiltro --max-detalle 200   # región completa, unos 40 min
 python3 compras_agiles.py --region coquimbo --incluir-sugeridos                 # suma capacitación y otros rubros sugeridos
+python3 compras_agiles.py --diseno --dias 0 --md "../../claude/dd.mm.aaaa - COMPRAS AGILES DISENO JUNCOS.md"   # línea de diseño
 ```
 
 - **Solo entran Compras Ágiles cuyos productos están en los rubros inscritos de JUNCOS.** Nicolás lo pidió el 19-10-2026. Las palabras clave ya no dejan pasar nada por sí solas: sirven para ordenar y como prefiltro por nombre, antes de bajar el detalle. `--incluir-sugeridos` suma los rubros que se recomendó inscribir, y `--todas` quita el filtro por rubro.
@@ -177,6 +178,19 @@ Cotiza solo lo que JUNCOS hace bien con su equipo, o con un apoyo menor subcontr
 | Diagnósticos breves, informes, indicadores y evaluaciones acotadas | | Logística: alimentación, traslados, sonido, carpas y premiación |
 | Diseño gráfico, piezas, infografías, identidad visual, contenidos y redes sociales | | Asesoría legal, contable, psicológica o médica |
 | Monitoreo de prensa, minutas y presentaciones | | |
+
+### CA2-bis. Línea de diseño gráfico (agregada el 20-10-2026 a pedido de Nicolás)
+
+Nicolás quiere incluir **piezas de diseño con poco material**: pendones y roller, lanyards y credenciales, afiches, lienzos, pasacalles, dípticos y trípticos, invitaciones, diplomas y logos. JUNCOS diseña y encarga la impresión a una imprenta, idealmente de la Región de Coquimbo.
+
+- **Rubros admitidos aunque no estén inscritos** (`compra_agil.diseno.rubros`): 82141500 Diseño (inscrito), 82101500 Publicidad impresa (letreros, carteles y pendones), 82121500 Impresión promocional o publicitaria y 60121900 Lienzos estampables. **En las Compras Ágiles reales del 20-10-2026, los pendones y lanyards venían con 82101501, 82101502 o 82121505, y casi nunca con 82141500.** Por eso conviene inscribir 82101500 y 82121500.
+- **Se descartan por material** (`motivo_material`):
+  - productos con más de 60 unidades;
+  - montos sobre $2.000.000;
+  - textos con merchandising (tazas, botellas, poleras, mochilas), cuadernos, agendas o libros, ploteo o brandeo de vehículos, letreros luminosos o insumos.
+  - Se ajusta en `compra_agil.diseno` (`max_unidades`, `monto_max`, `excluir`).
+- **Antes de cotizar:** pide precio a la imprenta (impresión, estructura del roller y despacho a la comuna de entrega). El margen está en el diseño. Una pieza suelta de $100.000 a $300.000 solo conviene si la imprenta y el despacho no se comen el precio.
+- **Alertas:** el buscador marca "cotizar impresión y despacho" en todas, e "incluye instalación" cuando la piden (por ejemplo, lienzos con instalación y retiro).
 
 ### CA3. Decisión rápida
 

@@ -87,3 +87,9 @@ Antes de enviar, revisa que:
 - [ ] El precio de la plataforma coincida con el PDF de `/cotizacion`.
 - [ ] No haya condiciones del tipo «sujeto a» o «salvo».
 - [ ] Vayan adjuntos todos los archivos que pide la solicitud.
+
+### 6-bis. Descripción de oferta para piezas de diseño (pendones, lanyards, afiches)
+
+> CONSULTORES NICOLÁS PÉREZ ALLENDES E.I.R.L. (JUNCOS), consultora de La Serena en comunicaciones y diseño, ofrece [pieza y cantidad] según lo solicitado: diseño gráfico a partir de los logos y lineamientos del organismo, con [n] propuestas y [n] rondas de ajuste; impresión en [material y medidas] y [estructura o accesorios, por ejemplo roller con bolso o lanyard con mosquetón]; despacho a [dirección de entrega], incluido. Plazo: [n] días corridos desde la aceptación de la orden de compra, que incluyen [n] días para aprobar el diseño. Se entregan además los archivos editables y en PDF.
+
+Revisa que el plazo deje tiempo para que el organismo apruebe el diseño antes de imprimir, y que la imprenta confirme por escrito su precio y su plazo.

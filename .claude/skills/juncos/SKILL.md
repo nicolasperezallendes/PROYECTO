@@ -111,10 +111,11 @@ Si el usuario cambia sus rubros, actualiza esta tabla y `perfil_juncos.json`. En
 4. Diseño de indicadores, seguimiento y evaluación de programas públicos.
 5. Capacitación, talleres y educación de adultos.
 6. Comunicaciones: estrategia, monitoreo de prensa, minutas, presentaciones, diseño de piezas y campañas de escala acotada.
+7. **Diseño gráfico de piezas con poco material** (desde el 20-10-2026): pendones y roller, lanyards y credenciales, afiches, lienzos, pasacalles, dípticos, invitaciones y logos. JUNCOS diseña y encarga la impresión. Se buscan con `compras_agiles.py --diseno` (ver `proceso-postulacion.md`, CA2-bis).
 
 Las campañas de medios millonarias y los planes reguladores solo se abordan en alianza, mediante una Unión Temporal de Proveedores (UTP), con JUNCOS a cargo del componente social o comunicacional. En Compra Ágil vale lo mismo, pero a escala chica: se cotiza lo que calza con estas especialidades. El filtro está en `proceso-postulacion.md`, CA2.
 
-**Regla de Nicolás (19-10-2026): en Compra Ágil solo se proponen las que piden productos de los rubros inscritos de la empresa.** Las demás no se muestran, aunque su nombre suene afín. Los rubros sugeridos se suman solo si él lo pide o después de inscribirlos.
+**Regla de Nicolás (19-10-2026): en Compra Ágil solo se proponen las que piden productos de los rubros inscritos de la empresa.** Excepción pedida por él el 20-10-2026: la **línea de diseño** admite 82101500, 82121500 y 60121900 aunque no estén inscritos, siempre que sean piezas con poco material. Las demás no se muestran, aunque su nombre suene afín. Los rubros sugeridos se suman solo si él lo pide o después de inscribirlos.
 
 ## Formato de entrega (preferencias del usuario)
 

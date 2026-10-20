@@ -348,6 +348,111 @@
       "sence",
       "nch 2728",
       "boleta de garantia"
-    ]
+    ],
+    "diseno": {
+      "activo": true,
+      "nota": "Agregado el 20-10-2026 a pedido de Nicolás: piezas de diseño gráfico con poco material (pendones, lanyards, credenciales, afiches, lienzos, dípticos, invitaciones). Estos códigos se admiten aunque no estén inscritos; se sugirió inscribir 82101500 y 82121500. JUNCOS diseña y encarga la impresión a una imprenta.",
+      "rubros": [
+        {
+          "codigo": "82141500",
+          "nombre": "Diseño",
+          "inscrito": true,
+          "peso": 5
+        },
+        {
+          "codigo": "82101500",
+          "nombre": "Publicidad impresa: letreros, carteles y pendones (diseño)",
+          "inscrito": false,
+          "peso": 4
+        },
+        {
+          "codigo": "82121500",
+          "nombre": "Impresión promocional o publicitaria (diseño)",
+          "inscrito": false,
+          "peso": 4
+        },
+        {
+          "codigo": "60121900",
+          "nombre": "Lienzos estampables (diseño)",
+          "inscrito": false,
+          "peso": 3
+        }
+      ],
+      "terminos_busqueda": "pendon,roller,lanyard,credencial,portacredencial,afiche,lienzo,pasacalle,diseño grafico,piezas graficas,diptico,triptico,flyer,volante,banner,hop up,invitacion,diploma,gigantografia,logo",
+      "palabras": [
+        "pendon",
+        "roller",
+        "roll up",
+        "hop up",
+        "lanyard",
+        "credencial",
+        "portacredencial",
+        "afiche",
+        "lienzo",
+        "pasacalle",
+        "diseno grafico",
+        "piezas graficas",
+        "pieza grafica",
+        "diptico",
+        "triptico",
+        "flyer",
+        "volante",
+        "banner",
+        "invitacion",
+        "diploma",
+        "gigantografia",
+        "logo",
+        "logotipo",
+        "grafica",
+        "sticker",
+        "calcomania",
+        "tarjeta de presentacion",
+        "bandera vela",
+        "backing",
+        "telon"
+      ],
+      "excluir": [
+        "mug",
+        "taza",
+        "botella",
+        "polera",
+        "jockey",
+        "gorro",
+        "mochila",
+        "bolso",
+        "chaqueta",
+        "parka",
+        "textil",
+        "libro",
+        "revista",
+        "cuaderno",
+        "agenda",
+        "brandeo",
+        "ploteo",
+        "vehiculo",
+        "camioneta",
+        "letrero luminoso",
+        "luminoso",
+        "led",
+        "senaletica vial",
+        "aposito",
+        "gasa",
+        "electrodo",
+        "etiqueta",
+        "insumo",
+        "ceramica",
+        "porcelanato",
+        "dron",
+        "toner",
+        "impresora",
+        "sonoro"
+      ],
+      "excluir_flexible": [
+        "adquisicion de",
+        "suministro de"
+      ],
+      "max_unidades": 60,
+      "monto_max": 2000000
+    }
   }
 }

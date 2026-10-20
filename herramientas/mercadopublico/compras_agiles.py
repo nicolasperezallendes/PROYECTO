@@ -225,17 +225,68 @@ def texto_completo(item):
     return f"{item.get('nombre', '')} {item.get('descripcion', '')} {prods}"
 
 
+# ---------------------------------------------------------------- línea de diseño
+
+def cfg_diseno(perfil):
+    d = perfil.get("compra_agil", {}).get("diseno", {})
+    return d if d.get("activo") else {}
+
+
+def excluido(nombre, perfil, extra=()):
+    """Exclusión por nombre. En diseño se perdonan exclusiones genéricas como 'adquisicion de'."""
+    ca = perfil.get("compra_agil", {})
+    excl = perfil.get("excluir", []) + ca.get("excluir_extra", []) + list(extra)
+    hits = contar(nombre, excl)
+    d = cfg_diseno(perfil)
+    if d and contar(nombre, d.get("palabras", [])):
+        flex = [normalizar(x) for x in d.get("excluir_flexible", [])]
+        hits = [h for h in hits if normalizar(h) not in flex]
+    return hits
+
+
+def es_diseno(item, perfil):
+    d = cfg_diseno(perfil)
+    if not d:
+        return False
+    return bool(rubros_coincidentes(codigos_productos(item), d.get("rubros", []))
+                or contar(item.get("nombre", ""), d.get("palabras", [])))
+
+
+def motivo_material(item, perfil):
+    """Devuelve por qué una compra de diseño involucra demasiado material, o '' si está bien."""
+    d = cfg_diseno(perfil)
+    texto = texto_completo(item)
+    malas = contar(texto, d.get("excluir", []))
+    if malas:
+        return "incluye " + ", ".join(malas[:3])
+    tope = d.get("max_unidades", 60)
+    for p in item.get("productos_solicitados") or []:
+        try:
+            if float(p.get("cantidad") or 0) > tope:
+                return f"{p.get('cantidad'):g} unidades de '{(p.get('nombre') or '')[:30]}'"
+        except (TypeError, ValueError):
+            pass
+    m = monto(item)
+    if m and m > d.get("monto_max", 2_000_000):
+        return f"monto ${m:,.0f}".replace(",", ".")
+    return ""
+
+
 # ---------------------------------------------------------------- evaluación
 
 def evaluar(item, perfil, ahora=None):
     ca = perfil.get("compra_agil", {})
-    excl = perfil.get("excluir", []) + ca.get("excluir_extra", [])
-    if contar(item.get("nombre", ""), excl):
+    if excluido(item.get("nombre", ""), perfil):
         return None
-    claves_todas = perfil.get("palabras_clave", []) + ca.get("palabras_clave_extra", [])
+    d = cfg_diseno(perfil)
+    claves_todas = perfil.get("palabras_clave", []) + ca.get("palabras_clave_extra", []) + d.get("palabras", [])
     texto = texto_completo(item)
     claves = contar(texto, claves_todas)
     rubros = rubros_coincidentes(codigos_productos(item), perfil.get("rubros", []))
+    vistos = {r["codigo"] for r in rubros}
+    rubros += [r for r in rubros_coincidentes(codigos_productos(item), d.get("rubros", []))
+               if r["codigo"] not in vistos]
+    linea = "diseño" if es_diseno(item, perfil) else "consultoría"
     region = g(item, "institucion", "nombre_region", defecto="") or ""
     pref = any(normalizar(r) in normalizar(region) for r in perfil.get("regiones_preferentes", []))
     remoto = bool(contar(texto, ca.get("senales_remoto", [])))
@@ -257,10 +308,15 @@ def evaluar(item, perfil, ahora=None):
         str(g(item, "convocatoria", "estado_convocatoria", defecto="") or "")
     if "segund" in normalizar(llamado):
         alertas.append("segundo llamado (abierto a empresas de todo tamaño)")
+    if linea == "diseño":
+        alertas.append("cotizar impresión y despacho con imprenta antes de fijar el precio")
+        if contar(texto, ["instalacion", "instalar", "retiro"]):
+            alertas.append("incluye instalación")
 
     m = monto(item)
     return {
         "puntaje": puntaje,
+        "linea": linea,
         "codigo": item.get("codigo", ""),
         "nombre": (item.get("nombre") or "").strip(),
         "organismo": g(item, "institucion", "organismo_comprador", defecto=""),
@@ -283,6 +339,7 @@ def evaluar(item, perfil, ahora=None):
 COLUMNAS = [
     (lambda r: r["puntaje"], "Pts"),
     (lambda r: r["codigo"], "Código"),
+    (lambda r: r.get("linea", ""), "Línea"),
     (lambda r: r["nombre"], "Nombre"),
     (lambda r: r["organismo"], "Organismo"),
     (lambda r: r["region"], "Región"),
@@ -316,6 +373,9 @@ def main():
                         "palabras clave en el nombre (lento: unos 17 s por Compra Ágil)")
     p.add_argument("--q", help="buscar con el filtro de texto de la API, términos separados por coma "
                                "(ej. 'clima,estudio,encuesta'). Mucho más rápido que recorrer todo")
+    p.add_argument("--diseno", action="store_true",
+                   help="agrega la búsqueda de piezas de diseño (pendones, lanyards, afiches...) "
+                        "con los términos de compra_agil.diseno.terminos_busqueda")
     p.add_argument("--md", help="guardar el ranking en este archivo Markdown")
     p.add_argument("--json", help="guardar el ranking en JSON")
     args = p.parse_args()
@@ -339,20 +399,23 @@ def main():
     consulta = datetime.now(CHILE) if CHILE else datetime.now()
     print("Bajando Compras Ágiles publicadas...", file=sys.stderr)
     try:
-        if args.q:
-            todas = buscar_texto([t.strip() for t in args.q.split(",") if t.strip()], region)
+        terminos = [t.strip() for t in (args.q or "").split(",") if t.strip()]
+        if args.diseno:
+            terminos += [t.strip() for t in cfg_diseno(perfil).get("terminos_busqueda", "").split(",") if t.strip()]
+        if terminos:
+            todas = buscar_texto(terminos, region)
         else:
             todas = listar_publicadas(dias, region)
     except ErrorCA as e:
         sys.exit(f"No se pudo listar: {e}")
 
-    excl = perfil.get("excluir", []) + ca.get("excluir_extra", [])
-    claves = perfil.get("palabras_clave", []) + ca.get("palabras_clave_extra", [])
+    claves = perfil.get("palabras_clave", []) + ca.get("palabras_clave_extra", []) \
+        + cfg_diseno(perfil).get("palabras", [])
     prefs = perfil.get("regiones_preferentes", [])
     candidatas = []
     for it in todas:
         nombre = it.get("nombre", "")
-        if contar(nombre, excl):
+        if excluido(nombre, perfil, cfg_diseno(perfil).get("excluir", []) if contar(nombre, cfg_diseno(perfil).get("palabras", [])) else ()):
             continue
         hits = contar(nombre, claves)
         if hits or args.sin_prefiltro:
@@ -363,7 +426,7 @@ def main():
     candidatas = candidatas[:max_det]
     print(f"{len(todas)} publicadas, {len(candidatas)} candidatas por nombre.", file=sys.stderr)
 
-    filas, aviso = [], ""
+    filas, aviso, descartes_material = [], "", []
     for i, (_, it) in enumerate(candidatas, 1):
         mp.progreso(i, len(candidatas))
         try:
@@ -376,8 +439,14 @@ def main():
             print(f"\n  {it.get('codigo')}: {e}", file=sys.stderr)
             det = {}
         item = {**it, **det}  # el detalle trae descripción, productos y entrega
-        if solo_rubros and not rubros_coincidentes(codigos_productos(item), admitidos):
-            continue  # sus productos no están en los rubros de la empresa
+        diseno = es_diseno(item, perfil)
+        rubro_ok = rubros_coincidentes(codigos_productos(item), admitidos) or \
+            rubros_coincidentes(codigos_productos(item), cfg_diseno(perfil).get("rubros", []))
+        if solo_rubros and not rubro_ok:
+            continue  # sus productos no están en los rubros de la empresa ni en la línea de diseño
+        if diseno and motivo_material(item, perfil):
+            descartes_material.append(f"{item.get('codigo')} ({motivo_material(item, perfil)})")
+            continue  # demasiado material o impresión para la línea de diseño
         fila = evaluar(item, perfil, consulta)
         if not fila or fila["puntaje"] < min_pts:
             continue
@@ -390,7 +459,11 @@ def main():
     ventana = f"publicadas en los últimos {dias} días" if dias else "todas las abiertas"
     if solo_rubros:
         ventana += (". Filtro: solo productos de los rubros inscritos"
-                    + (" y sugeridos" if args.incluir_sugeridos else ""))
+                    + (" y sugeridos" if args.incluir_sugeridos else "")
+                    + (", más la línea de diseño" if cfg_diseno(perfil) else ""))
+    if descartes_material:
+        aviso += ("\n\nDescartadas por mucho material o impresión (línea de diseño): "
+                  + "; ".join(descartes_material) + ".")
     md = (f"# Compras Ágiles afines · {perfil.get('empresa', 'perfil')}\n\n"
           f"Fuente: API Compra Ágil de Mercado Público (v2 beta), consultada el "
           f"{consulta:%d-%m-%Y %H:%M} (hora de Chile). Alcance: {alcance}, {ventana}. "
