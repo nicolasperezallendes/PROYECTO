@@ -40,7 +40,15 @@ Agregado el 19-10-2026, a partir de chilecompra.cl/api y de la documentación en
 - **Filtro de texto `q` (probado el 19-10-2026): funciona y es rápido**, unos 10 segundos por página. Es la mejor forma de buscar: `compras_agiles.py --q "clima,estudio,encuesta,diagnostico,capacitacion,taller,charla"`. Recorrer una región entera sin `q` toma casi una hora.
 - **Adjuntos de Compra Ágil:** la API solo da `id` y `nombre`, no el archivo. El buscador público (`buscador.mercadopublico.cl`) responde 403 desde la nube (firewall de CloudFront). No se intenta saltar. Los adjuntos los baja Nicolás desde su escritorio de proveedor, menú Compra Ágil, y los sube a la conversación.
 - **Cortes de conexión:** la API a veces corta la conexión a mitad de la respuesta (ConnectionResetError). `compras_agiles.py` ya los reintenta, pero un recorrido largo puede perderse si se cae. Prefiere `--q`.
-- **Pruebas:** `compras_agiles.py` se probó el 19-10-2026 contra una API simulada, no contra la real. La sesión del chat de claude.ai no tenía red hacia mercadopublico.cl ni ticket.
+- **Pruebas:** `compras_agiles.py` corre contra la API real desde el 19-10-2026. Las sesiones en la nube tienen red hacia `api2.mercadopublico.cl`. El chat de claude.ai no tenía red ni ticket.
+- **Corrida del 20-10-2026 en la tarde:**
+  - El listado con 23 términos `q` tomó 25 a 30 minutos y encontró 410 Compras Ágiles en el país.
+  - La Región de Coquimbo tuvo 331 publicadas en 3 días, en 34 páginas.
+  - En la tarde, 1 de cada 3 fichas dio 504, y la de EPCO falla siempre.
+  - Con 5 reintentos por ficha, cada 504 costaba unos 2,5 minutos, y la tarea de fondo (2 horas como máximo) se cortó sin dejar informe.
+  - **Solución usada:** un envoltorio que guarda en disco cada listado y cada ficha, intenta cada ficha una sola vez y se vuelve a correr para reintentar solo las que faltan. Conviene incorporarlo al script (mejora n.° 4 del informe de mejoras del 20-10).
+  - **Para no perder el día:** corre primero Coquimbo y lo nacional con pocos términos, y en la mañana, cuando la API responde mejor.
+- **Ruido del rubro Ventas y marketing (20-10-2026):** en la región se colaban producciones de eventos, coffee y alimentación (cuenta pública, Halloween, corridas, aniversarios). Se agregaron a `compra_agil.excluir_extra`.
 - **Las órdenes de compra de Compra Ágil** aparecen en la API v1 de órdenes con el tipo AG. Sirven para ver quién ganó y a qué precio.
 - **Alertas por palabra completa (20-10-2026):** la alerta "pide otec" saltaba en todas las Compras Ágiles de Sercotec, porque "Sercotec" contiene "otec". Ahora `alertas_texto` se compara por palabra completa (`contar_d`), igual que las palabras de diseño.
 
