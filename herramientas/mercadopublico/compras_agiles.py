@@ -318,8 +318,10 @@ def evaluar(item, perfil, ahora=None):
         alertas.append(f"cierra en {max(horas, 0):.0f} h")
     if not pref and not remoto:
         alertas.append("presencial fuera de la región: revisar logística")
-    if contar(texto, ca.get("alertas_texto", [])):
-        alertas.append("pide " + ", ".join(contar(texto, ca.get("alertas_texto", []))))
+    # por palabra completa: "otec" no debe calzar con "Sercotec" (lección del 20-10-2026)
+    pedidos = contar_d(texto, ca.get("alertas_texto", []))
+    if pedidos:
+        alertas.append("pide " + ", ".join(pedidos))
     llamado = g(item, "convocatoria", "descripcion", defecto="") or \
         str(g(item, "convocatoria", "estado_convocatoria", defecto="") or "")
     if "segund" in normalizar(llamado):

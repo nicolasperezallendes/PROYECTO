@@ -42,6 +42,7 @@ Agregado el 19-10-2026, a partir de chilecompra.cl/api y de la documentación en
 - **Cortes de conexión:** la API a veces corta la conexión a mitad de la respuesta (ConnectionResetError). `compras_agiles.py` ya los reintenta, pero un recorrido largo puede perderse si se cae. Prefiere `--q`.
 - **Pruebas:** `compras_agiles.py` se probó el 19-10-2026 contra una API simulada, no contra la real. La sesión del chat de claude.ai no tenía red hacia mercadopublico.cl ni ticket.
 - **Las órdenes de compra de Compra Ágil** aparecen en la API v1 de órdenes con el tipo AG. Sirven para ver quién ganó y a qué precio.
+- **Alertas por palabra completa (20-10-2026):** la alerta "pide otec" saltaba en todas las Compras Ágiles de Sercotec, porque "Sercotec" contiene "otec". Ahora `alertas_texto` se compara por palabra completa (`contar_d`), igual que las palabras de diseño.
 
 ## Portal web
 
