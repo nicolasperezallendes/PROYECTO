@@ -67,6 +67,8 @@ Agregado el 19-10-2026, a partir de chilecompra.cl/api y de la documentación en
 - **Para hacer push**, el repositorio `nicolasperezallendes/PROYECTO` tiene que estar agregado como fuente de la sesión, con permiso de escritura. Si no lo está, entrega los archivos por el chat y avisa que el commit quedó solo en el entorno. Así se perdieron el programa de integridad y el borrador de propuesta de 564953-79-LE26 del 19-10-2026: se hicieron en otra sesión y no llegaron a GitHub.
 - Las sesiones en la nube **no pueden usar el Chrome del usuario**. Para eso hay que trabajar en la app de escritorio o con `claude remote-control` en su computador, con la extensión Claude en Chrome conectada.
 - El trabajo se guarda con commits y push en la rama del proyecto. Lo que queda solo en el contenedor se pierde.
+- **Computador de escritorio de Nicolás (21-10-2026):** no tiene Python, Git ni `gh`, así que los scripts de `herramientas/mercadopublico/` no corren ahí. Las consultas se pueden hacer con PowerShell (`Invoke-RestMethod`), y el repositorio es público: se lee por `raw.githubusercontent.com` en la rama más reciente. La rama por defecto (`claude/beautiful-heisenberg-m7ttsc`) no trae la skill. El 21-10 estaba en `claude/tender-darwin-7d20o0`.
+- **Cupo de Compra Ágil agotado temprano (21-10-2026):** a las 14:28, la API v2 respondía 429 a la primera consulta del día en ese equipo, mientras la API v1 funcionaba. El cupo es por ticket y lo comparten todas las sesiones. Si una sesión recorre el país sin `q`, deja a las demás sin Compra Ágil hasta el día siguiente.
 
 ## Proceso y redacción
 
