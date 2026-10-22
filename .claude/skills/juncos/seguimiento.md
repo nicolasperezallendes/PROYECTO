@@ -39,7 +39,7 @@ Estados posibles: **Detectada**, **Cotizada**, **Seleccionada**, **OC aceptada**
 
 ## Tablero
 
-El 22-10-2026 se creó el tablero «Tablero JUNCOS Mercado Público» (https://claude.ai/artifact/MrUfVPBFpaWqkStktVptrM), con los datos de la consulta de ese día a las 13:00. No se actualiza solo: para refrescarlo, consulta las APIs y sube los archivos nuevos.
+El 22-10-2026 se creó el tablero «Tablero JUNCOS Mercado Público» (https://claude.ai/artifact/MrUfVPBFpaWqkStktVptrM), con los datos de la consulta de ese día a las 13:00. No se actualiza solo: se refresca con `tablero.py` y los pasos de `proceso-postulacion.md`, «Salida en tablero». Última actualización: 22-10-2026, 13:13.
 
 El 22-10, el conteo `total_ofertas_recibidas` de la API bajó a 0 en Compras Ágiles abiertas que el 20-10 tenían 1 o 2. Mientras están abiertas, no es confiable.
 

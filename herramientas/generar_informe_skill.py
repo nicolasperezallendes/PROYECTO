@@ -37,6 +37,7 @@ ORDEN = [
     ("rubros-consultoria.md", "Rubros que usa el Estado en consultoría y qué inscribir, mantener o quitar"),
 ]
 ARCHIVOS_ZIP = ["mercadopublico.py", "postulables.py", "compras_agiles.py", "rubros_en_uso.py",
+                "tablero.py", "tablero/index.html", "tablero/empresa.json",
                 "perfil_juncos.json", "README.md"]
 DIAS = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",

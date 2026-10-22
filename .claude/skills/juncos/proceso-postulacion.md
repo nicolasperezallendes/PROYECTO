@@ -228,6 +228,54 @@ Puntúa cinco criterios de 0 a 2. Cotiza con 7 puntos o más. Con 5 o 6, cotiza 
 - **Si no te seleccionan:** anota en `seguimiento.md` quién ganó y a qué precio. Las órdenes de Compra Ágil aparecen en la API de órdenes de compra con el tipo AG.
 - **Necesidad repetida:** si un organismo compra varias veces lo mismo y la suma del año pasa de 100 UTM, la directiva lo obliga a licitar. Anótalo como licitación probable.
 
+## Salida en tablero (agregada el 22-10-2026 a pedido de Nicolás)
+
+Además de los informes en Markdown, el estado de JUNCOS se muestra en un tablero: **«Tablero JUNCOS Mercado Público»**, en https://claude.ai/artifact/MrUfVPBFpaWqkStktVptrM. Se actualiza siempre ese mismo tablero, para que el enlace no cambie.
+
+**Qué muestra:**
+- **Encabezado:** el próximo cierre y la hora de la consulta.
+- **Cinco cifras:** Compras Ágiles abiertas, su monto disponible, licitaciones abiertas, procesos que cierran en 72 horas y tareas pendientes.
+- **Calendario de cierres.**
+- **Tabla de Compras Ágiles:** prioridad, monto, neto máximo, cierre, ofertas, CA3, estado, rubro y próximo paso. Se ordena y tiene buscador.
+- **Tabla de licitaciones:** con enlace a cada ficha.
+- **Tareas y ficha de la empresa con sus alertas.**
+
+**Cuándo actualizarlo:**
+- Al terminar cada sesión de /juncos, después de actualizar `seguimiento.md`.
+- Cuando Nicolás lo pida.
+
+**Cómo actualizarlo:**
+1. Actualiza primero `seguimiento.md`. El tablero sale de sus tablas «Licitaciones en curso», «Compras Ágiles en curso» y «Tareas pendientes de la empresa». En la columna Estado escribe el estado al comienzo (Detectada, Alternativa, Lista para enviar, Cotizada, Cerrada sin cotizar, Descartada…) y el CA3 como «CA3: 8».
+2. Corre `python3 herramientas/mercadopublico/tablero.py`. El script:
+   - consulta en vivo cada código, tanto Compras Ágiles como licitaciones;
+   - escribe en `herramientas/mercadopublico/tablero/datos/` los archivos `compras_agiles.json`, `licitaciones.json`, `tareas.json`, `empresa.json` y `consulta.json`, más `_pagina.json` (la página);
+   - si la API no responde por un código, usa lo que dice `seguimiento.md` y lo avisa.
+
+   La prioridad se calcula sola: primero las abiertas que conviene cotizar (CA3 de 7 o más, o listas para enviar), por fecha de cierre, y después las demás abiertas.
+3. Sube cada JSON que cambió al tablero, de a uno, con la herramienta Artifact: `publish` con `url` del tablero, `asset: true` y `file_path`. Los archivos de texto no se suben en grupo. Anota el `url` `/_blob/...` que devuelve cada uno.
+4. Lee las fuentes con ArtifactData (`list` de `datasets`) para conocer su `version`. Después haz un solo `batch` con:
+   - un `update` por fuente, con `source: {kind: "file", url, name}` y `updated: {at, by}`, fijado con `if_version`;
+   - si cambió `tablero/index.html`, un `set` de `files/index.html` con `file_path` apuntando a `datos/_pagina.json`, también fijado con su versión.
+5. Borra los archivos viejos que reemplazaste (`Artifact delete` con `url` y el id del blob), solo si nada más los usa.
+6. Revisa el chequeo con ArtifactData (`get` de `data/users/me`, documento `check`). Si dice `failed`, corrige lo que diga.
+7. Haz commit de `tablero/datos/`: así queda la foto de cada día en GitHub.
+
+**Cambiar el diseño:**
+- La página es `herramientas/mercadopublico/tablero/index.html`. Edítala ahí y súbela con el paso 4.
+- Sigue las reglas del tipo Dashboard: cada cifra sale de una fuente marcada con `data-source`, se usan los colores del tema y la página no tiene red propia.
+- La ficha de la empresa está en `tablero/empresa.json`. Se actualiza a mano cuando cambie la ficha de este SKILL.md.
+
+**Si se pierde el tablero o hay que crear otro:**
+1. Usa `Artifact quickstart` con `intent: "other"` y crea uno nuevo desde el tipo Dashboard.
+2. Escribe `dash/meta` con `{title: "Tablero JUNCOS Mercado Público"}` y las cinco fuentes (`datasets/compras_agiles`, `licitaciones`, `tareas`, `empresa`, `consulta`), cada una con `fixed: true`, título y descripción.
+3. Escribe `files/index.html`.
+4. Anota la URL nueva en esta sección y en `seguimiento.md`.
+
+**Límites:**
+- El tablero no se actualiza solo: la API se lee con el ticket de JUNCOS desde la sesión de Claude, y el tablero no tiene conector a Mercado Público.
+- Es privado: para que otra persona lo vea, Nicolás lo comparte desde el menú Compartir.
+- En un chat de claude.ai sin el repositorio, arma los mismos JSON a mano desde el informe del proyecto y súbelos igual.
+
 ## Documentos de la empresa que conviene tener siempre al día
 
 | Documento | Vigencia típica exigida | Dónde se obtiene |

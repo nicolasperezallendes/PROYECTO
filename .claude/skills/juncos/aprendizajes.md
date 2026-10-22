@@ -50,6 +50,8 @@ Agregado el 19-10-2026, a partir de chilecompra.cl/api y de la documentación en
   - **Para no perder el día:** corre primero Coquimbo y lo nacional con pocos términos, y en la mañana, cuando la API responde mejor.
 - **Ruido del rubro Ventas y marketing (20-10-2026):** en la región se colaban producciones de eventos, coffee y alimentación (cuenta pública, Halloween, corridas, aniversarios). Se agregaron a `compra_agil.excluir_extra`.
 - **Las órdenes de compra de Compra Ágil** aparecen en la API v1 de órdenes con el tipo AG. Sirven para ver quién ganó y a qué precio.
+- **Conteo de ofertas (22-10-2026):** mientras una Compra Ágil está abierta, `resumen.total_ofertas_recibidas` puede marcar 0 aunque ya haya ofertas. El 22-10 marcaba 0 en procesos que el 20-10 tenían 1 o 2, y Corfo (1153-16) pasó de 0 a 4 al cerrar. El conteo real aparece cuando cierra. `proveedores_cotizando` también viene vacío en casi todas, incluso cerradas.
+- **429 sueltos (22-10-2026):** la API de Compra Ágil respondió 429 a consultas seguidas y luego volvió a responder. Es un límite por segundo, no la cuota del día. Basta esperar unos segundos (`tablero.py` espera 10).
 - **Alertas por palabra completa (20-10-2026):** la alerta "pide otec" saltaba en todas las Compras Ágiles de Sercotec, porque "Sercotec" contiene "otec". Ahora `alertas_texto` se compara por palabra completa (`contar_d`), igual que las palabras de diseño.
 
 ## Portal web
@@ -78,3 +80,10 @@ Agregado el 19-10-2026, a partir de chilecompra.cl/api y de la documentación en
 - No inventes datos de la empresa: pídeselos al usuario. El correo del usuario no se escribe en documentos sin que él lo entregue para ese fin.
 - Cuando una vía falla o se bloquea, dilo claro, explica la alternativa y sigue con lo que sí se puede hacer. No rellenes con datos supuestos.
 - **Compra Ágil con pauta propia (19-10-2026):** el adjunto de una Compra Ágil puede traer criterios de evaluación propios (en EPCO: precio 40%, experiencia del consultor 40% y metodología 20%) y **fechas distintas a las de la plataforma**. Cuando no coinciden, envía en la fecha más temprana. En estos casos la experiencia suele ser **del consultor o del equipo**, así que la trayectoria de Nicolás sí cuenta.
+
+## Tablero (Artifact de tipo Dashboard)
+
+- **Fuentes como archivos (22-10-2026):** el tablero no tiene conector a Mercado Público, así que cada fuente es un archivo JSON subido al tablero, con `fixed: true`. No se actualiza solo.
+- **Subida:** los archivos JSON se suben de a uno (`Artifact publish` con `asset: true` y `file_path`). La subida en grupo (`file_paths`) no acepta archivos de texto.
+- **Escrituras fijadas:** cada `update` o `set` sobre un documento que ya existe lleva el `if_version` leído antes. Sin él, se rechaza.
+- **Chequeo:** el documento `data/users/me/check` puede quedarse en `checking` o no existir todavía. Se lee hasta 5 veces y no se insiste más.

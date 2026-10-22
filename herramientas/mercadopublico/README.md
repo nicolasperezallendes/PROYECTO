@@ -50,6 +50,10 @@ python3 compras_agiles.py --diseno --dias 0 --md ca_diseno.md
 python3 compras_agiles.py --md ranking_ca.md
 python3 compras_agiles.py --region coquimbo --dias 7 --md ranking_ca_coquimbo.md
 
+# Datos del tablero de JUNCOS (desde seguimiento.md + APIs), en tablero/datos/
+python3 tablero.py
+python3 tablero.py --sin-red        # solo con seguimiento.md
+
 # Buscar un proveedor por RUT
 python3 mercadopublico.py proveedor 76.123.456-7
 ```

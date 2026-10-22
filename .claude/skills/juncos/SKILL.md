@@ -15,12 +15,13 @@ Esta skill es la memoria de trabajo de la consultora en Mercado Público. Cubre 
 | `plantillas.md` | Al redactar una propuesta técnica, un presupuesto, un código de integridad, una carta de experiencia o la descripción de una cotización de Compra Ágil | 2.5 |
 | `rubros-consultoria.md` | Al revisar o ampliar los rubros inscritos, o al ajustar `perfil_juncos.json` | 2.6 |
 | `perfil_juncos.json` | Al buscar licitaciones o Compras Ágiles, o al ajustar pesos, palabras clave y exclusiones | Parte 1 (copia exacta del JSON) |
+| `proceso-postulacion.md`, «Salida en tablero» | Al cerrar cada sesión y cuando se pida el tablero: cómo actualizar el «Tablero JUNCOS Mercado Público» | 2.2 |
 
 ## Dónde están esos archivos
 
 Hay dos copias con el mismo contenido:
 
-1. **Repositorio `nicolasperezallendes/PROYECTO`.** Los cinco archivos de apoyo están en `.claude/skills/juncos/`. Los scripts, su `README.md` y `perfil_juncos.json` están en `herramientas/mercadopublico/`: `postulables.py` para licitaciones y `compras_agiles.py` para Compra Ágil. Es la fuente principal y el único lugar donde corren los scripts.
+1. **Repositorio `nicolasperezallendes/PROYECTO`.** Los cinco archivos de apoyo están en `.claude/skills/juncos/`. Los scripts, su `README.md` y `perfil_juncos.json` están en `herramientas/mercadopublico/`: `postulables.py` para licitaciones, `compras_agiles.py` para Compra Ágil y `tablero.py` para los datos del tablero (con su página y la ficha de la empresa en `tablero/`). Es la fuente principal y el único lugar donde corren los scripts.
 2. **Proyecto JUNCOS de claude.ai.** Es el informe más reciente de `claude/licitaciones-juncos/`, con el nombre `dd.mm.aaaa - INFORME PERFIL Y SKILL JUNCOS.md`. Al 19-10-2026 es `claude/licitaciones-juncos/19.10.2026 - INFORME PERFIL Y SKILL JUNCOS.md`. Trae una copia textual del perfil (Parte 1) y de los seis archivos de la skill (Parte 2). Los títulos internos están dos niveles más abajo.
 
 **Si un archivo de la tabla no está junto a este SKILL.md** (pasa en los chats de claude.ai, donde la skill llega sola), no lo des por inexistente ni lo rehagas de memoria. Abre el informe del proyecto con la herramienta Projects: `project_info` muestra cuál es el más reciente y `project_read` lo abre. Después usa la sección que indica la tabla.
@@ -124,3 +125,4 @@ Las campañas de medios millonarias y los planes reguladores solo se abordan en 
 - Redacción en español natural y directo, que no suene a texto automático. Primero la conclusión, después el detalle.
 - Siempre con datos frescos consultados el mismo día y con la fuente y la hora de la consulta.
 - Cada mañana de trabajo parte con `seguimiento.md` (en claude.ai, la sección 2.3 del informe más reciente). De lunes a viernes, sigue con la búsqueda de Compra Ágil.
+- **Salida en tablero (desde el 22-10-2026):** al cerrar cada sesión, después de actualizar `seguimiento.md`, actualiza el tablero «Tablero JUNCOS Mercado Público» (https://claude.ai/artifact/MrUfVPBFpaWqkStktVptrM) con `tablero.py`. Sigue los pasos de `proceso-postulacion.md`, «Salida en tablero». Siempre se actualiza el mismo tablero, nunca uno nuevo, y se entrega su enlace junto al informe en Markdown.
