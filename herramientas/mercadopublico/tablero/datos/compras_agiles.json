@@ -1,41 +1,5 @@
 [
  {
-  "codigo": "3260-101-COT26",
-  "nombre": "Curso «Buen trato, colaboración y clima laboral» para 80 funcionarios de la APS, 2 grupos, mié 04-11 y jue 12-11, de 09:00 a 13:00, en Pichasca, con coffee break",
-  "organismo": "Depto. de Salud de Río Hurtado",
-  "region": "Coquimbo",
-  "en_region_coquimbo": true,
-  "monto_clp": 1000000,
-  "neto_max_clp": 840336,
-  "cierre": "2026-10-22T16:57:00-03:00",
-  "estado_api": "publicada",
-  "llamado": "Segundo llamado",
-  "ofertas_api_hoy": 1,
-  "ca3": 8,
-  "rubro": "Inscrito",
-  "estado_juncos": "Detectada",
-  "prioridad": 1,
-  "proximo_paso": "Precio sugerido: $820.000 neto. Falta cotizar el coffee en la zona. Descripción lista en el informe del 20-10"
- },
- {
-  "codigo": "1447930-490-COT26",
-  "nombre": "Consultoría en gestión del cambio organizacional (Teatinos 220, 25 días)",
-  "organismo": "Subsecretaría de Seguridad Pública",
-  "region": "Metropolitana",
-  "en_region_coquimbo": false,
-  "monto_clp": 3700000,
-  "neto_max_clp": 3109244,
-  "cierre": "2026-10-23T10:00:00-03:00",
-  "estado_api": "publicada",
-  "llamado": "Primer llamado",
-  "ofertas_api_hoy": 0,
-  "ca3": 9,
-  "rubro": "Sugerido sin inscribir (80111500)",
-  "estado_juncos": "Detectada",
-  "prioridad": 2,
-  "proximo_paso": "Nicolás baja el adjunto. Confirmar cuánto es presencial"
- },
- {
   "codigo": "1481-21-COT26",
   "nombre": "Curso de IA aplicada a la docencia EPJA, CEIA Andacollo, unas 10 personas, 3 sesiones con 6 horas en total",
   "organismo": "Depto. Provincial de Educación Elqui",
@@ -50,8 +14,8 @@
   "ca3": 8,
   "rubro": "Inscrito",
   "estado_juncos": "Alternativa",
-  "prioridad": 3,
-  "proximo_paso": "Pide los anexos 1, 2 y 3 y un TDR"
+  "prioridad": 1,
+  "proximo_paso": "Pide los anexos 1, 2 y 3 y un TDR. Cierra temprano el lunes: decidir el fin de semana"
  },
  {
   "codigo": "953-82-COT26",
@@ -68,8 +32,8 @@
   "ca3": 9,
   "rubro": "Sugerido sin inscribir (80111500)",
   "estado_juncos": "Detectada",
-  "prioridad": 4,
-  "proximo_paso": "Inscribir 80111500. Nicolás baja «Especificaciones Técnicas Capacitación 2026.pdf»"
+  "prioridad": 2,
+  "proximo_paso": "Inscribir 80111500. Nicolás baja «Especificaciones Técnicas Capacitación 2026.pdf». Ojo: si compiten OTEC exentas de IVA, JUNCOS parte con el 19% en contra (ver historial de Río Hurtado)"
  },
  {
   "codigo": "1615-4-COT26",
@@ -86,7 +50,7 @@
   "ca3": 7,
   "rubro": "Inscrito",
   "estado_juncos": "Detectadas",
-  "prioridad": 5,
+  "prioridad": 3,
   "proximo_paso": "Un solo diseño. Cotizar Antofagasta (vuelo directo). La alerta «pide OTEC» era falsa (Sercotec)"
  },
  {
@@ -104,7 +68,7 @@
   "ca3": 7,
   "rubro": "Inscrito",
   "estado_juncos": "Detectadas",
-  "prioridad": 6,
+  "prioridad": 4,
   "proximo_paso": "Un solo diseño. Cotizar Antofagasta (vuelo directo). La alerta «pide OTEC» era falsa (Sercotec)"
  },
  {
@@ -122,7 +86,7 @@
   "ca3": 7,
   "rubro": "Inscrito",
   "estado_juncos": "Detectadas",
-  "prioridad": 7,
+  "prioridad": 5,
   "proximo_paso": "Un solo diseño. Cotizar Antofagasta (vuelo directo). La alerta «pide OTEC» era falsa (Sercotec)"
  },
  {
@@ -140,30 +104,12 @@
   "ca3": null,
   "rubro": "Sugerido sin inscribir (80111500)",
   "estado_juncos": "Lista para enviar",
-  "prioridad": 8,
-  "proximo_paso": "Nicolás envía por la plataforma: descripción, PDF claude/licitaciones/1317954-9-COT26/PROPUESTA JUNCOS - CLIMA LABORAL EPCO 2026.pdf y su CV. Evaluación: precio 40%, experiencia del consultor 40%, metodología 20%"
- },
- {
-  "codigo": "1040758-203-COT26",
-  "nombre": "Afiches de vigilancia epidemiológica (línea diseño)",
-  "organismo": "Subsecretaría de Salud Pública (Ñuble)",
-  "region": "Ñuble",
-  "en_region_coquimbo": false,
-  "monto_clp": 875959,
-  "neto_max_clp": 736100,
-  "cierre": "2026-10-23T10:00:00-03:00",
-  "estado_api": "publicada",
-  "llamado": "Primer llamado",
-  "ofertas_api_hoy": 0,
-  "ca3": null,
-  "rubro": "Inscrito",
-  "estado_juncos": "Detectada",
-  "prioridad": 9,
-  "proximo_paso": "Bajar el adjunto y cotizar con una imprenta de Chillán con despacho. Detalle en claude/20.10.2026 - OPORTUNIDADES DISENO JUNCOS.md"
+  "prioridad": 6,
+  "proximo_paso": "Si no se envió, enviarla antes del lunes: descripción, PDF claude/licitaciones/1317954-9-COT26/PROPUESTA JUNCOS - CLIMA LABORAL EPCO 2026.pdf y CV. Evaluación: precio 40%, experiencia del consultor 40%, metodología 20%"
  },
  {
   "codigo": "724-13-COT26",
-  "nombre": "Jornada de capacitación en autocuidado y clima organizacional para 15 personas (Talca). El 20-10 en la tarde cambió de nombre a «Comunicación efectiva, resolución de conflictos y trabajo en equipo»",
+  "nombre": "Jornada de comunicación efectiva, resolución de conflictos y trabajo en equipo para 15 personas (Talca). La descripción sigue hablando de contención y autocuidado",
   "organismo": "Sercotec, Dirección Regional del Maule",
   "region": "Maule",
   "en_region_coquimbo": false,
@@ -175,98 +121,8 @@
   "ofertas_api_hoy": 0,
   "ca3": null,
   "rubro": "Inscrito",
-  "estado_juncos": "Detectada",
-  "prioridad": 10,
-  "proximo_paso": "Bajar el PDF \"COMPRA ÁGIL DR MAULE.pdf\". Cotizar solo con una dupla (psicólogo o psicóloga de Talca), porque es presencial y psicosocial"
- },
- {
-  "codigo": "2708-641-COT26",
-  "nombre": "Jornadas de cuidado para el equipo de Habilidades para la Vida I",
-  "organismo": "Municipalidad de Ovalle",
-  "region": "Coquimbo",
-  "en_region_coquimbo": true,
-  "monto_clp": 1500000,
-  "neto_max_clp": 1260504,
-  "cierre": "2026-10-21T10:00:00-03:00",
-  "estado_api": "cerrada",
-  "llamado": "Primer llamado",
-  "ofertas_api_hoy": 3,
-  "ca3": 7,
-  "rubro": "Sugerido sin inscribir (80111500)",
-  "estado_juncos": "Cerrada sin cotizar",
-  "prioridad": null,
-  "proximo_paso": "Solo con un psicólogo o una psicóloga en dupla. El TDR está en el adjunto"
- },
- {
-  "codigo": "3760-612-COT26",
-  "nombre": "Estudio cualitativo: 2 grupos focales en el barrio Monte Centro, El Monte (SECPLAN, Quiero Mi Barrio)",
-  "organismo": "Región Metropolitana",
-  "region": "Metropolitana",
-  "en_region_coquimbo": false,
-  "monto_clp": 2000000,
-  "neto_max_clp": 1680672,
-  "cierre": "2026-10-21T10:00:00-03:00",
-  "estado_api": "cerrada",
-  "llamado": "Primer llamado",
-  "ofertas_api_hoy": 7,
-  "ca3": null,
-  "rubro": "No inscrito (80101703)",
-  "estado_juncos": "Cerrada sin cotizar",
-  "prioridad": null,
-  "proximo_paso": "Producto 80101703, fuera de los rubros inscritos. Requiere trabajo presencial en El Monte"
- },
- {
-  "codigo": "1305552-116-COT26",
-  "nombre": "Diagnóstico de bienestar de equipos: encuesta, informes por equipo, taller presencial de 4 horas y sesión en línea",
-  "organismo": "SLEP Tamarugal (Tarapacá)",
-  "region": "Tarapacá",
-  "en_region_coquimbo": false,
-  "monto_clp": 7200000,
-  "neto_max_clp": 6050420,
-  "cierre": "2026-10-21T12:28:00-03:00",
-  "estado_api": "cerrada",
-  "llamado": "Segundo llamado",
-  "ofertas_api_hoy": 10,
-  "ca3": null,
-  "rubro": "Sugerido sin inscribir (80111500)",
-  "estado_juncos": "Cerrada sin cotizar",
-  "prioridad": null,
-  "proximo_paso": "Ver quién gana y a qué precio (OC tipo AG)"
- },
- {
-  "codigo": "1109692-245-COT26",
-  "nombre": "Estudio de factibilidad, pertinencia territorial y plan de negocios del CFT Estatal de Magallanes",
-  "organismo": "Magallanes",
-  "region": "Magallanes",
-  "en_region_coquimbo": false,
-  "monto_clp": 7200000,
-  "neto_max_clp": 6050420,
-  "cierre": "2026-10-21T16:00:00-03:00",
-  "estado_api": "cerrada",
-  "llamado": "Primer llamado",
-  "ofertas_api_hoy": 6,
-  "ca3": null,
-  "rubro": "No inscrito (80101601)",
-  "estado_juncos": "Descartada por plazo",
-  "prioridad": null,
-  "proximo_paso": "Producto 80101601 (no inscrito). 60 días de ejecución y varios anexos"
- },
- {
-  "codigo": "1153-16-COT26",
-  "nombre": "Talleres de mejoramiento de la calidad de servicio, primer nivel de atención",
-  "organismo": "Corfo (Región Metropolitana)",
-  "region": "Metropolitana",
-  "en_region_coquimbo": false,
-  "monto_clp": 3500000,
-  "neto_max_clp": 2941176,
-  "cierre": "2026-10-22T13:00:00-03:00",
-  "estado_api": "cerrada",
-  "llamado": "Primer llamado",
-  "ofertas_api_hoy": 4,
-  "ca3": null,
-  "rubro": "Inscrito",
-  "estado_juncos": "Detectada",
-  "prioridad": null,
-  "proximo_paso": "Dos talleres en Moneda 921, Santiago. Abrir el adjunto: ¿cuántas sesiones?"
+  "estado_juncos": "Alternativa",
+  "prioridad": 7,
+  "proximo_paso": "Bajar el PDF «COMPRA ÁGIL DR MAULE.pdf». Cotizar solo con una dupla (psicólogo o psicóloga de Talca)"
  }
 ]

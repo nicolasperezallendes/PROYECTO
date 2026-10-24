@@ -1,19 +1,5 @@
 [
  {
-  "codigo": "2699-36-LE26",
-  "nombre": "Actualización del PLADECO de La Reina",
-  "organismo": "Municipalidad de La Reina",
-  "region": "Metropolitana",
-  "en_region_coquimbo": false,
-  "tipo": "LE",
-  "monto_clp": null,
-  "cierre": "2026-10-22T15:00:00-03:00",
-  "estado_api": "Publicada",
-  "estado_juncos": "Detectada",
-  "proximo_paso": "Cierra mañana: solo si Nicolás lo pide",
-  "ficha": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2699-36-LE26"
- },
- {
   "codigo": "1750-6-LE26",
   "nombre": "Diseño y ejecución de talleres de liderazgo efectivo",
   "organismo": "Dirección Nacional del Servicio Civil",
@@ -24,7 +10,7 @@
   "cierre": "2026-10-26T15:00:00-03:00",
   "estado_api": "Publicada",
   "estado_juncos": "Detectada",
-  "proximo_paso": "Decidir con la matriz. Las preguntas al foro cierran hoy, mar 20-10, a las 18:00",
+  "proximo_paso": "Decidir con la matriz. Si no hay bases analizadas al lunes en la mañana, se deja pasar",
   "ficha": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1750-6-LE26"
  },
  {
@@ -52,7 +38,7 @@
   "cierre": "2026-10-26T17:00:00-03:00",
   "estado_api": "Publicada",
   "estado_juncos": "Postulando",
-  "proximo_paso": "Bases y anexos analizados, anexos prellenados. Leer el foro el jue 22-10 a las 18:00 (antes era el 20-10). Faltan datos del Anexo 1 (cédula, inicio de actividades, banco), el precio y la difusión del programa de integridad. Apertura: mar 27-10, 09:00",
+  "proximo_paso": "Enviar la oferta antes del lunes (envío al menos 24 horas antes, según la etapa 6). Faltan datos del Anexo 1 (cédula, inicio de actividades, banco), el precio y la difusión del programa de integridad. Revisar si el foro del 22-10 cambió algo. Apertura: mar 27-10, 09:00",
   "ficha": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=564953-79-LE26"
  },
  {
@@ -80,7 +66,7 @@
   "cierre": "2026-10-29T15:30:00-03:00",
   "estado_api": "Publicada",
   "estado_juncos": "Detectada",
-  "proximo_paso": "Evaluación: formales 50%, experiencia de la empresa 35%, precio 10%, integridad 5%. Nicolás baja las bases. Preguntas al foro hasta el jue 22-10, 17:00 (por ejemplo, si acepta la experiencia del titular). Respuestas: lun 26-10, 15:45",
+  "proximo_paso": "Evaluación: formales 50%, experiencia de la empresa 35%, precio 10%, integridad 5%. Nicolás baja las bases. El plazo de preguntas venció el jue 22-10. Respuestas: lun 26-10, 15:45",
   "ficha": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4192-63-LE26"
  },
  {

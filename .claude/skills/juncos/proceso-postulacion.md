@@ -217,6 +217,7 @@ Puntúa cinco criterios de 0 a 2. Cotiza con 7 puntos o más. Con 5 o 6, cotiza 
 
 1. Lee la solicitud completa en Mercado Público, en el escritorio de proveedor, menú Compra Ágil: descripción, productos, cantidades, plazo y lugar de entrega, adjuntos y criterios.
 2. Calcula el precio neto con la estructura de `plantillas.md`, sección 2, en versión corta. Tiene que cubrir los costos y quedar bajo el neto máximo.
+   - **En capacitación, compara el total con IVA.** Las OTEC cotizan exento y las personas naturales con boleta de honorarios, así que con el mismo neto JUNCOS queda 19% más cara (lección de Río Hurtado, 24-10-2026, en `aprendizajes.md`). Antes de fijar el precio, revisa en el historial de `seguimiento.md` los precios que ganaron en procesos parecidos.
 3. Genera la cotización formal con `/cotizacion` (logo, correlativo y validez de 10 días hábiles) y pásala a PDF para adjuntarla.
 4. Redacta la descripción de la oferta con `plantillas.md`, sección 6.
 5. Nicolás ingresa el precio, adjunta los archivos, firma la declaración jurada y envía. Revisa si la plataforma pide el precio neto o con impuestos, y que coincida con el PDF. Envía con margen y no a última hora.
