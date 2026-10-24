@@ -1,0 +1,116 @@
+[
+ {
+  "n": 1,
+  "tarea": "Enviar la oferta de Las Condes (564953-79-LE26)",
+  "plazo": "Antes del lun 26-10, 17:00",
+  "estado": "Pendiente"
+ },
+ {
+  "n": 2,
+  "tarea": "Confirmar si se envió la Compra Ágil de EPCO (1317954-9-COT26)",
+  "plazo": "Antes del lun 26-10, 23:59",
+  "estado": "Pendiente"
+ },
+ {
+  "n": 3,
+  "tarea": "Decidir y cotizar la DPR (953-82-COT26) y las jornadas de Sercotec",
+  "plazo": "Lun 26-10, 12:00 y 17:00",
+  "estado": "Pendiente"
+ },
+ {
+  "n": 4,
+  "tarea": "Confirmar si JUNCOS cotizó la SSP (1447930-490-COT26)",
+  "plazo": "Lun 26-10",
+  "estado": "Pendiente"
+ },
+ {
+  "n": 5,
+  "tarea": "Renovar la inscripción en el Registro de Proveedores",
+  "plazo": "Antes del 29-12-2026",
+  "estado": "Pendiente"
+ },
+ {
+  "n": 6,
+  "tarea": "Agregar en el SII un giro de consultoría (702000, 732000 o 722000) y actualizarlo en Mercado Público",
+  "plazo": "Lo antes posible",
+  "estado": "Revisar"
+ },
+ {
+  "n": 7,
+  "tarea": "Quitar 5 rubros sin relación y agregar los 8 sugeridos. Los rubros también definen qué Compras Ágiles avisa la plataforma",
+  "plazo": "Lo antes posible",
+  "estado": "Pendiente"
+ },
+ {
+  "n": 8,
+  "tarea": "Verificar en Mercado Público que JUNCOS figure como Empresa de Menor Tamaño (micro). Sin eso no puede cotizar en el primer llamado de Compra Ágil. Si no aparece, consultar a la mesa de ayuda (600 0061 211)",
+  "plazo": "Antes de la primera Compra Ágil",
+  "estado": "Hecho"
+ },
+ {
+  "n": 9,
+  "tarea": "Primera corrida real de compras_agiles.py",
+  "plazo": "19-10-2026",
+  "estado": "Hecho"
+ },
+ {
+  "n": 10,
+  "tarea": "Confirmar el enlace público a la ficha de cada Compra Ágil y probar el filtro de texto q",
+  "plazo": "Esta semana",
+  "estado": "En curso"
+ },
+ {
+  "n": 11,
+  "tarea": "Guardar el ticket de la API como variable del entorno",
+  "plazo": "—",
+  "estado": "Hecho"
+ },
+ {
+  "n": 12,
+  "tarea": "Inscribir 80111500 (Consultorías para el desarrollo de recursos humanos)",
+  "plazo": "Antes de cotizar la DPR y la SSP",
+  "estado": "Pendiente"
+ },
+ {
+  "n": 13,
+  "tarea": "Inscribir los rubros 82101500 (publicidad impresa) y 82121500 (impresión promocional) para la línea de diseño",
+  "plazo": "Lo antes posible",
+  "estado": "Pendiente"
+ },
+ {
+  "n": 14,
+  "tarea": "Conseguir una imprenta de confianza en La Serena o Coquimbo (precios de pendón roller, lienzo, lanyard y credencial PVC, con despacho)",
+  "plazo": "Antes de la primera Compra Ágil de diseño",
+  "estado": "Pendiente"
+ },
+ {
+  "n": 15,
+  "tarea": "Pedir los certificados de vigencia, boletín comercial y quiebras",
+  "plazo": "Esta semana (para 564953-79-LE26)",
+  "estado": "Pendiente"
+ },
+ {
+  "n": 16,
+  "tarea": "Redactar el código de ética o programa de integridad",
+  "plazo": "Antes del 22-10-2026",
+  "estado": "En curso"
+ },
+ {
+  "n": 17,
+  "tarea": "Reunir certificados de experiencia del titular (trabajos previos)",
+  "plazo": "Antes del 22-10-2026",
+  "estado": "Pendiente"
+ },
+ {
+  "n": 18,
+  "tarea": "Completar el teléfono y el correo de contacto en la ficha",
+  "plazo": "19-10-2026",
+  "estado": "Hecho"
+ },
+ {
+  "n": 19,
+  "tarea": "Ingresar la declaración jurada de socios y beneficiarios finales en Mercado Público",
+  "plazo": "Lo antes posible",
+  "estado": "Pendiente"
+ }
+]

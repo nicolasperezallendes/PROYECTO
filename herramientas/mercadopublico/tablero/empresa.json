@@ -1,0 +1,44 @@
+[
+ {
+  "id": "registro",
+  "item": "Registro de Proveedores",
+  "valor": "Hábil, vence el 29-12-2026",
+  "nivel": "alerta"
+ },
+ {
+  "id": "emt",
+  "item": "Empresa de Menor Tamaño",
+  "valor": "Sí (verificado el 19-10-2026): puede cotizar en el primer llamado",
+  "nivel": "ok"
+ },
+ {
+  "id": "ventas",
+  "item": "Ventas al Estado",
+  "valor": "0: aún sin órdenes de compra",
+  "nivel": "alerta"
+ },
+ {
+  "id": "rubros",
+  "item": "Rubros inscritos",
+  "valor": "14 (5 sin relación). 9 sugeridos por inscribir",
+  "nivel": "alerta"
+ },
+ {
+  "id": "giro",
+  "item": "Giro principal en Mercado Público",
+  "valor": "Inmobiliario. En el SII ya figura 702000 (consultoría de gestión)",
+  "nivel": "revisar"
+ },
+ {
+  "id": "sello",
+  "item": "Sello Empresa Mujer",
+  "valor": "No tiene",
+  "nivel": "info"
+ },
+ {
+  "id": "socios",
+  "item": "Declaración de socios y beneficiarios",
+  "valor": "No ingresada",
+  "nivel": "alerta"
+ }
+]
