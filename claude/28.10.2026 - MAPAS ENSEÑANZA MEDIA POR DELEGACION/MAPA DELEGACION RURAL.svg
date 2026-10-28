@@ -9,19 +9,20 @@
 <g id="Localidad Tambillos"><circle cx="1222" cy="1299" r="11" fill="#FFFFFF" stroke="#718096" stroke-width="5"/><text x="1243.6" y="1308.7" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="700" fill="#4A5568" text-anchor="start" stroke="#FFFFFF" stroke-width="8" stroke-linejoin="round" paint-order="stroke">Tambillos</text></g>
 <g id="Localidad Las Barrancas"><circle cx="1078" cy="1343" r="11" fill="#FFFFFF" stroke="#718096" stroke-width="5"/><text x="1099.8" y="1352.7" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="700" fill="#4A5568" text-anchor="start" stroke="#FFFFFF" stroke-width="8" stroke-linejoin="round" paint-order="stroke">Las Barrancas</text></g>
 <g id="Localidad Las Cardas"><circle cx="1088" cy="1726" r="11" fill="#FFFFFF" stroke="#718096" stroke-width="5"/><text x="1109.9" y="1735.6" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="700" fill="#4A5568" text-anchor="start" stroke="#FFFFFF" stroke-width="8" stroke-linejoin="round" paint-order="stroke">Las Cardas</text></g>
-<g id="Marcador 7">
+
+<g id="Marcador 10">
 <circle cx="1097.5" cy="558.1" r="35" fill="#FFFFFF" opacity="0.95"/>
 <circle cx="1097.5" cy="558.1" r="30" fill="#4C7A2A"/>
-<text x="1097.5" y="568.9" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF" text-anchor="middle" >7</text>
+<text x="1097.5" y="568.9" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF" text-anchor="middle" >10</text>
 <text x="1141.5" y="568.9" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="700" fill="#0B2545" text-anchor="start" stroke="#FFFFFF" stroke-width="8" stroke-linejoin="round" paint-order="stroke">Colegio Pablo Neruda</text>
 </g>
 </g></g>
 <g id="Panel">
 <text x="2300.0" y="290.0" font-family="Montserrat, Arial, sans-serif" font-size="24" font-weight="700" fill="#4C7A2A" text-anchor="start" letter-spacing="3">SUBSECTORES PLADECO</text>
 <text x="2300.0" y="334.0" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="600" fill="#0B2545" text-anchor="start" >Rural Cordillera: Pan de Azúcar, Tambillos, El Peñón, Las Barrancas, Las Cardas y El Caiceo</text>
-<g id="Ficha 7"><rect x="2300" y="404" width="1460" height="332.9" rx="16" fill="#FFFFFF" stroke="#D5D0C4" stroke-width="2"/><rect x="2300" y="420" width="8" height="300.9" fill="#4C7A2A"/><text x="2410.0" y="462.9" font-family="Montserrat, Arial, sans-serif" font-size="34" font-weight="700" fill="#0B2545" text-anchor="start" >Colegio Pablo Neruda</text>
+<g id="Ficha 10"><rect x="2300" y="404" width="1460" height="332.9" rx="16" fill="#FFFFFF" stroke="#D5D0C4" stroke-width="2"/><rect x="2300" y="420" width="8" height="300.9" fill="#4C7A2A"/><text x="2410.0" y="462.9" font-family="Montserrat, Arial, sans-serif" font-size="34" font-weight="700" fill="#0B2545" text-anchor="start" >Colegio Pablo Neruda</text>
 <circle cx="2360" cy="464.0" r="30" fill="#4C7A2A"/>
-<text x="2360.0" y="474.8" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF" text-anchor="middle" >7</text>
+<text x="2360.0" y="474.8" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF" text-anchor="middle" >10</text>
 <text x="2410.0" y="522.4" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="500" fill="#718096" text-anchor="start" >Pública (SLEP Puerto Cordillera) · Parvularia, Básica, Media HC, Media TP · Matrícula 2025: 741</text>
 <text x="2410.0" y="564.1" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="700" fill="#4C7A2A" text-anchor="start" letter-spacing="1.5">DIRECTOR/A</text>
 <text x="2580.0" y="564.1" font-family="Montserrat, Arial, sans-serif" font-size="27" font-weight="500" fill="#0B2545" text-anchor="start" >Manuel Salas López</text>

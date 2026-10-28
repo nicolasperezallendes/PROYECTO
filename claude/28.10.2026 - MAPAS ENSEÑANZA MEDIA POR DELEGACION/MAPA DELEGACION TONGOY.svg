@@ -6,19 +6,20 @@
 <rect x="80" y="250" width="2160" height="1780" rx="18" fill="none" stroke="#D5D0C4" stroke-width="2"/>
 <g id="Marcadores">
 <g id="Localidad El Tangue"><circle cx="622" cy="1554" r="11" fill="#FFFFFF" stroke="#718096" stroke-width="5"/><text x="644.4" y="1564.0" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="700" fill="#4A5568" text-anchor="start" stroke="#FFFFFF" stroke-width="8" stroke-linejoin="round" paint-order="stroke">El Tangue</text></g>
-<g id="Marcador 8">
+
+<g id="Marcador 11">
 <circle cx="1700.6" cy="729.1" r="35" fill="#FFFFFF" opacity="0.95"/>
 <circle cx="1700.6" cy="729.1" r="30" fill="#2F4C8F"/>
-<text x="1700.6" y="739.9" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF" text-anchor="middle" >8</text>
+<text x="1700.6" y="739.9" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF" text-anchor="middle" >11</text>
 <text x="1656.6" y="739.9" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="700" fill="#0B2545" text-anchor="end" stroke="#FFFFFF" stroke-width="8" stroke-linejoin="round" paint-order="stroke">Liceo Carmen Aurora Rodríguez</text>
 </g>
 </g></g>
 <g id="Panel">
 <text x="2300.0" y="290.0" font-family="Montserrat, Arial, sans-serif" font-size="24" font-weight="700" fill="#2F4C8F" text-anchor="start" letter-spacing="3">SUBSECTORES PLADECO</text>
 <text x="2300.0" y="334.0" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="600" fill="#0B2545" text-anchor="start" >Tongoy y El Tangue</text>
-<g id="Ficha 8"><rect x="2300" y="404" width="1460" height="332.9" rx="16" fill="#FFFFFF" stroke="#D5D0C4" stroke-width="2"/><rect x="2300" y="420" width="8" height="300.9" fill="#2F4C8F"/><text x="2410.0" y="462.9" font-family="Montserrat, Arial, sans-serif" font-size="34" font-weight="700" fill="#0B2545" text-anchor="start" >Liceo Carmen Aurora Rodríguez Henríquez</text>
+<g id="Ficha 11"><rect x="2300" y="404" width="1460" height="332.9" rx="16" fill="#FFFFFF" stroke="#D5D0C4" stroke-width="2"/><rect x="2300" y="420" width="8" height="300.9" fill="#2F4C8F"/><text x="2410.0" y="462.9" font-family="Montserrat, Arial, sans-serif" font-size="34" font-weight="700" fill="#0B2545" text-anchor="start" >Liceo Carmen Aurora Rodríguez Henríquez</text>
 <circle cx="2360" cy="464.0" r="30" fill="#2F4C8F"/>
-<text x="2360.0" y="474.8" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF" text-anchor="middle" >8</text>
+<text x="2360.0" y="474.8" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF" text-anchor="middle" >11</text>
 <text x="2410.0" y="522.4" font-family="Montserrat, Arial, sans-serif" font-size="23" font-weight="500" fill="#718096" text-anchor="start" >Pública (SLEP Puerto Cordillera) · Media HC, Media TP, Adultos · Matrícula 2025: 353</text>
 <text x="2410.0" y="564.1" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="700" fill="#2F4C8F" text-anchor="start" letter-spacing="1.5">DIRECTOR/A</text>
 <text x="2580.0" y="564.1" font-family="Montserrat, Arial, sans-serif" font-size="27" font-weight="500" fill="#0B2545" text-anchor="start" >Perla Araya Yañez</text>
