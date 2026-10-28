@@ -13,7 +13,13 @@ Base usada: *BASE ESTABLECIMIENTOS ENSEÑANZA MEDIA COQUIMBO* (corte 23.10.2026)
 | MAPA DELEGACION GUANAQUEROS | Sin establecimientos; muestra el liceo más cercano, en Tongoy |
 | MAPA DELEGACION PARTE ALTA | 3 establecimientos |
 
-Cada pieza mide 3840×2160 (16:9) y viene en tres formatos: **SVG** para editar en Affinity (con capas por nombre: Fondo, Título, Mapa, Marcadores, Panel, Fichas), **PNG** para pantalla y **PDF** para imprimir. La tipografía es Montserrat, igual que en las piezas de inversión.
+**Formato de impresión: lámina de 90 × 60 cm a 200 ppp (horizontal, 3:2).**
+
+- **PDF** a tamaño real (90 × 60 cm). El texto va en vectores y el mapa base, a 200 ppp reales. Es el archivo para la imprenta.
+- **PNG** de 7.087 × 4.724 px, marcado a 200 ppp.
+- **SVG** para editar en Affinity, con capas por nombre (Fondo, Título, Mapa, Marcadores, Panel, Fichas). Si se exporta desde Affinity, usar 90 × 60 cm a 200 ppp.
+
+El mapa base se descargó un nivel de zoom más cerca que en la versión de pantalla, para que calles y nombres se vean nítidos al imprimir. Los archivos no traen sangrado ni marcas de corte; si la imprenta los pide (lo habitual es 3 a 5 mm por lado), se agregan sin rehacer el diseño. La tipografía es Montserrat, igual que en las piezas de inversión. Las versiones anteriores en 16:9 para pantalla quedan en el historial del repositorio.
 
 Cada ficha trae nombre, director/a, fono, e-mail y dirección. También indica dependencia, niveles y matrícula 2025.
 
