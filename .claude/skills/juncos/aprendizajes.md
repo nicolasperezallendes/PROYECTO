@@ -92,3 +92,9 @@ Agregado el 19-10-2026, a partir de chilecompra.cl/api y de la documentación en
 - **Subida:** los archivos JSON se suben de a uno (`Artifact publish` con `asset: true` y `file_path`). La subida en grupo (`file_paths`) no acepta archivos de texto.
 - **Escrituras fijadas:** cada `update` o `set` sobre un documento que ya existe lleva el `if_version` leído antes. Sin él, se rechaza.
 - **Chequeo:** el documento `data/users/me/check` puede quedarse en `checking` o no existir todavía. Se lee hasta 5 veces y no se insiste más.
+
+## n8n y mejora continua
+
+- **Planillas (06-11-2026):** el conector de Google Drive crea planillas desde un CSV, pero no edita celdas. Para agregar columnas hubo que crear una planilla nueva. Por eso los nodos de Sheets usan `handlingExtraData: insertInNewColumn`: las columnas futuras se agregan solas.
+- **Probar sin n8n:** la lógica de los Code node se prueba en Node.js con luxon (`DateTime`), simulando `$input`, `$()` y `$now`, y con datos reales bajados con Python (el `fetch` de Node no pasa por el proxy). Así se probaron las versiones 1.0 y 2.0.
+- **Ciclo de mejora:** las sugerencias del viernes son reglas simples. Verifícalas contra la planilla antes de proponerlas, y aplica pocas por semana para poder medir su efecto.

@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Genera el flujo de n8n «JUNCOS · Compras Ágiles diarias» a partir de perfil_juncos.json.
+"""Genera los flujos de n8n de JUNCOS a partir de perfil_juncos.json.
+
+1. «JUNCOS · Compras Ágiles diarias» (JUNCOS - Compras Agiles diarias.json).
+2. «JUNCOS · Resultados y mejora» (JUNCOS - Resultados y mejora.json): el ciclo de mejora
+   continua. Cada tarde anota en la planilla cómo terminó cada Compra Ágil (ganador, precio,
+   ofertas) y cada viernes calcula métricas y propone ajustes al perfil.
 
 El flujo, de lunes a viernes a las 07:30 (hora de Chile):
   1. busca Compras Ágiles publicadas con los términos del perfil (todo el país) y
@@ -22,13 +27,13 @@ AQUI = Path(__file__).resolve().parent
 PERFIL = AQUI.parent / "mercadopublico" / "perfil_juncos.json"
 SALIDA = AQUI / "JUNCOS - Compras Agiles diarias.json"
 
-# Términos de búsqueda (filtro q de la API). Pocos y amplios: cada término gasta cupo del ticket.
-TERMINOS = ["clima laboral", "encuesta", "estudio", "diagnostico", "capacitacion", "taller",
-            "charla", "jornada", "liderazgo", "grupo focal", "consultoria", "comunicaciones",
-            "pendon", "afiche", "lanyard"]
-MAX_DETALLE = 20          # fichas de detalle por corrida (unos 17 s cada una)
+SALIDA_MEJORA = AQUI / "JUNCOS - Resultados y mejora.json"
+# Términos, topes y umbrales viven en perfil_juncos.json > compra_agil > n8n, para que cada
+# mejora se haga en un solo lugar y suba la versión (ver CAMBIOS.md).
 CORREO = "juncoseirl@gmail.com"
-PLANILLA_ID = "1AVZaW4HAiRr9pcbD1zUMvfVBpP_tx3x6C5mUiRGRXqg"  # «Compras Ágiles JUNCOS (n8n)», creada el 06-11-2026
+PLANILLA_ID = "19yVuYAPHGi0fY6cVhPDxkCfec4LwHaYEPv8YSROnK7k"  # «Compras Ágiles JUNCOS (n8n)», v2 con columnas de mejora (06-11-2026)
+MEJORA_ID = "1ZBYFofbAG_5QE3aN6fEP7eEbAvsCACF23ldeU2r99Ss"  # «Mejora JUNCOS (n8n)»: una fila por semana (06-11-2026)
+RUT_JUNCOS = "78.390.884-0"
 RUTINA_URL = "https://api.anthropic.com/v1/claude_code/routines/PEGAR_ID_trig_/fire"
 
 
@@ -40,6 +45,9 @@ def main():
     p = json.loads(PERFIL.read_text(encoding="utf-8"))
     ca = p["compra_agil"]
     dis = ca.get("diseno", {})
+    n8n = ca["n8n"]
+    TERMINOS = n8n["terminos"]
+    VERSION = n8n["version"]
     perfil_js = {
         "claves": p["palabras_clave"] + ca.get("palabras_clave_extra", []),
         "excluir": p["excluir"] + ca.get("excluir_extra", []),
@@ -52,7 +60,9 @@ def main():
         "montoMaxDiseno": dis.get("monto_max", 2000000),
         "minPuntaje": ca.get("min_puntaje", 3),
         "minHoras": ca.get("min_horas_al_cierre", 3),
-        "maxDetalle": MAX_DETALLE,
+        "maxDetalle": n8n["max_detalle"],
+        "terminos": TERMINOS,
+        "version": VERSION,
     }
     PERFIL_JS = "const PERFIL = " + json.dumps(perfil_js, ensure_ascii=False) + ";\n"
     NORM = ("const norm = (t) => String(t || '').toLowerCase().normalize('NFD')"
@@ -124,6 +134,8 @@ def main():
         "  const enRegion = (it.institucion || {}).region === 4;\n"
         "  const hits = tiene(texto, PERFIL.claves);\n"
         "  const remoto = tiene(texto, PERFIL.remoto).length > 0;\n"
+        "  // Qué búsqueda la trajo: sirve para medir qué términos rinden (ciclo de mejora).\n"
+        "  const terminos = PERFIL.terminos.filter((t) => norm(texto).includes(norm(t))).concat(enRegion ? ['coquimbo'] : []);\n"
         "  const peso = Math.max(0, ...rub.concat(rubD).map((r) => r.peso || 0));\n"
         "  const puntaje = peso + Math.min(hits.length, 6) + (enRegion ? 2 : 0) + (remoto ? 1 : 0);\n"
         "  if (puntaje < PERFIL.minPuntaje) return;\n"
@@ -152,6 +164,8 @@ def main():
         "    alertas: alertas.join('; '),\n"
         "    nueva: pub.isValid ? pub >= desde : false,\n"
         "    revisada_el: ahora.toFormat('dd-MM-yyyy HH:mm'),\n"
+        "    terminos: terminos.join(', '),\n"
+        "    version_flujo: PERFIL.version,\n"
         "  });\n"
         "});\n"
         "filas.sort((a, b) => b.puntaje - a.puntaje || (a.horas_al_cierre || 1e9) - (b.horas_al_cierre || 1e9));\n"
@@ -179,7 +193,7 @@ def main():
         "  + `<h3>Nuevas desde la última revisión (${nuevas.length})</h3>` + tabla(nuevas)\n"
         "  + `<h3>Todas las abiertas afines (${filas.length})</h3>` + tabla(filas)\n"
         "  + '<p><small>Monto con impuestos; neto máximo = monto / 1,19. Antes de cotizar, revisa el adjunto en la plataforma y la decisión CA3 de /juncos.</small></p>';\n"
-        "const texto = `Revisión n8n del ${hoy}. Compras Ágiles afines nuevas: `\n"
+        "const texto = `REVISIÓN DIARIA. Revisión n8n del ${hoy}. Compras Ágiles afines nuevas: `\n"
         "  + (nuevas.map((f) => `${f.codigo} (${f.nombre}; ${f.organismo}; ${pesos(f.monto_clp)}; cierre ${f.cierre}; puntaje ${f.puntaje})`).join(' | ') || 'ninguna')\n"
         "  + '. Están también en la planilla «Compras Ágiles JUNCOS (n8n)».';\n"
         "return [{ json: { asunto, html, texto, nuevas: nuevas.length } }];\n")
@@ -195,8 +209,10 @@ def main():
 
     nodos = [
         {"parameters": {"content": (
-            "## JUNCOS · Compras Ágiles diarias\n"
+            f"## JUNCOS · Compras Ágiles diarias (v{VERSION})\n"
             "De lunes a viernes a las 07:30 (hora de Chile).\n\n"
+            "**Para que el ciclo de mejora aprenda:** en la planilla, marca la columna `decision` "
+            "(cotizar o descartar) y, si descartas, escribe el `motivo`.\n\n"
             "**Antes de activarlo:**\n"
             "1. Credencial *Header Auth* «Mercado Público ticket»: Name `ticket`, Value = tu ticket. "
             "Úsala en los tres nodos HTTP de la API.\n"
@@ -205,7 +221,8 @@ def main():
             "4. (Opcional) «Avisar a Claude»: pega la URL de la rutina y crea la credencial "
             "*Header Auth* «Rutina Claude JUNCOS»: Name `Authorization`, Value `Bearer sk-ant-oat01-…`. "
             "Luego activa el nodo.\n\n"
-            "Generado con herramientas/n8n/generar_flujo_n8n.py desde perfil_juncos.json."),
+            "Generado con herramientas/n8n/generar_flujo_n8n.py desde perfil_juncos.json. "
+            "Cambios por versión: herramientas/n8n/CAMBIOS.md."),
             "height": 420, "width": 420},
          "id": nid(), "name": "Instrucciones", "type": "n8n-nodes-base.stickyNote",
          "typeVersion": 1, "position": [-520, -260]},
@@ -224,7 +241,7 @@ def main():
                 "parameters": {"parameters": [{"type": "qs", "name": "numero_pagina", "value": "={{ $pageCount + 1 }}"}]},
                 "paginationCompleteWhen": "other",
                 "completeExpression": "={{ $pageCount + 1 >= (($response.body.payload || {}).paginacion || {}).total_paginas }}",
-                "limitPagesFetched": True, "maxRequests": 3, "requestInterval": 1500}}}},
+                "limitPagesFetched": True, "maxRequests": n8n["max_paginas_termino"], "requestInterval": 1500}}}},
          "id": nid(), "name": "Buscar por términos (país)", "type": "n8n-nodes-base.httpRequest",
          "typeVersion": 4.2, "position": [440, -120], "retryOnFail": True, "maxTries": 3,
          "waitBetweenTries": 5000, "onError": "continueRegularOutput"},
@@ -241,7 +258,7 @@ def main():
                 "parameters": {"parameters": [{"type": "qs", "name": "numero_pagina", "value": "={{ $pageCount + 1 }}"}]},
                 "paginationCompleteWhen": "other",
                 "completeExpression": "={{ $pageCount + 1 >= (($response.body.payload || {}).paginacion || {}).total_paginas }}",
-                "limitPagesFetched": True, "maxRequests": 12, "requestInterval": 1500}}}},
+                "limitPagesFetched": True, "maxRequests": n8n["max_paginas_region"], "requestInterval": 1500}}}},
          "id": nid(), "name": "Región de Coquimbo (nuevas)", "type": "n8n-nodes-base.httpRequest",
          "typeVersion": 4.2, "position": [440, 120], "retryOnFail": True, "maxTries": 3,
          "waitBetweenTries": 5000, "onError": "continueRegularOutput"},
@@ -261,7 +278,7 @@ def main():
             "documentId": {"__rl": True, "value": PLANILLA_ID, "mode": "id"},
             "sheetName": {"__rl": True, "value": "gid=0", "mode": "list", "cachedResultName": "Primera hoja"},
             "columns": {"mappingMode": "autoMapInputData", "value": {}, "matchingColumns": ["codigo"]},
-            "options": {}},
+            "options": {"handlingExtraData": "insertInNewColumn"}},
          "id": nid(), "name": "Guardar en planilla", "type": "n8n-nodes-base.googleSheets",
          "typeVersion": 4.5, "position": [1760, -120]},
         code("Armar correo", js_correo, [1540, 120]),
@@ -297,7 +314,7 @@ def main():
         "Enviar correo": {"main": [[con("Avisar a Claude")]]},
     }
     flujo = {
-        "name": "JUNCOS · Compras Ágiles diarias",
+        "name": f"JUNCOS · Compras Ágiles diarias v{VERSION}",
         "nodes": nodos,
         "connections": conexiones,
         "settings": {"executionOrder": "v1", "timezone": "America/Santiago", "saveManualExecutions": True},
@@ -308,6 +325,208 @@ def main():
     }
     SALIDA.write_text(json.dumps(flujo, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Flujo guardado en {SALIDA}")
+    flujo_mejora(n8n, VERSION, NORM, auth_ticket, opciones_api, code, con)
+
+
+def flujo_mejora(n8n, VERSION, NORM, auth_ticket, opciones_api, code, con):
+    """Ciclo de mejora continua: resultados diarios (19:00) y revisión semanal (viernes 17:00)."""
+    U = n8n["mejora"]
+    CONF = "const CONF = " + json.dumps({
+        "terminos": n8n["terminos"], "version": VERSION, "rutJuncos": RUT_JUNCOS,
+        "ventana": U["ventana_dias"], "minDet": U["min_detecciones_termino"],
+        "minMotivo": U["min_repeticiones_motivo"], "minPrecio": U["min_resultados_precio"],
+        "diasEspera": U["dias_espera_resultado"]}, ensure_ascii=False) + ";\n"
+    COMUN = CONF + NORM + (
+        "const ZONA = 'America/Santiago';\n"
+        "const ahora = DateTime.now().setZone(ZONA);\n"
+        "const num = (v) => { const n = Number(String(v == null ? '' : v).replace(/[^0-9.-]/g, '')); return isFinite(n) ? n : 0; };\n")
+
+    js_pendientes = COMUN + (
+        "// Compras Ágiles de la planilla que ya cerraron y aún no tienen resultado final.\n"
+        "const FINALES = ['ganada', 'adjudicada a otro', 'adjudicada (ganador no visible)', 'desierta', 'cancelada'];\n"
+        "const out = [];\n"
+        "for (const it of $input.all()) {\n"
+        "  const r = it.json;\n"
+        "  if (!r.codigo) continue;\n"
+        "  const cierre = DateTime.fromFormat(String(r.cierre || ''), 'yyyy-MM-dd HH:mm', { zone: ZONA });\n"
+        "  if (!cierre.isValid || cierre > ahora.minus({ hours: 2 })) continue;\n"
+        "  if (FINALES.includes(String(r.estado_final || ''))) continue;\n"
+        "  if (ahora.diff(cierre, 'days').days > CONF.diasEspera) continue;  // ya no se espera resultado\n"
+        "  out.push({ json: { codigo: r.codigo, monto_clp: num(r.monto_clp) } });\n"
+        "}\n"
+        "return out.slice(0, 30);  // unos 17 s por ficha\n")
+
+    js_resultado = COMUN + (
+        "// Cómo terminó cada una: estado, ofertas, ganador y precios visibles.\n"
+        "const pend = $('Pendientes de resultado').all();\n"
+        "const dets = $input.all();\n"
+        "const filas = [];\n"
+        "pend.forEach((p, i) => {\n"
+        "  const d = (dets[i] && dets[i].json && dets[i].json.payload) || null;\n"
+        "  if (!d) return;  // la API no respondió: se reintenta mañana\n"
+        "  const est = (d.estado || {}).codigo || '';\n"
+        "  const provs = d.proveedores_cotizando || [];\n"
+        "  const sel = provs.find((q) => q.proveedor_seleccionado);\n"
+        "  const juncos = provs.find((q) => q.rut_proveedor === CONF.rutJuncos);\n"
+        "  const montos = provs.map((q) => num(q.monto_total)).filter((v) => v > 0);\n"
+        "  let estado = est;\n"
+        "  if (est === 'proveedor_seleccionado') estado = !sel ? 'adjudicada (ganador no visible)' : (sel.rut_proveedor === CONF.rutJuncos ? 'ganada' : 'adjudicada a otro');\n"
+        "  else if (est === 'publicada') estado = 'abierta';\n"
+        "  const disp = num((d.presupuesto || {}).monto_disponible_clp) || p.json.monto_clp;\n"
+        "  const precio = sel ? num(sel.monto_total) : 0;\n"
+        "  filas.push({ json: {\n"
+        "    codigo: p.json.codigo,\n"
+        "    estado_final: estado,\n"
+        "    ofertas_final: (d.resumen || {}).total_ofertas_recibidas == null ? '' : d.resumen.total_ofertas_recibidas,\n"
+        "    juncos_cotizo: juncos ? 'sí' : (provs.length ? 'no visible' : ''),\n"
+        "    ganador: sel ? sel.razon_social : '',\n"
+        "    precio_ganador: precio || '',\n"
+        "    precio_min: montos.length ? Math.min(...montos) : '',\n"
+        "    ratio_ganador: precio && disp ? Math.round(precio / disp * 100) / 100 : '',\n"
+        "    resultado_revisado_el: ahora.toFormat('dd-MM-yyyy HH:mm'),\n"
+        "  } });\n"
+        "});\n"
+        "return filas;\n")
+
+    js_metricas = COMUN + (
+        "// Revisión semanal: qué se detectó, qué se decidió, qué ganó y qué conviene ajustar.\n"
+        "const rows = $input.all().map((i) => i.json).filter((r) => r.codigo);\n"
+        "const fecha = (s) => DateTime.fromFormat(String(s || ''), 'dd-MM-yyyy HH:mm', { zone: ZONA });\n"
+        "const dentro = (r, dias) => { const d = fecha(r.revisada_el); return d.isValid && d >= ahora.minus({ days: dias }); };\n"
+        "const sem = rows.filter((r) => dentro(r, 7));\n"
+        "const ven = rows.filter((r) => dentro(r, CONF.ventana));\n"
+        "const dec = (r) => norm(r.decision);\n"
+        "const cotizada = (r) => /cotiz/.test(dec(r)) || r.juncos_cotizo === 'sí';\n"
+        "const descartada = (r) => /descart/.test(dec(r));\n"
+        "const conDec = sem.filter((r) => dec(r)).length;\n"
+        "const cotSem = sem.filter(cotizada).length;\n"
+        "const desSem = sem.filter(descartada).length;\n"
+        "const mediana = (a) => { if (!a.length) return null; const s = a.slice().sort((x, y) => x - y); const m = Math.floor(s.length / 2); return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };\n"
+        "const pct = (v) => v == null ? '—' : Math.round(v * 100) + '%';\n"
+        "// Motivos de descarte en la ventana\n"
+        "const motivos = {};\n"
+        "ven.filter(descartada).forEach((r) => { const m = String(r.motivo || 'sin motivo').trim().toLowerCase() || 'sin motivo'; motivos[m] = (motivos[m] || 0) + 1; });\n"
+        "// Rendimiento de cada término de búsqueda en la ventana\n"
+        "const term = {};\n"
+        "CONF.terminos.concat(['coquimbo']).forEach((t) => { term[t] = { det: 0, cot: 0 }; });\n"
+        "ven.forEach((r) => String(r.terminos || '').split(',').map((x) => x.trim()).filter(Boolean).forEach((t) => {\n"
+        "  term[t] = term[t] || { det: 0, cot: 0 }; term[t].det++; if (cotizada(r)) term[t].cot++; }));\n"
+        "// Precios ganadores por línea (todo el historial)\n"
+        "const conRes = rows.filter((r) => num(r.ratio_ganador) > 0);\n"
+        "const lineas = {};\n"
+        "conRes.forEach((r) => { const l = r.linea || 'consultoría'; (lineas[l] = lineas[l] || { ratios: [], ofertas: [] }).ratios.push(num(r.ratio_ganador)); if (num(r.ofertas_final)) lineas[l].ofertas.push(num(r.ofertas_final)); });\n"
+        "const ganadas = rows.filter((r) => r.estado_final === 'ganada').length;\n"
+        "const cotizadasTot = rows.filter(cotizada).length;\n"
+        "// Sugerencias: cada una dice qué cambiar en perfil_juncos.json y con qué evidencia\n"
+        "const sug = [];\n"
+        "if (sem.length && conDec / sem.length < 0.5) sug.push(`Solo ${conDec} de ${sem.length} Compras Ágiles de la semana tienen decisión. Marca la columna decision (cotizar o descartar) y el motivo: sin eso el ciclo no aprende.`);\n"
+        "Object.entries(term).forEach(([t, v]) => {\n"
+        "  if (v.det >= CONF.minDet && v.cot === 0) sug.push(`El término «${t}» trajo ${v.det} Compras Ágiles afines en ${CONF.ventana} días y ninguna se cotizó: evaluar quitarlo de compra_agil.n8n.terminos o afinarlo.`);\n"
+        "  if (ven.length >= 20 && v.det === 0 && t !== 'coquimbo') sug.push(`El término «${t}» no aportó ninguna Compra Ágil afín en ${CONF.ventana} días: evaluar reemplazarlo.`);\n"
+        "});\n"
+        "Object.entries(motivos).filter(([m, n]) => n >= CONF.minMotivo && m !== 'sin motivo').forEach(([m, n]) => sug.push(`«${m}» se repitió ${n} veces como motivo de descarte: evaluar una exclusión o una regla nueva en el perfil.`));\n"
+        "Object.entries(lineas).forEach(([l, v]) => { if (v.ratios.length >= CONF.minPrecio) sug.push(`En ${l}, el ganador ofertó en mediana el ${pct(mediana(v.ratios))} del monto disponible, con ${mediana(v.ofertas) || '—'} ofertas en mediana (${v.ratios.length} resultados): úsalo como referencia al fijar precios.`); });\n"
+        "if (cotizadasTot >= 5 && ganadas === 0) sug.push(`JUNCOS lleva ${cotizadasTot} Compras Ágiles cotizadas sin ganar: revisar precio frente a los ganadores (columna precio_ganador) y la descripción de las ofertas.`);\n"
+        "const fila = {\n"
+        "  semana_hasta: ahora.toFormat('dd-MM-yyyy'), version_flujo: CONF.version,\n"
+        "  detectadas: sem.length, con_decision: conDec, cotizadas: cotSem, descartadas: desSem,\n"
+        "  sin_decision: sem.length - conDec, precision: conDec ? Math.round(cotSem / conDec * 100) / 100 : '',\n"
+        "  resultados_conocidos: conRes.length, ganadas_juncos: ganadas,\n"
+        "  mediana_ratio_consultoria: lineas['consultoría'] ? mediana(lineas['consultoría'].ratios) : '',\n"
+        "  mediana_ratio_diseno: lineas['diseño'] ? mediana(lineas['diseño'].ratios) : '',\n"
+        "  sugerencias: sug.join(' | '),\n"
+        "};\n"
+        "const esc = (t) => String(t == null ? '' : t).replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));\n"
+        "const filaT = (a, b) => `<tr><td>${esc(a)}</td><td style=\"text-align:right\">${esc(b)}</td></tr>`;\n"
+        "const tablaT = Object.entries(term).sort((a, b) => b[1].det - a[1].det).map(([t, v]) => `<tr><td>${esc(t)}</td><td style=\"text-align:right\">${v.det}</td><td style=\"text-align:right\">${v.cot}</td></tr>`).join('');\n"
+        "const asunto = `JUNCOS · Mejora semanal ${fila.semana_hasta}: ${sem.length} detectadas, ${cotSem} cotizadas, ${sug.length} sugerencias`;\n"
+        "const html = `<p>Revisión semanal del flujo n8n v${CONF.version}.</p>`\n"
+        "  + '<h3>La semana</h3><table border=\"1\" cellpadding=\"6\" style=\"border-collapse:collapse;font-family:sans-serif;font-size:13px\">'\n"
+        "  + filaT('Detectadas', sem.length) + filaT('Con decisión', conDec) + filaT('Cotizadas', cotSem) + filaT('Descartadas', desSem)\n"
+        "  + filaT('Precisión (cotizadas / con decisión)', fila.precision === '' ? '—' : pct(fila.precision))\n"
+        "  + filaT('Resultados conocidos (historial)', conRes.length) + filaT('Ganadas por JUNCOS', ganadas) + '</table>'\n"
+        "  + `<h3>Sugerencias (${sug.length})</h3>` + (sug.length ? '<ol>' + sug.map((x) => `<li>${esc(x)}</li>`).join('') + '</ol>' : '<p>Ninguna esta semana.</p>')\n"
+        "  + `<h3>Términos de búsqueda (${CONF.ventana} días)</h3><table border=\"1\" cellpadding=\"6\" style=\"border-collapse:collapse;font-family:sans-serif;font-size:13px\"><tr><th>Término</th><th>Afines</th><th>Cotizadas</th></tr>` + tablaT + '</table>'\n"
+        "  + '<p><small>Las sugerencias no se aplican solas: Claude las revisa contigo y, si las apruebas, actualiza perfil_juncos.json, sube la versión y regenera el flujo.</small></p>';\n"
+        "const texto = `MEJORA SEMANAL. Flujo n8n v${CONF.version}, semana hasta ${fila.semana_hasta}. `\n"
+        "  + `Detectadas ${sem.length}, con decisión ${conDec}, cotizadas ${cotSem}, descartadas ${desSem}, resultados conocidos ${conRes.length}, ganadas ${ganadas}. `\n"
+        "  + `Motivos de descarte: ${JSON.stringify(motivos)}. Términos: ${JSON.stringify(term)}. Sugerencias: ${sug.join(' | ') || 'ninguna'}.`;\n"
+        "return [{ json: { fila, asunto, html, texto } }];\n")
+
+    sheets = lambda nombre, doc, pos, **par: {  # noqa: E731
+        "parameters": {"documentId": {"__rl": True, "value": doc, "mode": "id"},
+                       "sheetName": {"__rl": True, "value": "gid=0", "mode": "list", "cachedResultName": "Primera hoja"},
+                       **par},
+        "id": nid(), "name": nombre, "type": "n8n-nodes-base.googleSheets", "typeVersion": 4.5, "position": pos}
+    fire = lambda nombre, origen, pos: {  # noqa: E731
+        "parameters": {
+            "method": "POST", "url": RUTINA_URL, **auth_ticket, "sendHeaders": True,
+            "headerParameters": {"parameters": [{"name": "anthropic-version", "value": "2023-06-01"}]},
+            "sendBody": True, "specifyBody": "json",
+            "jsonBody": "={{ JSON.stringify({ text: $('" + origen + "').first().json.texto }) }}",
+            "options": {"timeout": 30000}},
+        "id": nid(), "name": nombre, "type": "n8n-nodes-base.httpRequest", "typeVersion": 4.2,
+        "position": pos, "disabled": True, "onError": "continueRegularOutput",
+        "notes": "Sin reintentos: cada llamada abre una sesión nueva de Claude."}
+
+    nodos = [
+        {"parameters": {"content": (
+            f"## JUNCOS · Resultados y mejora (v{VERSION})\n"
+            "Ciclo de mejora continua del flujo diario.\n\n"
+            "**Medir (L–V 19:00):** revisa las Compras Ágiles de la planilla que ya cerraron y anota "
+            "estado final, ofertas, ganador, precio ganador y si JUNCOS aparece entre los oferentes.\n\n"
+            "**Aprender (viernes 17:00):** calcula detectadas, decisiones, precisión, rendimiento de cada "
+            "término, motivos de descarte y precios ganadores, y propone ajustes al perfil.\n\n"
+            "**Ajustar:** las sugerencias llegan por correo y, si activas el último nodo, a Claude, que las "
+            "revisa contigo. Nada cambia sin tu visto bueno.\n\n"
+            "Credenciales: las mismas del flujo diario. La planilla «Mejora JUNCOS (n8n)» guarda una fila por semana."),
+            "height": 440, "width": 440},
+         "id": nid(), "name": "Instrucciones", "type": "n8n-nodes-base.stickyNote", "typeVersion": 1,
+         "position": [-560, -300]},
+        {"parameters": {"rule": {"interval": [{"field": "cronExpression", "expression": "0 19 * * 1-5"}]}},
+         "id": nid(), "name": "Resultados L–V 19:00", "type": "n8n-nodes-base.scheduleTrigger",
+         "typeVersion": 1.2, "position": [0, -120]},
+        sheets("Leer planilla (resultados)", PLANILLA_ID, [220, -120], operation="read", options={}),
+        code("Pendientes de resultado", js_pendientes, [440, -120]),
+        {"parameters": {"url": "=https://api2.mercadopublico.cl/v2/compra-agil/{{ $json.codigo }}",
+                        **auth_ticket, "options": opciones_api},
+         "id": nid(), "name": "Detalle al cierre", "type": "n8n-nodes-base.httpRequest", "typeVersion": 4.2,
+         "position": [660, -120], "retryOnFail": True, "maxTries": 2, "waitBetweenTries": 5000,
+         "onError": "continueRegularOutput"},
+        code("Calcular resultado", js_resultado, [880, -120]),
+        sheets("Anotar resultado", PLANILLA_ID, [1100, -120], operation="appendOrUpdate",
+               columns={"mappingMode": "autoMapInputData", "value": {}, "matchingColumns": ["codigo"]}, options={"handlingExtraData": "insertInNewColumn"}),
+        {"parameters": {"rule": {"interval": [{"field": "cronExpression", "expression": "0 17 * * 5"}]}},
+         "id": nid(), "name": "Viernes 17:00", "type": "n8n-nodes-base.scheduleTrigger",
+         "typeVersion": 1.2, "position": [0, 160]},
+        sheets("Leer planilla (semana)", PLANILLA_ID, [220, 160], operation="read", options={}),
+        code("Métricas y sugerencias", js_metricas, [440, 160]),
+        code("Fila de la semana", "return [{ json: $json.fila }];\n", [660, 60]),
+        sheets("Guardar semana", MEJORA_ID, [880, 60], operation="append",
+               columns={"mappingMode": "autoMapInputData", "value": {}}, options={"handlingExtraData": "insertInNewColumn"}),
+        {"parameters": {"sendTo": CORREO, "subject": "={{ $json.asunto }}", "emailType": "html",
+                        "message": "={{ $json.html }}", "options": {"appendAttribution": False}},
+         "id": nid(), "name": "Correo semanal", "type": "n8n-nodes-base.gmail", "typeVersion": 2.1,
+         "position": [660, 260]},
+        fire("Pedir mejora a Claude", "Métricas y sugerencias", [880, 260]),
+    ]
+    conexiones = {
+        "Resultados L–V 19:00": {"main": [[con("Leer planilla (resultados)")]]},
+        "Leer planilla (resultados)": {"main": [[con("Pendientes de resultado")]]},
+        "Pendientes de resultado": {"main": [[con("Detalle al cierre")]]},
+        "Detalle al cierre": {"main": [[con("Calcular resultado")]]},
+        "Calcular resultado": {"main": [[con("Anotar resultado")]]},
+        "Viernes 17:00": {"main": [[con("Leer planilla (semana)")]]},
+        "Leer planilla (semana)": {"main": [[con("Métricas y sugerencias")]]},
+        "Métricas y sugerencias": {"main": [[con("Fila de la semana"), con("Correo semanal")]]},
+        "Fila de la semana": {"main": [[con("Guardar semana")]]},
+        "Correo semanal": {"main": [[con("Pedir mejora a Claude")]]},
+    }
+    flujo = {"name": f"JUNCOS · Resultados y mejora v{VERSION}", "nodes": nodos, "connections": conexiones,
+             "settings": {"executionOrder": "v1", "timezone": "America/Santiago", "saveManualExecutions": True},
+             "pinData": {}, "active": False, "meta": {"templateCredsSetupCompleted": False}, "tags": []}
+    SALIDA_MEJORA.write_text(json.dumps(flujo, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"Flujo guardado en {SALIDA_MEJORA}")
 
 
 if __name__ == "__main__":

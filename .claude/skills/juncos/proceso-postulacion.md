@@ -277,17 +277,52 @@ Además de los informes en Markdown, el estado de JUNCOS se muestra en un tabler
 - Es privado: para que otra persona lo vea, Nicolás lo comparte desde el menú Compartir.
 - En un chat de claude.ai sin el repositorio, arma los mismos JSON a mano desde el informe del proyecto y súbelos igual.
 
-## Automatización con n8n (agregada el 06-11-2026 a pedido de Nicolás)
+## Automatización con n8n (agregada el 06-11-2026 a pedido de Nicolás; v2.0 con mejora continua)
 
-El flujo de n8n **«JUNCOS · Compras Ágiles diarias»** hace la búsqueda CA1 de lunes a viernes a las 07:30. Busca 15 términos en todo el país y las nuevas de la Región de Coquimbo, filtra con `perfil_juncos.json`, guarda en la planilla [Compras Ágiles JUNCOS (n8n)](https://docs.google.com/spreadsheets/d/1AVZaW4HAiRr9pcbD1zUMvfVBpP_tx3x6C5mUiRGRXqg/edit) y manda un correo. Si está activado, despierta a una rutina de Claude Code que hace CA2 y CA3, el informe, el seguimiento y el tablero.
+Son dos flujos de n8n que forman un ciclo: **buscar → decidir → medir → aprender → ajustar**. La guía completa para Nicolás, con la instrucción de la rutina de Claude, está en `claude/06.11.2026 - GUIA N8N JUNCOS.md`.
 
-- **Archivos:**
-  - el flujo: `herramientas/n8n/JUNCOS - Compras Agiles diarias.json`;
-  - el generador: `herramientas/n8n/generar_flujo_n8n.py`;
-  - la guía: `claude/06.11.2026 - GUIA N8N JUNCOS.md`, que incluye la instrucción de la rutina.
-- **Cuando cambie el perfil** (palabras clave, exclusiones o rubros), regenera el flujo con `python3 herramientas/n8n/generar_flujo_n8n.py` y avisa a Nicolás que lo vuelva a importar.
-- **En la rutina diaria:** no repitas la búsqueda completa. Parte de la lista que manda n8n o de la planilla y baja solo el detalle de las que vayas a recomendar, porque el ticket es uno solo y tiene cuota diaria.
-- **Si n8n no corrió** (no hay filas del día en la planilla), haz la búsqueda CA1 normal.
+| Flujo | Cuándo | Qué hace |
+|---|---|---|
+| «JUNCOS · Compras Ágiles diarias» | L–V 07:30 | Búsqueda CA1: busca los términos en todo el país y las nuevas de Coquimbo, filtra con el perfil y la regla de rubros, guarda en la planilla [Compras Ágiles JUNCOS (n8n)](https://docs.google.com/spreadsheets/d/19yVuYAPHGi0fY6cVhPDxkCfec4LwHaYEPv8YSROnK7k/edit) y manda el correo. Si está activado, despierta a Claude con «REVISIÓN DIARIA» |
+| «JUNCOS · Resultados y mejora» | L–V 19:00 y viernes 17:00 | Anota el resultado de cada Compra Ágil cerrada: estado final, ofertas, ganador, precio ganador, precio mínimo, proporción frente al monto y si JUNCOS aparece entre los oferentes. Los viernes calcula métricas y sugerencias, guarda una fila en [Mejora JUNCOS (n8n)](https://docs.google.com/spreadsheets/d/1ZBYFofbAG_5QE3aN6fEP7eEbAvsCACF23ldeU2r99Ss/edit), manda el correo y, si está activado, despierta a Claude con «MEJORA SEMANAL» |
+
+**Archivos:**
+- `herramientas/n8n/generar_flujo_n8n.py` genera los dos flujos desde `perfil_juncos.json`.
+- Toda la configuración de n8n vive en `perfil_juncos.json` › `compra_agil.n8n`: versión, términos, topes de páginas y de fichas, y umbrales de mejora.
+- Cada cambio se anota en `herramientas/n8n/CAMBIOS.md`.
+
+**Revisión diaria (rutina, «REVISIÓN DIARIA»):**
+- No repitas la búsqueda completa: parte de la lista que manda n8n o de la planilla, y baja solo el detalle de las que vayas a recomendar. El ticket es uno solo y tiene cuota diaria.
+- Si n8n no corrió (no hay filas del día en la planilla), haz la búsqueda CA1 normal.
+
+### Ciclo de mejora continua («MEJORA SEMANAL»)
+
+El ciclo aprende de tres fuentes que se llenan en la planilla:
+- **`terminos`:** qué búsqueda trajo cada Compra Ágil. La llena n8n.
+- **`decision` y `motivo`:** los llena Nicolás. `decision` es cotizar, cotizada o descartar. Para `motivo` se usan frases fijas: presencial lejos, poco monto, plazo corto, pide OTEC o título, no es nuestro oficio, fuera de rubro, requiere impresión grande, competencia fuerte.
+- **Resultados al cierre:** `estado_final`, `ofertas_final`, `ganador`, `precio_ganador` y `ratio_ganador`. Los llena n8n.
+
+**Cuando llegue el informe semanal (o Nicolás lo pida):**
+1. **Verifica** cada sugerencia contra la planilla, porque las fórmulas son simples y pueden equivocarse. Revisa además si contradice algo de `aprendizajes.md` o una regla de Nicolás.
+2. **Propón** en `claude/dd.mm.aaaa - MEJORA SEMANAL N8N.md`. Para cada cambio, indica:
+   - qué cambia en `perfil_juncos.json`;
+   - la evidencia (números de la semana o de los últimos 30 días);
+   - el efecto esperado, por ejemplo menos ruido, más cobertura o un mejor precio;
+   - el riesgo, por ejemplo perder Compras Ágiles buenas.
+
+   Propón pocos cambios por semana (uno a tres), para poder medir el efecto de cada uno.
+3. **Espera la aprobación de Nicolás.** Nunca cambies la regla de rubros ni los rubros inscritos por esta vía.
+4. **Aplica lo aprobado:**
+   - edita `compra_agil.n8n` (`terminos`, topes o umbrales) o `compra_agil.excluir_extra`;
+   - sube la versión: menor si son ajustes, mayor si hay nodos o columnas nuevos;
+   - corre `python3 herramientas/n8n/generar_flujo_n8n.py`;
+   - anota el cambio en `herramientas/n8n/CAMBIOS.md` y en `aprendizajes.md`;
+   - pídele a Nicolás que reimporte el flujo y que anote el cambio en `cambios_aplicados`, en «Mejora JUNCOS (n8n)».
+5. **Evalúa** el cambio en el informe de la semana siguiente. Si la precisión baja o deja de llegar algo bueno, propón revertirlo.
+
+**Precios:**
+- Cuando una línea tenga 3 o más resultados, usa la mediana de `ratio_ganador` como referencia en CA4. Recuerda la lección del IVA frente a las OTEC.
+- Los ganadores y precios relevantes se pasan también al historial de `seguimiento.md`.
 
 ## Documentos de la empresa que conviene tener siempre al día
 

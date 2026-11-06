@@ -73,6 +73,8 @@ El 22-10, el conteo `total_ofertas_recibidas` de la API bajó a 0 en Compras Ág
 
 | Tarea | Plazo | Estado |
 |---|---|---|
+| Importar los flujos n8n v2.0 (diario y «Resultados y mejora») y conectar credenciales; ver `claude/06.11.2026 - GUIA N8N JUNCOS.md` | Lo antes posible | Pendiente |
+| Marcar `decision` y `motivo` en la planilla «Compras Ágiles JUNCOS (n8n)» cada día: sin eso el ciclo de mejora no aprende | Desde la primera corrida | Pendiente |
 | Enviar la oferta de Las Condes (564953-79-LE26) | **Antes del lun 26-10, 17:00** | Pendiente |
 | Confirmar si se envió la Compra Ágil de EPCO (1317954-9-COT26) | **Antes del lun 26-10, 23:59** | Pendiente |
 | Decidir y cotizar la DPR (953-82-COT26) y las jornadas de Sercotec | **Lun 26-10, 12:00 y 17:00** | Pendiente |
