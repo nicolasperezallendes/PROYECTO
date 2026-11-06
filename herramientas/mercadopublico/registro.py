@@ -378,8 +378,9 @@ def metricas():
 
     sug = []
     if sem and len(con_dec) / len(sem) < 0.5:
-        sug.append(f"Solo {len(con_dec)} de {len(sem)} procesos detectados esta semana tienen decisión. "
-                   "Sin decisiones el ciclo no aprende: conviene marcarlas al revisar el informe diario.")
+        inicio = (f"Ninguno de los {len(sem)} procesos detectados esta semana tiene decisión de Nicolás."
+                  if not con_dec else f"Solo {len(con_dec)} de {len(sem)} procesos detectados esta semana tienen decisión de Nicolás.")
+        sug.append(inicio + " Sin decisiones el ciclo no aprende: conviene anotarlas al revisar el informe diario.")
     for t, v in terminos.items():
         if v["afines"] >= U.get("min_detecciones_termino", 8) and v["cotizadas"] == 0:
             sug.append(f"El término «{t}» trajo {v['afines']} procesos afines en {ventana} días y ninguno se cotizó: "
