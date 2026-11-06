@@ -112,3 +112,5 @@ Agregado el 19-10-2026, a partir de chilecompra.cl/api y de la documentación en
 - **`num()` del registro (06-11-2026):** al leer «0.95», el punto se trataba como separador de miles y la proporción salía en 7750%. Ahora se distingue un decimal de un monto con formato chileno.
 - **Fechas de detección:** al marcar una decisión, no cambies `detectada_el` de un proceso que ya existe. Las métricas semanales cuentan por esa fecha.
 - **Tablero y fuentes tipográficas:** el tablero no carga Google Fonts. La fuente va incrustada en base64 en `files/fonts.css`, enlazada con `<link href="fonts.css">`.
+- **El signo «$» en la consola (06-11-2026):** al pasar a `registro.py marcar` un texto con un monto entre comillas dobles, bash trató «$300» como variable, y en el registro quedó «00.000». Escribe esos textos **entre comillas simples**: `--motivo-recomendacion 'poco monto ($300.000)'`.
+- **Dos mercados de precio (mejora semanal del 06-11-2026):** en Compra Ágil, capacitación y jornadas se ganan cerca del monto (mediana del 96%, 8 casos), y estudios y consultoría muy por debajo (mediana del 60%, 4 casos). No uses una sola referencia de precio.

@@ -326,7 +326,7 @@
   "precio_ganador": "",
   "precio_min": 3498900,
   "ratio_ganador": "",
-  "resultado_revisado_el": "06-11-2026 09:18",
+  "resultado_revisado_el": "06-11-2026 16:47",
   "notas": "Traída de seguimiento.md (Historial de resultados) el 06-11-2026"
  },
  {
@@ -386,7 +386,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "06-11-2026 09:18",
+  "resultado_revisado_el": "06-11-2026 16:47",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -416,7 +416,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "06-11-2026 09:18",
+  "resultado_revisado_el": "06-11-2026 16:47",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -446,7 +446,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "06-11-2026 09:18",
+  "resultado_revisado_el": "06-11-2026 16:47",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -476,7 +476,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "06-11-2026 09:18",
+  "resultado_revisado_el": "06-11-2026 16:47",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -506,7 +506,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "06-11-2026 09:18",
+  "resultado_revisado_el": "06-11-2026 16:47",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -529,14 +529,14 @@
   "decision": "",
   "motivo": "",
   "precio_ofertado": "",
-  "estado_final": "cerrada",
-  "ofertas_final": "",
+  "estado_final": "adjudicada a otro",
+  "ofertas_final": 4,
   "juncos_cotizo": "",
-  "ganador": "",
-  "precio_ganador": "",
+  "ganador": "Quinta Capacitación SpA",
+  "precio_ganador": 29989000,
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "06-11-2026 09:18",
+  "resultado_revisado_el": "06-11-2026 16:47",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -596,7 +596,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "06-11-2026 09:18",
+  "resultado_revisado_el": "06-11-2026 16:47",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -626,7 +626,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "06-11-2026 09:18",
+  "resultado_revisado_el": "06-11-2026 16:47",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -656,7 +656,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "06-11-2026 09:18",
+  "resultado_revisado_el": "06-11-2026 16:47",
   "notas": "Traída de seguimiento.md (Historial de resultados) el 06-11-2026"
  },
  {
@@ -686,7 +686,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "06-11-2026 09:18",
+  "resultado_revisado_el": "06-11-2026 16:47",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -746,7 +746,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "06-11-2026 09:18",
+  "resultado_revisado_el": "06-11-2026 16:47",
   "notas": "Traída de seguimiento.md (Historial de resultados) el 06-11-2026"
  },
  {
@@ -765,7 +765,7 @@
   "detectada_el": "06-11-2026",
   "version": "3.0",
   "recomendacion": "descartar",
-  "motivo_recomendacion": "presencial lejos; poco monto (00.000 en Teno)",
+  "motivo_recomendacion": "presencial lejos; poco monto ($300.000 en Teno)",
   "decision": "",
   "motivo": "",
   "precio_ofertado": "",
@@ -795,7 +795,7 @@
   "detectada_el": "06-11-2026",
   "version": "3.0",
   "recomendacion": "descartar",
-  "motivo_recomendacion": "poco monto y plazo corto (afiches por 50.000, cierra hoy 15:30)",
+  "motivo_recomendacion": "poco monto y plazo corto (afiches por $150.000, cierra el 06-11 a las 15:30)",
   "decision": "",
   "motivo": "",
   "precio_ofertado": "",
@@ -885,7 +885,7 @@
   "detectada_el": "06-11-2026",
   "version": "3.0",
   "recomendacion": "descartar",
-  "motivo_recomendacion": "poco monto (1.730 en lanyards para Quilpué)",
+  "motivo_recomendacion": "poco monto ($51.730 en lanyards para Quilpué)",
   "decision": "",
   "motivo": "",
   "precio_ofertado": "",

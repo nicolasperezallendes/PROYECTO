@@ -36,9 +36,9 @@
   "tipo": "LE",
   "monto_clp": null,
   "cierre": "2026-10-29T15:30:00-03:00",
-  "estado_api": "Cerrada",
-  "estado_juncos": "Cerrada, sin registro de oferta",
-  "proximo_paso": "Adjudicación prevista: vie 06-11. Ver ganador y precio",
+  "estado_api": "Adjudicada",
+  "estado_juncos": "Adjudicada",
+  "proximo_paso": "En el historial. Sacar de la tabla en la próxima revisión",
   "ficha": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4192-63-LE26"
  },
  {
