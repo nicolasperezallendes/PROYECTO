@@ -277,6 +277,18 @@ Además de los informes en Markdown, el estado de JUNCOS se muestra en un tabler
 - Es privado: para que otra persona lo vea, Nicolás lo comparte desde el menú Compartir.
 - En un chat de claude.ai sin el repositorio, arma los mismos JSON a mano desde el informe del proyecto y súbelos igual.
 
+## Automatización con n8n (agregada el 06-11-2026 a pedido de Nicolás)
+
+El flujo de n8n **«JUNCOS · Compras Ágiles diarias»** hace la búsqueda CA1 de lunes a viernes a las 07:30. Busca 15 términos en todo el país y las nuevas de la Región de Coquimbo, filtra con `perfil_juncos.json`, guarda en la planilla [Compras Ágiles JUNCOS (n8n)](https://docs.google.com/spreadsheets/d/1AVZaW4HAiRr9pcbD1zUMvfVBpP_tx3x6C5mUiRGRXqg/edit) y manda un correo. Si está activado, despierta a una rutina de Claude Code que hace CA2 y CA3, el informe, el seguimiento y el tablero.
+
+- **Archivos:**
+  - el flujo: `herramientas/n8n/JUNCOS - Compras Agiles diarias.json`;
+  - el generador: `herramientas/n8n/generar_flujo_n8n.py`;
+  - la guía: `claude/06.11.2026 - GUIA N8N JUNCOS.md`, que incluye la instrucción de la rutina.
+- **Cuando cambie el perfil** (palabras clave, exclusiones o rubros), regenera el flujo con `python3 herramientas/n8n/generar_flujo_n8n.py` y avisa a Nicolás que lo vuelva a importar.
+- **En la rutina diaria:** no repitas la búsqueda completa. Parte de la lista que manda n8n o de la planilla y baja solo el detalle de las que vayas a recomendar, porque el ticket es uno solo y tiene cuota diaria.
+- **Si n8n no corrió** (no hay filas del día en la planilla), haz la búsqueda CA1 normal.
+
 ## Documentos de la empresa que conviene tener siempre al día
 
 | Documento | Vigencia típica exigida | Dónde se obtiene |

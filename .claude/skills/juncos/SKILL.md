@@ -15,6 +15,7 @@ Esta skill es la memoria de trabajo de la consultora en Mercado Público. Cubre 
 | `plantillas.md` | Al redactar una propuesta técnica, un presupuesto, un código de integridad, una carta de experiencia o la descripción de una cotización de Compra Ágil | 2.5 |
 | `rubros-consultoria.md` | Al revisar o ampliar los rubros inscritos, o al ajustar `perfil_juncos.json` | 2.6 |
 | `perfil_juncos.json` | Al buscar licitaciones o Compras Ágiles, o al ajustar pesos, palabras clave y exclusiones | Parte 1 (copia exacta del JSON) |
+| `proceso-postulacion.md`, «Automatización con n8n» | Al trabajar con el flujo de n8n o la rutina diaria de Claude que despierta | 2.2 |
 | `proceso-postulacion.md`, «Salida en tablero» | Al cerrar cada sesión y cuando se pida el tablero: cómo actualizar el «Tablero JUNCOS Mercado Público» | 2.2 |
 
 ## Dónde están esos archivos
