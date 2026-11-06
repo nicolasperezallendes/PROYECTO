@@ -96,8 +96,14 @@ def pedir(sufijo="", **params):
                     ultimo = f"404 en {ruta}"
                     break  # probar la otra forma de la ruta
                 if e.code == 429:
-                    raise CuotaAgotada("429: se agotó la cuota diaria del ticket. "
-                                       "Se reinicia al cambiar el día.")
+                    # Muchas veces es el límite por segundo (por ejemplo, si otra
+                    # consulta corre en paralelo). Se espera y se reintenta dos
+                    # veces antes de darla por cuota diaria agotada.
+                    if intento < 2:
+                        time.sleep(15 * (intento + 1))
+                        continue
+                    raise CuotaAgotada("429 repetido: puede ser la cuota diaria del ticket "
+                                       "(se reinicia al cambiar el día) o consultas en paralelo.")
                 if e.code == 401:
                     raise ErrorCA("401: falta el ticket o no es válido para la API de Compra Ágil.")
                 if e.code in (500, 502, 503, 504) and intento < 4:

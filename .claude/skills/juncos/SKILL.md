@@ -55,7 +55,7 @@ Si el usuario pega una versión distinta de esta skill (por ejemplo, de otra ses
 | Declaración jurada de socios y beneficiarios | No ingresada (ficha pública) |
 | Sellos (Empresa Mujer u otros) | No tiene |
 | Tamaño de empresa (EMT) en Mercado Público | Empresa de Menor Tamaño (confirmado por Nicolás el 19-10-2026). Puede cotizar en el primer llamado de Compra Ágil |
-| Historial de ventas al Estado | Sin registros a octubre de 2026 |
+| Historial de ventas al Estado | Sin ventas a noviembre de 2026. Primera cotización enviada: Compra Ágil 1317954-9-COT26 de EPCO, por $750.000. No fue seleccionada (resultado visto el 06-11-2026) |
 | Unidades adicionales | No tiene |
 | Teléfono y correo de contacto | +56 9 9423 4563 · juncoseirl@gmail.com (entregados el 19-10-2026) |
 | Régimen de IVA | Factura afecta a IVA (confirmado por Nicolás el 19-10-2026). El precio total con impuestos es el neto × 1,19 |
