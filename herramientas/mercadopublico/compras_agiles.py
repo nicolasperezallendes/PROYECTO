@@ -143,7 +143,7 @@ def listar_publicadas(dias, region=None, tamano=10, max_paginas=200):
 
 def buscar_texto(terminos, region=None, max_paginas=4):
     """Busca Compras Ágiles publicadas con el filtro de texto q de la API (rápido)."""
-    items, vistos = [], set()
+    items, vistos = [], {}
     for t in terminos:
         params = {"estado": "publicada", "tamano_pagina": 10, "numero_pagina": 1, "q": t}
         if region:
@@ -155,9 +155,14 @@ def buscar_texto(terminos, region=None, max_paginas=4):
                 print(f"  '{t}' página {params['numero_pagina']}: {e}", file=sys.stderr)
                 break
             for it in payload.get("items") or []:
-                if it.get("codigo") not in vistos:
-                    vistos.add(it.get("codigo"))
+                cod = it.get("codigo")
+                if cod not in vistos:
+                    vistos[cod] = it
                     items.append(it)
+                # qué término la trajo: sirve para medir qué búsquedas rinden (mejora continua)
+                vistos[cod].setdefault("_terminos", [])
+                if t not in vistos[cod]["_terminos"]:
+                    vistos[cod]["_terminos"].append(t)
             total = int((payload.get("paginacion") or {}).get("total_paginas") or 1)
             print(f"  '{t}': página {params['numero_pagina']}/{total}, acumuladas {len(items)}", file=sys.stderr)
             if params["numero_pagina"] >= min(total, max_paginas):
@@ -353,6 +358,8 @@ def evaluar(item, perfil, ahora=None):
                             for r in rubros),
         "claves": ", ".join(claves[:4]),
         "alertas": "; ".join(alertas),
+        "terminos": ", ".join(item.get("_terminos", []) + (["coquimbo"] if pref else [])),
+        "fecha_publicacion": g(item, "fechas", "fecha_publicacion", defecto="") or "",
     }
 
 
@@ -392,7 +399,8 @@ def main():
                    help="revisa el detalle de todas las no excluidas, no solo las que tienen "
                         "palabras clave en el nombre (lento: unos 17 s por Compra Ágil)")
     p.add_argument("--q", help="buscar con el filtro de texto de la API, términos separados por coma "
-                               "(ej. 'clima,estudio,encuesta'). Mucho más rápido que recorrer todo")
+                               "(ej. 'clima,estudio,encuesta'), o 'perfil' para usar "
+                               "automatizacion.terminos. Mucho más rápido que recorrer todo")
     p.add_argument("--diseno", action="store_true",
                    help="agrega la búsqueda de piezas de diseño (pendones, lanyards, afiches...) "
                         "con los términos de compra_agil.diseno.terminos_busqueda")
@@ -419,6 +427,8 @@ def main():
     consulta = datetime.now(CHILE) if CHILE else datetime.now()
     print("Bajando Compras Ágiles publicadas...", file=sys.stderr)
     try:
+        if (args.q or "").strip() == "perfil":  # términos de la revisión automática
+            args.q = ",".join(perfil.get("automatizacion", {}).get("terminos", []))
         terminos = [t.strip() for t in (args.q or "").split(",") if t.strip()]
         if args.diseno:
             terminos += [t.strip() for t in cfg_diseno(perfil).get("terminos_busqueda", "").split(",") if t.strip()]

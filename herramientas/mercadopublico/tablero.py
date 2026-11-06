@@ -6,7 +6,10 @@ tareas), consulta el estado de cada proceso en Mercado Público y escribe en
 `tablero/datos/` los archivos que usa el tablero publicado:
 
     compras_agiles.json  licitaciones.json  tareas.json  empresa.json  consulta.json
+    mejora_resumen.json  resultados.json  mejora_terminos.json  mejora_motivos.json
+    mejora_precios.json  mejora_sugerencias.json   (mejora continua, desde registro.py)
     _pagina.json         (la página tablero/index.html envuelta como {"text": ...})
+    _fonts.json          (tablero/fonts.css con DM Sans embebida)
 
 Uso:
     python3 tablero.py                 # consulta las APIs y escribe los datos
@@ -270,12 +273,42 @@ def main():
                     (f" Sin respuesta de la API para: {', '.join(fallas)}; esas filas usan los datos de seguimiento.md." if fallas else "")),
     }]
 
+    # Mejora continua: desde registro/procesos.json (ver registro.py)
+    import registro as rg
+    met = rg.metricas()
+    s_, t_ = met["semana"], met["totales"]
+    mediana_ratio = rg.mediana([rg.num(r.get("ratio_ganador")) for r in rg.cargar().values() if rg.num(r.get("ratio_ganador")) > 0])
+    mejora_resumen = [{
+        "procesos": t_["procesos"], "con_resultado": t_["con_resultado"], "cotizados": t_["cotizados"],
+        "ganados": t_["ganados"], "perdidos": t_["perdidos"], "concordancia": t_["concordancia"],
+        "pares_concordancia": t_["pares_concordancia"], "mediana_ratio_ganador": mediana_ratio,
+        "detectados_semana": s_["detectados"], "con_decision_semana": s_["con_decision"],
+        "precision_semana": s_["precision"], "version": met["version"], "fecha": met["fecha"]}]
+    resultados = [
+        {k: r.get(k, "") for k in ("codigo", "tipo", "nombre", "organismo", "region", "linea", "monto_clp",
+                                    "cierre", "estado_final", "ofertas_final", "ganador", "precio_ganador",
+                                    "precio_min", "ratio_ganador", "juncos_cotizo", "precio_ofertado",
+                                    "recomendacion", "decision", "motivo", "terminos", "detectada_el", "notas")}
+        for r in rg.cargar().values()]
+    for r in resultados:  # números como números, para graficar
+        for k in ("monto_clp", "precio_ganador", "precio_min", "ratio_ganador", "ofertas_final", "precio_ofertado"):
+            r[k] = rg.num(r[k]) if str(r[k]).strip() else None
+        r["ratio_juncos"] = round(r["precio_ofertado"] / r["monto_clp"], 2) if r["precio_ofertado"] and r["monto_clp"] else None
+    resultados.sort(key=lambda r: r.get("cierre") or "", reverse=True)
+
     archivos = {"compras_agiles": filas_ca, "licitaciones": filas_lic, "tareas": filas_t,
-                "empresa": empresa, "consulta": consulta}
+                "empresa": empresa, "consulta": consulta,
+                "mejora_resumen": mejora_resumen, "resultados": resultados,
+                "mejora_terminos": met["terminos"], "mejora_motivos": met["motivos"] or [],
+                "mejora_precios": met["precios"],
+                "mejora_sugerencias": [{"n": i, "texto": t} for i, t in enumerate(met["sugerencias"], 1)]}
     for nombre, filas in archivos.items():
         (salida / f"{nombre}.json").write_text(json.dumps(filas, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     (salida / "_pagina.json").write_text(
         json.dumps({"text": (DIR_TABLERO / "index.html").read_text(encoding="utf-8")}, ensure_ascii=False), encoding="utf-8")
+    if (DIR_TABLERO / "fonts.css").exists():  # DM Sans embebida (línea gráfica Narrativa)
+        (salida / "_fonts.json").write_text(
+            json.dumps({"text": (DIR_TABLERO / "fonts.css").read_text(encoding="utf-8")}, ensure_ascii=False), encoding="utf-8")
 
     print(f"Consulta: {ahora:%d-%m-%Y %H:%M} (hora de Chile)")
     print(f"Compras Ágiles: {len(filas_ca)} · Licitaciones: {len(filas_lic)} · Tareas: {len(filas_t)}")

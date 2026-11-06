@@ -469,37 +469,35 @@
         "L1",
         "LE"
       ]
-    },
-    "n8n": {
-      "version": "2.0",
-      "nota": "Configuración de los flujos de n8n (herramientas/n8n). Cada cambio aquí sube la versión y se anota en herramientas/n8n/CAMBIOS.md. Los cambios salen de la revisión semanal de mejora y los aprueba Nicolás.",
-      "terminos": [
-        "clima laboral",
-        "encuesta",
-        "estudio",
-        "diagnostico",
-        "capacitacion",
-        "taller",
-        "charla",
-        "jornada",
-        "liderazgo",
-        "grupo focal",
-        "consultoria",
-        "comunicaciones",
-        "pendon",
-        "afiche",
-        "lanyard"
-      ],
-      "max_detalle": 20,
-      "max_paginas_termino": 3,
-      "max_paginas_region": 12,
-      "mejora": {
-        "ventana_dias": 30,
-        "min_detecciones_termino": 8,
-        "min_repeticiones_motivo": 3,
-        "min_resultados_precio": 3,
-        "dias_espera_resultado": 20
-      }
+    }
+  },
+  "automatizacion": {
+    "version": "3.0",
+    "nota": "Revisión automática hecha por Claude con tareas programadas (desde el 06-11-2026; reemplaza a n8n). Los términos y umbrales se ajustan con la revisión semanal de mejora y con aprobación de Nicolás. Cada cambio sube la versión y se anota en herramientas/mercadopublico/CAMBIOS.md.",
+    "terminos": [
+      "clima laboral",
+      "encuesta",
+      "estudio",
+      "diagnostico",
+      "capacitacion",
+      "taller",
+      "charla",
+      "jornada",
+      "liderazgo",
+      "grupo focal",
+      "consultoria",
+      "comunicaciones",
+      "pendon",
+      "afiche",
+      "lanyard"
+    ],
+    "max_detalle": 40,
+    "mejora": {
+      "ventana_dias": 30,
+      "min_detecciones_termino": 8,
+      "min_repeticiones_motivo": 3,
+      "min_resultados_precio": 3,
+      "dias_espera_resultado": 20
     }
   }
 }

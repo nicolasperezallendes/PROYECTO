@@ -93,8 +93,16 @@ Agregado el 19-10-2026, a partir de chilecompra.cl/api y de la documentación en
 - **Escrituras fijadas:** cada `update` o `set` sobre un documento que ya existe lleva el `if_version` leído antes. Sin él, se rechaza.
 - **Chequeo:** el documento `data/users/me/check` puede quedarse en `checking` o no existir todavía. Se lee hasta 5 veces y no se insiste más.
 
-## n8n y mejora continua
+## n8n (descontinuado el 06-11-2026) y mejora continua
+
+- **Decisión de Nicolás (06-11-2026):** se deja n8n y todo se automatiza en Claude, con tareas programadas. No vuelvas a proponer n8n salvo que él lo pida. Lo aprendido se conserva en el registro (`registro.py`) y en el tablero.
 
 - **Planillas (06-11-2026):** el conector de Google Drive crea planillas desde un CSV, pero no edita celdas. Para agregar columnas hubo que crear una planilla nueva. Por eso los nodos de Sheets usan `handlingExtraData: insertInNewColumn`: las columnas futuras se agregan solas.
 - **Probar sin n8n:** la lógica de los Code node se prueba en Node.js con luxon (`DateTime`), simulando `$input`, `$()` y `$now`, y con datos reales bajados con Python (el `fetch` de Node no pasa por el proxy). Así se probaron las versiones 1.0 y 2.0.
 - **Ciclo de mejora:** las sugerencias del viernes son reglas simples. Verifícalas contra la planilla antes de proponerlas, y aplica pocas por semana para poder medir su efecto.
+- **Registro y resultados (06-11-2026):** la primera corrida de `registro.py resultados` mostró:
+  - **EPCO (1317954-9-COT26):** JUNCOS ofertó $750.000 y quedó 5.º en precio entre 28 ofertas visibles. Ganó Global Connect Solutions SpA con $481.950, el 48% del monto, en una pauta con 40% de precio.
+  - **Las demás Compras Ágiles de capacitación y consultoría:** el ganador ofertó en mediana el 96% del monto disponible (12 resultados, con 3 a 28 ofertas). La DPR de Coquimbo (953-82) recibió 26 ofertas y la ganó Sikia Consultora SpA con $2.850.000.
+- **`num()` del registro (06-11-2026):** al leer «0.95», el punto se trataba como separador de miles y la proporción salía en 7750%. Ahora se distingue un decimal de un monto con formato chileno.
+- **Fechas de detección:** al marcar una decisión, no cambies `detectada_el` de un proceso que ya existe. Las métricas semanales cuentan por esa fecha.
+- **Tablero y fuentes tipográficas:** el tablero no carga Google Fonts. La fuente va incrustada en base64 en `files/fonts.css`, enlazada con `<link href="fonts.css">`.

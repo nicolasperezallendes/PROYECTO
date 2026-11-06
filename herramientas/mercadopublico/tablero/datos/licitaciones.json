@@ -8,9 +8,9 @@
   "tipo": "LE",
   "monto_clp": 68000000,
   "cierre": "2026-10-26T15:00:00-03:00",
-  "estado_api": "Publicada",
-  "estado_juncos": "Detectada",
-  "proximo_paso": "Decidir con la matriz. Si no hay bases analizadas al lunes en la mañana, se deja pasar",
+  "estado_api": "Cerrada",
+  "estado_juncos": "Cerrada",
+  "proximo_paso": "Ver adjudicación (prevista 15-11) para referencia de precio",
   "ficha": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1750-6-LE26"
  },
  {
@@ -22,9 +22,9 @@
   "tipo": "LE",
   "monto_clp": null,
   "cierre": "2026-10-26T15:05:00-03:00",
-  "estado_api": "Publicada",
-  "estado_juncos": "Detectada",
-  "proximo_paso": "Revisar bases. Es la única afín en la región",
+  "estado_api": "Cerrada",
+  "estado_juncos": "Cerrada",
+  "proximo_paso": "Ver adjudicación (prevista 27-01-2027) para referencia de precio",
   "ficha": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3712-75-LE26"
  },
  {
@@ -36,9 +36,9 @@
   "tipo": "LE",
   "monto_clp": 20000000,
   "cierre": "2026-10-26T17:00:00-03:00",
-  "estado_api": "Publicada",
-  "estado_juncos": "Postulando",
-  "proximo_paso": "Enviar la oferta antes del lunes (envío al menos 24 horas antes, según la etapa 6). Faltan datos del Anexo 1 (cédula, inicio de actividades, banco), el precio y la difusión del programa de integridad. Revisar si el foro del 22-10 cambió algo. Apertura: mar 27-10, 09:00",
+  "estado_api": "Cerrada",
+  "estado_juncos": "Cerrada",
+  "proximo_paso": "Adjudicación prevista: 30-11. Si se envió, registro.py marcar 564953-79-LE26 --decision cotizada --precio-ofertado ...",
   "ficha": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=564953-79-LE26"
  },
  {
@@ -50,9 +50,9 @@
   "tipo": "LE",
   "monto_clp": null,
   "cierre": "2026-10-28T15:10:00-03:00",
-  "estado_api": "Publicada",
-  "estado_juncos": "Detectada",
-  "proximo_paso": "Decidir con la matriz de la etapa 2",
+  "estado_api": "Cerrada",
+  "estado_juncos": "Cerrada",
+  "proximo_paso": "Ver adjudicación (prevista 30-11) para referencia de precio",
   "ficha": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=632-11-LE26"
  },
  {
@@ -64,9 +64,9 @@
   "tipo": "LE",
   "monto_clp": null,
   "cierre": "2026-10-29T15:30:00-03:00",
-  "estado_api": "Publicada",
-  "estado_juncos": "Detectada",
-  "proximo_paso": "Evaluación: formales 50%, experiencia de la empresa 35%, precio 10%, integridad 5%. Nicolás baja las bases. El plazo de preguntas venció el jue 22-10. Respuestas: lun 26-10, 15:45",
+  "estado_api": "Cerrada",
+  "estado_juncos": "Cerrada",
+  "proximo_paso": "Ver adjudicación (prevista 06-11) para referencia de precio",
   "ficha": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4192-63-LE26"
  },
  {
@@ -78,9 +78,9 @@
   "tipo": "LE",
   "monto_clp": null,
   "cierre": "2026-10-29T18:00:00-03:00",
-  "estado_api": "Publicada",
-  "estado_juncos": "Detectada",
-  "proximo_paso": "Ahora hay plazo: analizar bases. Respuestas del foro: vie 23-10, 16:00",
+  "estado_api": "Cerrada",
+  "estado_juncos": "Cerrada",
+  "proximo_paso": "Ver adjudicación (prevista 09-11) para referencia de precio",
   "ficha": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2898-15-LE26"
  },
  {
@@ -92,9 +92,9 @@
   "tipo": "LE",
   "monto_clp": null,
   "cierre": "2026-11-02T16:00:00-03:00",
-  "estado_api": "Publicada",
-  "estado_juncos": "Detectada",
-  "proximo_paso": "Revisar bases",
+  "estado_api": "Cerrada",
+  "estado_juncos": "Cerrada",
+  "proximo_paso": "Ver adjudicación (prevista 16-11) para referencia de precio",
   "ficha": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=519302-9-LE26"
  },
  {
@@ -106,9 +106,9 @@
   "tipo": "LP",
   "monto_clp": 100000000,
   "cierre": "2026-11-03T15:30:00-03:00",
-  "estado_api": "Publicada",
-  "estado_juncos": "Detectada",
-  "proximo_paso": "Decidir con la matriz. Probable alianza",
+  "estado_api": "Cerrada",
+  "estado_juncos": "Cerrada",
+  "proximo_paso": "Ver adjudicación (prevista 01-12) para referencia de precio",
   "ficha": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=752-32-LP26"
  },
  {
@@ -120,9 +120,9 @@
   "tipo": "LP",
   "monto_clp": 200000000,
   "cierre": "2026-11-04T17:00:00-03:00",
-  "estado_api": "Publicada",
-  "estado_juncos": "Detectada",
-  "proximo_paso": "Solo en UTP con urbanistas",
+  "estado_api": "Cerrada",
+  "estado_juncos": "Cerrada",
+  "proximo_paso": "Ver adjudicación (prevista 19-11) para referencia de precio",
   "ficha": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=691-8-LP26"
  }
 ]

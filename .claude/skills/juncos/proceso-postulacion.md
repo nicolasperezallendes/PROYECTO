@@ -233,6 +233,14 @@ Puntúa cinco criterios de 0 a 2. Cotiza con 7 puntos o más. Con 5 o 6, cotiza 
 
 Además de los informes en Markdown, el estado de JUNCOS se muestra en un tablero: **«Tablero JUNCOS Mercado Público»**, en https://claude.ai/artifact/MrUfVPBFpaWqkStktVptrM. Se actualiza siempre ese mismo tablero, para que el enlace no cambie.
 
+**Línea gráfica (desde el 06-11-2026):** la de Narrativa (somosnarrativa.cl).
+- **Tipografía:** DM Sans, incrustada en `tablero/fonts.css`.
+- **Títulos:** grandes, con una palabra destacada en fucsia (#ff6bbe).
+- **Formas y fondos:** esquinas rectas y banda casi negra (#181818) con texto crema (#f2e5e0).
+- **Paleta:** morado #8b33a5, celeste #00a0dc, coral #ff7f6e y turquesa #00c0bd.
+
+No se usan el logo ni el nombre de Narrativa. El tablero tiene dos pestañas: **Hoy** y **Mejora de procesos**.
+
 **Qué muestra:**
 - **Encabezado:** el próximo cierre y la hora de la consulta.
 - **Cinco cifras:** Compras Ágiles abiertas, su monto disponible, licitaciones abiertas, procesos que cierran en 72 horas y tareas pendientes.
@@ -249,14 +257,15 @@ Además de los informes en Markdown, el estado de JUNCOS se muestra en un tabler
 1. Actualiza primero `seguimiento.md`. El tablero sale de sus tablas «Licitaciones en curso», «Compras Ágiles en curso» y «Tareas pendientes de la empresa». En la columna Estado escribe el estado al comienzo (Detectada, Alternativa, Lista para enviar, Cotizada, Cerrada sin cotizar, Descartada…) y el CA3 como «CA3: 8».
 2. Corre `python3 herramientas/mercadopublico/tablero.py`. El script:
    - consulta en vivo cada código, tanto Compras Ágiles como licitaciones;
-   - escribe en `herramientas/mercadopublico/tablero/datos/` los archivos `compras_agiles.json`, `licitaciones.json`, `tareas.json`, `empresa.json` y `consulta.json`, más `_pagina.json` (la página);
+   - escribe en `herramientas/mercadopublico/tablero/datos/` los archivos `compras_agiles.json`, `licitaciones.json`, `tareas.json`, `empresa.json` y `consulta.json`; los de mejora (`mejora_resumen.json`, `resultados.json`, `mejora_terminos.json`, `mejora_motivos.json`, `mejora_precios.json` y `mejora_sugerencias.json`, que salen de `registro.py`); y `_pagina.json` (la página) y `_fonts.json` (la tipografía);
    - si la API no responde por un código, usa lo que dice `seguimiento.md` y lo avisa.
 
    La prioridad se calcula sola: primero las abiertas que conviene cotizar (CA3 de 7 o más, o listas para enviar), por fecha de cierre, y después las demás abiertas.
 3. Sube cada JSON que cambió al tablero, de a uno, con la herramienta Artifact: `publish` con `url` del tablero, `asset: true` y `file_path`. Los archivos de texto no se suben en grupo. Anota el `url` `/_blob/...` que devuelve cada uno.
 4. Lee las fuentes con ArtifactData (`list` de `datasets`) para conocer su `version`. Después haz un solo `batch` con:
    - un `update` por fuente, con `source: {kind: "file", url, name}` y `updated: {at, by}`, fijado con `if_version`;
-   - si cambió `tablero/index.html`, un `set` de `files/index.html` con `file_path` apuntando a `datos/_pagina.json`, también fijado con su versión.
+   - si cambió `tablero/index.html`, un `set` de `files/index.html` con `file_path` apuntando a `datos/_pagina.json`, también fijado con su versión. Lo mismo con `files/fonts.css` y `datos/_fonts.json` si cambió la tipografía;
+   - si es la primera vez que se sube una fuente de mejora, un `set` de `datasets/<id>` con título, descripción, `source`, `updated` y `fixed: true`.
 5. Borra los archivos viejos que reemplazaste (`Artifact delete` con `url` y el id del blob), solo si nada más los usa.
 6. Revisa el chequeo con ArtifactData (`get` de `data/users/me`, documento `check`). Si dice `failed`, corrige lo que diga.
 7. Haz commit de `tablero/datos/`: así queda la foto de cada día en GitHub.
@@ -277,52 +286,84 @@ Además de los informes en Markdown, el estado de JUNCOS se muestra en un tabler
 - Es privado: para que otra persona lo vea, Nicolás lo comparte desde el menú Compartir.
 - En un chat de claude.ai sin el repositorio, arma los mismos JSON a mano desde el informe del proyecto y súbelos igual.
 
-## Automatización con n8n (agregada el 06-11-2026 a pedido de Nicolás; v2.0 con mejora continua)
+## Automatización en Claude y mejora continua (v3.0, desde el 06-11-2026)
 
-Son dos flujos de n8n que forman un ciclo: **buscar → decidir → medir → aprender → ajustar**. La guía completa para Nicolás, con la instrucción de la rutina de Claude, está en `claude/06.11.2026 - GUIA N8N JUNCOS.md`.
+**n8n se dejó el 06-11-2026 por decisión de Nicolás.** Todo corre ahora en Claude, con dos tareas programadas que despiertan esta skill. Lo aprendido con n8n quedó en el registro de procesos y en el ciclo **buscar → recomendar → decidir → medir → aprender → ajustar**. El historial de versiones está en `herramientas/mercadopublico/CAMBIOS.md`.
 
-| Flujo | Cuándo | Qué hace |
+| Tarea programada | Cuándo | Qué hace |
 |---|---|---|
-| «JUNCOS · Compras Ágiles diarias» | L–V 07:30 | Búsqueda CA1: busca los términos en todo el país y las nuevas de Coquimbo, filtra con el perfil y la regla de rubros, guarda en la planilla [Compras Ágiles JUNCOS (n8n)](https://docs.google.com/spreadsheets/d/19yVuYAPHGi0fY6cVhPDxkCfec4LwHaYEPv8YSROnK7k/edit) y manda el correo. Si está activado, despierta a Claude con «REVISIÓN DIARIA» |
-| «JUNCOS · Resultados y mejora» | L–V 19:00 y viernes 17:00 | Anota el resultado de cada Compra Ágil cerrada: estado final, ofertas, ganador, precio ganador, precio mínimo, proporción frente al monto y si JUNCOS aparece entre los oferentes. Los viernes calcula métricas y sugerencias, guarda una fila en [Mejora JUNCOS (n8n)](https://docs.google.com/spreadsheets/d/1ZBYFofbAG_5QE3aN6fEP7eEbAvsCACF23ldeU2r99Ss/edit), manda el correo y, si está activado, despierta a Claude con «MEJORA SEMANAL» |
+| «JUNCOS · revisión diaria» | L–V 07:23 (Chile) | Los pasos de abajo, «Revisión diaria» |
+| «JUNCOS · mejora semanal» | Viernes 16:47 (Chile) | Los pasos de abajo, «Mejora semanal» |
 
-**Archivos:**
-- `herramientas/n8n/generar_flujo_n8n.py` genera los dos flujos desde `perfil_juncos.json`.
-- Toda la configuración de n8n vive en `perfil_juncos.json` › `compra_agil.n8n`: versión, términos, topes de páginas y de fichas, y umbrales de mejora.
-- Cada cambio se anota en `herramientas/n8n/CAMBIOS.md`.
+### Registro de procesos (`registro.py`)
 
-**Revisión diaria (rutina, «REVISIÓN DIARIA»):**
-- No repitas la búsqueda completa: parte de la lista que manda n8n o de la planilla, y baja solo el detalle de las que vayas a recomendar. El ticket es uno solo y tiene cuota diaria.
-- Si n8n no corrió (no hay filas del día en la planilla), haz la búsqueda CA1 normal.
+`herramientas/mercadopublico/registro/procesos.json` tiene una fila por proceso que pasó por /juncos. Cada fila guarda:
+- **de dónde salió:** `terminos`, `detectada_el` y `version`;
+- **qué recomendó Claude:** `recomendacion` (cotizar, alternativa o descartar) y `motivo_recomendacion`;
+- **qué decidió Nicolás:** `decision` (cotizar, cotizada o descartar), `motivo` y `precio_ofertado`;
+- **cómo terminó:** `estado_final`, `ofertas_final`, `juncos_cotizo`, `ganador`, `precio_ganador`, `precio_min` y `ratio_ganador` (precio ganador dividido por el monto disponible).
 
-### Ciclo de mejora continua («MEJORA SEMANAL»)
+Comandos, desde `herramientas/mercadopublico/`:
 
-El ciclo aprende de tres fuentes que se llenan en la planilla:
-- **`terminos`:** qué búsqueda trajo cada Compra Ágil. La llena n8n.
-- **`decision` y `motivo`:** los llena Nicolás. `decision` es cotizar, cotizada o descartar. Para `motivo` se usan frases fijas: presencial lejos, poco monto, plazo corto, pide OTEC o título, no es nuestro oficio, fuera de rubro, requiere impresión grande, competencia fuerte.
-- **Resultados al cierre:** `estado_final`, `ofertas_final`, `ganador`, `precio_ganador` y `ratio_ganador`. Los llena n8n.
+```bash
+python3 registro.py agregar --ranking ranking.json      # después de compras_agiles.py --json
+python3 registro.py sincronizar                         # trae los códigos de seguimiento.md
+python3 registro.py marcar CODIGO --recomendacion cotizar --motivo-recomendacion "CA3 9: ..."
+python3 registro.py marcar CODIGO --decision descartar --motivo "presencial lejos"
+python3 registro.py resultados                          # resultados al cierre (API v2 y v1)
+python3 registro.py metricas --md informe.md --json metricas.json
+```
 
-**Cuando llegue el informe semanal (o Nicolás lo pida):**
-1. **Verifica** cada sugerencia contra la planilla, porque las fórmulas son simples y pueden equivocarse. Revisa además si contradice algo de `aprendizajes.md` o una regla de Nicolás.
-2. **Propón** en `claude/dd.mm.aaaa - MEJORA SEMANAL N8N.md`. Para cada cambio, indica:
-   - qué cambia en `perfil_juncos.json`;
-   - la evidencia (números de la semana o de los últimos 30 días);
-   - el efecto esperado, por ejemplo menos ruido, más cobertura o un mejor precio;
-   - el riesgo, por ejemplo perder Compras Ágiles buenas.
+**Motivos con frases fijas**, para que se puedan contar:
+- presencial lejos
+- poco monto
+- plazo corto
+- pide OTEC o título
+- no es nuestro oficio
+- fuera de rubro
+- requiere impresión grande
+- competencia fuerte
 
-   Propón pocos cambios por semana (uno a tres), para poder medir el efecto de cada uno.
-3. **Espera la aprobación de Nicolás.** Nunca cambies la regla de rubros ni los rubros inscritos por esta vía.
-4. **Aplica lo aprobado:**
-   - edita `compra_agil.n8n` (`terminos`, topes o umbrales) o `compra_agil.excluir_extra`;
-   - sube la versión: menor si son ajustes, mayor si hay nodos o columnas nuevos;
-   - corre `python3 herramientas/n8n/generar_flujo_n8n.py`;
-   - anota el cambio en `herramientas/n8n/CAMBIOS.md` y en `aprendizajes.md`;
-   - pídele a Nicolás que reimporte el flujo y que anote el cambio en `cambios_aplicados`, en «Mejora JUNCOS (n8n)».
-5. **Evalúa** el cambio en el informe de la semana siguiente. Si la precisión baja o deja de llegar algo bueno, propón revertirlo.
+**Las decisiones son de Nicolás.** Cuando él diga en el chat qué cotiza o descarta (o confirme un envío), anótalo con `marcar`. Si no lo dice, pregúntaselo en el informe del día. No inventes decisiones.
 
-**Precios:**
-- Cuando una línea tenga 3 o más resultados, usa la mediana de `ratio_ganador` como referencia en CA4. Recuerda la lección del IVA frente a las OTEC.
-- Los ganadores y precios relevantes se pasan también al historial de `seguimiento.md`.
+### Revisión diaria (tarea programada, L–V)
+
+1. `git pull` y lectura de `seguimiento.md` y `aprendizajes.md`.
+2. `python3 registro.py resultados`: anota ganadores y precios de lo que cerró. Pasa los resultados relevantes al historial de `seguimiento.md`.
+3. Búsqueda CA1 con los términos del perfil: `python3 compras_agiles.py --q perfil --max-detalle 40 --json ranking.json --md ...`. La búsqueda es lenta, así que usa la caché descrita en `aprendizajes.md` si la API anda inestable.
+4. `python3 registro.py agregar --ranking ranking.json`.
+5. **CA2 y CA3** a las nuevas. Por cada una, `marcar --recomendacion` con el motivo. Las que conviene cotizar pasan a `seguimiento.md`.
+6. Para fijar precios (CA4), usa la mediana de `ratio_ganador` del registro y la lección del IVA frente a las OTEC.
+7. Informe `claude/dd.mm.aaaa - COMPRAS AGILES AFINES JUNCOS.md`, con las 3 a 5 que conviene cotizar. Al final, pregunta qué decidió Nicolás sobre las del día anterior.
+8. Tablero (`tablero.py` y «Salida en tablero»), informe de la skill, commit y push.
+9. Un mensaje corto en el chat: cuántas nuevas hay, las que conviene cotizar y el enlace al tablero.
+
+Si la API no responde o se agota la cuota (429), dilo en el informe y deja el tablero con lo que haya. No inventes datos.
+
+### Mejora semanal (tarea programada, viernes)
+
+1. `python3 registro.py resultados` y `python3 registro.py metricas --md claude/dd.mm.aaaa\ -\ METRICAS\ MEJORA\ JUNCOS.md --json ...`.
+2. **Verifica** cada sugerencia contra el registro, porque las reglas son simples. Revisa además si contradice `aprendizajes.md` o una regla de Nicolás.
+3. Escribe `claude/dd.mm.aaaa - MEJORA SEMANAL JUNCOS.md` con:
+   - **la conclusión:** qué funcionó y qué no;
+   - **de 1 a 3 cambios propuestos**, cada uno con qué cambia en `perfil_juncos.json` (`automatizacion.terminos`, `compra_agil.excluir_extra`, pesos o umbrales), la evidencia, el efecto esperado y el riesgo;
+   - **lo que aprendió Claude de sus propias recomendaciones:** la coincidencia con Nicolás y los motivos de desacuerdo, y si hay que ajustar CA2 o CA3;
+   - **la referencia de precio por línea.**
+4. **No apliques cambios sin la aprobación de Nicolás**, y nunca toques la regla de rubros por esta vía.
+5. **Con la aprobación:**
+   - edita el perfil y sube `automatizacion.version`;
+   - anota el cambio en `CAMBIOS.md` y en `aprendizajes.md`;
+   - haz commit;
+   - la semana siguiente, evalúa el efecto y, si empeoró, propón revertirlo.
+6. Actualiza el tablero: la pestaña «Mejora de procesos» muestra las métricas, los precios ganadores, los términos y las sugerencias.
+
+### Lo que se aprendió con n8n y se mantiene
+
+- Medir **qué término** trae cada proceso, para saber qué búsquedas rinden.
+- Registrar **decisión y motivo** con frases fijas: sin eso, el ciclo no aprende.
+- Anotar el **resultado al cierre**: ganador, precio y ofertas. La API los muestra en algunas Compras Ágiles cerradas, y es la mejor referencia de precio.
+- **Configuración versionada** en un solo lugar (`perfil_juncos.json` › `automatizacion`) y cambios con aprobación.
+- **Pocos cambios por semana**, para poder medir su efecto.
 
 ## Documentos de la empresa que conviene tener siempre al día
 
