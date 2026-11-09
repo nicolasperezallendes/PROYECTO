@@ -242,8 +242,8 @@ Además de los informes en Markdown, el estado de JUNCOS se muestra en un tabler
 - **Tareas y ficha de la empresa con sus alertas.**
 
 **Cuándo actualizarlo:**
-- Al terminar cada sesión de /juncos, después de actualizar `seguimiento.md`.
-- Cuando Nicolás lo pida.
+- **Solo cuando Nicolás lo pida expresamente con /juncos** (regla del 09-11-2026). Ya no se actualiza al terminar cada sesión.
+- Si no lo pide, no corras `tablero.py` ni subas archivos al tablero.
 
 **Cómo actualizarlo:**
 1. Actualiza primero `seguimiento.md`. El tablero sale de sus tablas «Licitaciones en curso», «Compras Ágiles en curso» y «Tareas pendientes de la empresa». En la columna Estado escribe el estado al comienzo (Detectada, Alternativa, Lista para enviar, Cotizada, Cerrada sin cotizar, Descartada…) y el CA3 como «CA3: 8».

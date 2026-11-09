@@ -15,7 +15,7 @@ Esta skill es la memoria de trabajo de la consultora en Mercado Público. Cubre 
 | `plantillas.md` | Al redactar una propuesta técnica, un presupuesto, un código de integridad, una carta de experiencia o la descripción de una cotización de Compra Ágil | 2.5 |
 | `rubros-consultoria.md` | Al revisar o ampliar los rubros inscritos, o al ajustar `perfil_juncos.json` | 2.6 |
 | `perfil_juncos.json` | Al buscar licitaciones o Compras Ágiles, o al ajustar pesos, palabras clave y exclusiones | Parte 1 (copia exacta del JSON) |
-| `proceso-postulacion.md`, «Salida en tablero» | Al cerrar cada sesión y cuando se pida el tablero: cómo actualizar el «Tablero JUNCOS Mercado Público» | 2.2 |
+| `proceso-postulacion.md`, «Salida en tablero» | Solo cuando Nicolás pida el tablero con /juncos: cómo actualizar el «Tablero JUNCOS Mercado Público» | 2.2 |
 
 ## Dónde están esos archivos
 
@@ -125,4 +125,4 @@ Las campañas de medios millonarias y los planes reguladores solo se abordan en 
 - Redacción en español natural y directo, que no suene a texto automático. Primero la conclusión, después el detalle.
 - Siempre con datos frescos consultados el mismo día y con la fuente y la hora de la consulta.
 - Cada mañana de trabajo parte con `seguimiento.md` (en claude.ai, la sección 2.3 del informe más reciente). De lunes a viernes, sigue con la búsqueda de Compra Ágil.
-- **Salida en tablero (desde el 22-10-2026):** al cerrar cada sesión, después de actualizar `seguimiento.md`, actualiza el tablero «Tablero JUNCOS Mercado Público» (https://claude.ai/artifact/MrUfVPBFpaWqkStktVptrM) con `tablero.py`. Sigue los pasos de `proceso-postulacion.md`, «Salida en tablero». Siempre se actualiza el mismo tablero, nunca uno nuevo, y se entrega su enlace junto al informe en Markdown.
+- **Tablero solo a pedido (regla de Nicolás del 09-11-2026):** el tablero «Tablero JUNCOS Mercado Público» (https://claude.ai/artifact/MrUfVPBFpaWqkStktVptrM) **no se actualiza al cerrar la sesión**. Se actualiza y se entrega solo cuando Nicolás lo pide expresamente con /juncos (por ejemplo, «/juncos tablero»). Entonces se siguen los pasos de `proceso-postulacion.md`, «Salida en tablero», se actualiza siempre el mismo tablero y se entrega su enlace. Si no lo pide, la sesión termina con el informe en Markdown y `seguimiento.md` al día, sin correr `tablero.py` ni tocar el tablero.
