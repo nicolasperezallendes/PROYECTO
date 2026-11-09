@@ -92,7 +92,7 @@
   "tipo": "LE",
   "monto_clp": 26000000,
   "cierre": "2026-11-16T15:00:00-03:00",
-  "estado_api": "sin datos",
+  "estado_api": "Publicada",
   "estado_juncos": "Descartada",
   "proximo_paso": "El domicilio en la comuna de Coquimbo vale 30% (JUNCOS está en La Serena). Revisar la inhabilidad del art. 4 de la Ley 19.886 por el trabajo de Nicolás con la alcaldía",
   "ficha": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2446-335-LE26"

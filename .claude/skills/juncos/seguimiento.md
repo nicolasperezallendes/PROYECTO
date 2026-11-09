@@ -84,7 +84,7 @@ El 22-10, el conteo `total_ofertas_recibidas` de la API bajó a 0 en Compras Ág
 | Confirmar si se envió la oferta de Las Condes (564953-79-LE26) | Antes del lun 30-11 (adjudicación) | **Confirmar con Nicolás** |
 | Confirmar si se envió la Compra Ágil de EPCO (1317954-9-COT26) | — | Hecho: la API muestra la cotización de JUNCOS ($750.000). No fue seleccionada (06-11) |
 | Bajar las bases de 624-28-LE26 (GORE Coquimbo) y leer las respuestas del foro | Vie 06-11, desde las 14:00 | Pendiente |
-| Ingresar en el foro de 1036569-19-LE26 (GORE Ñuble) las 4 preguntas redactadas el 07-11 (experiencia del titular, subcontratación de encuestadores, modalidad CAWI e integridad) | **Dom 08-11, 21:00** | Pendiente: redactadas, falta ingresarlas |
+| Ingresar en el foro de 1036569-19-LE26 (GORE Ñuble) las 4 preguntas redactadas el 07-11 | Dom 08-11, 21:00 (vencido) | **Confirmar con Nicolás** si se ingresaron. El foro público no las muestra al 09-11 a las 07:30. Respuestas: lun 09-11, 21:00 |
 | Bajar el PDF de la Compra Ágil del CFT (1004823-129-COT26) y cotizar espacio y audiovisual en Ovalle | Antes del lun 09-11, 09:00 | Pendiente |
 | Confirmar si JUNCOS cotizó la SSP (1447930-490-COT26) | — | Hecho: no aparece entre los 9 oferentes (06-11) |
 | Renovar la inscripción en el Registro de Proveedores | Antes del 29-12-2026 (quedan 53 días al 06-11) | Pendiente. Urgente si se postula a 624-28 o 1036569-19, cuyos contratos pasan esa fecha |

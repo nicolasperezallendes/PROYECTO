@@ -1,6 +1,6 @@
 [
  {
-  "consultado": "2026-11-07T10:08:15-03:00",
-  "detalle": "Estado desde seguimiento.md de la skill /juncos. Cierres, montos, ofertas y región desde la API Compra Ágil v2 y la API de licitaciones v1 de Mercado Público. Sin respuesta de la API para: 1004823-129-COT26, 1425525-51-COT26, 2583-876-COT26, 889473-2570-COT26, 2216-208-COT26, 2494-286-COT26, 2446-335-LE26; esas filas usan los datos de seguimiento.md."
+  "consultado": "2026-11-09T07:25:48-03:00",
+  "detalle": "Estado desde seguimiento.md de la skill /juncos. Cierres, montos, ofertas y región desde la API Compra Ágil v2 y la API de licitaciones v1 de Mercado Público. Sin respuesta de la API para: 1004823-129-COT26, 1425525-51-COT26, 2583-876-COT26, 889473-2570-COT26, 2216-208-COT26, 2494-286-COT26; esas filas usan los datos de seguimiento.md."
  }
 ]
