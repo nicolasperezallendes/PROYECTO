@@ -250,8 +250,8 @@ No se usan el logo ni el nombre de Narrativa. El tablero tiene dos pestañas: **
 - **Tareas y ficha de la empresa con sus alertas.**
 
 **Cuándo actualizarlo:**
-- Al terminar cada sesión de /juncos, después de actualizar `seguimiento.md`.
-- Cuando Nicolás lo pida.
+- **Solo cuando Nicolás lo pida expresamente con /juncos** (regla del 09-11-2026). Ya no se actualiza al terminar cada sesión.
+- Si no lo pide, no corras `tablero.py` ni subas archivos al tablero.
 
 **Cómo actualizarlo:**
 1. Actualiza primero `seguimiento.md`. El tablero sale de sus tablas «Licitaciones en curso», «Compras Ágiles en curso» y «Tareas pendientes de la empresa». En la columna Estado escribe el estado al comienzo (Detectada, Alternativa, Lista para enviar, Cotizada, Cerrada sin cotizar, Descartada…) y el CA3 como «CA3: 8».
@@ -335,8 +335,8 @@ python3 registro.py metricas --md informe.md --json metricas.json
 5. **CA2 y CA3** a las nuevas. Por cada una, `marcar --recomendacion` con el motivo. Las que conviene cotizar pasan a `seguimiento.md`.
 6. Para fijar precios (CA4), usa la mediana de `ratio_ganador` del registro y la lección del IVA frente a las OTEC.
 7. Informe `claude/dd.mm.aaaa - COMPRAS AGILES AFINES JUNCOS.md`, con las 3 a 5 que conviene cotizar. Al final, pregunta qué decidió Nicolás sobre las del día anterior.
-8. Tablero (`tablero.py` y «Salida en tablero»), informe de la skill, commit y push.
-9. Un mensaje corto en el chat: cuántas nuevas hay, las que conviene cotizar y el enlace al tablero.
+8. Informe de la skill, commit y push. **El tablero no se actualiza** en la revisión diaria: solo cuando Nicolás lo pide con /juncos (regla del 09-11-2026).
+9. Un mensaje corto en el chat: cuántas nuevas hay y cuáles conviene cotizar.
 
 Si la API no responde o se agota la cuota (429), dilo en el informe y deja el tablero con lo que haya. No inventes datos.
 
@@ -355,7 +355,7 @@ Si la API no responde o se agota la cuota (429), dilo en el informe y deja el ta
    - anota el cambio en `CAMBIOS.md` y en `aprendizajes.md`;
    - haz commit;
    - la semana siguiente, evalúa el efecto y, si empeoró, propón revertirlo.
-6. Actualiza el tablero: la pestaña «Mejora de procesos» muestra las métricas, los precios ganadores, los términos y las sugerencias.
+6. No actualices el tablero, salvo que Nicolás lo pida con /juncos (regla del 09-11-2026). Cuando lo pida, la pestaña «Mejora de procesos» muestra las métricas, los precios ganadores, los términos y las sugerencias.
 
 ### Lo que se aprendió con n8n y se mantiene
 
