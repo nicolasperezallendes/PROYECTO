@@ -386,7 +386,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "09-11-2026 07:25",
+  "resultado_revisado_el": "10-11-2026 07:26",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -416,7 +416,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "09-11-2026 07:25",
+  "resultado_revisado_el": "10-11-2026 07:26",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -446,7 +446,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "09-11-2026 07:25",
+  "resultado_revisado_el": "10-11-2026 07:26",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -466,18 +466,18 @@
   "version": "",
   "recomendacion": "",
   "motivo_recomendacion": "",
-  "decision": "cotizar",
-  "motivo": "",
+  "decision": "no enviada",
+  "motivo": "sin registro del motivo",
   "precio_ofertado": "",
-  "estado_final": "cerrada",
-  "ofertas_final": "",
-  "juncos_cotizo": "",
-  "ganador": "",
-  "precio_ganador": "",
+  "estado_final": "adjudicada a otro",
+  "ofertas_final": 7,
+  "juncos_cotizo": "no",
+  "ganador": "Qualimet Ltda. (línea 1, educación, 99,4 pts, $1.900.000 bruto); GlobalConnect SpA (línea 2, salud, 81 pts, $4.760.000 bruto)",
+  "precio_ganador": 6660000,
   "precio_min": "",
-  "ratio_ganador": "",
-  "resultado_revisado_el": "09-11-2026 07:25",
-  "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
+  "ratio_ganador": 0.33,
+  "resultado_revisado_el": "10-11-2026 07:26",
+  "notas": "Acta de adjudicación (Res. 1068, 06-11-2026): 7 oferentes (Cadem, CEM Ingeniería, Datamark en UTP, GlobalConnect, Innmetrics, Qualimet, Search Consultores, inadmisible). JUNCOS no ofertó. Monto bruto adjudicado: $6.660.000 de $20.000.000 referenciales (33%)."
  },
  {
   "codigo": "519302-9-LE26",
@@ -506,7 +506,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "09-11-2026 07:25",
+  "resultado_revisado_el": "10-11-2026 07:26",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -596,7 +596,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "09-11-2026 07:25",
+  "resultado_revisado_el": "10-11-2026 07:26",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -626,7 +626,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "09-11-2026 07:25",
+  "resultado_revisado_el": "10-11-2026 07:26",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -656,7 +656,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "09-11-2026 07:25",
+  "resultado_revisado_el": "10-11-2026 07:26",
   "notas": "Traída de seguimiento.md (Historial de resultados) el 06-11-2026"
  },
  {
@@ -686,7 +686,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "09-11-2026 07:25",
+  "resultado_revisado_el": "10-11-2026 07:26",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
