@@ -326,7 +326,7 @@
   "precio_ganador": "",
   "precio_min": 3498900,
   "ratio_ganador": "",
-  "resultado_revisado_el": "07-11-2026 09:55",
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": "Traída de seguimiento.md (Historial de resultados) el 06-11-2026"
  },
  {
@@ -386,7 +386,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "10-11-2026 07:26",
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -416,7 +416,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "10-11-2026 07:26",
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -446,7 +446,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "10-11-2026 07:26",
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -506,7 +506,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "10-11-2026 07:26",
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -596,7 +596,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "10-11-2026 07:26",
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -626,7 +626,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "10-11-2026 07:26",
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -656,7 +656,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "10-11-2026 07:26",
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": "Traída de seguimiento.md (Historial de resultados) el 06-11-2026"
  },
  {
@@ -686,7 +686,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "10-11-2026 07:26",
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -746,7 +746,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "07-11-2026 09:55",
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": "Traída de seguimiento.md (Historial de resultados) el 06-11-2026"
  },
  {
@@ -769,14 +769,14 @@
   "decision": "",
   "motivo": "",
   "precio_ofertado": "",
-  "estado_final": "",
-  "ofertas_final": "",
+  "estado_final": "cerrada",
+  "ofertas_final": 5,
   "juncos_cotizo": "",
   "ganador": "",
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "",
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": ""
  },
  {
@@ -799,14 +799,14 @@
   "decision": "",
   "motivo": "",
   "precio_ofertado": "",
-  "estado_final": "",
-  "ofertas_final": "",
+  "estado_final": "cerrada",
+  "ofertas_final": 4,
   "juncos_cotizo": "",
   "ganador": "",
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "07-11-2026 09:55",
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": ""
  },
  {
@@ -829,14 +829,14 @@
   "decision": "",
   "motivo": "",
   "precio_ofertado": "",
-  "estado_final": "",
-  "ofertas_final": "",
-  "juncos_cotizo": "",
-  "ganador": "",
-  "precio_ganador": "",
-  "precio_min": "",
-  "ratio_ganador": "",
-  "resultado_revisado_el": "07-11-2026 09:55",
+  "estado_final": "adjudicada a otro",
+  "ofertas_final": 5,
+  "juncos_cotizo": "no visible",
+  "ganador": "SERVICIOS DE CAPACITACIÓN APORTE CHILE LIMITADA",
+  "precio_ganador": 1300000,
+  "precio_min": 850000,
+  "ratio_ganador": 1.0,
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": ""
  },
  {
@@ -859,14 +859,14 @@
   "decision": "",
   "motivo": "",
   "precio_ofertado": "",
-  "estado_final": "",
-  "ofertas_final": "",
-  "juncos_cotizo": "",
-  "ganador": "",
-  "precio_ganador": "",
-  "precio_min": "",
-  "ratio_ganador": "",
-  "resultado_revisado_el": "07-11-2026 09:55",
+  "estado_final": "adjudicada a otro",
+  "ofertas_final": 5,
+  "juncos_cotizo": "no visible",
+  "ganador": "GRUPO AG PUBLICIDAD LIMITADA",
+  "precio_ganador": 605186,
+  "precio_min": 605186,
+  "ratio_ganador": 0.75,
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": ""
  },
  {
@@ -889,14 +889,14 @@
   "decision": "",
   "motivo": "",
   "precio_ofertado": "",
-  "estado_final": "",
-  "ofertas_final": "",
-  "juncos_cotizo": "",
-  "ganador": "",
-  "precio_ganador": "",
-  "precio_min": "",
-  "ratio_ganador": "",
-  "resultado_revisado_el": "",
+  "estado_final": "adjudicada a otro",
+  "ofertas_final": 2,
+  "juncos_cotizo": "no visible",
+  "ganador": "AUXIA TL SPA",
+  "precio_ganador": 47481,
+  "precio_min": 47481,
+  "ratio_ganador": 0.92,
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": ""
  },
  {
@@ -919,14 +919,14 @@
   "decision": "",
   "motivo": "",
   "precio_ofertado": "",
-  "estado_final": "",
-  "ofertas_final": "",
+  "estado_final": "cerrada",
+  "ofertas_final": 8,
   "juncos_cotizo": "",
   "ganador": "",
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "07-11-2026 09:55",
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": ""
  },
  {
@@ -949,14 +949,14 @@
   "decision": "",
   "motivo": "",
   "precio_ofertado": "",
-  "estado_final": "abierta",
-  "ofertas_final": 0,
+  "estado_final": "cerrada",
+  "ofertas_final": 3,
   "juncos_cotizo": "",
   "ganador": "",
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "07-11-2026 09:55",
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": "Traída de seguimiento.md (Compras Ágiles en curso) el 06-11-2026"
  },
  {
@@ -1069,14 +1069,14 @@
   "decision": "descartar",
   "motivo": "",
   "precio_ofertado": "",
-  "estado_final": "abierta",
+  "estado_final": "cerrada",
   "ofertas_final": "",
   "juncos_cotizo": "",
   "ganador": "",
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "06-11-2026 09:18",
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": "Traída de seguimiento.md (Licitaciones en curso) el 06-11-2026"
  },
  {
@@ -1099,14 +1099,14 @@
   "decision": "",
   "motivo": "",
   "precio_ofertado": "",
-  "estado_final": "abierta",
-  "ofertas_final": 0,
+  "estado_final": "cerrada",
+  "ofertas_final": 5,
   "juncos_cotizo": "",
   "ganador": "",
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "06-11-2026 09:18",
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": "Traída de seguimiento.md (Compras Ágiles en curso) el 06-11-2026"
  },
  {
@@ -1129,14 +1129,14 @@
   "decision": "",
   "motivo": "",
   "precio_ofertado": "",
-  "estado_final": "abierta",
-  "ofertas_final": 0,
-  "juncos_cotizo": "",
-  "ganador": "",
-  "precio_ganador": "",
-  "precio_min": "",
-  "ratio_ganador": "",
-  "resultado_revisado_el": "06-11-2026 09:18",
+  "estado_final": "adjudicada a otro",
+  "ofertas_final": 8,
+  "juncos_cotizo": "no visible",
+  "ganador": "MINIK SPA",
+  "precio_ganador": 4998000,
+  "precio_min": 4998000,
+  "ratio_ganador": 0.83,
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": "Traída de seguimiento.md (Compras Ágiles en curso) el 06-11-2026"
  },
  {
@@ -1189,14 +1189,14 @@
   "decision": "",
   "motivo": "",
   "precio_ofertado": "",
-  "estado_final": "",
-  "ofertas_final": "",
+  "estado_final": "cerrada",
+  "ofertas_final": 17,
   "juncos_cotizo": "",
   "ganador": "",
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "07-11-2026 09:55",
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": "Traída de seguimiento.md (Compras Ágiles en curso) el 06-11-2026"
  },
  {
@@ -1286,7 +1286,7 @@
   "precio_ganador": "",
   "precio_min": "",
   "ratio_ganador": "",
-  "resultado_revisado_el": "06-11-2026 09:18",
+  "resultado_revisado_el": "11-11-2026 07:24",
   "notas": "Traída de seguimiento.md (Compras Ágiles en curso) el 06-11-2026"
  }
 ]
