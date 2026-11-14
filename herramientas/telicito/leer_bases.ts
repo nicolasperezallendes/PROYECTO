@@ -5,6 +5,10 @@
  * repositorio privado `licitia` (ver leer_bases.sh), que tiene que estar clonado y preparado.
  *
  *   bash herramientas/telicito/leer_bases.sh bases.pdf anexos.zip --md "claude/dd.mm.aaaa - LECTURA BASES CODIGO.md"
+ *   bash herramientas/telicito/leer_bases.sh ficha.txt --foro 624-28-LE26 --md lectura.md
+ *
+ * --foro CODIGO suma el foro oficial de preguntas y respuestas (datos abiertos OCDS de ChileCompra, licencia CC0,
+ * sin ticket). Es el único documento que se obtiene solo: las bases y anexos los baja una persona de la ficha.
  *
  * Acepta PDF, Word, Excel, imágenes, texto y ZIP con varios adjuntos. Todo corre en la máquina: el modo de
  * reglas no envía los documentos a ningún proveedor de IA.
@@ -31,14 +35,16 @@ async function main() {
   const base = process.env.LEER_BASES_CWD ?? process.cwd();
   let salida: string | null = null;
   let salidaJson: string | null = null;
+  let foro: string | null = null;
   const archivos: string[] = [];
   for (let i = 0; i < args.length; i++) {
     if (args[i] === "--md") salida = path.resolve(base, args[++i] ?? "");
     else if (args[i] === "--json") salidaJson = path.resolve(base, args[++i] ?? "");
+    else if (args[i] === "--foro") foro = args[++i] ?? null;
     else if (!args[i].startsWith("--")) archivos.push(path.resolve(base, args[i]));
   }
-  if (!archivos.length) {
-    console.error("Uso: leer_bases.sh ARCHIVO [ARCHIVO...] [--md salida.md] [--json salida.json]");
+  if (!archivos.length && !foro) {
+    console.error("Uso: leer_bases.sh [ARCHIVO...] [--foro CODIGO] [--md salida.md] [--json salida.json]");
     process.exit(2);
   }
 
@@ -85,7 +91,29 @@ async function main() {
       avisos.push(`No se pudo leer «${e.name}»: ${err instanceof Error ? err.message : String(err)}`);
     }
   }
-  if (!fuentes.length) {
+  // Foro oficial: cada pregunta respondida es un bloque citable; solo la respuesta del organismo se analiza.
+  const preguntas: Array<{ question: string; answer: string | null; askedAt: Date | null; answeredAt: Date | null }> = [];
+  if (foro) {
+    const { fetchTenderEnquiries } = await telicito("mercadopublico/ocds");
+    const baseUrl = process.env.MERCADO_PUBLICO_OCDS_URL ?? "https://api.mercadopublico.cl/APISOCDS/OCDS";
+    try {
+      const r = await fetchTenderEnquiries(foro, { baseUrl });
+      if (!r.found) avisos.push(`Foro: los datos abiertos de ChileCompra no tienen la licitación ${foro} (todavía o con ese código).`);
+      else if (!r.enquiries.length) avisos.push(`Foro: la licitación ${foro} no registra preguntas en los datos abiertos de ChileCompra.`);
+      preguntas.push(...r.enquiries);
+      const respondidas = preguntas.filter((e) => e.answer && e.answer.trim());
+      lectura.push(`| Foro oficial de ${foro} (datos abiertos) | Aclaración o respuestas del foro | ${preguntas.length} preguntas, ${respondidas.length} respondidas | ok |`);
+      if (respondidas.length) {
+        fuentes.push({
+          documentId: "foro", fileId: "foro", title: `Foro oficial ${foro}`, kind: "aclaracion", unit: "bloque",
+          pages: respondidas.map((e, i) => ({ pageNumber: i + 1, text: `Pregunta: ${e.question}\nRespuesta: ${e.answer}`, scanText: e.answer })),
+        });
+      }
+    } catch (err) {
+      avisos.push(`Foro: no se pudo consultar (${err instanceof Error ? err.message : String(err)}).`);
+    }
+  }
+  if (!fuentes.length && !preguntas.length && !foro) {
     console.error(`No se pudo leer ningún documento.\n${avisos.join("\n")}`);
     process.exit(1);
   }
@@ -132,8 +160,14 @@ async function main() {
     });
     md.push("");
   }
+  if (preguntas.length) {
+    const fecha = (d: Date | null) => (d ? new Intl.DateTimeFormat("es-CL", { timeZone: "America/Santiago", dateStyle: "short" }).format(d) : "—");
+    md.push(`## Foro oficial: preguntas y respuestas (${preguntas.length})`, "", "| N.° | Fecha | Pregunta | Respuesta del organismo |", "|---|---|---|---|");
+    preguntas.forEach((e, i) => md.push(`| ${i + 1} | ${fecha(e.askedAt)} | ${una(e.question, 500)} | ${e.answer ? una(e.answer, 900) : "Sin respuesta publicada"} |`));
+    md.push("");
+  }
   const texto = md.join("\n");
-  if (salidaJson) writeFileSync(salidaJson, JSON.stringify({ motor: RULES_ENGINE_VERSION, documentos: fuentes.map((d) => ({ id: d.documentId, titulo: d.title, tipo: d.kind, paginas: d.pages.length })), hallazgos, avisos }, null, 1));
+  if (salidaJson) writeFileSync(salidaJson, JSON.stringify({ motor: RULES_ENGINE_VERSION, documentos: fuentes.map((d) => ({ id: d.documentId, titulo: d.title, tipo: d.kind, paginas: d.pages.length })), hallazgos, foro: preguntas, avisos }, null, 1));
   if (salida) {
     writeFileSync(salida, texto);
     console.error(`Informe guardado en ${salida} (${hallazgos.length} hallazgos, ${excluyentes.length} excluyentes).`);

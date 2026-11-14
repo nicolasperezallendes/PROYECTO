@@ -90,6 +90,7 @@ criterios, documentos requeridos, requisitos, plazos, multas y preguntas sugerid
 
 ```bash
 bash herramientas/telicito/leer_bases.sh bases.pdf anexos.zip --md lectura.md --json lectura.json
+NODE_USE_ENV_PROXY=1 bash herramientas/telicito/leer_bases.sh --foro 624-28-LE26 --md foro.md   # foro oficial (datos abiertos)
 ```
 
 Usa el motor del repositorio privado `franciscomerysoler-ux/licitia`, que debe estar clonado junto a este

@@ -54,6 +54,14 @@ Para la competencia, revisa órdenes de compra anteriores del organismo con `mer
    - Marca qué exigencias son **excluyentes** y en qué etapa aplican (al ofertar, al contratar o en la ejecución).
    - **Es una primera pasada por reglas, sin IA.** Sirve para no saltarse nada y para armar la lista de admisibilidad de la etapa 6. No reemplaza la lectura completa: revisa los avisos del informe (topes alcanzados, páginas sin texto) y verifica cada cita antes de usarla.
    - Necesita el repositorio privado `franciscomerysoler-ux/licitia` clonado junto a `PROYECTO` (ver `aprendizajes.md`, «Herramientas de Telicito»).
+5. **Foro oficial por datos abiertos** (lo único que Telicito obtiene solo, además de la API):
+   ```bash
+   NODE_USE_ENV_PROXY=1 bash herramientas/telicito/leer_bases.sh --foro CODIGO --md foro.md
+   NODE_USE_ENV_PROXY=1 bash herramientas/telicito/leer_bases.sh bases.pdf --foro CODIGO --md lectura.md   # bases y foro juntos
+   ```
+   Trae todas las preguntas con la respuesta del organismo (API OCDS de ChileCompra, licencia CC0, sin ticket) y analiza las respuestas como aclaraciones de las bases. Si el foro está vacío, lo dice.
+
+**Mientras no lleguen los adjuntos**, el análisis se hace igual con la ficha pública, la API y el foro, y se entrega con el aviso de que falta leer las bases. La ficha trae los criterios con su peso, las garantías, los documentos pedidos y las cláusulas principales; el detalle (rúbricas, presupuesto, entregables) está en el PDF. El modelo es el análisis de 624-28-LE26 del 13-11-2026.
 
 **Qué se extrae siempre:**
 - Objeto, productos, cantidades, tamaño de las muestras, cobertura territorial y plazos de cada producto.
