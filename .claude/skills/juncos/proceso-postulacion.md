@@ -44,12 +44,19 @@ Para la competencia, revisa órdenes de compra anteriores del organismo con `mer
 **Fuentes, en este orden:**
 1. `python3 mercadopublico.py ficha-web CODIGO --md ficha.md`: el resumen de las bases que publica el portal y el foro.
 2. `python3 mercadopublico.py licitacion CODIGO`: productos UNSPSC, fechas, responsables y justificación del monto.
-3. **Bases en PDF y anexos:** se le piden al usuario, que los descarga desde "Ver adjuntos". No se descargan de forma automática (ver `aprendizajes.md`).
+3. **Anexos y documentos de referencia de la ficha** (desde el 13-11-2026): se bajan solos, como visitante anónimo, desde la sección 4 de la ficha, que no tiene captcha:
+   ```bash
+   python3 anexos_ficha.py CODIGO --listar                                              # ver qué hay
+   python3 anexos_ficha.py CODIGO --dir "../../claude/licitaciones/CODIGO/originales"   # bajarlos
+   ```
+   Suelen ser los formatos editables de los anexos y algún documento de referencia. Los anexos dicen mucho: la pauta de la propuesta técnica, las reglas de la experiencia y el formato de la oferta económica. Reglas de uso en `aprendizajes.md`.
+3-bis. **Bases en PDF:** se le piden al usuario, que las descarga desde "Ver adjuntos". Esa ventana tiene reCAPTCHA y no se descarga de forma automática (ver `aprendizajes.md`).
 4. **Lectura de las bases con el motor de Telicito.cl** (desde el 14-11-2026), apenas Nicolás suba los archivos:
    ```bash
    bash herramientas/telicito/leer_bases.sh bases.pdf anexos.zip --md "claude/dd.mm.aaaa - LECTURA BASES CODIGO.md"
    ```
    - Acepta PDF, Word, Excel, imágenes, texto y ZIP con todos los adjuntos.
+   - Con `--volcar "claude/licitaciones/CODIGO/texto"` guarda además el texto completo de cada documento en Markdown, página por página. Hazlo siempre: después se lee y se cita desde ahí.
    - Entrega tablas con cita literal y página, en este orden: causales de rechazo, garantías, criterios de evaluación, documentos requeridos, requisitos, plazos, lugar, pago, multas, obligaciones posteriores, riesgos contractuales y preguntas sugeridas para el foro.
    - Marca qué exigencias son **excluyentes** y en qué etapa aplican (al ofertar, al contratar o en la ejecución).
    - **Es una primera pasada por reglas, sin IA.** Sirve para no saltarse nada y para armar la lista de admisibilidad de la etapa 6. No reemplaza la lectura completa: revisa los avisos del informe (topes alcanzados, páginas sin texto) y verifica cada cita antes de usarla.
@@ -61,7 +68,9 @@ Para la competencia, revisa órdenes de compra anteriores del organismo con `mer
    ```
    Trae todas las preguntas con la respuesta del organismo (API OCDS de ChileCompra, licencia CC0, sin ticket) y analiza las respuestas como aclaraciones de las bases. Si el foro está vacío, lo dice.
 
-**Mientras no lleguen los adjuntos**, el análisis se hace igual con la ficha pública, la API y el foro, y se entrega con el aviso de que falta leer las bases. La ficha trae los criterios con su peso, las garantías, los documentos pedidos y las cláusulas principales; el detalle (rúbricas, presupuesto, entregables) está en el PDF. El modelo es el análisis de 624-28-LE26 del 13-11-2026.
+**Mientras no lleguen los adjuntos**, el análisis se hace igual con la ficha pública, la API y el foro, y se entrega con el aviso de que falta leer las bases. La ficha trae los criterios con su peso, las garantías, los documentos pedidos y las cláusulas principales; el detalle (rúbricas, presupuesto, entregables) está en el PDF. El modelo es el análisis de 624-28-LE26 del 13-11-2026, hecho con la ficha, el foro y los anexos de la ficha.
+
+**Orden completo cuando se va a analizar una licitación:** `ficha-web` → `licitacion` (API) → `anexos_ficha.py` → `leer_bases.sh ... --foro CODIGO --volcar ...` → leer los Markdown → escribir el análisis. Las bases en PDF se suman cuando Nicolás las suba.
 
 **Qué se extrae siempre:**
 - Objeto, productos, cantidades, tamaño de las muestras, cobertura territorial y plazos de cada producto.

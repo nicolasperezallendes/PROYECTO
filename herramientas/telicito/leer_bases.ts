@@ -7,13 +7,14 @@
  *   bash herramientas/telicito/leer_bases.sh bases.pdf anexos.zip --md "claude/dd.mm.aaaa - LECTURA BASES CODIGO.md"
  *   bash herramientas/telicito/leer_bases.sh ficha.txt --foro 624-28-LE26 --md lectura.md
  *
+ * --volcar CARPETA guarda además el texto completo de cada documento como Markdown, página por página.
  * --foro CODIGO suma el foro oficial de preguntas y respuestas (datos abiertos OCDS de ChileCompra, licencia CC0,
  * sin ticket). Es el único documento que se obtiene solo: las bases y anexos los baja una persona de la ficha.
  *
  * Acepta PDF, Word, Excel, imágenes, texto y ZIP con varios adjuntos. Todo corre en la máquina: el modo de
  * reglas no envía los documentos a ningún proveedor de IA.
  */
-import { readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 
@@ -36,15 +37,17 @@ async function main() {
   let salida: string | null = null;
   let salidaJson: string | null = null;
   let foro: string | null = null;
+  let volcar: string | null = null;
   const archivos: string[] = [];
   for (let i = 0; i < args.length; i++) {
     if (args[i] === "--md") salida = path.resolve(base, args[++i] ?? "");
     else if (args[i] === "--json") salidaJson = path.resolve(base, args[++i] ?? "");
     else if (args[i] === "--foro") foro = args[++i] ?? null;
+    else if (args[i] === "--volcar") volcar = path.resolve(base, args[++i] ?? "");
     else if (!args[i].startsWith("--")) archivos.push(path.resolve(base, args[i]));
   }
   if (!archivos.length && !foro) {
-    console.error("Uso: leer_bases.sh [ARCHIVO...] [--foro CODIGO] [--md salida.md] [--json salida.json]");
+    console.error("Uso: leer_bases.sh [ARCHIVO...] [--foro CODIGO] [--volcar CARPETA] [--md salida.md] [--json salida.json]");
     process.exit(2);
   }
 
@@ -116,6 +119,18 @@ async function main() {
   if (!fuentes.length && !preguntas.length && !foro) {
     console.error(`No se pudo leer ningún documento.\n${avisos.join("\n")}`);
     process.exit(1);
+  }
+
+  // Texto completo de cada documento en Markdown, para leerlo y citarlo sin volver al original.
+  if (volcar) {
+    mkdirSync(volcar, { recursive: true });
+    for (const d of fuentes) {
+      if (d.documentId === "foro") continue;
+      const unidad = d.unit === "pagina" ? "Página" : d.unit === "hoja" ? "Hoja" : "Bloque";
+      const cuerpo = d.pages.map((p: any) => `## ${unidad} ${p.pageNumber}\n\n${p.text}`).join("\n\n");
+      const nombre = `${d.title.replace(/\.[A-Za-z0-9]{2,5}$/, "").replace(/[\\/:*?"<>|]/g, "_")}.md`;
+      writeFileSync(path.join(volcar, nombre), `# ${d.title}\n\nTexto extraído con el motor de Telicito.cl. El original manda ante cualquier diferencia.\n\n${cuerpo}\n`);
+    }
   }
 
   const omitidos = {};

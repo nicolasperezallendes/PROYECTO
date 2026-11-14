@@ -54,6 +54,10 @@ python3 compras_agiles.py --region coquimbo --dias 7 --md ranking_ca_coquimbo.md
 python3 tablero.py
 python3 tablero.py --sin-red        # solo con seguimiento.md
 
+# Anexos y documentos de referencia de la ficha (sin captcha; las bases de «Ver adjuntos» no)
+python3 anexos_ficha.py 624-28-LE26 --listar
+python3 anexos_ficha.py 624-28-LE26 --dir ../../claude/licitaciones/624-28-LE26/originales
+
 # Buscar un proveedor por RUT
 python3 mercadopublico.py proveedor 76.123.456-7
 ```
@@ -90,6 +94,7 @@ criterios, documentos requeridos, requisitos, plazos, multas y preguntas sugerid
 
 ```bash
 bash herramientas/telicito/leer_bases.sh bases.pdf anexos.zip --md lectura.md --json lectura.json
+bash herramientas/telicito/leer_bases.sh originales/* --volcar texto --md lectura.md   # y el texto de cada documento en Markdown
 NODE_USE_ENV_PROXY=1 bash herramientas/telicito/leer_bases.sh --foro 624-28-LE26 --md foro.md   # foro oficial (datos abiertos)
 ```
 
