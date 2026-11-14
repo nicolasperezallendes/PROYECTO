@@ -99,7 +99,7 @@ Telicito.cl es el producto de Nicolás y su socio Francisco Mery. Su código est
 - **Los anexos mandan sobre la intuición (13-11-2026):** en 624-28-LE26, el Anexo 4 mostró que la experiencia solo vale si es de la empresa oferente (2021 a 2026, terminada antes de la publicación, mandantes de RUT distinto) y que en una UTP vale la de cualquier integrante. El Anexo 2 traía la pauta completa de la propuesta creativa: 20 ítems obligatorios. Lee siempre los anexos antes de dar un veredicto.
 - **El motor sobre la ficha pública rinde poco:** con el texto de la ficha de 624-28-LE26 dio 6 hallazgos. La ficha se lee a mano; el motor es para las bases en PDF o Word.
 - **Lo que el motor no resuelve:** el motor tampoco decide si conviene postular: eso sigue en las etapas 2 y 3.
-- **Otras piezas de Telicito que aún no se usan en JUNCOS:** comparación de las exigencias con los antecedentes de la empresa (brechas), foro oficial por datos abiertos, revisión de coherencia entre ficha y bases, e informe en PDF. Viven dentro de la app y necesitan su base de datos. Se pueden usar creando la empresa JUNCOS en la app de Telicito.
+- **Otras piezas de Telicito que aún no se usan en JUNCOS:** comparación de las exigencias con los antecedentes de la empresa (brechas), foro oficial por datos abiertos, revisión de coherencia entre ficha y bases, e informe en PDF. Viven dentro de la app y necesitan su base de datos. Usarlas exige crear a JUNCOS como empresa en la app de Telicito, y eso solo se hace si Nicolás lo decide (ver «Propiedad y resguardo» en `SKILL.md`).
 
 ## Proceso y redacción
 

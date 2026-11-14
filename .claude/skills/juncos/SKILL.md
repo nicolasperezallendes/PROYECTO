@@ -22,7 +22,7 @@ Esta skill es la memoria de trabajo de la consultora en Mercado Público. Cubre 
 
 Hay dos copias con el mismo contenido:
 
-1. **Repositorio `nicolasperezallendes/PROYECTO`.** Los cinco archivos de apoyo están en `.claude/skills/juncos/`. Los scripts, su `README.md` y `perfil_juncos.json` están en `herramientas/mercadopublico/`: `postulables.py` para licitaciones, `compras_agiles.py` para Compra Ágil, `registro.py` para el registro de procesos y la mejora continua, y `tablero.py` para los datos del tablero (con su página, la fuente DM Sans y la ficha de la empresa en `tablero/`). En `herramientas/telicito/` está `leer_bases.sh`, que lee las bases en PDF, Word o ZIP con el motor de Telicito.cl (repositorio privado `franciscomerysoler-ux/licitia`, de Francisco Mery y Nicolás). Es la fuente principal y el único lugar donde corren los scripts.
+1. **Repositorio `nicolasperezallendes/PROYECTO`.** Los cinco archivos de apoyo están en `.claude/skills/juncos/`. Los scripts, su `README.md` y `perfil_juncos.json` están en `herramientas/mercadopublico/`: `postulables.py` para licitaciones, `compras_agiles.py` para Compra Ágil, `registro.py` para el registro de procesos y la mejora continua, y `tablero.py` para los datos del tablero (con su página, la fuente DM Sans y la ficha de la empresa en `tablero/`). `anexos_ficha.py` baja los anexos y documentos de referencia que la ficha pública de una licitación muestra sin captcha. En `herramientas/telicito/` está `leer_bases.sh`, que lee documentos en PDF, Word o ZIP con el motor de Telicito.cl (repositorio privado `franciscomerysoler-ux/licitia`, de Francisco Mery y Nicolás), los pasa a Markdown y trae el foro oficial. Es la fuente principal y el único lugar donde corren los scripts.
 2. **Proyecto JUNCOS de claude.ai.** Es el informe más reciente de `claude/licitaciones-juncos/`, con el nombre `dd.mm.aaaa - INFORME PERFIL Y SKILL JUNCOS.md`. Al 19-10-2026 es `claude/licitaciones-juncos/19.10.2026 - INFORME PERFIL Y SKILL JUNCOS.md`. Trae una copia textual del perfil (Parte 1) y de los seis archivos de la skill (Parte 2). Los títulos internos están dos niveles más abajo.
 
 **Si un archivo de la tabla no está junto a este SKILL.md** (pasa en los chats de claude.ai, donde la skill llega sola), no lo des por inexistente ni lo rehagas de memoria. Abre el informe del proyecto con la herramienta Projects: `project_info` muestra cuál es el más reciente y `project_read` lo abre. Después usa la sección que indica la tabla.
@@ -36,6 +36,18 @@ Si el repositorio y el informe no coinciden, manda el de fecha más reciente. Av
 - Para correr los scripts o hacer push desde claude.ai, agrega el repositorio a la sesión, con permiso de escritura si vas a hacer push. Si no se puede, trabaja con lo que trae el informe y dilo.
 
 Si el usuario pega una versión distinta de esta skill (por ejemplo, de otra sesión), integra lo nuevo en el archivo que corresponda sin perder lo que ya existe, y avisa qué contenido no coincide con lo verificado.
+
+## Propiedad y resguardo (regla de Nicolás del 13-11-2026)
+
+**JUNCOS es un proyecto exclusivo de Nicolás Pérez Allendes** (GitHub `nicolasperezallendes`). Se resguarda siempre:
+
+1. **Todo lo de JUNCOS vive solo en `nicolasperezallendes/PROYECTO`:** perfil, seguimiento, análisis, ofertas, precios, plantillas, herramientas y esta skill. No se escribe, copia ni sube a ningún otro repositorio, sea de quien sea.
+2. **Telicito es otro proyecto, compartido con Francisco Mery.** El repositorio `franciscomerysoler-ux/licitia` se usa **solo para leer**: `leer_bases.sh` llama a su motor y no deja nada de JUNCOS allá. Desde las sesiones de JUNCOS no se hacen commits, push ni cambios en `licitia`.
+3. **No se aporta a Telicito nada de JUNCOS** (herramientas como `anexos_ficha.py` o `compras_agiles.py`, lecciones, datos de procesos o de competidores) sin una instrucción expresa de Nicolás.
+4. **No se crea a JUNCOS como empresa en la app de Telicito** ni se cargan ahí sus documentos sin que Nicolás lo decida: quedarían en la base de datos del producto compartido.
+5. **El ticket de Mercado Público de JUNCOS** está solo en la variable `MERCADOPUBLICO_TICKET` del entorno personal de Nicolás. No va a otros entornos, repositorios ni chats.
+6. **Sesiones separadas:** el desarrollo de Telicito va en su propia sesión y entorno («licitia»), sin los archivos ni el ticket de JUNCOS. Si una sesión tiene los dos repositorios, cada cosa se guarda en el suyo.
+7. **Alerta vigente: `PROYECTO` es un repositorio público.** Cualquiera puede leer el seguimiento, los precios cotizados y los análisis de JUNCOS, incluida la competencia. Recuérdaselo a Nicolás mientras no lo haga privado (GitHub → Settings → General → Change visibility). Al hacerlo privado, su computador de escritorio ya no podrá leerlo por `raw.githubusercontent.com` sin iniciar sesión.
 
 ## Ficha de la empresa (verificada el 19-10-2026 en Mercado Público, Mi empresa)
 
