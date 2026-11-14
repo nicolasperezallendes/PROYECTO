@@ -81,3 +81,17 @@ Todas las listas aceptan `--md`, `--csv` y `--json` para guardar el resultado.
   Coquimbo es la región 4. Por defecto solo muestra Compras Ágiles cuyos productos
   están en los rubros inscritos (`--incluir-sugeridos`, `--todas` y `--sin-prefiltro`
   cambian ese comportamiento).
+
+## Lectura de bases con el motor de Telicito.cl
+
+`../telicito/leer_bases.sh` lee las bases de una licitación (PDF, Word, Excel, imágenes o un ZIP con los
+adjuntos) y entrega en Markdown las exigencias con su cita literal y página: causales de rechazo, garantías,
+criterios, documentos requeridos, requisitos, plazos, multas y preguntas sugeridas para el foro.
+
+```bash
+bash herramientas/telicito/leer_bases.sh bases.pdf anexos.zip --md lectura.md --json lectura.json
+```
+
+Usa el motor del repositorio privado `franciscomerysoler-ux/licitia`, que debe estar clonado junto a este
+(`../licitia`) o en la ruta de `TELICITO_DIR`. Aquí no se copia su código. Corre por reglas, sin IA y sin
+enviar los documentos a ningún servicio externo.

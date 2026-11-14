@@ -76,6 +76,19 @@ Agregado el 19-10-2026, a partir de chilecompra.cl/api y de la documentación en
 - **Computador de escritorio de Nicolás (21-10-2026):** no tiene Python, Git ni `gh`, así que los scripts de `herramientas/mercadopublico/` no corren ahí. Las consultas se pueden hacer con PowerShell (`Invoke-RestMethod`), y el repositorio es público: se lee por `raw.githubusercontent.com` en la rama más reciente. Desde el 06-11-2026, la skill también está en la rama por defecto (`claude/beautiful-heisenberg-m7ttsc`), unida con `claude/tender-darwin-7d20o0`. Antes de empezar, revisa cuál rama tiene el `seguimiento.md` más reciente.
 - **Cupo de Compra Ágil agotado temprano (21-10-2026):** a las 14:28, la API v2 respondía 429 a la primera consulta del día en ese equipo, mientras la API v1 funcionaba. El cupo es por ticket y lo comparten todas las sesiones. Si una sesión recorre el país sin `q`, deja a las demás sin Compra Ágil hasta el día siguiente.
 
+## Herramientas de Telicito (agregado el 14-11-2026)
+
+Telicito.cl es el producto de Nicolás y su socio Francisco Mery. Su código está en el repositorio **privado** `franciscomerysoler-ux/licitia`. JUNCOS usa su motor de lectura de bases como una empresa usuaria más.
+
+- **No se copia código de Telicito a `PROYECTO`.** `PROYECTO` es un repositorio público, y publicar el motor es una decisión de los dos socios (regla D-038 de Telicito). `herramientas/telicito/leer_bases.ts` solo llama a las funciones del motor desde la carpeta de `licitia`.
+- **Cómo dejarlo disponible en una sesión:** agrega el repositorio `franciscomerysoler-ux/licitia` a la sesión y clónalo en la rama vigente, junto a `PROYECTO` (queda en `../licitia`). La rama vigente está anotada en su `TELICITO_MASTER.md`; el 14-11-2026 era `claude/keen-euler-krhwh2`. `leer_bases.sh` instala las dependencias la primera vez (`pnpm install`, un par de minutos). Si el clon está en otra parte, define `TELICITO_DIR`.
+- **No hace falta la base de datos ni la app:** la lectura de documentos y el análisis por reglas corren solos. No ejecutes `scripts/setup-dev.sh` de `licitia` solo para leer bases.
+- **No se modifica `licitia` desde las sesiones de JUNCOS.** El desarrollo de Telicito va en su propia sesión. Si el motor falla o le falta algo, anótalo y avísale a Nicolás.
+- **Probado el 14-11-2026** con dos bases públicas de ChileCompra (un PDF de 111 páginas y un Word): 473 hallazgos, 90 excluyentes, en segundos. El motor (reglas-2.0) lista como máximo 150 requisitos, 80 documentos y 30 plazos por análisis, y avisa cuando hay más. Con varios documentos grandes juntos, conviene leerlos por separado.
+- **Calidad medida por Telicito** (`eval/README.md` de `licitia`, 12-11-2026): 100% de las exigencias en las bases con que se ajustó el motor y 81,8% en una medición a ciegas. Las referencias aún no las revisó una persona, así que el motor puede saltarse exigencias: la lectura completa de las bases sigue siendo obligatoria.
+- **Lo que el motor no resuelve:** los adjuntos siguen protegidos con reCAPTCHA y los baja Nicolás. El motor tampoco decide si conviene postular: eso sigue en las etapas 2 y 3.
+- **Otras piezas de Telicito que aún no se usan en JUNCOS:** comparación de las exigencias con los antecedentes de la empresa (brechas), foro oficial por datos abiertos, revisión de coherencia entre ficha y bases, e informe en PDF. Viven dentro de la app y necesitan su base de datos. Se pueden usar creando la empresa JUNCOS en la app de Telicito.
+
 ## Proceso y redacción
 
 - **Verifica siempre el día de la semana** de cada fecha con `date -d AAAA-MM-DD +%A`. El 19-10-2026 se escribió "jueves 23" cuando era viernes, y hubo que corregir dos informes.

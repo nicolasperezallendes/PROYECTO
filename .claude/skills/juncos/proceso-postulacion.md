@@ -45,6 +45,15 @@ Para la competencia, revisa órdenes de compra anteriores del organismo con `mer
 1. `python3 mercadopublico.py ficha-web CODIGO --md ficha.md`: el resumen de las bases que publica el portal y el foro.
 2. `python3 mercadopublico.py licitacion CODIGO`: productos UNSPSC, fechas, responsables y justificación del monto.
 3. **Bases en PDF y anexos:** se le piden al usuario, que los descarga desde "Ver adjuntos". No se descargan de forma automática (ver `aprendizajes.md`).
+4. **Lectura de las bases con el motor de Telicito.cl** (desde el 14-11-2026), apenas Nicolás suba los archivos:
+   ```bash
+   bash herramientas/telicito/leer_bases.sh bases.pdf anexos.zip --md "claude/dd.mm.aaaa - LECTURA BASES CODIGO.md"
+   ```
+   - Acepta PDF, Word, Excel, imágenes, texto y ZIP con todos los adjuntos.
+   - Entrega tablas con cita literal y página, en este orden: causales de rechazo, garantías, criterios de evaluación, documentos requeridos, requisitos, plazos, lugar, pago, multas, obligaciones posteriores, riesgos contractuales y preguntas sugeridas para el foro.
+   - Marca qué exigencias son **excluyentes** y en qué etapa aplican (al ofertar, al contratar o en la ejecución).
+   - **Es una primera pasada por reglas, sin IA.** Sirve para no saltarse nada y para armar la lista de admisibilidad de la etapa 6. No reemplaza la lectura completa: revisa los avisos del informe (topes alcanzados, páginas sin texto) y verifica cada cita antes de usarla.
+   - Necesita el repositorio privado `franciscomerysoler-ux/licitia` clonado junto a `PROYECTO` (ver `aprendizajes.md`, «Herramientas de Telicito»).
 
 **Qué se extrae siempre:**
 - Objeto, productos, cantidades, tamaño de las muestras, cobertura territorial y plazos de cada producto.
