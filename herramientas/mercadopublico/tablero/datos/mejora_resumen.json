@@ -1,0 +1,17 @@
+[
+ {
+  "procesos": 43,
+  "con_resultado": 14,
+  "cotizados": 2,
+  "ganados": 0,
+  "perdidos": 1,
+  "concordancia": 1.0,
+  "pares_concordancia": 1,
+  "mediana_ratio_ganador": 0.96,
+  "detectados_semana": 6,
+  "con_decision_semana": 0,
+  "precision_semana": null,
+  "version": "3.0",
+  "fecha": "09-11-2026 07:32"
+ }
+]

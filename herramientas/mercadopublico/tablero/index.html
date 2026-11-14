@@ -1,148 +1,257 @@
+<link rel="stylesheet" href="fonts.css">
 <style>
-#dash-root .jx { display: grid; gap: var(--cds-gap-xl); font-family: var(--font-anthropic-sans); font-variant-numeric: tabular-nums; }
-#dash-root .jx-head h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
-#dash-root .jx-take { margin: var(--cds-gap-xs) 0 0; font-size: var(--cds-font-size-body); max-width: 70ch; }
-#dash-root .jx-when { margin: var(--cds-gap-xs) 0 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
-#dash-root .jx-tiles { display: grid; gap: var(--cds-gap-md); grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); }
-#dash-root .jx-tile { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: grid; gap: var(--cds-gap-xs); align-content: start; }
-#dash-root .jx-tile .lbl { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
-#dash-root .jx-tile .big { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); line-height: 1.1; min-height: 1.1em; }
-#dash-root .jx-tile .note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
-#dash-root .jx-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); min-width: 0; display: grid; gap: var(--cds-gap-sm); align-content: start; }
-#dash-root .jx-card h2 { margin: 0; font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); }
-#dash-root .jx-card .sub { margin: 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); max-width: 80ch; }
-#dash-root .jx-grid2 { display: grid; gap: var(--cds-gap-md); grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); }
-#dash-root .jx-chart { position: relative; min-height: 220px; }
-#dash-root .jx-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
-#dash-root .jx-legend i { display: inline-block; width: .6rem; height: .6rem; border-radius: 50%; margin-right: .35rem; vertical-align: middle; }
-#dash-root .jx-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); max-width: 18rem; z-index: 2; }
-#dash-root .jx-tip .t { color: var(--cds-text-secondary); }
-#dash-root .jx-scroll { overflow-x: auto; }
-#dash-root table.jx-t { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); }
-#dash-root .jx-t th { text-align: left; font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
-#dash-root .jx-t th button { all: unset; cursor: pointer; }
-#dash-root .jx-t th button:focus-visible { outline: 2px solid var(--color-fg-muted); outline-offset: 2px; border-radius: 2px; }
-#dash-root .jx-t td { padding: var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
-#dash-root .jx-t td.num { text-align: right; white-space: nowrap; }
-#dash-root .jx-t th.num { text-align: right; }
-#dash-root .jx-t td.code { white-space: nowrap; font-weight: var(--cds-font-weight-medium); }
-#dash-root .jx-t td.wide { min-width: 14rem; }
-#dash-root .jx-t tr.closed td { color: var(--color-fg-muted); }
-#dash-root .jx-t a { color: inherit; }
-#dash-root .jx-pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: var(--cds-font-size-caption); white-space: nowrap; border: 1px solid var(--color-border-line); }
-#dash-root .jx-pill.urg { color: var(--color-bad); border-color: currentColor; }
-#dash-root .jx-pill.ok { color: var(--color-ok); border-color: currentColor; }
-#dash-root .jx-pill.warn { color: var(--color-warn); border-color: currentColor; }
-#dash-root .jx-pill.mute { color: var(--color-fg-muted); }
-#dash-root .jx-rel { display: block; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
-#dash-root .jx-rel.hot { color: var(--color-bad); }
-#dash-root .jx-search { width: 100%; max-width: 20rem; padding: var(--cds-pad-xs) var(--cds-pad-sm); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg); font: inherit; }
-#dash-root .jx-co { display: grid; gap: var(--cds-gap-sm); margin: 0; padding: 0; list-style: none; }
-#dash-root .jx-co li { display: grid; grid-template-columns: .6rem 1fr; gap: var(--cds-gap-sm); align-items: baseline; font-size: var(--cds-font-size-caption); }
-#dash-root .jx-co li .dot { width: .5rem; height: .5rem; border-radius: 50%; background: var(--color-fg-muted); transform: translateY(-1px); }
-#dash-root .jx-co li.alerta .dot { background: var(--color-warn); }
-#dash-root .jx-co li.revisar .dot { background: var(--color-bad); }
-#dash-root .jx-co li.ok .dot { background: var(--color-ok); }
-#dash-root .jx-co li b { font-weight: var(--cds-font-weight-medium); }
-#dash-root .jx-fail { display: flex; align-items: center; justify-content: center; gap: .5rem; min-height: 4rem; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
-#dash-root .jx-fail::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+/* Línea gráfica Narrativa: DM Sans, títulos grandes con una palabra destacada en fucsia,
+   esquinas rectas, banda casi negra con texto crema y paleta fucsia / morado / celeste / coral / turquesa. */
+#dash-root .nx {
+  --nx-pink: #ff6bbe; --nx-purple: #8b33a5; --nx-ink: #181818; --nx-blue: #00a0dc;
+  --nx-coral: #ff7f6e; --nx-teal: #00c0bd; --nx-cream: #f2e5e0; --nx-navy: #0b315c;
+  --nx-font: 'DM Sans JUNCOS', 'DM Sans', var(--font-anthropic-sans);
+  display: grid; gap: var(--cds-gap-xl); font-family: var(--nx-font); font-variant-numeric: tabular-nums;
+}
+#dash-root .nx-band { background: var(--nx-ink); color: var(--nx-cream); padding: var(--cds-pad-xl) var(--cds-pad-lg); display: grid; gap: var(--cds-gap-sm); }
+#dash-root .nx-eyebrow { font-size: var(--cds-font-size-caption); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+#dash-root .nx-band .nx-eyebrow { color: var(--nx-pink); }
+#dash-root .nx-band h1 { margin: 0; font-family: var(--nx-font); font-weight: 700; font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.1; text-wrap: balance; color: var(--nx-cream); }
+#dash-root .nx-hl { color: var(--nx-pink); }
+#dash-root .nx-take { margin: 0; max-width: 70ch; font-size: var(--cds-font-size-body); font-weight: 300; line-height: 1.5; color: var(--nx-cream); }
+#dash-root .nx-take b { font-weight: 700; color: var(--nx-cream); }
+#dash-root .nx-when { margin: 0; font-size: var(--cds-font-size-caption); opacity: .75; color: var(--nx-cream); }
+#dash-root .nx-tabs { display: flex; flex-wrap: wrap; gap: 0; border-bottom: 2px solid var(--color-fg); }
+#dash-root .nx-tab { all: unset; cursor: pointer; padding: var(--cds-pad-sm) var(--cds-pad-lg); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+#dash-root .nx-tab[aria-selected="true"] { background: var(--color-fg); color: var(--color-bg); }
+#dash-root .nx-tab:focus-visible { outline: 2px solid var(--nx-pink); outline-offset: 2px; }
+#dash-root .nx-view { display: grid; gap: var(--cds-gap-xl); }
+#dash-root .nx-h2 { margin: 0; font-family: var(--nx-font); font-weight: 700; font-size: var(--cds-font-size-title); line-height: 1.15; text-wrap: balance; }
+#dash-root .nx-lede { margin: 0; color: var(--color-fg-muted); font-weight: 300; max-width: 75ch; }
+#dash-root .nx-tiles { display: grid; gap: 0; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10.5rem), 1fr)); border-top: 1px solid var(--color-border-line); border-left: 1px solid var(--color-border-line); }
+#dash-root .nx-tile { padding: var(--cds-pad-lg); border-right: 1px solid var(--color-border-line); border-bottom: 1px solid var(--color-border-line); display: grid; gap: var(--cds-gap-xs); align-content: start; }
+#dash-root .nx-tile .lbl { font-size: var(--cds-font-size-caption); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--color-fg-muted); }
+#dash-root .nx-tile .big { font-family: var(--nx-font); font-weight: 700; font-size: 2.4rem; line-height: 1; min-height: 1em; }
+#dash-root .nx-tile .note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+#dash-root .nx-tile.acc .big { color: var(--nx-pink); }
+#dash-root .nx-card { border: 1px solid var(--color-border-line); padding: var(--cds-pad-lg); min-width: 0; display: grid; gap: var(--cds-gap-sm); align-content: start; background: var(--color-panel); }
+#dash-root .nx-card h3 { margin: 0; font-family: var(--nx-font); font-size: var(--cds-font-size-heading); font-weight: 700; }
+#dash-root .nx-card .sub { margin: 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); max-width: 85ch; }
+#dash-root .nx-grid2 { display: grid; gap: var(--cds-gap-md); grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); }
+#dash-root .nx-chart { position: relative; min-height: 200px; }
+#dash-root .nx-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+#dash-root .nx-legend i { display: inline-block; width: .65rem; height: .65rem; margin-right: .35rem; vertical-align: middle; }
+#dash-root .nx-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); max-width: 19rem; z-index: 2; }
+#dash-root .nx-tip .t { color: var(--cds-text-secondary); font-weight: 700; }
+#dash-root .nx-scroll { overflow-x: auto; }
+#dash-root table.nx-t { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); }
+#dash-root .nx-t th { text-align: left; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--color-fg-muted); padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 2px solid var(--color-fg); white-space: nowrap; }
+#dash-root .nx-t th button { all: unset; cursor: pointer; }
+#dash-root .nx-t th button:focus-visible { outline: 2px solid var(--nx-pink); outline-offset: 2px; }
+#dash-root .nx-t td { padding: var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
+#dash-root .nx-t td.num, #dash-root .nx-t th.num { text-align: right; white-space: nowrap; }
+#dash-root .nx-t td.code { white-space: nowrap; font-weight: 700; }
+#dash-root .nx-t td.wide { min-width: 14rem; }
+#dash-root .nx-t tr.closed td { color: var(--color-fg-muted); }
+#dash-root .nx-t a { color: inherit; text-decoration-color: var(--nx-pink); text-underline-offset: 3px; }
+#dash-root .nx-pill { display: inline-block; padding: 2px 8px; font-size: var(--cds-font-size-caption); font-weight: 700; white-space: nowrap; color: var(--nx-ink); background: var(--nx-cream); }
+#dash-root .nx-pill.urg { background: var(--nx-coral); }
+#dash-root .nx-pill.ok { background: var(--nx-teal); }
+#dash-root .nx-pill.warn { background: var(--nx-pink); }
+#dash-root .nx-pill.mute { background: transparent; color: var(--color-fg-muted); border: 1px solid var(--color-border-line); }
+#dash-root .nx-rel { display: block; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+#dash-root .nx-rel.hot { color: var(--color-bad); font-weight: 700; }
+#dash-root .nx-search { width: 100%; max-width: 20rem; padding: var(--cds-pad-xs) var(--cds-pad-sm); border: 1px solid var(--color-border-line); background: var(--color-bg); color: var(--color-fg); font: inherit; }
+#dash-root .nx-list { display: grid; gap: var(--cds-gap-sm); margin: 0; padding: 0; list-style: none; }
+#dash-root .nx-list li { display: grid; grid-template-columns: .6rem 1fr; gap: var(--cds-gap-sm); align-items: baseline; font-size: var(--cds-font-size-caption); }
+#dash-root .nx-list li .dot { width: .55rem; height: .55rem; background: var(--color-fg-muted); }
+#dash-root .nx-list li.alerta .dot { background: var(--nx-coral); }
+#dash-root .nx-list li.revisar .dot { background: var(--nx-pink); }
+#dash-root .nx-list li.ok .dot { background: var(--nx-teal); }
+#dash-root .nx-list li b { font-weight: 700; }
+#dash-root ol.nx-sug { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: var(--cds-gap-md); }
+#dash-root ol.nx-sug li { counter-increment: s; display: grid; grid-template-columns: 2.2rem 1fr; gap: var(--cds-gap-sm); align-items: baseline; max-width: 85ch; }
+#dash-root ol.nx-sug li::before { content: counter(s, decimal-leading-zero); font-weight: 700; color: var(--nx-pink); font-size: 1.2rem; }
+#dash-root .nx-empty { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); margin: 0; }
+#dash-root .nx-fail { display: flex; align-items: center; justify-content: center; gap: .5rem; min-height: 4rem; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+#dash-root .nx-fail::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+#dash-root .nx-foot { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin: 0; max-width: 90ch; }
 #dash-root [data-dash-source-state=empty] { color: transparent; }
 #dash-root [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
-#dash-root .jx-foot { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin: 0; max-width: 90ch; }
 </style>
 
-<div class="jx">
-  <header class="jx-head" id="inicio">
-    <h1>Tablero JUNCOS · Mercado Público</h1>
-    <p class="jx-take dash-skeleton" id="takeaway">—</p>
-    <p class="jx-when"><span data-source="consulta" data-field="consultado" data-row="0" id="cuando" class="dash-skeleton">—</span></p>
+<div class="nx">
+  <header class="nx-band" id="inicio">
+    <span class="nx-eyebrow">JUNCOS E.I.R.L. · Mercado Público</span>
+    <h1>Licitaciones y Compras Ágiles, <span class="nx-hl">a partir de los datos</span></h1>
+    <p class="nx-take dash-skeleton" id="takeaway">—</p>
+    <p class="nx-when"><span data-source="consulta" data-field="consultado" data-row="0" id="cuando" class="dash-skeleton">—</span></p>
   </header>
 
-  <section class="jx-tiles" id="cifras" aria-label="Cifras clave">
-    <div class="jx-tile"><span class="lbl">Compras Ágiles abiertas</span><span class="big dash-skeleton" data-source="resumen" data-field="ca_abiertas" data-row="0">—</span><span class="note">de las que sigue JUNCOS</span></div>
-    <div class="jx-tile"><span class="lbl">Monto disponible en ellas</span><span class="big dash-skeleton" data-source="resumen" data-field="ca_monto_abiertas" data-row="0">—</span><span class="note">con impuestos</span></div>
-    <div class="jx-tile"><span class="lbl">Licitaciones abiertas</span><span class="big dash-skeleton" data-source="resumen" data-field="lic_abiertas" data-row="0">—</span><span class="note">en seguimiento</span></div>
-    <div class="jx-tile"><span class="lbl">Cierran en 72 horas</span><span class="big dash-skeleton" data-source="resumen" data-field="cierran_72h" data-row="0">—</span><span class="note">Compras Ágiles y licitaciones</span></div>
-    <div class="jx-tile"><span class="lbl">Tareas pendientes</span><span class="big dash-skeleton" data-source="resumen" data-field="tareas_pendientes" data-row="0">—</span><span class="note">de la empresa</span></div>
-  </section>
+  <nav class="nx-tabs" role="tablist" aria-label="Vistas">
+    <button class="nx-tab" role="tab" type="button" id="tab-hoy" data-view="hoy" aria-selected="true">Hoy</button>
+    <button class="nx-tab" role="tab" type="button" id="tab-mejora" data-view="mejora" aria-selected="false">Mejora de procesos</button>
+  </nav>
 
-  <section class="jx-card" id="calendario">
-    <h2>Calendario de cierres</h2>
-    <p class="sub">Cada línea va desde la consulta hasta el cierre de un proceso abierto. Las de la Región de Coquimbo van en negrita.</p>
-    <div class="jx-legend" id="leyenda"></div>
-    <div class="jx-chart" id="chart" data-source="cierres"></div>
-  </section>
-
-  <section class="jx-card" id="compras-agiles">
-    <h2>Compras Ágiles</h2>
-    <p class="sub">El número es la prioridad: primero las que conviene cotizar (CA3 de 7 o más, o listas para enviar), por fecha de cierre, y después las demás abiertas. CA3 es la decisión rápida de la skill. El neto máximo es el monto disponible dividido por 1,19.</p>
-    <label class="sub" for="buscar-ca">Buscar</label>
-    <input id="buscar-ca" class="jx-search" type="search" placeholder="Código, organismo o región">
-    <div class="jx-scroll">
-      <table class="jx-t" id="tabla-ca" data-source="compras_agiles" data-row-key="codigo">
-        <thead><tr>
-          <th data-field="prioridad"><button type="button" data-k="prioridad">#</button></th>
-          <th data-field="codigo"><button type="button" data-k="codigo">Código</button></th>
-          <th data-field="nombre">Qué piden</th>
-          <th data-field="organismo"><button type="button" data-k="organismo">Organismo</button></th>
-          <th data-field="region"><button type="button" data-k="region">Región</button></th>
-          <th data-field="monto_clp" class="num"><button type="button" data-k="monto_clp">Monto</button></th>
-          <th data-field="neto_max_clp" class="num">Neto máx.</th>
-          <th data-field="cierre"><button type="button" data-k="cierre">Cierre</button></th>
-          <th data-field="ofertas_api_hoy" class="num">Ofertas</th>
-          <th data-field="ca3" class="num"><button type="button" data-k="ca3">CA3</button></th>
-          <th data-field="estado_juncos">Estado</th>
-          <th data-field="rubro">Rubro</th>
-          <th data-field="proximo_paso">Próximo paso</th>
-        </tr></thead>
-        <tbody></tbody>
-      </table>
+  <section class="nx-view" id="hoy" role="tabpanel" aria-labelledby="tab-hoy">
+    <div class="nx-tiles" id="cifras" aria-label="Cifras clave">
+      <div class="nx-tile acc"><span class="lbl">Compras Ágiles abiertas</span><span class="big dash-skeleton" data-source="resumen" data-field="ca_abiertas" data-row="0">—</span><span class="note">en seguimiento</span></div>
+      <div class="nx-tile"><span class="lbl">Monto disponible</span><span class="big dash-skeleton" data-source="resumen" data-field="ca_monto_abiertas" data-row="0">—</span><span class="note">de esas Compras Ágiles, con impuestos</span></div>
+      <div class="nx-tile"><span class="lbl">Licitaciones abiertas</span><span class="big dash-skeleton" data-source="resumen" data-field="lic_abiertas" data-row="0">—</span><span class="note">en seguimiento</span></div>
+      <div class="nx-tile"><span class="lbl">Cierran en 72 h</span><span class="big dash-skeleton" data-source="resumen" data-field="cierran_72h" data-row="0">—</span><span class="note">Compras Ágiles y licitaciones</span></div>
+      <div class="nx-tile"><span class="lbl">Tareas pendientes</span><span class="big dash-skeleton" data-source="resumen" data-field="tareas_pendientes" data-row="0">—</span><span class="note">de la empresa</span></div>
     </div>
-    <p class="jx-foot">Ofertas: mientras una Compra Ágil está abierta, la API muestra 0 o un número desfasado. El conteo real aparece cuando cierra.</p>
-  </section>
 
-  <section class="jx-card" id="licitaciones">
-    <h2>Licitaciones en seguimiento</h2>
-    <p class="sub">Ordenadas por fecha de cierre. El código abre la ficha en Mercado Público.</p>
-    <div class="jx-scroll">
-      <table class="jx-t" id="tabla-lic" data-source="licitaciones" data-row-key="codigo">
-        <thead><tr>
-          <th data-field="codigo">Código</th>
-          <th data-field="nombre">Objeto</th>
-          <th data-field="organismo">Organismo</th>
-          <th data-field="region">Región</th>
-          <th data-field="monto_clp" class="num">Monto</th>
-          <th data-field="cierre">Cierre</th>
-          <th data-field="estado_juncos">Estado</th>
-          <th data-field="proximo_paso">Próximo paso</th>
-        </tr></thead>
-        <tbody></tbody>
-      </table>
-    </div>
-  </section>
+    <section class="nx-card" id="calendario">
+      <h3>Calendario de cierres</h3>
+      <p class="sub">Una línea por proceso abierto, desde la consulta hasta su cierre. Los de la Región de Coquimbo van en negrita.</p>
+      <div class="nx-legend" id="leyenda"></div>
+      <div class="nx-chart" id="chart" data-source="cierres"></div>
+      <p class="nx-empty" id="chart-vacio" hidden>No hay procesos abiertos en seguimiento a la hora de la consulta.</p>
+    </section>
 
-  <div class="jx-grid2">
-    <section class="jx-card" id="tareas">
-      <h2>Tareas de la empresa</h2>
-      <p class="sub">Primero las de hoy, al final las ya hechas.</p>
-      <div class="jx-scroll">
-        <table class="jx-t" id="tabla-tareas" data-source="tareas" data-row-key="n">
+    <section class="nx-card" id="compras-agiles">
+      <h3>Compras Ágiles en seguimiento</h3>
+      <p class="sub">El número es la prioridad: primero las que conviene cotizar (CA3 de 7 o más, o listas para enviar), por fecha de cierre. El neto máximo es el monto dividido por 1,19.</p>
+      <label class="sub" for="buscar-ca">Buscar</label>
+      <input id="buscar-ca" class="nx-search" type="search" placeholder="Código, organismo o región">
+      <div class="nx-scroll">
+        <table class="nx-t" id="tabla-ca" data-source="compras_agiles" data-row-key="codigo">
           <thead><tr>
-            <th data-field="n">N°</th>
-            <th data-field="tarea">Tarea</th>
-            <th data-field="plazo">Plazo</th>
-            <th data-field="estado">Estado</th>
+            <th data-field="prioridad"><button type="button" data-k="prioridad">#</button></th>
+            <th data-field="codigo"><button type="button" data-k="codigo">Código</button></th>
+            <th data-field="nombre">Qué piden</th>
+            <th data-field="organismo"><button type="button" data-k="organismo">Organismo</button></th>
+            <th data-field="region"><button type="button" data-k="region">Región</button></th>
+            <th data-field="monto_clp" class="num"><button type="button" data-k="monto_clp">Monto</button></th>
+            <th data-field="neto_max_clp" class="num">Neto máx.</th>
+            <th data-field="cierre"><button type="button" data-k="cierre">Cierre</button></th>
+            <th data-field="ofertas_api_hoy" class="num">Ofertas</th>
+            <th data-field="ca3" class="num"><button type="button" data-k="ca3">CA3</button></th>
+            <th data-field="estado_juncos">Estado</th>
+            <th data-field="rubro">Rubro</th>
+            <th data-field="proximo_paso">Próximo paso</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="nx-foot">Ofertas: mientras una Compra Ágil está abierta, la API muestra 0 o un número desfasado. El conteo real aparece al cerrar.</p>
+    </section>
+
+    <section class="nx-card" id="licitaciones">
+      <h3>Licitaciones en seguimiento</h3>
+      <p class="sub">Ordenadas por cierre. El código abre la ficha en Mercado Público.</p>
+      <div class="nx-scroll">
+        <table class="nx-t" id="tabla-lic" data-source="licitaciones" data-row-key="codigo">
+          <thead><tr>
+            <th data-field="codigo">Código</th>
+            <th data-field="nombre">Objeto</th>
+            <th data-field="organismo">Organismo</th>
+            <th data-field="region">Región</th>
+            <th data-field="monto_clp" class="num">Monto</th>
+            <th data-field="cierre">Cierre</th>
+            <th data-field="estado_juncos">Estado</th>
+            <th data-field="proximo_paso">Próximo paso</th>
           </tr></thead>
           <tbody></tbody>
         </table>
       </div>
     </section>
-    <section class="jx-card" id="empresa">
-      <h2>Ficha de la empresa</h2>
-      <p class="sub">CONSULTORES NICOLÁS PÉREZ ALLENDES E.I.R.L. (JUNCOS), RUT 78.390.884-0.</p>
-      <ul class="jx-co" id="lista-empresa"></ul>
+
+    <div class="nx-grid2">
+      <section class="nx-card" id="tareas">
+        <h3>Tareas de la empresa</h3>
+        <p class="sub">Primero las urgentes, al final las ya hechas.</p>
+        <div class="nx-scroll">
+          <table class="nx-t" id="tabla-tareas" data-source="tareas" data-row-key="n">
+            <thead><tr>
+              <th data-field="n">N°</th>
+              <th data-field="tarea">Tarea</th>
+              <th data-field="plazo">Plazo</th>
+              <th data-field="estado">Estado</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="nx-card" id="empresa">
+        <h3>Ficha de la empresa</h3>
+        <p class="sub">CONSULTORES NICOLÁS PÉREZ ALLENDES E.I.R.L. (JUNCOS), RUT 78.390.884-0.</p>
+        <ul class="nx-list" id="lista-empresa"></ul>
+      </section>
+    </div>
+  </section>
+
+  <section class="nx-view" id="mejora" role="tabpanel" aria-labelledby="tab-mejora" hidden>
+    <div>
+      <h2 class="nx-h2">Qué aprendemos de <span class="nx-hl">cada proceso</span></h2>
+      <p class="nx-lede">Cada Compra Ágil y licitación queda en el registro: de qué búsqueda salió, qué recomendó Claude, qué decidió Nicolás y cómo terminó. Con eso se ajusta la búsqueda y se fijan mejor los precios.</p>
+    </div>
+
+    <div class="nx-tiles" id="cifras-mejora" aria-label="Cifras de mejora">
+      <div class="nx-tile"><span class="lbl">En el registro</span><span class="big dash-skeleton" data-source="mejora_resumen" data-field="procesos" data-row="0">—</span><span class="note">procesos revisados</span></div>
+      <div class="nx-tile"><span class="lbl">Con resultado</span><span class="big dash-skeleton" data-source="mejora_resumen" data-field="con_resultado" data-row="0">—</span><span class="note">ganador o cierre final conocido</span></div>
+      <div class="nx-tile"><span class="lbl">Cotizados</span><span class="big dash-skeleton" data-source="mejora_resumen" data-field="cotizados" data-row="0">—</span><span class="note">por JUNCOS</span></div>
+      <div class="nx-tile"><span class="lbl">Ganados</span><span class="big dash-skeleton" data-source="mejora_resumen" data-field="ganados" data-row="0">—</span><span class="note">órdenes de compra o adjudicaciones</span></div>
+      <div class="nx-tile acc"><span class="lbl">Precio ganador</span><span class="big dash-skeleton" data-source="mejora_resumen" data-field="mediana_ratio_ganador" data-row="0">—</span><span class="note">mediana, como % del monto disponible</span></div>
+      <div class="nx-tile"><span class="lbl">Claude y Nicolás</span><span class="big dash-skeleton" data-source="mejora_resumen" data-field="concordancia" data-row="0">—</span><span class="note" id="nota-concordancia">coincidencia entre recomendación y decisión</span></div>
+    </div>
+
+    <section class="nx-card" id="precios">
+      <h3>¿A qué precio se gana?</h3>
+      <p class="sub">Cada fila es un proceso cerrado. El punto morado o celeste es lo que ofertó el ganador, como porcentaje del monto disponible; el fucsia, lo que ofertó JUNCOS cuando se conoce. La línea punteada es la mediana de los ganadores.</p>
+      <div class="nx-legend" id="leyenda-precios"></div>
+      <div class="nx-chart" id="chart-precios" data-source="resultados"></div>
     </section>
-  </div>
+
+    <section class="nx-card" id="sugerencias">
+      <h3>Sugerencias de la semana</h3>
+      <p class="sub">Salen de las métricas del registro. No se aplican solas: Claude las verifica y las propone, y Nicolás decide.</p>
+      <ol class="nx-sug" id="lista-sug" data-source="mejora_sugerencias"></ol>
+    </section>
+
+    <section class="nx-card" id="resultados">
+      <h3>Resultados al cierre</h3>
+      <p class="sub">Quién ganó y a qué precio. «JUNCOS» indica si aparece entre los oferentes visibles; la API muestra solo parte de ellos.</p>
+      <div class="nx-scroll">
+        <table class="nx-t" id="tabla-res" data-source="resultados" data-row-key="codigo">
+          <thead><tr>
+            <th data-field="codigo">Código</th>
+            <th data-field="nombre">Proceso</th>
+            <th data-field="organismo">Organismo</th>
+            <th data-field="estado_final">Resultado</th>
+            <th data-field="ofertas_final" class="num">Ofertas</th>
+            <th data-field="ganador">Ganador</th>
+            <th data-field="precio_ganador" class="num">Precio ganador</th>
+            <th data-field="ratio_ganador" class="num">% del monto</th>
+            <th data-field="precio_ofertado" class="num">JUNCOS ofertó</th>
+            <th data-field="notas">Notas</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="nx-grid2">
+      <section class="nx-card" id="terminos">
+        <h3>¿Qué búsquedas rinden?</h3>
+        <p class="sub">Procesos afines que trajo cada término en los últimos 30 días, y cuántos se cotizaron. Se mide desde el 06-11-2026.</p>
+        <div class="nx-chart" id="chart-terminos" data-source="mejora_terminos"></div>
+      </section>
+      <section class="nx-card" id="precios-grupo">
+        <h3>Precio ganador por tipo de proceso</h3>
+        <p class="sub">Mediana del precio ganador como % del monto disponible, y mediana de ofertas recibidas.</p>
+        <div class="nx-scroll">
+          <table class="nx-t" id="tabla-precios" data-source="mejora_precios" data-row-key="grupo">
+            <thead><tr>
+              <th data-field="grupo">Tipo · línea</th>
+              <th data-field="resultados" class="num">Resultados</th>
+              <th data-field="mediana_ratio" class="num">Mediana precio</th>
+              <th data-field="mediana_ofertas" class="num">Mediana ofertas</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <h3>Motivos de descarte</h3>
+        <ul class="nx-list" id="lista-motivos" data-source="mejora_motivos"></ul>
+      </section>
+    </div>
+  </section>
 </div>
 
 <script>
@@ -153,13 +262,13 @@ dash.calc('resumen', {
   fn: (compras_agiles, licitaciones, tareas, consulta) => {
     const t0 = new Date(consulta[0].consultado).getTime();
     const t72 = t0 + 72 * 3600 * 1000;
-    const abierta = (r) => new Date(r.cierre).getTime() > t0;
+    const abierta = (r) => r.cierre && new Date(r.cierre).getTime() > t0;
     const ca = compras_agiles.filter(abierta);
     const lic = licitaciones.filter(abierta);
     const pronto = ca.concat(lic).filter((r) => new Date(r.cierre).getTime() <= t72);
     return [{
       ca_abiertas: ca.length,
-      ca_monto_abiertas: ca.reduce((s, r) => s + r.monto_clp, 0),
+      ca_monto_abiertas: ca.reduce((s, r) => s + (r.monto_clp || 0), 0),
       lic_abiertas: lic.length,
       cierran_72h: pronto.length,
       tareas_pendientes: tareas.filter((r) => r.estado !== 'Hecho').length
@@ -169,26 +278,29 @@ dash.calc('resumen', {
 
 dash.calc('cierres', {
   title: 'Cierres de procesos abiertos',
-  description: 'Une Compras Ágiles y licitaciones que seguían abiertas a la hora de la consulta, ordenadas por cierre.',
+  description: 'Une Compras Ágiles y licitaciones abiertas a la hora de la consulta, ordenadas por cierre.',
   inputs: ['compras_agiles', 'licitaciones', 'consulta'],
   fn: (compras_agiles, licitaciones, consulta) => {
     const t0 = new Date(consulta[0].consultado).getTime();
     const pick = (tipo) => (r) => ({ codigo: r.codigo, tipo, nombre: r.nombre, organismo: r.organismo, region: r.region, en_region_coquimbo: r.en_region_coquimbo, monto_clp: r.monto_clp, cierre: r.cierre, estado_juncos: r.estado_juncos });
     return compras_agiles.map(pick('Compra Ágil')).concat(licitaciones.map(pick('Licitación')))
-      .filter((r) => new Date(r.cierre).getTime() > t0)
+      .filter((r) => r.cierre && new Date(r.cierre).getTime() > t0)
       .sort((a, b) => new Date(a.cierre) - new Date(b.cierre));
   }
 });
 
 (function () {
   const TZ = 'America/Santiago';
+  const C = { pink: '#ff6bbe', purple: '#8b33a5', blue: '#00a0dc', coral: '#ff7f6e', teal: '#00c0bd' };
   const clp = new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP', maximumFractionDigits: 0 });
   const clpCorto = (v) => v >= 1e6 ? '$' + (v / 1e6).toLocaleString('es-CL', { maximumFractionDigits: 1 }) + ' M' : clp.format(v);
+  const pct = (v) => v == null || v === '' ? '—' : Math.round(Number(v) * 100) + '%';
   const partes = (d) => Object.fromEntries(new Intl.DateTimeFormat('es-CL', { weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false, timeZone: TZ }).formatToParts(d).map((p) => [p.type, p.value]));
-  const fecha = (iso) => { const p = partes(new Date(iso)); return `${p.weekday.replace('.', '')} ${p.day}-${p.month}, ${p.hour}:${p.minute}`; };
+  const fecha = (iso) => { if (!iso) return '—'; const p = partes(new Date(iso)); return `${p.weekday.replace('.', '')} ${p.day}-${p.month}, ${p.hour}:${p.minute}`; };
   const fechaCorta = (d) => { const p = partes(d); return `${p.weekday.replace('.', '')} ${p.day}-${p.month}`; };
   const diaCL = (d) => new Intl.DateTimeFormat('en-CA', { timeZone: TZ }).format(d);
   const relativo = (iso) => {
+    if (!iso) return { txt: 'sin fecha', hot: false };
     const c = new Date(iso), now = new Date();
     if (c <= now) return { txt: 'cerrada', hot: false };
     const dd = Math.round((new Date(diaCL(c)) - new Date(diaCL(now))) / 864e5);
@@ -196,11 +308,20 @@ dash.calc('cierres', {
     if (dd === 1) return { txt: 'cierra mañana', hot: true };
     return { txt: `en ${dd} días`, hot: false };
   };
-  const pillClase = (e) => /hoy/i.test(e) ? 'urg' : /Lista|Postulando/.test(e) ? 'ok' : /Cerr|Vencida/.test(e) ? 'mute' : /Alternativa|UTP/.test(e) ? 'mute' : /Revisar/.test(e) ? 'urg' : /Hecho/.test(e) ? 'ok' : /Pendiente/.test(e) ? 'warn' : '';
-  const pill = (txt) => { const s = document.createElement('span'); s.className = 'jx-pill ' + pillClase(txt); s.textContent = txt; return s; };
-  const td = (tr, txt, cls) => { const c = tr.insertCell(); if (cls) c.className = cls; if (txt instanceof Node) c.append(txt); else c.textContent = txt == null ? '—' : txt; return c; };
-  const fallo = (el) => { el.replaceChildren(); const d = document.createElement('div'); d.className = 'jx-fail'; d.textContent = 'Failed to load'; el.append(d); };
+  const pillClase = (e) => /hoy|Revisar|ganada/i.test(e) ? (/ganada/i.test(e) ? 'ok' : 'urg') : /Lista|Postulando|Cotizada|Hecho/.test(e) ? 'ok' : /Cerr|Vencida|Alternativa|UTP|adjudicada|desierta/i.test(e) ? 'mute' : /Pendiente|En curso/.test(e) ? 'warn' : '';
+  const pill = (txt) => { const s = document.createElement('span'); s.className = 'nx-pill ' + pillClase(txt || ''); s.textContent = txt || '—'; return s; };
+  const td = (tr, txt, cls) => { const c = tr.insertCell(); if (cls) c.className = cls; if (txt instanceof Node) c.append(txt); else c.textContent = txt == null || txt === '' ? '—' : txt; return c; };
+  const fallo = (el) => { el.replaceChildren(); const d = document.createElement('div'); d.className = 'nx-fail'; d.textContent = 'Failed to load'; el.append(d); };
   const sinSkel = (...els) => els.forEach((e) => e && e.classList.remove('dash-skeleton'));
+
+  // Pestañas, con enlace directo (#hoy, #mejora)
+  const vistas = ['hoy', 'mejora'];
+  const mostrar = (v) => {
+    vistas.forEach((x) => { document.getElementById(x).hidden = x !== v; document.getElementById('tab-' + x).setAttribute('aria-selected', String(x === v)); });
+    dash.setLink(v);
+    dibujar();
+  };
+  document.querySelectorAll('.nx-tab').forEach((b) => b.addEventListener('click', () => mostrar(b.dataset.view)));
 
   let ordenCA = { k: 'prioridad', dir: 1 };
   document.querySelectorAll('#tabla-ca th button').forEach((b) => b.addEventListener('click', () => {
@@ -214,11 +335,10 @@ dash.calc('cierres', {
   function tablaCA() {
     const body = document.querySelector('#tabla-ca tbody');
     const s = dash.data('compras_agiles');
-    if (s.status === 'error') { body.replaceChildren(); return; }
     if (s.status !== 'ok') return;
     const q = document.getElementById('buscar-ca').value.trim().toLowerCase();
     const { k, dir } = ordenCA;
-    const val = (r) => k === 'cierre' ? new Date(r.cierre).getTime() : r[k];
+    const val = (r) => k === 'cierre' ? (r.cierre ? new Date(r.cierre).getTime() : null) : r[k];
     const rows = s.data.filter((r) => !q || [r.codigo, r.organismo, r.region, r.nombre].join(' ').toLowerCase().includes(q))
       .slice().sort((a, b) => {
         const va = val(a), vb = val(b);
@@ -235,10 +355,10 @@ dash.calc('cierres', {
       td(tr, r.nombre, 'wide');
       td(tr, r.organismo);
       td(tr, r.region);
-      td(tr, clp.format(r.monto_clp), 'num');
-      td(tr, clp.format(r.neto_max_clp), 'num');
+      td(tr, r.monto_clp == null ? '—' : clp.format(r.monto_clp), 'num');
+      td(tr, r.neto_max_clp == null ? '—' : clp.format(r.neto_max_clp), 'num');
       const c = td(tr, fecha(r.cierre)); c.style.whiteSpace = 'nowrap';
-      const sp = document.createElement('span'); sp.className = 'jx-rel' + (rel.hot ? ' hot' : ''); sp.textContent = rel.txt + (r.llamado === 'Segundo llamado' ? ' · 2.º llamado' : ''); c.append(sp);
+      const sp = document.createElement('span'); sp.className = 'nx-rel' + (rel.hot ? ' hot' : ''); sp.textContent = rel.txt + (r.llamado === 'Segundo llamado' ? ' · 2.º llamado' : ''); c.append(sp);
       td(tr, r.ofertas_api_hoy, 'num');
       td(tr, r.ca3 == null ? '—' : r.ca3, 'num');
       td(tr, pill(r.estado_juncos));
@@ -252,7 +372,7 @@ dash.calc('cierres', {
     const s = dash.data('licitaciones');
     if (s.status !== 'ok') return;
     body.replaceChildren();
-    s.data.slice().sort((a, b) => new Date(a.cierre) - new Date(b.cierre)).forEach((r) => {
+    s.data.slice().sort((a, b) => new Date(a.cierre || 0) - new Date(b.cierre || 0)).forEach((r) => {
       const tr = body.insertRow();
       const rel = relativo(r.cierre);
       if (rel.txt === 'cerrada') tr.className = 'closed';
@@ -263,7 +383,7 @@ dash.calc('cierres', {
       td(tr, r.region);
       td(tr, r.monto_clp == null ? 'No publica' : clp.format(r.monto_clp), 'num');
       const c = td(tr, fecha(r.cierre)); c.style.whiteSpace = 'nowrap';
-      const sp = document.createElement('span'); sp.className = 'jx-rel' + (rel.hot ? ' hot' : ''); sp.textContent = rel.txt; c.append(sp);
+      const sp = document.createElement('span'); sp.className = 'nx-rel' + (rel.hot ? ' hot' : ''); sp.textContent = rel.txt; c.append(sp);
       td(tr, pill(r.estado_juncos));
       td(tr, r.proximo_paso, 'wide');
     });
@@ -273,7 +393,7 @@ dash.calc('cierres', {
     const body = document.querySelector('#tabla-tareas tbody');
     const s = dash.data('tareas');
     if (s.status !== 'ok') return;
-    const peso = (r) => r.estado === 'Hecho' ? 3 : /^Hoy/.test(r.plazo) ? 0 : r.estado === 'Revisar' ? 1 : 2;
+    const peso = (r) => r.estado === 'Hecho' ? 3 : /^(Hoy|Antes del lun|\*\*)/.test(r.plazo) ? 0 : r.estado === 'Revisar' ? 1 : 2;
     body.replaceChildren();
     s.data.slice().sort((a, b) => peso(a) - peso(b) || a.n - b.n).forEach((r) => {
       const tr = body.insertRow();
@@ -302,14 +422,13 @@ dash.calc('cierres', {
     });
   }
 
-  function cifras() {
-    const s = dash.data('resumen');
-    const els = document.querySelectorAll('#cifras [data-source="resumen"]');
-    els.forEach((el) => {
+  function cifras(id, fuente, fmt) {
+    const s = dash.data(fuente);
+    document.querySelectorAll(`#${id} [data-source="${fuente}"]`).forEach((el) => {
       if (s.status !== 'ok') { if (s.status === 'error') { sinSkel(el); el.textContent = '—'; } return; }
       sinSkel(el);
-      const v = s.data[0][el.dataset.field];
-      el.textContent = el.dataset.field === 'ca_monto_abiertas' ? clpCorto(v) : String(v);
+      const v = s.data[0] ? s.data[0][el.dataset.field] : null;
+      el.textContent = fmt(el.dataset.field, v);
     });
   }
 
@@ -320,99 +439,213 @@ dash.calc('cierres', {
     if (c.status === 'ok') {
       sinSkel(cuando);
       const p = partes(new Date(c.data[0].consultado));
-      cuando.textContent = `Datos de Mercado Público consultados el ${p.weekday.replace('.', '')} ${p.day}-${p.month}-2026 a las ${p.hour}:${p.minute} (hora de Chile).`;
+      cuando.textContent = `Datos de Mercado Público consultados el ${p.weekday.replace('.', '')} ${p.day}-${p.month} a las ${p.hour}:${p.minute} (hora de Chile).`;
     }
     const s = dash.data('cierres');
+    const m = dash.data('mejora_resumen');
     if (s.status !== 'ok') return;
     sinSkel(take);
     take.replaceChildren();
     const now = new Date();
     const vivos = s.data.filter((r) => new Date(r.cierre) > now);
-    if (!vivos.length) { take.textContent = 'Todos los procesos de esta consulta ya cerraron: hay que actualizar el tablero.'; return; }
-    const r = vivos[0];
-    const i = s.data.indexOf(r);
-    const span = (txt, field) => { const e = document.createElement('b'); e.textContent = txt; e.setAttribute('data-source', 'cierres'); e.setAttribute('data-field', field); e.setAttribute('data-row', String(i)); return e; };
-    const hoyN = vivos.filter((x) => diaCL(new Date(x.cierre)) === diaCL(now)).length;
-    take.append(
-      document.createTextNode(hoyN > 1 ? `Hoy cierran ${hoyN} procesos. El primero es ` : 'El próximo cierre es '),
-      span(r.nombre, 'nombre'),
-      document.createTextNode(` (${r.codigo}, ${r.organismo}), `),
-      span(fecha(r.cierre), 'cierre'),
-      document.createTextNode('.')
-    );
+    if (vivos.length) {
+      const r = vivos[0];
+      const i = s.data.indexOf(r);
+      const b = document.createElement('b'); b.textContent = r.nombre; b.setAttribute('data-source', 'cierres'); b.setAttribute('data-field', 'nombre'); b.setAttribute('data-row', String(i));
+      take.append(document.createTextNode('El próximo cierre es '), b, document.createTextNode(` (${r.codigo}, ${r.organismo}), ${fecha(r.cierre)}.`));
+    } else {
+      take.append(document.createTextNode('No hay procesos abiertos en seguimiento a la hora de la consulta.'));
+    }
+    if (m.status === 'ok' && m.data[0] && m.data[0].mediana_ratio_ganador) {
+      const b = document.createElement('b'); b.textContent = pct(m.data[0].mediana_ratio_ganador);
+      b.setAttribute('data-source', 'mejora_resumen'); b.setAttribute('data-field', 'mediana_ratio_ganador'); b.setAttribute('data-row', '0');
+      take.append(document.createTextNode(' En los procesos cerrados, el ganador ofertó en mediana el '), b, document.createTextNode(' del monto disponible.'));
+    }
   }
 
-  function grafico() {
+  function tooltip(box) {
+    const tip = document.createElement('div'); tip.className = 'nx-tip'; tip.hidden = true; box.append(tip);
+    return {
+      show(ev, lineas) {
+        tip.hidden = false; tip.replaceChildren();
+        lineas.forEach((t, i) => { const d = document.createElement('div'); if (i === 0) d.className = 't'; d.textContent = t; tip.append(d); });
+        const [mx, my] = d3.pointer(ev, box);
+        tip.style.left = Math.max(0, Math.min(mx + 12, box.clientWidth - tip.offsetWidth)) + 'px';
+        tip.style.top = (my + 14) + 'px';
+      },
+      hide() { tip.hidden = true; }
+    };
+  }
+  const leyenda = (el, items) => el.replaceChildren(...items.map(([k, col]) => { const sp = document.createElement('span'); const i = document.createElement('i'); i.style.background = col; sp.append(i, document.createTextNode(k)); return sp; }));
+  const textoCorto = function (max) { let t = this.textContent; while (this.getComputedTextLength() > max && t.length > 4) { t = t.slice(0, -2); this.textContent = t + '…'; } };
+
+  function grafCierres() {
     const box = document.getElementById('chart');
-    const ley = document.getElementById('leyenda');
     const s = dash.data('cierres');
     const c = dash.data('consulta');
     if (s.status === 'error') { fallo(box); return; }
     if (s.status !== 'ok' || c.status !== 'ok') return;
     box.replaceChildren();
-    const colores = { 'Compra Ágil': dash.colors[0], 'Licitación': dash.colors[1] };
-    ley.replaceChildren(...Object.entries(colores).map(([k, col]) => { const sp = document.createElement('span'); const i = document.createElement('i'); i.style.background = col; sp.append(i, document.createTextNode(k)); return sp; }));
     const rows = s.data;
-    const W = Math.max(280, box.clientWidth);
-    const apilado = W < 620;
-    const rowH = apilado ? 40 : 26;
-    const top = 26, bottom = 8;
-    const t0 = new Date(c.data[0].consultado);
-    const tMax = d3.max(rows, (r) => new Date(r.cierre));
+    document.getElementById('chart-vacio').hidden = rows.length > 0;
+    box.hidden = !rows.length;
+    const colores = { 'Compra Ágil': C.blue, 'Licitación': C.purple };
+    leyenda(document.getElementById('leyenda'), Object.entries(colores));
+    if (!rows.length) return;
+    const W = Math.max(280, box.clientWidth), apilado = W < 620, rowH = apilado ? 40 : 26, top = 26, bottom = 8;
+    const t0 = new Date(c.data[0].consultado), tMax = d3.max(rows, (r) => new Date(r.cierre));
     const H = top + rows.length * rowH + bottom;
     const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Calendario de cierres');
     const etiqueta = (r) => `${r.codigo.replace(/-(COT|LE|LP|L1)26$/, '')} · ${r.organismo}`;
     let left = 8;
     if (!apilado) {
-      const tmp = svg.append('text').attr('font-size', 12).style('font-family', 'var(--font-anthropic-sans)');
+      const tmp = svg.append('text').attr('font-size', 12).style('font-family', 'var(--nx-font)');
       left = 8 + Math.min(W * 0.42, d3.max(rows, (r) => { tmp.text(etiqueta(r)); return tmp.node().getComputedTextLength(); }));
       tmp.remove();
     }
-    const right = 56;
-    const x = d3.scaleUtc([t0, d3.utcHour.offset(tMax, 6)], [left, W - right]);
+    const x = d3.scaleUtc([t0, d3.utcHour.offset(tMax, 6)], [left, W - 56]);
     const dias = d3.utcDay.range(d3.utcDay.ceil(t0), tMax);
-    const paso = Math.max(1, Math.ceil(dias.length / Math.max(2, Math.floor((W - left - right) / 70))));
+    const paso = Math.max(1, Math.ceil(dias.length / Math.max(2, Math.floor((W - left - 56) / 70))));
     const g = svg.append('g');
-    g.selectAll('line.grid').data(dias).join('line').attr('x1', (d) => x(d)).attr('x2', (d) => x(d)).attr('y1', top - 6).attr('y2', H - bottom).attr('stroke', 'var(--cds-chart-grid)').attr('stroke-width', 1);
-    g.selectAll('text.tick').data(dias.filter((_, i) => i % paso === 0)).join('text').attr('x', (d) => x(d) + 3).attr('y', 12).attr('font-size', 11).attr('fill', 'var(--color-fg-muted)').style('font-family', 'var(--font-anthropic-sans)').text((d) => fechaCorta(d3.utcHour.offset(d, 12)));
-    const ahora = new Date();
-    if (ahora > t0 && ahora < tMax) {
-      g.append('line').attr('x1', x(ahora)).attr('x2', x(ahora)).attr('y1', top - 6).attr('y2', H - bottom).attr('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '3 3');
-      g.append('text').attr('x', x(ahora) + 3).attr('y', 24).attr('font-size', 10).attr('fill', 'var(--color-fg-muted)').style('font-family', 'var(--font-anthropic-sans)').text('ahora');
-    }
-    const tip = document.createElement('div'); tip.className = 'jx-tip'; tip.hidden = true; box.append(tip);
+    g.selectAll('line.grid').data(dias).join('line').attr('x1', (d) => x(d)).attr('x2', (d) => x(d)).attr('y1', top - 6).attr('y2', H - bottom).attr('stroke', 'var(--cds-chart-grid)');
+    g.selectAll('text.tick').data(dias.filter((_, i) => i % paso === 0)).join('text').attr('x', (d) => x(d) + 3).attr('y', 12).attr('font-size', 11).attr('fill', 'var(--color-fg-muted)').style('font-family', 'var(--nx-font)').text((d) => fechaCorta(d3.utcHour.offset(d, 12)));
+    const tip = tooltip(box);
     const fila = g.selectAll('g.r').data(rows).join('g').attr('transform', (r, i) => `translate(0, ${top + i * rowH})`);
     fila.append('text').attr('x', apilado ? 0 : left - 8).attr('y', apilado ? 13 : 16).attr('text-anchor', apilado ? 'start' : 'end').attr('font-size', 12)
-      .attr('font-weight', (r) => r.en_region_coquimbo ? 600 : 400).attr('fill', 'var(--color-fg)').style('font-family', 'var(--font-anthropic-sans)')
-      .text((r) => etiqueta(r)).each(function () {
-        const max = apilado ? W - 4 : left - 12;
-        let t = this.textContent;
-        while (this.getComputedTextLength() > max && t.length > 4) { t = t.slice(0, -2); this.textContent = t + '…'; }
-      });
+      .attr('font-weight', (r) => r.en_region_coquimbo ? 700 : 400).attr('fill', 'var(--color-fg)').style('font-family', 'var(--nx-font)')
+      .text(etiqueta).each(function () { textoCorto.call(this, apilado ? W - 4 : left - 12); });
     const yL = apilado ? 28 : 12;
-    fila.append('line').attr('x1', x(t0)).attr('x2', (r) => x(new Date(r.cierre))).attr('y1', yL).attr('y2', yL).attr('stroke', (r) => colores[r.tipo]).attr('stroke-width', 2).attr('stroke-linecap', 'round').attr('opacity', .45);
-    fila.append('circle').attr('cx', (r) => x(new Date(r.cierre))).attr('cy', yL).attr('r', 5).attr('fill', (r) => colores[r.tipo]);
-    fila.append('text').attr('x', (r) => x(new Date(r.cierre)) + 9).attr('y', yL + 4).attr('font-size', 11).attr('fill', 'var(--color-fg-muted)').style('font-family', 'var(--font-anthropic-sans)')
+    fila.append('line').attr('x1', x(t0)).attr('x2', (r) => x(new Date(r.cierre))).attr('y1', yL).attr('y2', yL).attr('stroke', (r) => colores[r.tipo]).attr('stroke-width', 3).attr('opacity', .45);
+    fila.append('rect').attr('x', (r) => x(new Date(r.cierre)) - 5).attr('y', yL - 5).attr('width', 10).attr('height', 10).attr('fill', (r) => colores[r.tipo]);
+    fila.append('text').attr('x', (r) => x(new Date(r.cierre)) + 9).attr('y', yL + 4).attr('font-size', 11).attr('fill', 'var(--color-fg-muted)').style('font-family', 'var(--nx-font)')
       .text((r) => { const p = partes(new Date(r.cierre)); return `${p.day}-${p.month}`; });
     fila.append('rect').attr('x', 0).attr('y', 0).attr('width', W).attr('height', rowH).attr('fill', 'transparent')
-      .on('mousemove', (ev, r) => {
-        tip.hidden = false;
-        tip.replaceChildren();
-        const a = document.createElement('div'); a.className = 't'; a.textContent = `${r.tipo} · ${r.codigo}`;
-        const b = document.createElement('div'); b.textContent = r.nombre;
-        const c2 = document.createElement('div'); c2.textContent = `${r.organismo} (${r.region})`;
-        const d = document.createElement('div'); d.textContent = `Cierre: ${fecha(r.cierre)} · ${r.monto_clp == null ? 'monto no publicado' : clp.format(r.monto_clp)}`;
-        tip.append(a, b, c2, d);
-        const [mx, my] = d3.pointer(ev, box);
-        const tw = tip.offsetWidth;
-        tip.style.left = Math.max(0, Math.min(mx + 12, box.clientWidth - tw)) + 'px';
-        tip.style.top = (my + 14) + 'px';
-      })
-      .on('mouseleave', () => { tip.hidden = true; });
+      .on('mousemove', (ev, r) => tip.show(ev, [`${r.tipo} · ${r.codigo}`, r.nombre, `${r.organismo} (${r.region})`, `Cierre: ${fecha(r.cierre)} · ${r.monto_clp == null ? 'monto no publicado' : clp.format(r.monto_clp)}`]))
+      .on('mouseleave', () => tip.hide());
     box.style.minHeight = H + 'px';
   }
 
-  function dibujar() { cabecera(); cifras(); grafico(); tablaCA(); tablaLic(); tablaTareas(); empresa(); }
+  function grafPrecios() {
+    const box = document.getElementById('chart-precios');
+    const s = dash.data('resultados');
+    if (s.status === 'error') { fallo(box); return; }
+    if (s.status !== 'ok') return;
+    box.replaceChildren();
+    const colores = { 'compra ágil': C.blue, 'licitación': C.purple };
+    leyenda(document.getElementById('leyenda-precios'), [['Ganador · Compra Ágil', C.blue], ['Ganador · licitación', C.purple], ['JUNCOS', C.pink]]);
+    const rows = s.data.filter((r) => r.ratio_ganador > 0).sort((a, b) => a.ratio_ganador - b.ratio_ganador);
+    if (!rows.length) { const p = document.createElement('p'); p.className = 'nx-empty'; p.textContent = 'Todavía no hay procesos cerrados con precio ganador conocido.'; box.append(p); return; }
+    const W = Math.max(280, box.clientWidth), apilado = W < 620, rowH = apilado ? 38 : 24, top = 24, bottom = 10;
+    const H = top + rows.length * rowH + bottom;
+    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Precio ganador como porcentaje del monto disponible');
+    const etiqueta = (r) => `${r.codigo.replace(/-(COT|LE|LP|L1)26$/, '')} · ${r.organismo}`;
+    let left = 8;
+    if (!apilado) {
+      const tmp = svg.append('text').attr('font-size', 12).style('font-family', 'var(--nx-font)');
+      left = 8 + Math.min(W * 0.42, d3.max(rows, (r) => { tmp.text(etiqueta(r)); return tmp.node().getComputedTextLength(); }));
+      tmp.remove();
+    }
+    const x = d3.scaleLinear([0, 1.1], [left, W - 16]);
+    const g = svg.append('g');
+    const ticks = [0, .25, .5, .75, 1];
+    g.selectAll('line.grid').data(ticks).join('line').attr('x1', (d) => x(d)).attr('x2', (d) => x(d)).attr('y1', top - 6).attr('y2', H - bottom).attr('stroke', (d) => d === 1 ? 'var(--cds-chart-axis)' : 'var(--cds-chart-grid)');
+    g.selectAll('text.tick').data(ticks).join('text').attr('x', (d) => x(d)).attr('y', 12).attr('text-anchor', 'middle').attr('font-size', 11).attr('fill', 'var(--color-fg-muted)').style('font-family', 'var(--nx-font)').text((d) => pct(d));
+    const med = d3.median(rows, (r) => r.ratio_ganador);
+    g.append('line').attr('x1', x(med)).attr('x2', x(med)).attr('y1', top - 6).attr('y2', H - bottom).attr('stroke', C.pink).attr('stroke-width', 2).attr('stroke-dasharray', '4 4');
+    const tip = tooltip(box);
+    const fila = g.selectAll('g.r').data(rows).join('g').attr('transform', (r, i) => `translate(0, ${top + i * rowH})`);
+    fila.append('text').attr('x', apilado ? 0 : left - 8).attr('y', apilado ? 12 : 15).attr('text-anchor', apilado ? 'start' : 'end').attr('font-size', 12).attr('fill', 'var(--color-fg)').style('font-family', 'var(--nx-font)')
+      .text(etiqueta).each(function () { textoCorto.call(this, apilado ? W - 4 : left - 12); });
+    const yL = apilado ? 27 : 11;
+    fila.filter((r) => r.ratio_juncos > 0).append('line').attr('x1', (r) => x(Math.min(r.ratio_ganador, r.ratio_juncos))).attr('x2', (r) => x(Math.max(r.ratio_ganador, r.ratio_juncos))).attr('y1', yL).attr('y2', yL).attr('stroke', C.pink).attr('stroke-width', 2);
+    fila.append('circle').attr('cx', (r) => x(r.ratio_ganador)).attr('cy', yL).attr('r', 6).attr('fill', (r) => colores[r.tipo] || C.blue);
+    fila.filter((r) => r.ratio_juncos > 0).append('rect').attr('x', (r) => x(r.ratio_juncos) - 6).attr('y', yL - 6).attr('width', 12).attr('height', 12).attr('transform', (r) => `rotate(45 ${x(r.ratio_juncos)} ${yL})`).attr('fill', C.pink);
+    fila.append('rect').attr('x', 0).attr('y', 0).attr('width', W).attr('height', rowH).attr('fill', 'transparent')
+      .on('mousemove', (ev, r) => tip.show(ev, [`${r.codigo} · ${r.tipo}`, r.nombre, `Ganó ${r.ganador || '—'} con ${clp.format(r.precio_ganador)} (${pct(r.ratio_ganador)} de ${clp.format(r.monto_clp)})`, `${r.ofertas_final == null ? '—' : r.ofertas_final} ofertas` + (r.precio_ofertado ? ` · JUNCOS ofertó ${clp.format(r.precio_ofertado)} (${pct(r.ratio_juncos)})` : '')]))
+      .on('mouseleave', () => tip.hide());
+    box.style.minHeight = H + 'px';
+  }
+
+  function grafTerminos() {
+    const box = document.getElementById('chart-terminos');
+    const s = dash.data('mejora_terminos');
+    if (s.status === 'error') { fallo(box); return; }
+    if (s.status !== 'ok') return;
+    box.replaceChildren();
+    const rows = s.data.slice().sort((a, b) => b.afines - a.afines || a.termino.localeCompare(b.termino, 'es'));
+    if (!rows.some((r) => r.afines > 0)) { const p = document.createElement('p'); p.className = 'nx-empty'; p.textContent = 'Aún no hay procesos con registro de búsqueda en los últimos 30 días. Se llena con cada revisión diaria.'; box.append(p); return; }
+    const W = Math.max(280, box.clientWidth), rowH = 22, top = 8, H = top + rows.length * rowH + 8;
+    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Procesos afines por término de búsqueda');
+    const tmp = svg.append('text').attr('font-size', 12);
+    const left = 8 + d3.max(rows, (r) => { tmp.text(r.termino); return tmp.node().getComputedTextLength(); }); tmp.remove();
+    const x = d3.scaleLinear([0, d3.max(rows, (r) => r.afines) || 1], [left + 4, W - 40]);
+    const g = svg.selectAll('g').data(rows).join('g').attr('transform', (r, i) => `translate(0, ${top + i * rowH})`);
+    g.append('text').attr('x', left - 4).attr('y', 14).attr('text-anchor', 'end').attr('font-size', 12).attr('fill', 'var(--color-fg)').style('font-family', 'var(--nx-font)').text((r) => r.termino);
+    g.append('rect').attr('x', x(0)).attr('y', 4).attr('height', 14).attr('width', (r) => Math.max(0, x(r.afines) - x(0))).attr('fill', C.blue);
+    g.append('rect').attr('x', x(0)).attr('y', 4).attr('height', 14).attr('width', (r) => Math.max(0, x(r.cotizadas) - x(0))).attr('fill', C.pink);
+    g.append('text').attr('x', (r) => x(r.afines) + 4).attr('y', 15).attr('font-size', 11).attr('fill', 'var(--color-fg-muted)').style('font-family', 'var(--nx-font)').text((r) => r.cotizadas ? `${r.afines} · ${r.cotizadas} cot.` : String(r.afines));
+    box.style.minHeight = H + 'px';
+  }
+
+  function tablaRes() {
+    const body = document.querySelector('#tabla-res tbody');
+    const s = dash.data('resultados');
+    if (s.status !== 'ok') return;
+    body.replaceChildren();
+    s.data.filter((r) => r.estado_final && r.estado_final !== 'abierta').forEach((r) => {
+      const tr = body.insertRow();
+      td(tr, r.codigo, 'code');
+      td(tr, r.nombre, 'wide');
+      td(tr, r.organismo);
+      td(tr, pill(r.estado_final));
+      td(tr, r.ofertas_final, 'num');
+      td(tr, r.ganador);
+      td(tr, r.precio_ganador ? clp.format(r.precio_ganador) : '—', 'num');
+      td(tr, r.ratio_ganador ? pct(r.ratio_ganador) : '—', 'num');
+      td(tr, r.precio_ofertado ? clp.format(r.precio_ofertado) : (r.juncos_cotizo || '—'), 'num');
+      td(tr, r.notas, 'wide');
+    });
+  }
+
+  function tablaPrecios() {
+    const body = document.querySelector('#tabla-precios tbody');
+    const s = dash.data('mejora_precios');
+    if (s.status !== 'ok') return;
+    body.replaceChildren();
+    if (!s.data.length) { const tr = body.insertRow(); const c = td(tr, 'Sin resultados todavía.'); c.colSpan = 4; return; }
+    s.data.forEach((r) => { const tr = body.insertRow(); td(tr, r.grupo); td(tr, r.resultados, 'num'); td(tr, pct(r.mediana_ratio), 'num'); td(tr, r.mediana_ofertas, 'num'); });
+  }
+
+  function listaSimple(id, fuente, crear, vacio) {
+    const el = document.getElementById(id);
+    const s = dash.data(fuente);
+    if (s.status === 'error') { fallo(el); return; }
+    if (s.status !== 'ok') return;
+    el.replaceChildren();
+    if (!s.data.length) { const li = document.createElement('li'); li.className = 'nx-empty'; li.textContent = vacio; el.append(li); return; }
+    s.data.forEach((r, i) => el.append(crear(r, i)));
+  }
+
+  function mejora() {
+    cifras('cifras-mejora', 'mejora_resumen', (k, v) => k === 'mediana_ratio_ganador' || k === 'concordancia' ? pct(v) : String(v == null ? '—' : v));
+    const m = dash.data('mejora_resumen');
+    if (m.status === 'ok' && m.data[0]) document.getElementById('nota-concordancia').textContent = `coincidencia entre recomendación y decisión (${m.data[0].pares_concordancia} casos)`;
+    grafPrecios(); grafTerminos(); tablaRes(); tablaPrecios();
+    listaSimple('lista-sug', 'mejora_sugerencias', (r) => { const li = document.createElement('li'); const t = document.createElement('span'); t.textContent = r.texto; t.setAttribute('data-source', 'mejora_sugerencias'); t.setAttribute('data-field', 'texto'); t.setAttribute('data-where', 'n=' + r.n); li.append(t); return li; }, 'Ninguna esta semana.');
+    listaSimple('lista-motivos', 'mejora_motivos', (r) => { const li = document.createElement('li'); li.className = 'alerta'; const dot = document.createElement('span'); dot.className = 'dot'; const t = document.createElement('span'); t.textContent = `${r.motivo}: ${r.veces}`; li.append(dot, t); return li; }, 'Aún no hay descartes con motivo registrado.');
+  }
+
+  function dibujar() {
+    cabecera();
+    if (!document.getElementById('hoy').hidden) {
+      cifras('cifras', 'resumen', (k, v) => k === 'ca_monto_abiertas' ? clpCorto(v || 0) : String(v));
+      grafCierres(); tablaCA(); tablaLic(); tablaTareas(); empresa();
+    } else {
+      mejora();
+    }
+  }
   dash.onData(dibujar);
+  const inicial = location.hash.slice(1);
+  if (vistas.includes(inicial)) mostrar(inicial);
 })();
 </script>

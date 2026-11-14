@@ -28,20 +28,6 @@
   "ficha": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=564953-79-LE26"
  },
  {
-  "codigo": "4192-63-LE26",
-  "nombre": "Capacitación de desarrollo personal y profesional",
-  "organismo": "Municipalidad de Caldera",
-  "region": "Atacama",
-  "en_region_coquimbo": false,
-  "tipo": "LE",
-  "monto_clp": null,
-  "cierre": "2026-10-29T15:30:00-03:00",
-  "estado_api": "Cerrada",
-  "estado_juncos": "Cerrada, sin registro de oferta",
-  "proximo_paso": "Adjudicación prevista: vie 06-11. Ver ganador y precio",
-  "ficha": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4192-63-LE26"
- },
- {
   "codigo": "2898-15-LE26",
   "nombre": "Actualización del PLADECO de TDP",
   "organismo": "Municipalidad",
@@ -80,7 +66,7 @@
   "cierre": "2026-11-13T12:13:00-03:00",
   "estado_api": "Publicada",
   "estado_juncos": "En análisis",
-  "proximo_paso": "Preguntar en el foro antes del dom 08-11, 21:00 si vale la experiencia del titular o del equipo (piden estudios de 200 casos o más). Evaluación: metodología 25%, precio 25%, instrumento 20%, experiencia 15%, coordinador 10%, integridad 5%. Dos etapas",
+  "proximo_paso": "Preguntas al foro redactadas (claude/07.11.2026 - PREGUNTAS FORO 1036569-19-LE26 GORE NUBLE.md): ingresarlas antes del dom 08-11, 21:00. Las bases no permiten subcontratar: preguntar si los encuestadores a honorarios cuentan. Experiencia del oferente 15% (6 a 15 pts por estudios de 200 casos o más). Integridad 5% con código de ética. Contrato de 130 días: pasa el 29-12-2026, así que hay que renovar el registro. Respuestas: lun 09-11, 21:00",
   "ficha": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1036569-19-LE26"
  },
  {
